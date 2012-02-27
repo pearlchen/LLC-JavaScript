@@ -1,0 +1,209 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  background: url(../../assets/ladieslearningcode-125x125.gif) 10px -10px no-repeat;
+  border-top: 7px #b1009a solid;
+}
+
+#presentation {
+  min-width: 1000px;
+}
+
+.deck-container {
+  font-family: 'Istok Web', Arial, sans-serif;
+  font-size: 16px;
+  padding: 0; /* overriding deck.coder.css */
+  padding-left: 145px;
+}
+
+.deck-container p {
+  color: #222;
+  font-size: 1em;
+}
+
+.deck-container .slide {
+  width: 1000px;
+  height: 100%;
+  min-height: 640px;
+  border: 3px solid #b1009a;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 15px auto 30px auto;
+  padding: 20px;
+}
+
+.deck-container .slide-title {
+}
+
+.deck-container .slide-title h1 {
+  font-family: 'Podkova', Arial;
+  font-size: 4em;
+  font-weight: normal;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  text-transform: none; 
+}
+
+.deck-container .slide-list h2 {
+  font-size: 3em;
+  padding-bottom: .07em;
+  margin-bottom: .1em; 
+  margin-top: 0;
+}
+
+.deck-container .slide-list h3 {
+font-size: 1.4em;
+color: #444444;
+margin-bottom: .1em; 
+}
+
+.deck-container .slide-list ul {
+margin-left: 1em;
+list-style-type: square;
+font-weight: 400;
+color: #d3502c; }
+.deck-container .slide-list li {
+padding-left: .5em; }
+
+.deck-container .slide-list p {
+}
+
+.deck-container .slide-subhead {
+  text-align: center;
+}
+
+.deck-container .slide-subhead h1 {
+  font-size: 4.5em;
+  position: static;
+  margin: 0px;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -transform: none;
+  -o-transform: none;
+}
+
+.deck-container .slide-subhead h2 {
+  font-size: 2em;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  padding-top: .1em; 
+}
+
+
+
+
+.deck-container h1 {
+  font-family: 'Podkova', Arial;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: 5em;
+  line-height: .9em;
+  text-transform: uppercase;
+  padding-top: 7em;
+  color: #b1009a; 
+}
+
+.deck-container h2 {
+  font-family: 'Podkova', Arial;
+  font-weight: 400;
+  color: #b1009a;
+  border: none;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  padding-top: 0;
+}
+
+.deck-container h3 {
+  color: #b1009a;
+  font-weight: 800; 
+}
+
+.deck-container .slide > pre {
+padding:10px;
+border-color: #ccc; }
+.deck-container code {
+color: #888; }
+.deck-container blockquote {
+font-size: 2em;
+font-style: italic;
+padding: 1em 2em;
+color: #000;
+border-left: 5px solid #d3502c; }
+.deck-container blockquote p {
+margin: 0; }
+.deck-container blockquote cite {
+font-size: .5em;
+font-style: normal;
+font-weight: bold;
+color: #888; }
+
+.deck-container ::-moz-selection, .deck-container ::selection {
+  background: #7E006E;
+  color: #fff; 
+}
+
+.deck-container a, .deck-container a:hover, .deck-container a:focus, .deck-container a:active, .deck-container a:visited {
+  color: #444;
+  text-decoration: underline; 
+}
+
+.deck-container a:hover, .deck-container a:focus {
+  color: #b1009a; 
+  text-decoration: none; 
+}
+.deck-container .deck-prev-link, .deck-container .deck-next-link {
+background: #d3502c;
+font-family: serif; }
+.deck-container .deck-prev-link, .deck-container .deck-prev-link:hover, .deck-container .deck-prev-link:focus, .deck-container .deck-prev-link:active, .deck-container .deck-prev-link:visited, .deck-container .deck-next-link, .deck-container .deck-next-link:hover, .deck-container .deck-next-link:focus, .deck-container .deck-next-link:active, .deck-container .deck-next-link:visited {
+color: #fff; }
+.deck-container .deck-prev-link:hover, .deck-container .deck-prev-link:focus, .deck-container .deck-next-link:hover, .deck-container .deck-next-link:focus {
+background: #bf0000;
+text-decoration: none; }
+.deck-container .deck-status {
+font-size: 0.6666em; }
+.deck-container.deck-menu .slide {
+background: #eee; }
+.deck-container.deck-menu .deck-current {
+background: #ddf; }
+
+
+.deck-container .prettyprint {
+  font-size: 0.9em;
+}
+
+.deck-container .coder-wrapper {
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  box-shadow: 2px 2px 5px #CCC;
+}
+
+.deck-container .coder-editor-wrapper pre {
+  font-size: 0.9em;
+}
+
+.deck-container .coder-wrapper .coder-buttons button {
+  background-color: #b1009a;
+}
+
+.deck-container .coder-wrapper .coder-buttons {
+  top: 10px;
+  right: 1%;
+}
+
+.deck-container .coder-wrapper-split .coder-buttons {
+  right: 51%;
+}
+
+.deck-container .coder-wrapper .coder-buttons button:hover {
+  background-color: #7E006E;
+}
+
+.CodeMirror-gutter {
+  min-width: 1.2em;
+  left: -5px;
+}

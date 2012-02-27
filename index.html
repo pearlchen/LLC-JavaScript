@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ladies Learning Code - JavaScript March 18, 2012</title>
+	<meta name="viewport" content="width=1024">
+	
+  <!-- CoderDeck core and extension CSS files -->
+	<link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
+	<link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="src/css/prettify.css">
+	<link rel="stylesheet" href="src/css/deck.coder.css">
+  <link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="src/codemirror/theme/default.css">
+
+	<!-- Custom for LLC -->
+  <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
+  <style type="text/css">
+  .deck-container .slide-subhead .workshop_title {
+    padding-bottom: 80px;
+  }
+  .deck-container .slide-subhead .workshop_title h1 {
+    padding-bottom: 0.1em;
+    padding-top: 0.8em;
+  }
+  .deck-container .slide-subhead .workshop_title .download_link {
+    font-size: 1.3em; 
+    margin: 2.5em 0 0.5em 0;
+  }
+  .deck-container .slide-subhead .workshop_title .download_link a {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #b1009a;
+    text-decoration: none;
+  }
+  .deck-container .instructor_holder {
+    width: 560px;
+    margin: 0px auto;
+  }
+  .deck-container .instructor_holder h2 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin-bottom: 0.8em;
+  }
+  .deck-container .instructor_holder div {
+    width: 50%;
+    float: left;
+  }
+  </style>
+
+</head>
+<body class="deck-container">
+
+<script type='text/coderdeck' id='coderdeck-default'>
+  <html>
+    <head>
+      <script src='src/jquery.min.js'>SCRIPTEND
+    </head>
+    <body>
+	    CODE
+    </body>
+</html>
+</script>
+
+<script type='text/coderdeck' id='coderdeck-style-example'>
+	<html>
+		<title>test</title>
+		<style>
+			CODE
+		</style>
+		<body>
+			<h1>I'm a H1 heading</h1>
+			<h2>I'm a H2 heading</h2>
+			<p>Pargraph of text &lt;p&gt; here</p>
+			<div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
+			<div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
+		</body>
+	</html>
+</script> 	
+
+<div id="presentation">
+
+<article class='slide slide-subhead slide-title'>
+  <div class="workshop_title">
+    <h1>Introduction to JavaScript</h1>
+    <p style="color: #999;">March 28, 2012</p>
+    <p class="download_link">
+      Download the slides to your laptop!<br />
+      <a href='http://javascript.ladieslearningcode.com'>http://javascript.ladieslearningcode.com</a></p>
+    <p style="font-size: 0.9em; color: #999;">(Interactive code slides thanks to <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>!)</p>
+  </div>
+  <div class="instructor_holder">
+    <h2>Your instructors today</h2>
+    <div>
+      <img src="assets/pearl_avatar.png" width="72" height="72" alt="pearl chen" />
+      <h4>Pearl Chen</h4>
+      pearl [at] karma-laboratory.com<br />
+      <a href="http://klab.ca/&plus;">klab.ca/+</a><br />
+      <a href="http://twitter.com/@androidsNsheep">@androidsNsheep</a>
+    </div>
+    <div>
+      <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
+      <h4>Christina Truong</h4>
+      contactme [at] christinatruong.com<br />
+     <a href="http://christinatruong.com">christinatruong.com</a><br />
+      <a href="http://twitter.com/@christinatruong">@christinatruong</a>
+    </div>
+    <br  clear="left" />
+  </div>
+</article>
+
+<!-- Apply a class of "coder-editor" to a textarea to make it show up as runnable code -->
+<article class='slide slide-list'>
+<h2>Basic Code Editor</h2>
+<p>Basic split code editor is created by adding a class of "coder-editor" to a textarea.
+   Press run, then modify some code and press "run" again</p>
+
+<textarea class='coder-editor'>
+<header>
+  <h1>My Site!</h1>
+  <nav><ul>
+    <li><a href='#'>Link 1</a></li>
+    <li><a href='#'>Link 2</a></li>
+  </ul></nav>
+</header>
+
+<section id='content'>
+  <article class='blog-post'>
+    <h1>Blog Post 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
+  </article>
+</section>
+<footer>
+  <a href='#'>Link 1</a> | <a href='#'>Link 2</a>
+</footer>	
+</textarea>
+</article>
+
+<article class='slide slide-list'>
+<h2>How to use it?</h2>
+<p>Download a release and modify the index.html with your slide. Slides are created with by adding a class='slide' to any element. CoderDeck areas are created
+	by adding a class of 'coder-editor' to a text area, for example (prettyprint is also bundled, so, as below just use a &lt;pre class='prettyprint'&gt;.. to highlight static code):</p>
+<pre class='prettyprint'>
+&lt;article class='slide slide-list'&gt;
+  &lt;h2&gt;This is a second level heading!&lt;/h2&gt;
+  &lt;p&gt;Here is some descriptive text, followed by a split editor. &lt;/p&gt;
+  &lt;textarea class='coder-editor'&gt;
+    &lt;script&gt;
+       alert("Yay!");
+    &lt;/script&gt; 
+  &lt;textarea&gt;
+&lt;/article&gt;
+</pre>
+
+</article>
+
+
+<!-- Apply a class of "coder-editor-full" along with "coder-editor" to a textarea to make it show up as runnable code -->
+<article class='slide slide-list'>
+<h2>Full Page Code Editor</h2>
+<p>Basic full page code editor is created by adding a class of "coder-editor-full" along with "coder-editor" to a textarea.
+   Press run, then press "back", then modify some code and press "run" again</p>
+
+<textarea class='coder-editor coder-editor-full'>
+<header>
+  <h1>My Site!</h1>
+  <nav><ul>
+    <li><a href='#'>Link 1</a></li>
+    <li><a href='#'>Link 2</a></li>
+  </ul></nav>
+</header>
+
+<section id='content'>
+  <article class='blog-post'>
+    <h1>Blog Post 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
+  </article>
+</section>
+<footer>
+  <a href='#'>Link 1</a> | <a href='#'>Link 2</a>
+</footer>	
+</textarea>
+</article>
+
+
+<!-- use a class of gist and a data-gist-id to pull the code example from a gist -->
+<article class='slide slide-list'>
+<h2>Pulling from Gists</h2>
+<p>Use a class of 'gist' and an attribute of data-gist-id for the Gist ID</p>
+<div class='gist' data-gist-classes='coder-editor coder-editor-full' data-gist-id='1262553'></div>
+</article>
+
+<!-- add a "data-coder-template" to use a different template (see the template definitions at the top)
+     add a "data-language" to use a different CodeMirror2 mode other than htmlmixed. Options include "html", "javascript", "css", "xml" and any other mode supported by CodeMirror2
+-->
+<article class='slide slide-list'>
+<h2>Custom template and custom language</h2>
+<p>You can create custom reusable templates for wrapping the editor code with custom &lt;script&gt; tags. You can also specify the mode the editor should display (xml, css, javascript or the default htmlmixed ) </p>
+
+<textarea class='coder-editor' data-coder-template="coderdeck-style-example" data-language="css">
+h1 { color:blue; }
+h2 { color:red;}
+p  { color:pink;}
+.stuff  { color:purple;}
+#my-div { color:teal;}
+</textarea>
+</article>
+
+
+
+<!-- add a "data-coder-instant" to do on-the-fly updating-->
+<article class='slide slide-list'>
+<h2>Instant Update Sample</h2>
+<p>Try modifying any of the HTML on the left, the right side should updated periodically as you type. This is done by adding a class of "coder-editor-instant" to the textarea</p>
+
+<textarea class='coder-editor coder-editor-instant' data-coder-template="coderdeck-style-example" data-language="css">
+h1 { color:blue; }
+h2 { color:red;}
+p  { color:pink;}
+.stuff  { color:purple;}
+#my-div { color:teal;}
+</textarea>
+</article>
+
+
+<!-- Javascript works normally as well, libraries and external css (including jquery) can be included in template -->
+<article class='slide slide-list'>
+<h2>Javascript/jQuery Example</h2>
+<p> Javascript works normally as well, libraries and external css (including jquery) can be included in the coderdeck template.</p>
+<textarea class='coder-editor'>
+<script>
+  $(function() {
+    $(".box").animate({ 
+        'top':"50%", 
+        'left':"50%" });
+  });
+</script>
+<style>
+  .box { 
+    top:0px; left:0px;
+    width:50px; height:50px; 
+    position:absolute; 
+    background-color:red;
+  }
+</style>
+<div class='box'></div>
+</textarea>
+</article>
+
+
+
+<article class='slide slide-list'>
+<h2>Local Storage</h2>
+<p>  If you want your changes to a slide to survive between page reloads you can define a data-save attribute which will save it to the attributes value in localstorage. Make a code change, hit run/save and reload this slide.</p>
+<p> You can also use the same 'data-save'  attribute on mulitiple slides to keep the same code moving forwad</p>
+<textarea class='coder-editor' data-save='dummy'>
+  <h1>This is some dummy content..</h1>
+</textarea>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Solutions</h2>
+<p>If you want to add a solution to an exercise, you can add a coderdeck-solution script tag in the slide </p>
+<textarea class='coder-editor'>
+
+<script>
+    // Display an alert message
+    // if a confirm dialog returns true
+</script>
+</textarea>
+
+<script type='coder-solution'>
+SCRIPT
+  if(confirm("Do you want an alert?")) {
+      alert("Yay!");
+  }
+SCRIPTEND
+</script>
+</article>
+
+</div><!-- END div id=presentation -->
+
+
+<script src='src/jquery.min.js'></script>
+<script src="src/modernizr.js"></script>
+
+<!-- Update these paths to point to the correct files. -->
+<script src="src/jquery.tmpl.min.js"></script>
+<script src="src/deck.js/core/deck.core.js"></script>
+
+<!-- Code Mirror -->
+<script src="src/codemirror/lib/codemirror.js"></script>
+<script src="src/codemirror/mode/xml/xml.js"></script>
+<script src="src/codemirror/mode/css/css.js"></script>
+<script src="src/codemirror/mode/javascript/javascript.js"></script>
+<script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+<!-- Prettify -->
+<script src="src/prettify.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="src/deck.js/extensions/status/deck.status.js"></script>
+<script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src='src/deck.coder.js'></script>
+<script src="src/deck.js/extensions/hash/deck.hash.js"></script>
+<script src="src/deck.js/extensions/menu/deck.menu.js"></script>
+
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
