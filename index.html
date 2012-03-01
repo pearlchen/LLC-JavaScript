@@ -137,12 +137,19 @@
 <!-- new slide -->
 <article class='slide slide-list'>
   <h2>Variables</h2>
+  <ul>
+  	<li>Variables are used to store values.</li>
+	<li>Declare a variable using the keyword <strong>var</strong> to tell the computer that it exists.</li>
+	<li>Assign values to variables using the equals (=) sign</li>
+	<li>Variables can be:
+		<ul>
+			<li>numbers (integers &amp; decimals)</li>
+			<li>strings (letters, words &amp; sentences)</li>
+			<li>Booleans (true/false)</li>
+		</ul>			
+	</li>	
+  </ul>	
 
-  <p>Variables are used to store values.  Declaring a variable tells the computer that it exists.</p>
-  <p>Declare variables with the keyword var.</p> 
-  <p>They can be: numbers(integers &amp; decimals), strings(letters, words &amp; sentences), and Booleans(true/false).</p>
-
-  <p>Assign values to variables using the equals(=) sign.</p>
 <pre>
 var <span class="var">someIntegerNumber</span> = 10;
 var <span class="var">someDecimalNumber</span> = 10.5;
@@ -159,9 +166,35 @@ var <span class="var">isSunday</span> = true;
 
 <!-- new slide -->
 <article class='slide slide-list'>
-	<p>Variables cannot start with a number or any special characters except for underscore (_) and dollar signs ($).</p>
-	<p>Variables cannot contain spaces so a convention used for creating longer named variables is called "camel case" in which variable names lookLikeCamelHumps.</p>
+  	<h3>What else should I know about variables?</h3>
+  	<ul>
+		<li>Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).</li>
+		<li>Variables cannot contain spaces. Use a convention called "camel case" in which every new word is capitalized.<br />
+		Why is it called camel case? Because it looks likeCamelHumps.</li>
+		<li>When naming a variable, it's best to give it a descriptive name.</li>
+		<pre>var <span class="var">firstName</span> = "This is a descriptive variable name";</pre>
+		<pre>var <span class="var">fn</span> = "This is not a descriptive variable name";</pre>
+	</ul>
 </article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+  	<h2>Comments</h2>
+	<p>Sometimes you want to write notes to yourself (and others) to organize your blocks of code or leave explanations but you want the browser to ignore it. Use comments!</p>
+<pre>
+// This is how you leave a single line comment.
+// You can write many single line comments.
+</pre>
+	<p>Instead of using several single line comments, you can also use multi-line comments!</p>
+<pre>
+/* This is how you leave
+multi-line comments for when you
+want to write a longer message */
+</pre>
+	<p>Multi-line comments are also great for when you want to "hide" large blocks of code so you can try something new out without erasing your old code.</p>
+</article>
+
 
 <!-- new slide -->
 <article class='slide slide-list'>
@@ -170,10 +203,10 @@ var <span class="var">isSunday</span> = true;
 
 <textarea class='coder-editor'>
 <script>
-  var cakePrice = 20;
+  var cupcakePrice = 20;
   var shoePrice = 60;
-  var couponAmount = 10;
-
+  var discountAmount = 10;
+  
   var shoppingTotal = 	
   document.write(shoppingTotal);
 
@@ -181,11 +214,120 @@ var <span class="var">isSunday</span> = true;
   //document.write(withDiscountTotal);
 </script>
 </textarea>
+</article>
 
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>JavaScript Arithmetic Operators (cont.)</h2>
+	<p>Using <em>shoppingTotal</em>, try manipulating the variable using addition (+) and multiplication operations (*).</p>  
+	<p>How would you find the total of 1 cupcake and 2 pairs of shoes? Output the total using <strong>document.write();</strong></p>
+
+<textarea class='coder-editor'>
+<script>
+  var cupcakePrice = 20;
+  var shoePrice = 60;
+
+  /* Calculate the total of 1 cake 
+  and 2 pairs of shoes here */
+  var shoppingTotal =
+</script>
+</textarea>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Concatenation</h2>
+	<p>Now that we’ve calculated the totals, how do we format the output to include a dollar sign?<br />
+	We can use a technique called concatenation using the + operator to combine strings.</p>  
+	<p><strong>Note:</strong> this is the same symbol used for the mathematical addition operator.<br />  
+	If you use the + operator with numerical values, it will add the values.  Otherwise it will combine the outputs.</p>
+
+<textarea class='coder-editor'>
+<script>
+  //Addition with the + operator
+  var cakePrice = 20;
+  var shoePrice = 60;
+  var shoppingTotal = cakePrice + shoePrice;
+  document.write(shoppingTotal);
+
+  //Concatenation with the + operator
+  //document.write("$" + shoppingTotal);
+  //document.write("Your total is: " + "$" + shoppingTotal);
+</script>
+</textarea>
+</article>
+
+<!-- new slide -->
+<article class='slide slide-list'>
+  	<h2>Conditional Statements</h2>
+	<p>Declaring variables with "static" values can be boring. Programming is about generating stuff on the fly! <strong>If... else statements</strong> are conditional statements that can be used to perform different actions based on different conditions. There are 3 variations:</p> 
+
+<p><strong>If Statement</strong> - executes the code only if the condition is true</p>
+<pre>
+if (condition) {
+  execute this code if condition is true
+}
+</pre>
+
+<p><strong>If...Else Statement</strong> - executes some code if the condition is true and different code if condition is false</p>
+<pre>
+if (condition) {
+  	execute this code if condition is true
+} else {
+	execute this code if condition is not true
+}
+</pre>
+
+<p><strong>If...Else If...Else Statement</strong> - use this statement to execute different code for multiple conditions</p>
+<pre>
+if (condition) {
+  	execute this code if the first condition is true
+} else if (condition) {
+	execute this code if the second condition is true
+} else {
+	execute this code if neither conditions are true
+}
+</pre>
+</article>
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Conditional Statements (cont.)</h2>
+	<p>Let’s look at some examples.  Uncomment the code to be executed for each condition and see if the result is what you expected.<br /> 
+	Try changing the variable values too!</p>  
+
+<textarea class='coder-editor'>
+<script>
+var regularPrice = 200;
+var salePrice = 19.99;
+
+if ( salePrice < regularPrice ) {
+  //console.log("You've got to buy those shoes!");
+} 
+
+
+if ( salePrice > regularPrice ) {
+  //console.log("Don't buy those shoes");
+} else {
+  //console.log("Buy two in different colours!");
+}
+
+
+if ( salePrice > regularPrice ) {
+  //console.log("Don't buy those shoes");
+} else if ( salePrice == regularPrice) {
+  //console.log("Only buy it if you reeeaallly want it!");
+} else {
+  //console.log("Buy two in different colours!");
+}
+</script>
+</textarea>
 </article>
 
 
 
+<!-- CODERDECK EXAMPLES -->
 <!-- Apply a class of "coder-editor" to a textarea to make it show up as runnable code -->
 <article class='slide slide-list'>
 <h2>Basic Code Editor</h2>
