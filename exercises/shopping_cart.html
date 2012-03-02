@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Shoes n' Cupcakes</title>
+	<script type="text/javascript">
+		/**
+		Calculates totals for selected shoes & cupcake items
+		**/
+		function itemTotal() {
+			//start the total at 0
+			var totalPrice = 0;
+			var productArray = document.shoppingForm.product;
+			var numberOfProducts = productArray.length;
+	
+			//using var numberOfProducts to loop through each product listing
+	  		for (i=0; i < numberOfProducts; i++) {
+	    		if (productArray[i].checked) { 
+					//if checked, the cost of the selected item is added to var totalPrice
+					totalPrice = totalPrice + Number(productArray[i].value);					
+				} 
+	  		}
+			return totalPrice;
+		}		
+		
+		
+		/** 
+		Calculates total of selected items and shipping
+		**/
+		function calculateTotal(){
+		    var finalTotal = itemTotal();
+		    //display the result with 2 decimal points
+			document.getElementById('totalPrice').value = finalTotal.toFixed(2);
+		}		
+	</script>
+</head>
+
+<body>
+	<form action="" name="shoppingForm" onsubmit="return false;">
+		<fieldset>
+			<legend>Shoes</legend>			
+			<input id="product0" type="checkbox" name="product" value="9.99" onclick="calculateTotal()">
+			<label for="product0">shoe 1 ($9.99)</label>
+			<br />			
+			<input id="product1" type="checkbox" name="product" value="20" onclick="calculateTotal()">
+			<label for="product1">shoe 2 ($20)</label>
+			<br />			
+			<input id="product2" type="checkbox" name="product" value="30" onclick="calculateTotal()">
+			<label for="product2">shoe 3 ($30)</label>
+			<br />			
+			<input id="product3" type="checkbox" name="product" value="40" onclick="calculateTotal()">
+			<label for="product3">shoe 4 ($40)</label>
+		</fieldset>	
+		
+		<fieldset>
+			<legend>Cupcakes</legend>			
+			<input id="product4" type="checkbox" name="product" value="2.50" onclick="calculateTotal()">
+			<label for="product4">cupcake single ($2.50)</label>
+			<br />			
+			<input id="product5" type="checkbox" name="product" value="13" onclick="calculateTotal()">
+			<label for="product5">cupcake 1/2 dozen ($13)</label>
+			<br />			
+			<input id="product6" type="checkbox" name="product" value="25" onclick="calculateTotal()">
+			<label for="product6">cupcakes dozen ($25)</label>
+			<br />			
+			<input id="product7" type="checkbox" name="product" value="15" onclick="calculateTotal()">
+			<label for="product7">babycakes dozen ($15)</label>
+		</fieldset>		
+				
+		<br />
+		<label for="totalPrice">Total:</label>
+		<input type="text" id="totalPrice" value="">
+
+		<button type="button" onclick="validateForm()">Submit</button>
+	</form>
+</body>
+</html>
+
