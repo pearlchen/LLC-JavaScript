@@ -2,82 +2,157 @@
 <head>
 	<title>Shoes n' Cupcakes</title>
 	<script type="text/javascript">
-		//Calculates totals for shopping items
+		/**
+		Calculates totals for selected shoes & cupcake items
+		**/
 		function itemTotal() {
-			//start the sum at 0
-			var sumOfItems = 0;
-			//finds the number of products via the name attribute
+			//start the total at 0
+			var totalOfItems = 0;
+			//finds the number of products via the name attribute "product"
 	  		var numberOfItems = document.shoppingForm.elements["product"].length;
+	
+			//using var numberOfItems to loop through each product listing
 	  		for (i=0; i < numberOfItems; i++) {
+				//assigning the value of the product id
 				var productId = 'product'+i;
+				//getting the id of the selected item
 	    		var selectedItem = document.getElementById(productId);
+				//check if checkbox has been selected
 	    		if (selectedItem.checked == true) { 
-					sumOfItems = sumOfItems + Number(selectedItem.value);					
+					//if true, the cost of the selected item is added to var sumOfItems
+					//selectedItem.value gets the cost of the item from the value attribute
+					totalOfItems = totalOfItems + Number(selectedItem.value);					
 				}
 	  		}
-			return sumOfItems;
+			return totalOfItems;
 		}
 		
 		
-		// Calculates shipping cost
+		/** 
+		Calculates shipping cost
+		**/
 		var shipping = new Array();
 		shipping["ontario"]=5;
 		shipping["canada"]=10;
 		shipping["international"]=25;
 
-		function getShippingCost()
-		{  
+		function getShippingCost(){  
 		    var shippingCost=0;
 		    //var theForm = document.forms["shoppingForm"];
 		    var selectedShipping = document.shoppingForm.elements["selectedShipping"];
 		    for(var i = 0; i < selectedShipping.length; i++){
-		        //checks if radio button is selected
+		        //checks if radio button
 		        if(selectedShipping[i].checked){
 		            shippingCost = shipping[selectedShipping[i].value];
 		            break;
 		        }
 		    }
 		    return shippingCost;
+			console.log(shippingCost);
 		}
-				
-		// Calculates total of items and shipping
+		
+		
+		/** 
+		Calculates total of selected items and shipping
+		**/
 		function calculateTotal(){
 		    var finalTotal = itemTotal() + getShippingCost();
-		    //display the result to 2 decimal points
+		    //display the result with 2 decimal points
 			document.getElementById('totalPrice').value = finalTotal.toFixed(2);
+		}
+		
+		
+		/** 
+		Form validation
+		**/		
+		//check if the contact info is empty
+		function isEmpty(aTextField) {
+		   	if ((aTextField.value.length==0) || (aTextField.value==null)) {
+		      	return true;
+		   	} else { 
+				return false; 
+			}
+		}
+		
+		function validateForm(){
+			//var theForm = document.forms["shoppingForm"];
+		   	if(isEmpty(document.shoppingForm.name)) { 
+		      	alert('Please enter your name.'); 
+		   	} else if(isEmpty(document.shoppingForm.address)) {
+				alert('Please enter your address.'); 
+			} else if(isEmpty(document.shoppingForm.email)) {
+				alert('Please enter your email.'); 
+			} else {
+				alert('Your order has been submitted. Thank you!');
+			}
 		}
 	</script>
 </head>
+
 <body>
 	<form action="" id="shoppingForm" name="shoppingForm" onsubmit="return false;">
-		<input type="checkbox" id='product0' value="9.99"  onclick="calculateTotal()" name="product">shoe 1 ($9.99)<br />
-		<input type="checkbox" id='product1' value="20" onclick="calculateTotal()" name="product">shoe 2 ($20)<br />
-		<input type="checkbox" id='product2' value="30" onclick="calculateTotal()" name="product">shoe 3 ($30)<br />
-		<input type="checkbox" id='product3' value="40" onclick="calculateTotal()" name="product">shoe 4 ($40)<br />		
-	
+		<fieldset>
+			<legend>Shoes</legend>			
+			<input id="product0" type="checkbox" name="product" value="9.99" onclick="calculateTotal()" >
+			<label for="product0">shoe 1 ($9.99)</label>
+			<br />			
+			<input id="product1" type="checkbox" name="product" value="20" onclick="calculateTotal()">
+			<label for="product1">shoe 2 ($20)</label>
+			<br />			
+			<input id="product2" type="checkbox" name="product" value="30" onclick="calculateTotal()">
+			<label for="product2">shoe 3 ($30)</label>
+			<br />			
+			<input id="product3" type="checkbox" name="product" value="40" onclick="calculateTotal()">
+			<label for="product3">shoe 4 ($40)</label>
+		</fieldset>	
+		
+		<fieldset>
+			<legend>Cupcakes</legend>			
+			<input id="product4" type="checkbox" name="product" value="2.50" onclick="calculateTotal()" >
+			<label for="product4">cupcake single ($2.50)</label>
+			<br />			
+			<input id="product5" type="checkbox" name="product" value="13" onclick="calculateTotal()">
+			<label for="product5">cupcake 1/2 dozen ($13)</label>
+			<br />			
+			<input id="product6" type="checkbox" name="product" value="25" onclick="calculateTotal()">
+			<label for="product6">cupcakes dozen ($25)</label>
+			<br />			
+			<input id="product7" type="checkbox" name="product" value="15" onclick="calculateTotal()">
+			<label for="product7">babycakes dozen ($15)</label>
+		</fieldset>		
 		
 		<br />
-		Shipping:<br />
-		<label class='radiolabel'><input type="radio"  name="selectedShipping" value="ontario" onclick="calculateTotal()" />Within Ontario ($5)</label><br/>
-		<label class='radiolabel'><input type="radio"  name="selectedShipping" value="canada" onclick="calculateTotal()" />Within Canada ($10)</label><br/>
-        <label class='radiolabel'><input type="radio"  name="selectedShipping" value="international" onclick="calculateTotal()" />Outside of Canada ($25)</label><br/>
-
-		Total: <input type="text" id="totalPrice" value="">
+		<fieldset>
+			<legend>Shipping:</legend>
+			<input type="radio" name="selectedShipping" value="ontario" onclick="calculateTotal()" />
+			<label class="radiolabel">Within Ontario ($5)</label><br/>
+			
+			<input type="radio" name="selectedShipping" value="canada" onclick="calculateTotal()" />
+			<label class="radiolabel">Within Canada ($10)</label><br/>
+			
+        	<input type="radio" name="selectedShipping" value="international" onclick="calculateTotal()" />
+			<label class="radiolabel">Outside of Canada ($25)</label><br/>
+		</fieldset>
 		
-		<br /><br />
-		<div id="contactInfo">
+		<br />
+		<label for="totalPrice">Total:</label>
+		<input type="text" id="totalPrice" value="">
+		
+		<br />
+		<fieldset>
             <legend>Contact Information</legend>
-            <label for='name'>Name</label>
-            <input type="text" id="name" name='name' />
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" />
             <br/>
-            <label for='address'>Address</label>
-            <input type="text" id="address" name='address' />
+            <label for="address">Address</label>
+            <input id="address" type="text" name="address" />
             <br/>
-            <label for='email'>Email</label>
-            <input type="text" id="email" name='email'/>
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email"/>
             <br/>
-        </div>
-        <input type='submit' id='submit' value='Submit' onclick="validateForm()" />
+        </fieldset>
+
+		<button type="button" onclick="validateForm()">Submit</button>
 	</form>
 </body>
 </html>
