@@ -128,39 +128,40 @@
 
 <!-- new slide -->
 <article class='slide slide-list'>
-  <h3>JavaScript Assignment Overview</h3>
+  <h2>JavaScript Assignment Overview</h2>
   <p>In this first part, we'll be creating a shopping cart checkout form.</p> 
-  <p>In order to do this, we will need to use <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong>, <strong>arrays</strong> and <strong>loops</strong>.</p>
-  <p>See the <a href="#">finished product</a>.</p> 
+  <p>In order to do this, we will need to learn how to use <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong>, <strong>arrays</strong> and <strong>loops</strong>.</p>
+  <p>See the <a href="exercises/shopping_cart_final.html">finished product</a>.</p> 
 </article>
 
 <!-- new slide -->
 <article class='slide slide-list'>
   <h2>Variables</h2>
   <ul>
-  	<li>Variables are used to store values.</li>
-	<li>Declare a variable using the keyword <strong>var</strong> to tell the computer that it exists.</li>
-	<li>Assign values to variables using the equals (=) sign</li>
+  	<li>Variables are used to store values. Declaring a variable tells the computer that it exists.</li>
+	<li>Declare a variable using the keyword <strong>var</strong>.</li>	
 	<li>Variables can be:
 		<ul>
 			<li>numbers (integers &amp; decimals)</li>
 			<li>strings (letters, words &amp; sentences)</li>
 			<li>Booleans (true/false)</li>
 		</ul>			
-	</li>	
+	</li>
+	<li>Assign values to variables using the equals (=) sign</li>	
   </ul>	
 
 <pre>
-var <span class="var">someIntegerNumber</span> = 10;
-var <span class="var">someDecimalNumber</span> = 10.5;
+<span class="var">var</span> someIntegerNumber = <span class="value">10</span>;
+<span class="var">var</span> someDecimalNumber = <span class="value">10.5</span>;
 </pre>
 <pre>
-var <span class="var">someSimpleString</span> = "hello";
-var <span class="var">someLongerString</span> = "Hello, good day to you!";
+<span class="var">var</span> someSimpleString = <span class="value">"hello"</span>;
+<span class="var">var</span> someLongerString = <span class="value">"Hello, good day to you!"</span>;
+<span class="var">var</span> numberString = <span class="value">"10"</span>;
 </pre>
 <pre>
-var <span class="var">isSaturday</span> = false;
-var <span class="var">isSunday</span> = true;
+<span class="var">var</span> isSaturday = <span class="value">false</span>;
+<span class="var">var</span> isSunday = <span class="value">true</span>;
 </pre>
 </article>
 
@@ -169,11 +170,19 @@ var <span class="var">isSunday</span> = true;
   	<h3>What else should I know about variables?</h3>
   	<ul>
 		<li>Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).</li>
-		<li>Variables cannot contain spaces. Use a convention called "camel case" in which every new word is capitalized.<br />
-		Why is it called camel case? Because it looks likeCamelHumps.</li>
+		<li>Variables cannot contain spaces. Use a convention called "camel case" in which every new word is capitalized.
+			<ul>
+				<li>Why is it called camel case? Because it looks <strong>likeCamelHumps</strong>.</li>
+				<li>JavaScript is case sensitive so variable names are also case sensitive.<br />
+					<strong>likecamelhumps</strong> is not the same as <strong>likeCamelHumps</strong>.
+				</li>
+			</ul>
+		</li>
+		<li>Another convention is using underscores to <strong>spread_out_words</strong> which is common in other programming languages (like PHP).<br />
+			Choose one method and be consistent for the entire project or take cues from the tech lead when working on a team. </li>
 		<li>When naming a variable, it's best to give it a descriptive name.</li>
-		<pre>var <span class="var">firstName</span> = "This is a descriptive variable name";</pre>
-		<pre>var <span class="var">fn</span> = "This is not a descriptive variable name";</pre>
+		<pre><span class="var">var</span> firstName = <span class="value">"This is a descriptive variable name"</span>;</pre>
+		<pre><span class="var">var</span> fn = <span class="value">"This is not a descriptive variable name"</span>;</pre>
 	</ul>
 </article>
 
@@ -183,14 +192,14 @@ var <span class="var">isSunday</span> = true;
   	<h2>Comments</h2>
 	<p>Sometimes you want to write notes to yourself (and others) to organize your blocks of code or leave explanations but you want the browser to ignore it. Use comments!</p>
 <pre>
-// This is how you leave a single line comment.
-// You can write many single line comments.
+<span class="comments">// This is how you leave a single line comment.
+// You can write many single line comments.</span>
 </pre>
 	<p>Instead of using several single line comments, you can also use multi-line comments!</p>
 <pre>
-/* This is how you leave
+<span class="comments">/* This is how you leave
 multi-line comments for when you
-want to write a longer message */
+want to write a longer message */</span>
 </pre>
 	<p>Multi-line comments are also great for when you want to "hide" large blocks of code so you can try something new out without erasing your old code.</p>
 </article>
@@ -199,7 +208,7 @@ want to write a longer message */
 <!-- new slide -->
 <article class='slide slide-list'>
 	<h2>JavaScript Arithmetic Operators</h2>
-	<p>You can manipulate variables with operations such as addition or subtraction.</p>
+	<p>You can manipulate variables with operations such as addition (+) or subtraction (-).</p>
 
 <textarea class='coder-editor'>
 <script>
@@ -209,6 +218,7 @@ want to write a longer message */
   
   var shoppingTotal = 	
   document.write(shoppingTotal);
+  document.write("<br />")
 
   //var withDiscountTotal =
   //document.write(withDiscountTotal);
@@ -219,17 +229,22 @@ want to write a longer message */
 <!-- new slide -->
 <article class='slide slide-list'>
 	<h2>JavaScript Arithmetic Operators (cont.)</h2>
-	<p>Using <em>shoppingTotal</em>, try manipulating the variable using addition (+) and multiplication operations (*).</p>  
-	<p>How would you find the total of 1 cupcake and 2 pairs of shoes? Output the total using <strong>document.write();</strong></p>
-
+	<p>Just like the algebra we learned in school, we can add (+), subtract (-), multiply (*) and divide (/) variable values.</p>
+	<p>Using the <strong>shoppingTotal</strong> variable, how would you find the total of 1 cake and 2 pairs of shoes?<br /> 
+	Output the total using <strong>document.write()</strong>.</p>
+	
+	<p>Wait! There's a sale going on! Buy one pair of shoes and get the second pair for 50% off.<br />  
+	How can we calculate the total of 2 pairs of shoes including the 50% sale discount?</p>
 <textarea class='coder-editor'>
 <script>
   var cupcakePrice = 20;
   var shoePrice = 60;
 
-  /* Calculate the total of 1 cake 
-  and 2 pairs of shoes here */
   var shoppingTotal =
+  document.write();
+  
+  //var shoeSaleTotal =
+  //document.write();
 </script>
 </textarea>
 </article>
@@ -237,11 +252,65 @@ want to write a longer message */
 
 <!-- new slide -->
 <article class='slide slide-list'>
+	<h2>JavaScript Arithmetic Operators (cont.)</h2>
+	<p>JavaScript can also increase or decrease values up or down by 1 using the increment (++) or decrement (--) operators.  This will come in handy when we discuss <strong>Loops</strong> later on.</p>
+<textarea class='coder-editor'>
+<script>
+  var plusIncrement = 0;
+  plusIncrement++;
+  alert(plusIncrement); 
+
+  var minusIncrement = 4;
+  minusIncrement--;
+  alert(minusIncrement);
+</script>
+</textarea>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Who loves LadiesLearningCode? I do!</h2>
+	<p>Don't worry about the function syntax or the DOM stuff right now. We'll get a little more into that later.</p>
+<textarea class='coder-editor'>
+<script>
+  var loves=0;
+  function moreLove(){
+     loves++;	
+     document.getElementById('update').innerHTML = loves;
+  }
+</script>
+<style>
+  #loveLLC button, #loveLLC #update {
+	float: left;
+	font-size: 13px;
+	line-height: 20px;
+  }
+  #loveLLC button img {
+	float: left;
+	padding-right: 5px;
+  }
+  #loveLLC #update {
+	border: 1px solid #ccc;
+	margin: 2px 0 0 4px;
+	padding: 2px 4px 1px;
+  }
+</style>
+<div id="loveLLC">
+  <button onclick="moreLove();"><img src="exercises/assets/llc-logo.png" /> Love!</button>
+  <p id="update">0</p>
+</div>
+</textarea>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
 	<h2>Concatenation</h2>
-	<p>Now that we’ve calculated the totals, how do we format the output to include a dollar sign?<br />
-	We can use a technique called concatenation using the + operator to combine strings.</p>  
+	<p>Now that we've calculated numerical totals, how do we format the output to include non-numerical values like a dollar sign?<br />
+	We can use a technique called concatenation using the plus (+) operator to combine strings.</p>  
 	<p><strong>Note:</strong> this is the same symbol used for the mathematical addition operator.<br />  
-	If you use the + operator with numerical values, it will add the values.  Otherwise it will combine the outputs.</p>
+	If you use the + operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
 
 <textarea class='coder-editor'>
 <script>
@@ -253,6 +322,7 @@ want to write a longer message */
 
   //Concatenation with the + operator
   //document.write("$" + shoppingTotal);
+  //document.write("<br />");
   //document.write("Your total is: " + "$" + shoppingTotal);
 </script>
 </textarea>
@@ -294,8 +364,7 @@ if (condition) {
 <!-- new slide -->
 <article class='slide slide-list'>
 	<h2>Conditional Statements (cont.)</h2>
-	<p>Let’s look at some examples.  Uncomment the code to be executed for each condition and see if the result is what you expected.<br /> 
-	Try changing the variable values too!</p>  
+	<p>Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!</p>  
 
 <textarea class='coder-editor'>
 <script>
@@ -321,6 +390,21 @@ if ( salePrice > regularPrice ) {
 } else {
   //console.log("Buy two in different colours!");
 }
+</script>
+</textarea>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Rewind: JavaScript Comparison and<br/> Logical Operators</h2>
+	<p>Let's go back a step and take a look at the different operators that can be used in conditional statements.<br />
+	Let's define two variables and see what the outputs will be using the various operators below.</p>
+
+<textarea class='coder-editor'>
+<script>
+  var two = 2;   
+  var ten = 10;
 </script>
 </textarea>
 </article>
