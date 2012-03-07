@@ -1,6 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Shoes n' Cupcakes</title>
+	<link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="shopping-cart.css">
+	
 	<script type="text/javascript">
 		/**
 		Calculates totals for selected shoes & cupcake items
@@ -58,7 +62,7 @@
 		function calculateTotal(){
 		    var finalTotal = itemTotal() + getShippingCost();
 		    //display the result with 2 decimal points
-			document.getElementById('totalPrice').value = finalTotal.toFixed(2);
+			document.getElementById('totalPrice').value = ("$" + finalTotal.toFixed(2));
 		}
 		
 		
@@ -90,69 +94,95 @@
 </head>
 
 <body>
-	<form action="" id="shoppingForm" name="shoppingForm" onsubmit="return false;">
-		<fieldset>
-			<legend>Shoes</legend>			
-			<input id="product0" type="checkbox" name="product" value="9.99" onclick="calculateTotal()" >
-			<label for="product0">shoe 1 ($9.99)</label>
-			<br />			
-			<input id="product1" type="checkbox" name="product" value="20" onclick="calculateTotal()">
-			<label for="product1">shoe 2 ($20)</label>
-			<br />			
-			<input id="product2" type="checkbox" name="product" value="30" onclick="calculateTotal()">
-			<label for="product2">shoe 3 ($30)</label>
-			<br />			
-			<input id="product3" type="checkbox" name="product" value="40" onclick="calculateTotal()">
-			<label for="product3">shoe 4 ($40)</label>
-		</fieldset>	
+	<div id="container">
+		<header>
+			<h1>Shoes n' Cupcakes</h1>
+			<h2>Sweet treats for your mouth or your feet!</h2>
+		</header>
+		<form action="" id="shoppingForm" name="shoppingForm" onsubmit="return false;">
+			<div id="productListings">
+				<fieldset>
+					<div class="item">
+						<img src="assets/booties.jpg" alt="Booties" /><br />			
+						<input id="product0" type="checkbox" name="product" value="99.99" onclick="calculateTotal()" >
+						<label for="product0">$99.99</label>
+					</div>				
+					<div class="item">
+						<img src="assets/flats.jpg" alt="Flats" /><br />			
+						<input id="product1" type="checkbox" name="product" value="39.00" onclick="calculateTotal()">
+						<label for="product1">$39.00</label>
+					</div>
+					<div class="item">
+						<img src="assets/pumps.jpg" alt="Pumps" /><br />				
+						<input id="product2" type="checkbox" name="product" value="79.99" onclick="calculateTotal()">
+						<label for="product2">$79.99</label>
+					</div>
+					<div class="item">
+						<img src="assets/sandals.jpg"  alt="Sandals" /><br />				
+						<input id="product3" type="checkbox" name="product" value="59.99" onclick="calculateTotal()">
+						<label for="product3">$59.99</label>
+					</div>
+				</fieldset>	
 		
-		<fieldset>
-			<legend>Cupcakes</legend>			
-			<input id="product4" type="checkbox" name="product" value="2.50" onclick="calculateTotal()" >
-			<label for="product4">cupcake single ($2.50)</label>
-			<br />			
-			<input id="product5" type="checkbox" name="product" value="13" onclick="calculateTotal()">
-			<label for="product5">cupcake 1/2 dozen ($13)</label>
-			<br />			
-			<input id="product6" type="checkbox" name="product" value="25" onclick="calculateTotal()">
-			<label for="product6">cupcakes dozen ($25)</label>
-			<br />			
-			<input id="product7" type="checkbox" name="product" value="15" onclick="calculateTotal()">
-			<label for="product7">babycakes dozen ($15)</label>
-		</fieldset>		
+				<fieldset>
+					<div class="item">			
+						<img src="assets/cupcake.jpg" width="280" height="180" alt="Cupcake" /><br />
+						<input id="product4" type="checkbox" name="product" value="2.50" onclick="calculateTotal()" >
+						<label for="product4">Cupcake ($2.50)</label>
+					</div>
+					<div class="item">		
+						<img src="assets/cupcakes-dozen.jpg" width="280" height="180" alt="Cupcakes Dozen" /><br />	
+						<input id="product5" type="checkbox" name="product" value="25" onclick="calculateTotal()">
+						<label for="product5">Cupcakes - 1 dozen ($25)</label>
+					</div>
+					<div class="item">	
+						<img src="assets/cupcakes-bouquet.jpg" width="280" height="180" alt="Cupcakes Bouquet" /><br />		
+						<input id="product6" type="checkbox" name="product" value="30" onclick="calculateTotal()">
+						<label for="product6">Cupcake bouquet ($30)</label>
+					</div>
+					<div class="item">	
+						<img src="assets/cupcakes-baby.jpg" width="280" height="180" alt="Cupcake" /><br />		
+						<input id="product7" type="checkbox" name="product" value="15" onclick="calculateTotal()">
+						<label for="product7">Babycakes - 1 dozen ($15)</label>
+					</div>
+				</fieldset>
+			</div>		
 		
-		<br />
-		<fieldset>
-			<legend>Shipping:</legend>
-			<input type="radio" name="selectedShipping" value="ontario" onclick="calculateTotal()" />
-			<label class="radiolabel">Within Ontario ($5)</label><br/>
+		
+			<div id="additionalInfo">
+				<fieldset>
+					<h3>Shipping:</h3>
+					<input type="radio" name="selectedShipping" value="ontario" onclick="calculateTotal()" />
+					<label class="radiolabel">Within Ontario ($5.00)</label><br/>
 			
-			<input type="radio" name="selectedShipping" value="canada" onclick="calculateTotal()" />
-			<label class="radiolabel">Within Canada ($10)</label><br/>
+					<input type="radio" name="selectedShipping" value="canada" onclick="calculateTotal()" />
+					<label class="radiolabel">Within Canada ($10.00)</label><br/>
 			
-        	<input type="radio" name="selectedShipping" value="international" onclick="calculateTotal()" />
-			<label class="radiolabel">Outside of Canada ($25)</label><br/>
-		</fieldset>
+		        	<input type="radio" name="selectedShipping" value="international" onclick="calculateTotal()" />
+					<label class="radiolabel">Outside of Canada ($25.00)</label><br/>
+				</fieldset>
 		
-		<br />
-		<label for="totalPrice">Total:</label>
-		<input type="text" id="totalPrice" value="">
+				<br />
+				<label for="totalPrice"><strong>Total</strong></label>
+				<input type="text" id="totalPrice" value="">
 		
-		<br />
-		<fieldset>
-            <legend>Contact Information</legend>
-            <label for="name">Name</label>
-            <input id="name" type="text" name="name" />
-            <br/>
-            <label for="address">Address</label>
-            <input id="address" type="text" name="address" />
-            <br/>
-            <label for="email">Email</label>
-            <input id="email" type="text" name="email"/>
-            <br/>
-        </fieldset>
+				<br /><br />
+				<fieldset id="contactInfo">
+		            <h3>Contact Information</h3>
+		            <label for="name">Name</label>
+		            <input id="name" type="text" name="name" />
+		            <br/>
+		            <label for="address">Address</label>
+		            <input id="address" type="text" name="address" />
+		            <br/>
+		            <label for="email">Email</label>
+		            <input id="email" type="text" name="email"/>
+		            <br/>
+		        </fieldset>
 
-		<button type="button" onclick="validateForm()">Submit</button>
-	</form>
+				<button type="button" onclick="validateForm()">Submit</button>
+			</div>
+		</form>
+	</div><!-- close #container -->
 </body>
 </html>

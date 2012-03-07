@@ -1,0 +1,79 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, serif;
+}
+header {
+	padding-left: 95px;
+}
+h1 {
+	color: #B1009A;
+	font: 70px 'Allura', cursive;
+	margin: 5px 0;
+	float: left;
+}
+h2 {
+	font: normal 18px Georgia, serif;
+	padding: 30px 0 0 20px;
+	float: left;
+}
+#container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+
+#shoppingForm {
+	width: 885px;
+	margin: 0 auto;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+legend {
+	padding-top: 20px;
+}
+
+#productListings {
+	float: left;
+	width: 605px;
+}
+	#productListings .item {
+		float: left;
+		padding: 10px;
+	}
+	#productListings fieldset {
+		border: 1px solid #B1009A;
+		margin-bottom: 10px;
+	}
+
+#additionalInfo {
+	float: right;
+	border: 1px solid #CCC;
+	font-size: 15px;
+	padding: 15px 20px;
+	width: 220px;
+} 
+	#additionalInfo fieldset {
+		border: none;
+	}
+	#additionalInfo h3 {
+		margin: 0 0 5px;
+		font: 30px 'Allura',cursive;
+	}
+	#additionalInfo #contactInfo label {
+		float: left;
+		margin-bottom: 4px;
+		padding-top: 3px;
+	}
+	#additionalInfo #contactInfo input {
+		float: right;
+		margin-bottom: 5px;
+	}
+
+button {
+	float: right;
+	margin-top: 5px;
+}
+
