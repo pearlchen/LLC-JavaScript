@@ -131,7 +131,8 @@
   <h2>JavaScript Assignment Overview</h2>
   <p>In this first part, we'll be creating a shopping cart checkout form.</p> 
   <p>In order to do this, we will need to learn how to use <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong>, <strong>arrays</strong> and <strong>loops</strong>.</p>
-  <p>See the <a href="exercises/shopping_cart_final.html">finished product</a>.</p> 
+  <p>This will be our <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_final.html">end goal</a>.</p> 
+  <p>But before we get there, we'll work on getting a <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart.html">working prototype first</a>.</p>
 </article>
 
 <!-- new slide -->
@@ -208,7 +209,10 @@ want to write a longer message */</span>
 <!-- new slide -->
 <article class='slide slide-list'>
 	<h2>JavaScript Arithmetic Operators</h2>
-	<p>You can manipulate variables with operations such as addition (+) or subtraction (-).</p>
+	<p>You can manipulate variables with operations such as addition (+) or subtraction (-).<br />
+		Use these operators to find the total of 1 cupcake and 1 pair of shoes.<br /> 
+		Then, what will the total be once the discount is applied?
+	</p>
 
 <textarea class='coder-editor'>
 <script>
@@ -242,7 +246,8 @@ want to write a longer message */</span>
 
   var shoppingTotal =
   document.write();
-  
+  document.write("<br />");
+
   //var shoeSaleTotal =
   //document.write();
 </script>
@@ -282,18 +287,18 @@ want to write a longer message */</span>
 </script>
 <style>
   #loveLLC button, #loveLLC #update {
-	float: left;
-	font-size: 13px;
-	line-height: 20px;
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
   }
   #loveLLC button img {
-	float: left;
-	padding-right: 5px;
+    float: left;
+    padding-right: 5px;
   }
   #loveLLC #update {
-	border: 1px solid #ccc;
-	margin: 2px 0 0 4px;
-	padding: 2px 4px 1px;
+    border: 1px solid #ccc;
+    margin: 2px 0 0 4px;
+    padding: 2px 4px 1px;
   }
 </style>
 <div id="loveLLC">
@@ -398,16 +403,199 @@ if ( salePrice > regularPrice ) {
 <!-- new slide -->
 <article class='slide slide-list'>
 	<h2>Rewind: JavaScript Comparison and<br/> Logical Operators</h2>
-	<p>Let's go back a step and take a look at the different operators that can be used in conditional statements.<br />
-	Let's define two variables and see what the outputs will be using the various operators below.</p>
+	<p>Let's take a step back and look at the different operators that can be used in conditional statements.<br />
+	Using these two variables, <strong>var two = 2</strong> and <strong>var ten = 10</strong>, the examples below show how the statements would return true using the various operators.</p>
+
+	<table class="comparison-table" width="470" style="float:left; margin-right:20px;">
+		<tr>
+			<th colspan="3" align="left">Comparison operators</th>			
+		</tr>
+		<tr>
+			<td width="15%">==</td>
+			<td width="50%">is equal to </td>
+			<td width="35%">ten == two * 5</td>
+		</tr>
+		<tr>
+			<td width="15%">===</td>
+			<td width="50%">
+				is exactly equal to<br />
+				(value and type)
+			</td>
+			<td width="35%">
+				ten === 10 <br />
+				ten === "10" (false)
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">!=</td>
+			<td width="50%">is not equal to</td>
+			<td width="35%">ten !== two</td>
+		</tr>
+		<tr>
+			<td width="15%">></td>
+			<td width="50%">greater than</td>
+			<td width="35%">ten > two</td>
+		</tr>
+		<tr>
+			<td width="15%">< </td>
+			<td width="50%">less than</td>
+			<td width="35%">two < ten</td>
+		</tr>
+		<tr>
+			<td width="15%">>= </td>
+			<td width="50%">greater than or equal to</td>
+			<td width="35%">
+				ten >= two * 5<br />
+				ten >= two * 5 + 1
+			</td>
+		</tr>
+		<tr>
+			<td width="15%"><= </td>
+			<td width="50%">less than for equal to</td>
+			<td width="35%">
+				two <= ten<br />
+				two <= 2
+			</td>
+		</tr>
+	</table>
+	
+	<table class="comparison-table" width="470" style="float:left;">
+		<tr>
+			<th colspan="3" align="left">Logical operators</th>			
+		</tr>
+		<tr>
+			<td width="15%">&amp;&amp;</td>
+			<td width="20%">and</td>
+			<td width="65%">(ten < 11 &amp;&amp; ten > 9)</td>
+		</tr>
+		<tr>
+			<td width="15%">||</td>
+			<td width="20%">or</td>
+			<td width="65%">(ten == 10 || two == 2)</td>
+		</tr>
+		<tr>
+			<td width="15%">!</td>
+			<td width="20%">not</td>
+			<td width="65%">!(ten == two)</td>
+		</tr>
+	</table>
+</article>	 
+ 
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Variables, Operators, Concatenation and Conditionals</h2>
+	<p>Now that we know what variables, operators and conditionals are, let's put them all into action using dynamic content.</p>  
 
 <textarea class='coder-editor'>
 <script>
-  var two = 2;   
-  var ten = 10;
+  prompt("How much are those shoes?");
+  //var shoePrice = prompt("How much are those shoes?");
+  if ( shoePrice <= 100 ) {
+	document.write("$" + shoePrice + " isn't bad. Buy them!");
+  } else {
+	document.write("$" + shoePrice + "? Good Lawd! That's a lot of money!");
+  }
 </script>
 </textarea>
 </article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Functions &amp; Methods</h2>
+	<p>The browser executes the JavaScript as soon as the page loads.  But sometimes you need to control when it executes. This is where <strong>functions</strong> come into play.</p>
+	<ul><strong>Functions: </strong>
+		<li>group together related lines of code and stores them into descriptive names.</li>
+		<li>can be reused just by calling the function name</li>
+		<li>created by using <span class="var">function</span> keyword</li>
+		<li>use <strong>parameters</strong> to vary the output using different inputs</li>
+		<li><em>define</em> the function first but it will not be executed until you <em>call</em> the function</li>
+		<li>Functions and methods are pretty much the same thing in JavaScript except that methods are associated with an object and functions are not.  Basically, they make things happen. (We will be talking about objects in greater detail later on.) </li>
+	</ul>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Defining and Calling a Function</h2>
+	<p>There are different ways to define a function.  Below is the most common way of writing a function. (We'll talk about another way later!)</p>  
+Function syntax:
+<pre>
+function nameOfFunction() {
+  //Instructions here
+}	
+</pre>	
+<textarea class='coder-editor'>
+<script>
+  //define the function
+  function sayMyName() {
+    alert("Christina");
+  }
+
+  //call the function
+  sayMyName();
+</script>
+
+<!-- call function from a button click -->
+<input type="button" onclick="sayMyName()" value="Say my name!">
+</textarea>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Functions and Parameters</h2>
+	<p>Using <strong>parameters</strong> makes functions more flexible. Functions can be used with one parameter, more than one parameter or none at all.  When using a function without parameters, you can't change the output by changing the parameters in the function call.</p>  
+	
+<textarea class='coder-editor'>
+<script>
+  // declaring a function without a parameter
+  function sayMyName() {
+    document.write("Christina" + "<br />");
+  }
+  sayMyName();
+
+  // declaring a function with one parameter
+  function sayInstructorNames(name){
+    document.write(name);
+    document.write("<br />");
+  }
+  //sayInstructorNames("Christina");
+  //sayInstructorNames("Pearl");
+
+
+  // declaring a function with two parameters
+  function sayMyFullName(firstname, lastname) {
+    document.write(firstname + " " + lastname);
+  }
+  //sayMyFullName("Christina", "Truong");
+</script>
+</textarea>
+</article>
+
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Parameters vs Local Variables vs <br />Global Variables</h2>
+	<p>Now let's try getting the function (without a parameter) to alert your name using a variable.</p>  
+	
+<textarea class='coder-editor'>
+<script>
+var name = "Christina";
+// declare the function
+function sayMyName() {
+	alert(name);	
+}
+
+//call the function 
+sayMyName();
+</script>
+</textarea>
+</article>
+
 
 
 

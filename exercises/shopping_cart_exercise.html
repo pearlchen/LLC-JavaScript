@@ -5,23 +5,21 @@
 	<link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="shopping-cart.css">
 	<script type="text/javascript">
-		var productArray = new Array();
-		productArray[0]=99.99;
-		productArray[1]=39;
-		productArray[2]=79.99;
-		productArray[3]=59.99;
-		productArray[4]=2.50;
-		productArray[5]=25;
-		productArray[6]=30;
-		productArray[7]=15;
+		// 1. Declare new array
+		var productArray = 
+		/* 2. List the values using an array index
+		Use the values listed in the label tag provided in the HTML label */
+		productArray[] =
 		
 		//Calculates totals for selected items
 		function itemTotal() {
-			var totalPrice = 0;
+			// 3. Start the total at 0
+			var totalPrice = 
 			//gets the value of the checked form items
 			var selectedProducts = document.shoppingForm.elements["product"];
 			
-	  		for (i=0; i < productArray.length; i++) {
+			// 4. Complete the 'for loop' to loop through the total number of productArray
+	  		for () {
 				//checks for selected checkboxes	
 	    		if (selectedProducts[i].checked) { 
 					//Updates the totalPrice to reflect the total of selected items
@@ -36,8 +34,9 @@
 		function calculateTotal(){
 			/* the value of totalPrice returned in the itemTotal() function is now 
 			being declared as the value of finalTotal */
-			var finalTotal = itemTotal();s
-			document.getElementById('totalPrice').value = ("$" + finalTotal.toFixed(2));
+			var finalTotal = itemTotal();
+			//5. Update the finalTotal to add a dollar sign and round the total to two decimals
+			document.getElementById('totalPrice').value = (finalTotal);
 		}		
 	</script>
 </head>

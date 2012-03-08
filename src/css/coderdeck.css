@@ -197,3 +197,10 @@ html, body {
   background: #ddf; 
 }
 
+
+table.comparison-table tr {
+	border: 1px solid #000;
+}
+table.comparison-table tr td, table.comparison-table tr th {
+	padding: 5px 10px;
+}
