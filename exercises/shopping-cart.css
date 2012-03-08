@@ -62,14 +62,17 @@ legend {
 		margin: 0 0 5px;
 		font: 30px 'Allura',cursive;
 	}
-	#additionalInfo #contactInfo label {
+	#additionalInfo #contactInfo label, #additionalInfo #finalTotal label {
 		float: left;
 		margin-bottom: 4px;
 		padding-top: 3px;
 	}
-	#additionalInfo #contactInfo input {
+	#additionalInfo #contactInfo input, #additionalInfo #finalTotal input {
 		float: right;
 		margin-bottom: 5px;
+	}
+	#additionalInfo #contactInfo {
+		padding-top: 20px;
 	}
 
 button {
