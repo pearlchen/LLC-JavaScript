@@ -57,65 +57,31 @@
           </style> 
           <section class="middle"> 
             <h1>Photo Slider Assignment</h1>
-            <p>Show off 5 things you like!</p>
             <p>Press <span id="left-init-key" class="key">&rarr;</span> key to advance.</p> 
           </section> 
         </div> 
         
         <div class="slide" id="assignment-1"> 
           <style>
-          </style> 
-          <header><h1>JavaScript Assignment Overview</h1></header> 
-          <section> 
-			<p>In this final part, we'll be creating a photo slider with images of 5 things you like.</p>
-            <p>See the <a href="examples/pearl.c/photos.html" target="_blank">finished product</a>.</p>
-          </section> 
-        </div> 
-
-        <div class="slide" id="assignment-2"> 
-          <style>
 		  	#assignment-2 #hint { display: none; }
           </style> 
-          <header><h1>Create a web page with these 5 images.</h1></header> 
+          <header><h1>Overview</h1></header> 
           <section>
-           	<ol start="3">
-           		<li>Create a brand new webpage named <b>photos.html</b>.</li>
-                <li>Embed all 5 images using the &lt;img&gt; tag.</li>
-                <li>Wrap all of the <code>img</code> tags in <code>div</code> tags.</li>
-                <li>Give all of your <code>div</code> tags an unique id name. e.g. image1, image2, etc</li>
-            </ol>
-            <p>It should look like <a href="examples/pearl.c/photos-draft1.html" target="_blank" class="try">this</a> when you're done.</p>
-<pre id="hint">&lt;div id="**********"&gt;
-  &lt;img src="**********" width="500" height="375" alt="First thing I like" /&gt;
-&lt;/div&gt;</pre>
-			<p class="showHint" onclick="javascript:showHint('assignment-2'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
-            <p class="small">If you're really stuck, or when you want to confirm your work, remember that you can "view source" on a web page.</p>
+            <p>In this final part, we'll be creating a photo slider with images of 5 things you like.</p>
+            <p>See the <a href="examples/photos_final.html" target="_blank">finished product</a>.</p>
+            <p>An HTML web page (photos.html) with 5 images (1.jpg to 5.jpg) and CSS (photos.css) has been supplied to you already to get you started.</p>
+            <<p>Notice that there's already stub JavaScript code for you at the bottom of the page.</p>
           </section> 
         </div>
-        
-        <div class="slide" id="assignment-3"> 
-          <style>
-		  	#assignment-3 #hint { display: none; }
-          </style> 
-          <header><h1>Create a JavaScript file</h1></header> 
-          <section>
-           	<ol start="7">
-           		<li>Create a JavaScript file named <b>scripts.js</b> and use the <code>script</code> tag to link to it from your photos.html file from step 3.</li>
-            </ol>
-<pre id="hint">&lt;script type="text/javascript" src="**********"&gt;&lt;/script&gt;</pre>
-			<p class="showHint" onclick="javascript:showHint('assignment-3'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
-          </section> 
-        </div>
-
         
         <div class="slide" id="assignment-4"> 
           <style>
 		  	#assignment-4 #hint { display: none; }
           </style> 
-          <header><h1>Create an array</h1></header> 
+          <header><h1>Create an array of image divs</h1></header> 
           <section>
            	<ol start="8">
-                <li>Within scripts.js, create an array named "<code>imageDivs</code>" and populate the array with the id names of all your div tags from step 6.</li>
+                <li>Within the script tag, create an array named "<code>imageDivs</code>" and populate the array with the id names of all your div tags from step 6.</li>
             </ol>
 <pre id="hint">var imageDivs = [ "image1", ********** ];</pre>
 			<p class="showHint" onclick="javascript:showHint('assignment-4'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
@@ -344,7 +310,7 @@ function showNext() {
             </ol>
           </section> 
         </div>
-        
+
          <div class="slide" id="assignment-bonus"> 
           <style>
 
