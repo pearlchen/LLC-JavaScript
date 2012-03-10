@@ -6,6 +6,9 @@ html, body {
   background: url(../../assets/ladieslearningcode-125x125.gif) 10px -10px no-repeat;
   /*border-top: 7px #b1009a solid;*/
 }
+.deck-container #presentation {
+	
+}
 .deck-container {
   font-family: 'Istok Web', Arial, sans-serif;
   font-weight: 400;
@@ -13,24 +16,34 @@ html, body {
   padding: 0; /* overriding deck.coder.css */
   padding-left: 145px; 
 }
+.deck-container h1, .deck-container h2, .deck-container h3 {
+	color: #B1009A;
+  	font-family: 'Podkova', Arial, sans-serif;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.deck-container strong {
+	color: #2E2E2E;
+}
+
+
 .deck-container .slide {
   background: #fff;
-  width: 1000px;
+  width: 940px;
   height: 100%;
-  min-height: 640px;
+  min-height: 600px;
   border: 3px solid #b1009a;
   border-radius: 10px;
   -moz-border-radius: 10px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 50px;
 }
+
 .deck-container .slide-title {
   font-size: 1em;
   text-align: center; 
 }
 .deck-container .slide-title .workshop_title {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin: 60px 0;
 }
 .deck-container .slide-title .workshop_title .download_link {
   font-size: 1.3em; 
@@ -45,6 +58,7 @@ html, body {
   color: #b1009a;
   text-decoration: none;
 }
+
 .deck-container .instructor_holder {
   width: 560px;
   margin: 0px auto;
@@ -58,45 +72,51 @@ html, body {
   width: 50%;
   float: left;
 }
+
 .deck-container .slide-title h1 {
-  color: #B1009A;
-  font-family: 'Podkova',Arial;
   font-size: 4em;
   font-weight: 400;
   letter-spacing: -0.04em;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   text-transform: none;
   position: static;
   top: 0%;
 }
+
 .deck-container .slide-list h2 {
-  font-size: 3em;
+  font-size: 3.5em;
   padding-bottom: .07em;
   margin-bottom: .1em;
   margin-top: 0;
 }
 .deck-container .slide-list h3 {
-  font-size: 1.4em;
-  color: #B1009A;
+  font-size: 2em;
   margin-bottom: .1em; 
+}
+.deck-container .slide-list ul, .deck-container .slide-list p {
+  font-size: 1.8em;	
 }
 .deck-container .slide-list ul {
     margin-left: 1em;
     list-style-type: square;
+ 	margin-bottom: 0.6em;
 }
 .deck-container .slide-list li {
   padding-left: .5em;
+  line-height: 1em;
+}
+.deck-container .slide-list li ul {
+	margin-bottom: 0;
+}
+.deck-container .slide-list li li {
+  font-size: 0.5em;
 }
 .deck-container .slide-list p {
 }
+
 .deck-container .slide-subhead h1 {
-  font-family: 'Podkova', Arial;
   font-size: 4em;
-  color: #b1009a;
   margin: 0px;
-  padding-top: 2em;
-  padding-bottom: 0.5em;
-  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  padding: 2em 0 0.5em 0;
   position: static;
   -webkit-transform: none;
   -moz-transform: none;
@@ -117,33 +137,27 @@ html, body {
   font-size: 2em;
   text-align: center;
 }
+
 .deck-container h1 {
-  font-family: 'Podkova', Arial;
   font-weight: 700;
   letter-spacing: -0.04em;
   font-size: 4em;
   line-height: .9em;
   text-transform: none;
   padding-top: 7em;
-  color: #b1009a; 
 }
 .deck-container h2 {
-  font-family: 'Podkova', Arial;
   font-weight: 400;
-  color: #b1009a;
   border: none;
-  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
   padding-top: 0;
 }
 .deck-container h3 {
-  font-family: 'Podkova', Arial;
   font-weight: 800;
-  color: #b1009a;
-  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
 }
 .deck-container .slide > pre {
   padding:10px;
   border-color: #ccc;
+  font-size: 1.2em;
 }
 .deck-container code {
   color: #888; 
@@ -197,7 +211,10 @@ html, body {
   background: #ddf; 
 }
 
-
+/* Logical Operators table */
+table.comparison-table {
+	width: 460px;
+}
 table.comparison-table tr {
 	border: 1px solid #000;
 }

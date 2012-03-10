@@ -128,81 +128,155 @@
 
 <!-- new slide -->
 <article class='slide slide-list'>
-  <h2>JavaScript Assignment Overview</h2>
+  <h2>JavaScript Exercise Overview</h2>
+  <br /><br />
   <p>In this first part, we'll be creating a shopping cart checkout form.</p> 
-  <p>In order to do this, we will need to learn how to use <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong>, <strong>arrays</strong> and <strong>loops</strong>.</p>
+  <br />
+  <p>In order to do this, we will need to learn how to use <strong>VARIABLES</strong>, <strong>FUNCTIONS</strong>, <strong>OBJECTS</strong>, <strong>ARRAYS</strong> and <strong>LOOPS</strong>.</p>
+  <br />
   <p>This will be our <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_final.html">end goal</a>.</p> 
+  <br />
   <p>But before we get there, we'll work on getting a <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart.html">working prototype first</a>.</p>
 </article>
 
 <!-- new slide -->
 <article class='slide slide-list'>
   <h2>Variables</h2>
-  <ul>
-  	<li>Variables are used to store values. Declaring a variable tells the computer that it exists.</li>
-	<li>Declare a variable using the keyword <strong>var</strong>.</li>	
-	<li>Variables can be:
-		<ul>
-			<li>numbers (integers &amp; decimals)</li>
-			<li>strings (letters, words &amp; sentences)</li>
-			<li>Booleans (true/false)</li>
-		</ul>			
-	</li>
-	<li>Assign values to variables using the equals (=) sign</li>	
-  </ul>	
+  <br />
+  <p>Variables are used to store values.</p>  
+  <p><strong>Declaring</strong> a variable tells the computer that it exists. Otherwise,<br /> 
+	values will just disappear.</p>
+  <br />
+  <p><img src="http://placehold.it/550x150&text=box+images"></p>
+</article>
 
-<pre>
-<span class="var">var</span> someIntegerNumber = <span class="value">10</span>;
-<span class="var">var</span> someDecimalNumber = <span class="value">10.5</span>;
+<!-- new slide -->
+<article class='slide slide-list'>
+  <h2>Variables (cont'd)</h2>
+  <p>Variables are like the computer's short-term memory. In this example, the computer can't remember any one's name!</p>  
+
+<textarea class='coder-editor'>
+<script>
+  prompt("What's your name?");
+  document.write("Hello....?");
+</script>
+</textarea>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+  <h2>Variables (cont'd)</h2>
+  <p>Applied, it's a web checkout form that asks for your name, address, and email so it knows where to send your package.</p>  
+  <p><img src="http://placehold.it/550x150&text=contact+form"></p>
+</article>
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Variables How-to</h2>
+	<p>Declare variables with the keyword <strong>var</strong>.</p>
+<pre class='prettyprint'>
+var email
 </pre>
-<pre>
-<span class="var">var</span> someSimpleString = <span class="value">"hello"</span>;
-<span class="var">var</span> someLongerString = <span class="value">"Hello, good day to you!"</span>;
-<span class="var">var</span> numberString = <span class="value">"10"</span>;
+	<p>Assign a values to the variable using the equals (=) sign.<br /> 
+	End the <strong>statement</strong> with a semicolon (;).</p>
+<pre class='prettyprint'>
+var email = "hello@christinatruong.com";
 </pre>
-<pre>
-<span class="var">var</span> isSaturday = <span class="value">false</span>;
-<span class="var">var</span> isSunday = <span class="value">true</span>;
+	<p>Now the computer knows my email address!</p>
+	<p><strong>Statements</strong> are commands that tell the computer what to do. Ending the statement with a semicolon is like ending a sentence with a period. We are telling the computer that the statement is done.</p>
+</article>
+
+
+<!-- new slide -->
+<article class='slide slide-list'>
+	<h2>Various Variables</h2>
+	<p>Different types of variables hold different kinds of values.</p> 
+	<p>1. Numeric variable (integers &amp; decimals)</p>	
+<pre class='prettyprint'>
+var someIntegerNumber = 10;
+var someDecimalNumber = 10.5;
+</pre>
+	<p>2. String variable (letters, words &amp; sentences)</p>
+<pre class='prettyprint'>
+var singleWordString = "hello";
+var sentenceString = "Hello, good day to you!";
+var numberString = "10";
+</pre>
+<strong>Note:</strong> string values are always written inside double quotes(")
+<br /><br />
+	<p>3. Boolean variable (true/false)</p>
+<pre class='prettyprint'>
+var isSaturday = false;
+var isSunday = true;
 </pre>
 </article>
 
 <!-- new slide -->
 <article class='slide slide-list'>
-  	<h3>What else should I know about variables?</h3>
-  	<ul>
-		<li>Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).</li>
-		<li>Variables cannot contain spaces. Use a convention called "camel case" in which every new word is capitalized.
-			<ul>
-				<li>Why is it called camel case? Because it looks <strong>likeCamelHumps</strong>.</li>
-				<li>JavaScript is case sensitive so variable names are also case sensitive.<br />
-					<strong>likecamelhumps</strong> is not the same as <strong>likeCamelHumps</strong>.
-				</li>
-			</ul>
-		</li>
-		<li>Another convention is using underscores to <strong>spread_out_words</strong> which is common in other programming languages (like PHP).<br />
-			Choose one method and be consistent for the entire project or take cues from the tech lead when working on a team. </li>
-		<li>When naming a variable, it's best to give it a descriptive name.</li>
-		<pre><span class="var">var</span> firstName = <span class="value">"This is a descriptive variable name"</span>;</pre>
-		<pre><span class="var">var</span> fn = <span class="value">"This is not a descriptive variable name"</span>;</pre>
-	</ul>
+  	<h2>Variables: Tips &amp; Best Practices</h2>
+  	<p>Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).<p>
+<textarea class='coder-editor'>
+<script>
+  var 3hundred = 300;
+  document.write(3hundred);
+
+  var $300 = 300;
+  document.write($300);
+</script>
+</textarea>
 </article>
+
+<!-- new slide -->
+<article class='slide slide-list'>
+  	<h2>Variables: Tips &amp; Best Practices</h2>
+	<p>Variables cannot contain spaces. Use a convention called <strong>camel case</strong> in which every new word is capitalized. It's called <strong>camel case</strong> because it looks <strong>likeCamelHumps</strong></p>
+	<p>JavaScript is case sensitive so variable names are also case sensitive. These two variable names below are not the same.</p>
+<pre class='prettyprint'>
+var camelCaseVariable = "Hello";
+var camelcasevariable = "Goodbye";
+</pre>
+	<p>Another convention is using underscores to separate words. This is common in other programming languages (like PHP).</p>
+<pre class='prettyprint'>
+var spread_out_words = "Hello";
+</pre>
+<p>It is important to choose one method and be consistent throughout the entire project.</p>
+</article>
+</pre>
+
+<!-- new slide -->
+<article class='slide slide-list'>
+  	<h2>Variables: Tips &amp; Best Practices</h2>
+  	<p>When naming a variable, it's best to give it a descriptive name.</p> 
+	<p>It makes it easier to see at a glance, what kind of value that variable is going to hold.</p>  
+	<p>This is especially useful when sharing code with others who may not use the same kinds of abbreviations.</p>	
+<pre class='prettyprint'>
+var firstName = "Clear that first name will go here";
+var fn = "Not as obvious as firstName";
+var x = "Not clear at all.";
+</pre>
+</article>
+
 
 
 <!-- new slide -->
 <article class='slide slide-list'>
   	<h2>Comments</h2>
-	<p>Sometimes you want to write notes to yourself (and others) to organize your blocks of code or leave explanations but you want the browser to ignore it. Use comments!</p>
-<pre>
-<span class="comments">// This is how you leave a single line comment.
-// You can write many single line comments.</span>
+	<p>Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations but you want the browser to ignore it. Use comments!</p>
+<pre class='prettyprint'>
+// This is how you leave a single line comment.
+
+// You can write many single line comments.
+// Just make sure to add the double backslash
+// for every new line.</span>
 </pre>
-	<p>Instead of using several single line comments, you can also use multi-line comments!</p>
-<pre>
-<span class="comments">/* This is how you leave
+	<p>Here's another way to comment larger blocks of text.</p>
+<pre class='prettyprint'>
+/* This is how you leave
 multi-line comments for when you
-want to write a longer message */</span>
+want to write a longer message */
 </pre>
-	<p>Multi-line comments are also great for when you want to "hide" large blocks of code so you can try something new out without erasing your old code.</p>
+	<p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>
 </article>
 
 
@@ -406,7 +480,7 @@ if ( salePrice > regularPrice ) {
 	<p>Let's take a step back and look at the different operators that can be used in conditional statements.<br />
 	Using these two variables, <strong>var two = 2</strong> and <strong>var ten = 10</strong>, the examples below show how the statements would return true using the various operators.</p>
 
-	<table class="comparison-table" width="470" style="float:left; margin-right:20px;">
+	<table class="comparison-table" style="float:left; margin-right:20px;">
 		<tr>
 			<th colspan="3" align="left">Comparison operators</th>			
 		</tr>
@@ -459,7 +533,7 @@ if ( salePrice > regularPrice ) {
 		</tr>
 	</table>
 	
-	<table class="comparison-table" width="470" style="float:left;">
+	<table class="comparison-table" style="float:left;">
 		<tr>
 			<th colspan="3" align="left">Logical operators</th>			
 		</tr>
