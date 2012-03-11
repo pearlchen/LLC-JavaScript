@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shoes n' Cupcakes</title>
-	<link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+	<title>Planet Robot</title>
+	<link href='http://fonts.googleapis.com/css?family=Fascinate|Titan+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="shopping-cart.css">
 	
 	<script type="text/javascript">
@@ -41,7 +41,7 @@
 		shipping["international"]=25;
 
 		function getShippingCost(){  
-		    var shippingCost=0;
+		    var shippingCost = 0;
 		    //var theForm = document.forms["shoppingForm"];
 		    var selectedShipping = document.shoppingForm.elements["selectedShipping"];
 		    for(var i = 0; i < selectedShipping.length; i++){
@@ -96,54 +96,109 @@
 <body>
 	<div id="container">
 		<header>
-			<h1>Shoes n' Cupcakes</h1>
-			<h2>Sweet treats for your mouth or your feet!</h2>
+			<h1>Planet Robots</h1>
 		</header>
 		<form action="" id="shoppingForm" name="shoppingForm" onsubmit="return false;">
 			<div id="productListings">
 				<fieldset>
 					<div class="item">
-						<img src="assets/booties.jpg" alt="Booties" /><br />			
-						<input id="product0" type="checkbox" name="product" value="99.99" onclick="calculateTotal()" >
-						<label for="product0">$99.99</label>
+						<ul>
+							<li><img src="assets/earbuds.jpg" width="195" height="195" /></li>
+							<li>Transformers Ear buds</li>
+							<li>$17.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>
 					</div>				
 					<div class="item">
-						<img src="assets/flats.jpg" alt="Flats" /><br />			
-						<input id="product1" type="checkbox" name="product" value="39.00" onclick="calculateTotal()">
-						<label for="product1">$39.00</label>
+						<ul>
+							<li><img src="assets/gold-usb.jpg" width="195" height="195" /></li>
+							<li>Gold Robot USB</li>
+							<li>$25.00
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>					
 					</div>
 					<div class="item">
-						<img src="assets/pumps.jpg" alt="Pumps" /><br />				
-						<input id="product2" type="checkbox" name="product" value="79.99" onclick="calculateTotal()">
-						<label for="product2">$79.99</label>
+						<ul>
+							<li><img src="assets/nesting-dolls.jpg" width="195" height="195" /></li>
+							<li>Robots &amp; Ninjas Nesting Dolls</li>
+							<li>$13.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>
 					</div>
 					<div class="item">
-						<img src="assets/sandals.jpg"  alt="Sandals" /><br />				
-						<input id="product3" type="checkbox" name="product" value="59.99" onclick="calculateTotal()">
-						<label for="product3">$59.99</label>
+						<ul>
+							<li><img src="assets/plush-android.jpg" width="195" height="195" /></li>
+							<li>Plush Android</li>
+							<li>$9.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>
 					</div>
-				</fieldset>	
-		
-				<fieldset>
-					<div class="item">			
-						<img src="assets/cupcake.jpg" width="280" height="180" alt="Cupcake" /><br />
-						<input id="product4" type="checkbox" name="product" value="2.50" onclick="calculateTotal()" >
-						<label for="product4">Cupcake ($2.50)</label>
+					<div class="item">
+						<ul>
+							<li><img src="assets/salt-pepper-shakers.jpg" width="195" height="195" /></li>
+							<li>Salt &amp; Pepper Shakers</li>
+							<li>$24.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>			
 					</div>
-					<div class="item">		
-						<img src="assets/cupcakes-dozen.jpg" width="280" height="180" alt="Cupcakes Dozen" /><br />	
-						<input id="product5" type="checkbox" name="product" value="25" onclick="calculateTotal()">
-						<label for="product5">Cupcakes - 1 dozen ($25)</label>
+					<div class="item">
+						<ul>
+							<li><img src="assets/stencil-kit.jpg" width="195" height="195" /></li>
+							<li>Stencil &amp; Pen Kit</li>
+							<li>$8.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>
 					</div>
 					<div class="item">	
-						<img src="assets/cupcakes-bouquet.jpg" width="280" height="180" alt="Cupcakes Bouquet" /><br />		
-						<input id="product6" type="checkbox" name="product" value="30" onclick="calculateTotal()">
-						<label for="product6">Cupcake bouquet ($30)</label>
+						<ul>
+							<li><img src="assets/t-shirt.jpg" width="195" height="195" /></li>
+							<li>T-shirt</li>
+							<li>$24.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>
 					</div>
-					<div class="item">	
-						<img src="assets/cupcakes-baby.jpg" width="280" height="180" alt="Cupcake" /><br />		
-						<input id="product7" type="checkbox" name="product" value="15" onclick="calculateTotal()">
-						<label for="product7">Babycakes - 1 dozen ($15)</label>
+					<div class="item">
+						<ul>
+							<li><img src="assets/tea-infuser.jpg" width="195" height="195" /></li>
+							<li>Tea Infuser</li>
+							<li>$10.00
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>	
+					</div>
+					<div class="item">
+						<ul>
+							<li><img src="assets/wrapping-paper.jpg" width="195" height="195" /></li>
+							<li>Wrapping paper</li>
+							<li>$5.99
+								<button onclick="addItem();">Add</button>
+								<button onclick="removeItem();">Remove</button>
+							</li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+						</ul>	
 					</div>
 				</fieldset>
 			</div>		
@@ -153,13 +208,13 @@
 				<fieldset>
 					<h3>Shipping:</h3>
 					<input type="radio" name="selectedShipping" value="ontario" onclick="calculateTotal()" />
-					<label class="radiolabel">Within Ontario ($5.00)</label><br/>
+					<label class="radiolabel">Within Ontario $5.00</label><br/>
 			
 					<input type="radio" name="selectedShipping" value="canada" onclick="calculateTotal()" />
-					<label class="radiolabel">Within Canada ($10.00)</label><br/>
+					<label class="radiolabel">Within Canada $10.00</label><br/>
 			
 		        	<input type="radio" name="selectedShipping" value="international" onclick="calculateTotal()" />
-					<label class="radiolabel">Outside of Canada ($25.00)</label><br/>
+					<label class="radiolabel">Outside of Canada $25.00</label><br/>
 				</fieldset>
 		
 				<br />

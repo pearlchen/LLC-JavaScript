@@ -1,14 +1,16 @@
+/*font-family: 'Fascinate', cursive;
+font-family: 'Titan One', cursive;*/
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Georgia, serif;
+	font-family: Verdana, Arial, sans-serif;
 }
 header {
 	padding-left: 95px;
 }
 h1 {
 	color: #B1009A;
-	font: 70px 'Allura', cursive;
+	font: 70px 'Fascinate', cursive;
 	margin: 5px 0;
 	float: left;
 }
@@ -24,8 +26,8 @@ h2 {
 
 
 #shoppingForm {
-	width: 885px;
-	margin: 0 auto;
+	width: 960px;
+	font-size: 12px;
 }
 fieldset {
 	margin: 0;
@@ -37,21 +39,40 @@ legend {
 
 #productListings {
 	float: left;
-	width: 605px;
+	width: 680px;
+	margin-bottom: 40px;
 }
 	#productListings .item {
 		float: left;
 		padding: 10px;
+		width: 195px;
+	}
+	#productListings .item ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	#productListings .item ul li {	
+		display: inline-block;
+		padding: 2px 0;
+	}
+	#productListings .item img { 
+		border: 1px solid #CCC;
+	}
+	#productListings .item input#updateQuantity {
+		width: 15px;
+		height: 10px;
 	}
 	#productListings fieldset {
-		border: 1px solid #B1009A;
+		border: 2px solid #B1009A;
 		margin-bottom: 10px;
+		padding: 10px 14px;
 	}
 
 #additionalInfo {
 	float: right;
-	border: 1px solid #CCC;
-	font-size: 15px;
+	border: 2px solid #CCC;
+	font-size: 14px;
 	padding: 15px 20px;
 	width: 220px;
 } 
@@ -60,7 +81,7 @@ legend {
 	}
 	#additionalInfo h3 {
 		margin: 0 0 5px;
-		font: 30px 'Allura',cursive;
+		font: 22px 'Titan One',cursive;
 	}
 	#additionalInfo #contactInfo label, #additionalInfo #finalTotal label {
 		float: left;
@@ -74,9 +95,12 @@ legend {
 	#additionalInfo #contactInfo {
 		padding-top: 20px;
 	}
+	#additionalInfo button {
+		float: right;
+		margin-top: 5px;	
+	}
 
 button {
-	float: right;
-	margin-top: 5px;
+	
 }
 
