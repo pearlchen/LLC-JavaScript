@@ -1,0 +1,29 @@
+/* Slide: Who loves LadiesLearningCode? */
+#loveLLC button, #loveLLC #update {
+	float: left;
+	font-size: 13px; line-height: 20px;
+}
+#loveLLC button img {
+	float: left;
+	padding-right: 5px;
+}
+#loveLLC #update {
+	border: 1px solid #ccc;
+	margin: 2px 0 0 4px;
+	padding: 2px 4px 1px;
+	
+	float: left;
+}
+
+
+/* Slide: Mini-exercise #2 */
+#exercise2 {
+	width: 200px;
+	text-align: center;
+}
+	#exercise2 input#updateQuantity {
+		width: 20px;
+	}
+	#exercise2 input#updateTotal {
+		width: 66px;
+	}
