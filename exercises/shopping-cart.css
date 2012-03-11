@@ -73,24 +73,25 @@ legend {
 	float: right;
 	border: 2px solid #CCC;
 	font-size: 14px;
-	padding: 15px 20px;
+	padding: 20px;
 	width: 220px;
 } 
 	#additionalInfo fieldset {
 		border: none;
 	}
 	#additionalInfo h3 {
-		margin: 0 0 5px;
-		font: 22px 'Titan One',cursive;
+		margin: 0 0 10px;
+		font: 21px 'Titan One',cursive;
 	}
 	#additionalInfo #contactInfo label, #additionalInfo #finalTotal label {
 		float: left;
 		margin-bottom: 4px;
 		padding-top: 3px;
+		width: 90px;
 	}
 	#additionalInfo #contactInfo input, #additionalInfo #finalTotal input {
-		float: right;
 		margin-bottom: 5px;
+		width: 120px;
 	}
 	#additionalInfo #contactInfo {
 		padding-top: 20px;

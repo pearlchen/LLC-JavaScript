@@ -205,35 +205,25 @@
 		
 		
 			<div id="additionalInfo">
-				<fieldset>
-					<h3>Shipping:</h3>
-					<input type="radio" name="selectedShipping" value="ontario" onclick="calculateTotal()" />
-					<label class="radiolabel">Within Ontario $5.00</label><br/>
-			
-					<input type="radio" name="selectedShipping" value="canada" onclick="calculateTotal()" />
-					<label class="radiolabel">Within Canada $10.00</label><br/>
-			
-		        	<input type="radio" name="selectedShipping" value="international" onclick="calculateTotal()" />
-					<label class="radiolabel">Outside of Canada $25.00</label><br/>
-				</fieldset>
-		
-				<br />
 				<div id="finalTotal">
-					<label for="totalPrice"><strong>Total</strong></label>
+					<h3>Your shopping cart</h3>
+					<label for="totalPrice">Total</label>
 					<input type="text" id="totalPrice" value="">
 				</div>
 		
 				<fieldset id="contactInfo">
-		            <h3>Contact Information</h3>
+		            <h3>Shipping Info</h3>
 		            <label for="name">Name</label>
 		            <input id="name" type="text" name="name" />
 		            <br/>
 		            <label for="address">Address</label>
 		            <input id="address" type="text" name="address" />
 		            <br/>
-		            <label for="email">Email</label>
-		            <input id="email" type="text" name="email"/>
+		            <label for="city">City</label>
+		            <input id="city" type="text" name="city"/>
 		            <br/>
+					<label for="postalCode">Postal Code</label>
+		            <input id="postalCode" type="text" name="postalCode"/>
 		        </fieldset>
 
 				<button type="button" onclick="validateForm()">Submit</button>
