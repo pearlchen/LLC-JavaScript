@@ -83,17 +83,17 @@ legend {
 		margin: 0 0 10px;
 		font: 21px 'Titan One',cursive;
 	}
-	#additionalInfo #contactInfo label, #additionalInfo #finalTotal label {
+	#additionalInfo .contactInfo label, #additionalInfo #finalTotal label {
 		float: left;
 		margin-bottom: 4px;
 		padding-top: 3px;
 		width: 90px;
 	}
-	#additionalInfo #contactInfo input, #additionalInfo #finalTotal input {
+	#additionalInfo .contactInfo input, #additionalInfo #finalTotal input {
 		margin-bottom: 5px;
 		width: 120px;
 	}
-	#additionalInfo #contactInfo {
+	#additionalInfo .contactInfo {
 		padding-top: 20px;
 	}
 	#additionalInfo button {
