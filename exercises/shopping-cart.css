@@ -27,7 +27,6 @@ h2 {
 
 #shoppingForm {
 	width: 960px;
-	font-size: 12px;
 }
 fieldset {
 	margin: 0;
@@ -41,6 +40,7 @@ legend {
 	float: left;
 	width: 680px;
 	margin-bottom: 40px;
+	font-size: 12px;
 }
 	#productListings .item {
 		float: left;
@@ -121,7 +121,7 @@ legend {
 	  color: #000;
 	}
 
-input .readonly {
+input.readonly {
 	border: 1px solid #ccc;
 }
 
