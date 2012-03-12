@@ -3,7 +3,7 @@
 <head>
 	<title>Planet Robot</title>
 	<link href='http://fonts.googleapis.com/css?family=Fascinate|Titan+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="shopping-cart.css">
+	<link rel="stylesheet" type="text/css" href="http://pchen.github.com/LLC-JavaScript/exercises/shopping-cart.css">
 	
 	<script type="text/javascript">
 		/**
@@ -109,7 +109,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>
 					</div>				
 					<div class="item">
@@ -120,7 +120,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>					
 					</div>
 					<div class="item">
@@ -131,7 +131,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>
 					</div>
 					<div class="item">
@@ -142,7 +142,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>
 					</div>
 					<div class="item">
@@ -153,7 +153,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>			
 					</div>
 					<div class="item">
@@ -164,7 +164,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>
 					</div>
 					<div class="item">	
@@ -175,7 +175,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>
 					</div>
 					<div class="item">
@@ -186,7 +186,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>	
 					</div>
 					<div class="item">
@@ -197,7 +197,7 @@
 								<button onclick="addItem();">Add</button>
 								<button onclick="removeItem();">Remove</button>
 							</li>
-							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" /></li>
+							<li>Quantity <input type="text" id="updateQuantity" value="0" readonly="readonly" class="readonly" /></li>
 						</ul>	
 					</div>
 				</fieldset>
@@ -208,9 +208,11 @@
 				<div id="finalTotal">
 					<h3>Your shopping cart</h3>
 					<label for="totalPrice">Total</label>
-					<input type="text" id="totalPrice" value="">
+					<input type="text" id="totalPrice" readonly="readonly" class="readonly" value="">
 				</div>
-		
+			</div>
+
+			<div id="additionalInfo">
 				<fieldset id="shippingInfo">
 		            <h3>Shipping Info</h3>
 		            <label for="name">Name</label>
@@ -226,7 +228,7 @@
 		            <input id="postalCode" type="text" name="postalCode"/>
 		        </fieldset>
 
-				<button type="button" onclick="validateForm()">Submit</button>
+				<button type="button" onclick="validateForm()">Check out now!</button>
 			</div>
 		</form>
 	</div><!-- close #container -->

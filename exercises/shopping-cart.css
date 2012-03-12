@@ -27,7 +27,6 @@ h2 {
 
 #shoppingForm {
 	width: 960px;
-	font-size: 12px;
 }
 fieldset {
 	margin: 0;
@@ -41,6 +40,7 @@ legend {
 	float: left;
 	width: 680px;
 	margin-bottom: 40px;
+	font-size: 12px;
 }
 	#productListings .item {
 		float: left;
@@ -75,11 +75,15 @@ legend {
 	font-size: 14px;
 	padding: 20px;
 	width: 220px;
+	margin-bottom: 15px;
 } 
 	#additionalInfo fieldset {
 		border: none;
+		padding: 0;
+		margin: 0;
 	}
 	#additionalInfo h3 {
+		padding-top: 0;
 		margin: 0 0 10px;
 		font: 21px 'Titan One',cursive;
 	}
@@ -94,11 +98,10 @@ legend {
 		width: 120px;
 	}
 	#additionalInfo #shippingInfo, #additionalInfo #billingInfo {
-		padding-top: 20px;
+		margin-bottom: 20px;
 	}
 	#additionalInfo button {
 		float: right;
-		margin-top: 5px;	
 	}
 
 	#additionalInfo label#same_as_billing_label {
@@ -116,6 +119,10 @@ legend {
 	#additionalInfo .non-editable label#same_as_billing_label {
 	  color: #000;
 	}
+
+input.readonly {
+	border: 1px solid #ccc;
+}
 
 button {
 	
