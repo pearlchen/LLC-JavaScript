@@ -101,6 +101,22 @@ legend {
 		margin-top: 5px;	
 	}
 
+	#additionalInfo label#same_as_billing_label {
+	  padding-top: 0;
+	  width: 115px;
+	  padding-bottom: 5px;
+	}
+	#additionalInfo input#same_as_billing {
+	  width: 25px;
+	  margin-bottom: 15px;
+	} 
+	#additionalInfo .non-editable label {
+	  color: #ccc;
+	}
+	#additionalInfo .non-editable label#same_as_billing_label {
+	  color: #000;
+	}
+
 button {
 	
 }
