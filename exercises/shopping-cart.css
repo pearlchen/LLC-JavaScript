@@ -98,11 +98,10 @@ legend {
 		width: 120px;
 	}
 	#additionalInfo #shippingInfo, #additionalInfo #billingInfo {
-
+		margin-bottom: 20px;
 	}
 	#additionalInfo button {
 		float: right;
-		margin-top: 5px;	
 	}
 
 	#additionalInfo label#same_as_billing_label {
