@@ -1,320 +1,480 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Ladies Learning Code - JavaScript March 18, 2012</title>
-	<meta name="viewport" content="width=1280">
-	
+  <meta charset="utf-8">
+  <title>Ladies Learning Code - JavaScript March 18, 2012</title>
+  <meta name="viewport" content="width=1280">
+
   <!-- CoderDeck core and extension CSS files -->
-	<link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
-	<link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
-	<link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
-	<link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
-	<link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
-	<link rel="stylesheet" href="src/css/prettify.css">
-	<link rel="stylesheet" href="src/css/deck.coder.css">
+  <link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
+  <link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="src/css/prettify.css">
+  <link rel="stylesheet" href="src/css/deck.coder.css">
   <link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="src/codemirror/theme/default.css">
 
-	<!-- Custom for LLC -->
+  <!-- Custom for LLC -->
   <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
-  <style type="text/css">
-  </style>
+  <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
+  <style type="text/css"></style>
 
 </head>
 <body class="deck-container">
 
-<script type='text/coderdeck' id='coderdeck-default'>
+  <script type='text/coderdeck' id='coderdeck-default'>
   <html>
     <head>
-      <script src='src/jquery.min.js'>SCRIPTEND
-    </head>
-    <body>
-	    CODE
-    </body>
+      <script src='src/jquery.min.js'>SCRIPTEND</head>
+    <body>CODE</body>
 </html>
 </script>
 
-<script type='text/coderdeck' id='coderdeck-style-example'>
-	<html>
-		<title>test</title>
-		<style>
-			CODE
-		</style>
-		<body>
-			<h1>I'm a H1 heading</h1>
-			<h2>I'm a H2 heading</h2>
-			<p>Pargraph of text &lt;p&gt; here</p>
-			<div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
-			<div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
-		</body>
-	</html>
-</script> 	
+  <script type='text/coderdeck' id='coderdeck-style-example'>
+  <html>
+    <title>test</title>
+    <style>CODE</style>
+    <body>
+      <h1>I'm a H1 heading</h1>
+      <h2>I'm a H2 heading</h2>
+      <p>Pargraph of text &lt;p&gt; here</p>
+      <div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
+      <div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
+    </body>
+  </html>
+</script>
 
-<div id="presentation">
+  <div id="presentation">
 
-<!-- new slide -->
-<article class='slide slide-title'>
-  <div class="workshop_title">
-    <h1>Introduction to JavaScript</h1>
-    <p style="font-size: 1em; color: #999;">March 28, 2012</p>
-    <p class="download_link">
-      Download the slides to your laptop!<br />
-      <a href='http://javascript.ladieslearningcode.com'>http://javascript.ladieslearningcode.com</a></p>
-    <p style="font-size: 0.9em; color: #999;">(Interactive code slides thanks to <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>!)</p>
-  </div>
-  <div class="instructor_holder">
-    <h2>Your instructors today</h2>
-    <div>
-      <img src="assets/pearl_avatar.png" width="72" height="72" alt="pearl chen" />
-      <h4>Pearl Chen</h4>
-      pearl [at] karma-laboratory.com<br />
-      <a href="http://klab.ca/&plus;">klab.ca/+</a><br />
-      <a href="http://twitter.com/@androidsNsheep">@androidsNsheep</a>
-    </div>
-    <div>
-      <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
-      <h4>Christina Truong</h4>
-      hello [at] christinatruong.com<br />
-     <a href="http://christinatruong.com">christinatruong.com</a><br />
-      <a href="http://twitter.com/@christinatruong">@christinatruong</a>
-    </div>
-    <br  clear="left" />
-  </div>
-</article>
+    <!-- SLIDE: Download zip from Github -->
+    <article class='slide slide-title'>
+      <div class="workshop_title">
+        <h1>Introduction to JavaScript</h1>
+      </div>
+      <p class="download_link">
+        <a href='http://github.com/pchen/LLC-JavaScript/'>http://github.com/pchen/LLC-JavaScript/</a>
+      </p>
+      <img src="assets/git-download-zip.gif" width="566" height="400" alt="Github screenshot of ZIP button">
+      <p style="padding-top: 25px; margin-bottom: 0; font-size: 0.9em; color: #999;">
+        ( Interactive code slides thanks to
+        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>
+        ! )</p>
+    </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  <h2>Course Outline</h2>
-  <h3>The morning</h3>
-  <ul>
-    <li>Setting up your programming environment.</li>
-    <li>A brief history of JavaScript and where it is used.</li>
-    <li>JavaScript basics.</li>
-  </ul>
-  <h3>The afternoon</h3>
-  <ul>
-    <li>JavaScript basics cont'd.</li>
-    <li>Start building a JavaScript photo slider.</li>
-  </ul>
-  <h3>Homestretch</h3>
-  <ul>
-    <li>Wrap up.</li>
-    <li>Where can you go from here? </li>
-    <li>Q&amp;A and discussion.</li>
-  </ul>
-</article>
+    <!-- SLIDE: Workshop intro -->
+    <article class='slide slide-title'>
+      <div class="workshop_title">
+        <h1>Introduction to JavaScript</h1>
+        <p style="font-size: 1em; color: #999;">March 28, 2012</p>
+      </div>
+      <div class="instructor_holder">
+        <h2>Your instructors today</h2>
+        <div>
+          <img src="assets/pearl_avatar.png" width="72" height="72" alt="pearl chen" />
+          <h4>Pearl Chen</h4>
+          pearl [at] karma-laboratory.com
+          <br />
+          <a href="http://klab.ca/&plus;">klab.ca/+</a>
+          <br />
+          <a href="http://twitter.com/@androidsNsheep">@androidsNsheep</a>
+        </div>
+        <div>
+          <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
+          <h4>Christina Truong</h4>
+          hello [at] christinatruong.com
+          <br />
+          <a href="http://christinatruong.com">christinatruong.com</a>
+          <br />
+          <a href="http://twitter.com/@christinatruong">@christinatruong</a>
+        </div>
+          <br  clear="left" />
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-subhead'>
-  <h1>Development Environment</h1>
-  <p>3 tools you need to get started</p>
-</article>
+      <!-- SLIDE: Course Outline -->
+      <article class='slide slide-list'>
+        <h2>Course Outline</h2>
+        <h3>The morning</h3>
+        <ul>
+          <li>Setting up your programming environment.</li>
+          <li>A brief history of JavaScript and where it is used.</li>
+          <li>JavaScript basics.</li>
+        </ul>
+        <h3>The afternoon</h3>
+        <ul>
+          <li>JavaScript basics cont'd.</li>
+          <li>Start building a JavaScript photo slider.</li>
+        </ul>
+        <h3>Homestretch</h3>
+        <ul>
+          <li>Wrap up.</li>
+          <li>Where can you go from here?</li>
+          <li>Q&amp;A and discussion.</li>
+        </ul>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  <h2>1. A Web Browser</h2>
-  <p>We'll be using Chrome because of the built-in development tools.</p>
-  <p><img src="assets/new-chrome-logo.png" width="125" height="125" alt="chrome" /></p>
-</article>
+      <!-- SLIDE: Development Environment -->
+      <article class='slide slide-subhead'>
+        <h1>Development Environment</h1>
+        <p>3 tools you need to get started</p>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-subhead'>
-  <h1>JavaScript Hands-on</h1>
-  <p>Programming Language (Behaviour)</p>
-</article>
+      <!-- SLIDE: Web Browser -->
+      <article class='slide slide-list'>
+        <h2>1. Web Browser</h2>
+        <p>
+          Choose a modern web browser that has good, built-in development tools to help make building web pages easier.
+        </p>
+        <div class="centered contains_sidebyside_icons">
+          <img src="assets/new-chrome-logo.png" width="125" height="125" alt="Chrome" />      
+          <br/>      
+          <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>
+        </div>
+        <br clear="all" />      
+        <br />      
+        <br />      
+        <br />      
+        <p class="sidenote centered">
+          (If you are unable to install Chrome:
+          <br />      
+          install
+          <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> <b>and</b>
+          <a href="http://getfirebug.com/" target="_blank">Firebug</a>
+          .)
+        </p>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  <h2>JavaScript Exercise Overview</h2>
-  <br /><br />
-  <p>In this first part, we'll be creating a shopping cart checkout form.</p> 
-  <br />
-  <p>In order to do this, we will need to learn how to use <strong>VARIABLES</strong>, <strong>FUNCTIONS</strong>, <strong>OBJECTS</strong>, <strong>ARRAYS</strong> and <strong>LOOPS</strong>.</p>
-  <br />
-  <p>This will be our <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_final.html">end goal</a>.</p> 
-  <br />
-  <p>But before we get there, we'll work on getting a <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart.html">working prototype first</a>.</p>
-</article>
+      <!-- SLIDE: Code Editor -->      
+      <article class='slide slide-list'>
+        <h2>2. Code Editor</h2>
+        <p>
+          There are many, many free and paid options* but let's keep it simple for today and use just one of these two to edit our code.
+        </p>
+        <div class="centered contains_sidebyside_icons">
+          <div class="sidebyside_download_icon">
+            <img src="assets/Notepad.png" width="169" height="125" alt="Notepad++" />      
+            <br />      
+            <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>
+            (Windows)
+          </div>
+          <div class="sidebyside_download_icon">
+            <img src="assets/textWranglerIcon.png" width="125" height="125" alt="Text Wrangler" />      
+            <br />      
+            <a href="http://www.barebones.com/products/textwrangler/" target="_blank">TextWrangler</a>
+            (Mac)
+          </div>
+        </div>
+        <br clear="all" />      
+        <br />      
+        <br />      
+        <br />      
+        <p class="sidenote centered">
+          *Pearl likes to use Sublime Text. Christina like TextMate.
+          <br />      
+          Ask a group of developers what they use and arguments will ensue -- it's a very personal choice! ;)
+        </p>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  <h2>Variables</h2>
-  <br />
-  <p>Variables are used to store values.</p>  
-  <p><strong>Declaring</strong> a variable tells the computer that it exists. Otherwise,<br /> 
-	values will just disappear.</p>
-  <br />
-  <p><img src="http://placehold.it/550x150&text=box+images"></p>
-</article>
+      <!-- SLIDE: FTP -->
+      <article class='slide slide-list'>
+        <h2>3. File Transfer Program (FTP)</h2>
+        <p>
+          Do you already have your own hosted website? FTP software will let you copy the files you work on today to somewhere where the rest of the world can see them!
+        </p>
+        <div class="centered contains_sidebyside_icons">
+          <img src="assets/Cyberduck_icon.png" width="125" height="125" alt="CyberDuck" />      
+          <br />      
+          <a href="http://cyberduck.ch/" target="_blank">CyberDuck</a>
+        </div>
+        <br clear="all" />      
+        <br />      
+        <br />      
+        <br />      
+        <p class="sidenote centered">
+          Again, there are many, many free and paid options.
+          <br />      
+          <a href="http://filezilla-project.org/" target="_blank">FileZilla</a>
+          is good when you're more advanced.
+        </p>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  <h2>Variables (cont'd)</h2>
-  <p>Variables are like the computer's short-term memory. In this example, the computer can't remember any one's name!</p>  
+      <!-- new slide -->
+      <article class='slide slide-subhead'>
+        <h1>Technology Overview</h1>
+        <p>Programming and JavaScript</p>
+      </article>
 
-<textarea class='coder-editor'>
-<script>
+      <!-- new slide -->
+      <article class='slide slide-subhead'>
+        <h1>JavaScript Hands-on</h1>
+        <p>Programming Language (Behaviour)</p>
+      </article>
+
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>JavaScript Exercise Overview</h2>
+        <br />
+        <br />
+        <p>
+          In this first part, we'll be creating a shopping cart checkout form.
+        </p>
+        <br />
+        <p>
+          In order to do this, we will need to learn how to use <strong>VARIABLES</strong>
+          , <strong>FUNCTIONS</strong>
+          ,
+          <strong>OBJECTS</strong>
+          ,
+          <strong>ARRAYS</strong>
+          and
+          <strong>LOOPS</strong>
+          .
+        </p>
+        <br />
+        <p>
+          This will be our
+          <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_final.html">end goal</a>
+          .
+        </p>
+        <br />
+        <p>
+          But before we get there, we'll work on getting a
+          <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart.html">working prototype first</a>
+          .
+        </p>
+      </article>
+
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>Variables</h2>
+        <br />
+        <p>Variables are used to store values.</p>
+        <p>
+          <strong>Declaring</strong>
+          a variable tells the computer that it exists. Otherwise,
+          <br />
+          values will just disappear.
+        </p>
+        <br />
+        <p>
+          <img src="http://placehold.it/550x150&text=box+images"></p>
+      </article>
+
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>Variables (cont'd)</h2>
+        <p>
+          Variables are like the computer's short-term memory. In this example, the computer can't remember any one's name!
+        </p>
+
+        <textarea class='coder-editor'>
+          <script>
   prompt("What's your name?");
   document.write("Hello....?");
 </script>
-</textarea>
-</article>
+        </textarea>
+      </article>
 
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>Variables (cont'd)</h2>
+        <p>
+          Applied, it's a web checkout form that asks for your name, address, and email so it knows where to send your package.
+        </p>
+        <p>
+          <img src="http://placehold.it/550x150&text=contact+form"></p>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  <h2>Variables (cont'd)</h2>
-  <p>Applied, it's a web checkout form that asks for your name, address, and email so it knows where to send your package.</p>  
-  <p><img src="http://placehold.it/550x150&text=contact+form"></p>
-</article>
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>Variables How-to</h2>
+        <p>
+          Declare variables with the keyword
+          <strong>var</strong>
+          .
+        </p>
+        <pre class='prettyprint'>var email</pre>
+        <p>
+          Assign a values to the variable using the equals (=) sign.
+          <br />
+          End the
+          <strong>statement</strong>
+          with a semicolon (;).
+        </p>
+        <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
+        <p>Now the computer knows my email address!</p>
+        <p>
+          <strong>Statements</strong>
+          are commands that tell the computer what to do. Ending the statement with a semicolon is like ending a sentence with a period. We are telling the computer that the statement is done.
+        </p>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Variables How-to</h2>
-	<p>Declare variables with the keyword <strong>var</strong>.</p>
-<pre class='prettyprint'>
-var email
-</pre>
-	<p>Assign a values to the variable using the equals (=) sign.<br /> 
-	End the <strong>statement</strong> with a semicolon (;).</p>
-<pre class='prettyprint'>
-var email = "hello@christinatruong.com";
-</pre>
-	<p>Now the computer knows my email address!</p>
-	<p><strong>Statements</strong> are commands that tell the computer what to do. Ending the statement with a semicolon is like ending a sentence with a period. We are telling the computer that the statement is done.</p>
-</article>
-
-
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Various Variables</h2>
-	<p>Different types of variables hold different kinds of values.</p> 
-	<p>1. Numeric variable (integers &amp; decimals)</p>	
-<pre class='prettyprint'>
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>Various Variables</h2>
+        <p>Different types of variables hold different kinds of values.</p>
+        <p>1. Numeric variable (integers &amp; decimals)</p>
+        <pre class='prettyprint'>
 var someIntegerNumber = 10;
 var someDecimalNumber = 10.5;
 </pre>
-	<p>2. String variable (letters, words &amp; sentences)</p>
-<pre class='prettyprint'>
+        <p>2. String variable (letters, words &amp; sentences)</p>
+        <pre class='prettyprint'>
 var singleWordString = "hello";
 var sentenceString = "Hello, good day to you!";
 var numberString = "10";
 </pre>
-<strong>Note:</strong> string values are always written inside double quotes(")
-<br /><br />
-	<p>3. Boolean variable (true/false)</p>
-<pre class='prettyprint'>
+        <strong>Note:</strong>
+        string values are always written inside double quotes(")
+        <br />
+        <br />
+        <p>3. Boolean variable (true/false)</p>
+        <pre class='prettyprint'>
 var isSaturday = false;
 var isSunday = true;
 </pre>
-</article>
+      </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  	<h2>Variables: Tips &amp; Best Practices</h2>
-  	<p>Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).<p>
-<textarea class='coder-editor'>
-<script>
+      <!-- new slide -->
+      <article class='slide slide-list'>
+        <h2>Variables: Tips &amp; Best Practices</h2>
+        <p>
+          Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).
+          <p>
+            <textarea class='coder-editor'>
+              <script>
   var 3hundred = 300;
   document.write(3hundred);
 
   var $300 = 300;
   document.write($300);
 </script>
-</textarea>
-</article>
+            </textarea>
+          </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  	<h2>Variables: Tips &amp; Best Practices</h2>
-	<p>Variables cannot contain spaces. Use a convention called <strong>camel case</strong> in which every new word is capitalized. It's called <strong>camel case</strong> because it looks <strong>likeCamelHumps</strong></p>
-	<p>JavaScript is case sensitive so variable names are also case sensitive. These two variable names below are not the same.</p>
-<pre class='prettyprint'>
+          <!-- new slide -->
+          <article class='slide slide-list'>
+            <h2>Variables: Tips &amp; Best Practices</h2>
+            <p>
+              Variables cannot contain spaces. Use a convention called
+              <strong>camel case</strong>
+              in which every new word is capitalized. It's called
+              <strong>camel case</strong>
+              because it looks
+              <strong>likeCamelHumps</strong>
+            </p>
+            <p>
+              JavaScript is case sensitive so variable names are also case sensitive. These two variable names below are not the same.
+            </p>
+            <pre class='prettyprint'>
 var camelCaseVariable = "Hello";
 var camelcasevariable = "Goodbye";
 </pre>
-	<p>Another convention is using underscores to separate words. This is common in other programming languages (like PHP).</p>
-<pre class='prettyprint'>
-var spread_out_words = "Hello";
-</pre>
-<p>It is important to choose one method and be consistent throughout the entire project.</p>
-</article>
-</pre>
+            <p>
+              Another convention is using underscores to separate words. This is common in other programming languages (like PHP).
+            </p>
+            <pre class='prettyprint'>var spread_out_words = "Hello";</pre>
+            <p>
+              It is important to choose one method and be consistent throughout the entire project.
+            </p>
+          </article>
+        </pre>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  	<h2>Variables: Tips &amp; Best Practices</h2>
-  	<p>When naming a variable, it's best to give it a descriptive name.</p> 
-	<p>It makes it easier to see at a glance, what kind of value that variable is going to hold.</p>  
-	<p>This is especially useful when sharing code with others who may not use the same kinds of abbreviations.</p>	
-<pre class='prettyprint'>
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>Variables: Tips &amp; Best Practices</h2>
+          <p>
+            When naming a variable, it's best to give it a descriptive name.
+          </p>
+          <p>
+            It makes it easier to see at a glance, what kind of value that variable is going to hold.
+          </p>
+          <p>
+            This is especially useful when sharing code with others who may not use the same kinds of abbreviations.
+          </p>
+          <pre class='prettyprint'>
 var firstName = "Clear that first name will go here";
 var fn = "Not as obvious as firstName";
 var x = "Not clear at all.";
 </pre>
-</article>
+        </article>
 
-
-
-<!-- new slide -->
-<article class='slide slide-list'>
-  	<h2>Comments</h2>
-	<p>Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations but you want the browser to ignore it. Use comments!</p>
-<pre class='prettyprint'>
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>Comments</h2>
+          <p>
+            Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations but you want the browser to ignore it. Use comments!
+          </p>
+          <pre class='prettyprint'>
 // This is how you leave a single line comment.
 
 // You can write many single line comments.
 // Just make sure to add the double backslash
 // for every new line.</span>
 </pre>
-	<p>Here's another way to comment larger blocks of text.</p>
-<pre class='prettyprint'>
+          <p>Here's another way to comment larger blocks of text.</p>
+          <pre class='prettyprint'>
 /* This is how you leave
 multi-line comments for when you
 want to write a longer message */
 </pre>
-	<p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>
-</article>
+          <p>
+            Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.
+          </p>
+        </article>
 
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>JavaScript Arithmetic Operators</h2>
+          <p>
+            You can manipulate variables with operations such as addition (+) or subtraction (-).
+            <br />
+            Use these operators to find the total of 1 cupcake and 1 pair of shoes.
+            <br />
+            Then, what will the total be once the discount is applied?
+          </p>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>JavaScript Arithmetic Operators</h2>
-	<p>You can manipulate variables with operations such as addition (+) or subtraction (-).<br />
-		Use these operators to find the total of 1 cupcake and 1 pair of shoes.<br /> 
-		Then, what will the total be once the discount is applied?
-	</p>
-
-<textarea class='coder-editor'>
-<script>
+          <textarea class='coder-editor'>
+            <script>
   var cupcakePrice = 20;
   var shoePrice = 60;
   var discountAmount = 10;
   
-  var shoppingTotal = 	
+  var shoppingTotal =   
   document.write(shoppingTotal);
   document.write("<br />")
 
   //var withDiscountTotal =
   //document.write(withDiscountTotal);
 </script>
-</textarea>
-</article>
+          </textarea>
+        </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>JavaScript Arithmetic Operators (cont.)</h2>
-	<p>Just like the algebra we learned in school, we can add (+), subtract (-), multiply (*) and divide (/) variable values.</p>
-	<p>Using the <strong>shoppingTotal</strong> variable, how would you find the total of 1 cake and 2 pairs of shoes?<br /> 
-	Output the total using <strong>document.write()</strong>.</p>
-	
-	<p>Wait! There's a sale going on! Buy one pair of shoes and get the second pair for 50% off.<br />  
-	How can we calculate the total of 2 pairs of shoes including the 50% sale discount?</p>
-<textarea class='coder-editor'>
-<script>
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>JavaScript Arithmetic Operators (cont.)</h2>
+          <p>
+            Just like the algebra we learned in school, we can add (+), subtract (-), multiply (*) and divide (/) variable values.
+          </p>
+          <p>
+            Using the
+            <strong>shoppingTotal</strong>
+            variable, how would you find the total of 1 cake and 2 pairs of shoes?
+            <br />
+            Output the total using
+            <strong>document.write()</strong>
+            .
+          </p>
+
+          <p>
+            Wait! There's a sale going on! Buy one pair of shoes and get the second pair for 50% off.
+            <br />
+            How can we calculate the total of 2 pairs of shoes including the 50% sale discount?
+          </p>
+          <textarea class='coder-editor'>
+            <script>
   var cupcakePrice = 20;
   var shoePrice = 60;
 
@@ -325,16 +485,19 @@ want to write a longer message */
   //var shoeSaleTotal =
   //document.write();
 </script>
-</textarea>
-</article>
+          </textarea>
+        </article>
 
-
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>JavaScript Arithmetic Operators (cont.)</h2>
-	<p>JavaScript can also increase or decrease values up or down by 1 using the increment (++) or decrement (--) operators.  This will come in handy when we discuss <strong>Loops</strong> later on.</p>
-<textarea class='coder-editor'>
-<script>
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>JavaScript Arithmetic Operators (cont.)</h2>
+          <p>
+            JavaScript can also increase or decrease values up or down by 1 using the increment (++) or decrement (--) operators.  This will come in handy when we discuss
+            <strong>Loops</strong>
+            later on.
+          </p>
+          <textarea class='coder-editor'>
+            <script>
   var plusIncrement = 0;
   plusIncrement++;
   alert(plusIncrement); 
@@ -343,23 +506,24 @@ want to write a longer message */
   minusIncrement--;
   alert(minusIncrement);
 </script>
-</textarea>
-</article>
+          </textarea>
+        </article>
 
-
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Who loves LadiesLearningCode? I do!</h2>
-	<p>Don't worry about the function syntax or the DOM stuff right now. We'll get a little more into that later.</p>
-<textarea class='coder-editor'>
-<script>
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>Who loves LadiesLearningCode? I do!</h2>
+          <p>
+            Don't worry about the function syntax or the DOM stuff right now. We'll get a little more into that later.
+          </p>
+          <textarea class='coder-editor'>
+            <script>
   var loves=0;
   function moreLove(){
-     loves++;	
+     loves++; 
      document.getElementById('update').innerHTML = loves;
   }
 </script>
-<style>
+            <style>
   #loveLLC button, #loveLLC #update {
     float: left;
     font-size: 13px;
@@ -375,24 +539,33 @@ want to write a longer message */
     padding: 2px 4px 1px;
   }
 </style>
-<div id="loveLLC">
-  <button onclick="moreLove();"><img src="exercises/assets/llc-logo.png" /> Love!</button>
-  <p id="update">0</p>
-</div>
-</textarea>
-</article>
+            <div id="loveLLC">
+              <button onclick="moreLove();">
+                <img src="exercises/assets/llc-logo.png" />
+                Love!
+              </button>
+              <p id="update">0</p>
+            </div>
+          </textarea>
+        </article>
 
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>Concatenation</h2>
+          <p>
+            Now that we've calculated numerical totals, how do we format the output to include non-numerical values like a dollar sign?
+            <br />
+            We can use a technique called concatenation using the plus (+) operator to combine strings.
+          </p>
+          <p>
+            <strong>Note:</strong>
+            this is the same symbol used for the mathematical addition operator.
+            <br />
+            If you use the + operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.
+          </p>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Concatenation</h2>
-	<p>Now that we've calculated numerical totals, how do we format the output to include non-numerical values like a dollar sign?<br />
-	We can use a technique called concatenation using the plus (+) operator to combine strings.</p>  
-	<p><strong>Note:</strong> this is the same symbol used for the mathematical addition operator.<br />  
-	If you use the + operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
-
-<textarea class='coder-editor'>
-<script>
+          <textarea class='coder-editor'>
+            <script>
   //Addition with the + operator
   var cakePrice = 20;
   var shoePrice = 60;
@@ -404,49 +577,64 @@ want to write a longer message */
   //document.write("<br />");
   //document.write("Your total is: " + "$" + shoppingTotal);
 </script>
-</textarea>
-</article>
+          </textarea>
+        </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-  	<h2>Conditional Statements</h2>
-	<p>Declaring variables with "static" values can be boring. Programming is about generating stuff on the fly! <strong>If... else statements</strong> are conditional statements that can be used to perform different actions based on different conditions. There are 3 variations:</p> 
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>Conditional Statements</h2>
+          <p>
+            Declaring variables with "static" values can be boring. Programming is about generating stuff on the fly!
+            <strong>If... else statements</strong>
+            are conditional statements that can be used to perform different actions based on different conditions. There are 3 variations:
+          </p>
 
-<p><strong>If Statement</strong> - executes the code only if the condition is true</p>
-<pre>
+          <p>
+            <strong>If Statement</strong>
+            - executes the code only if the condition is true
+          </p>
+          <pre>
 if (condition) {
   execute this code if condition is true
 }
 </pre>
 
-<p><strong>If...Else Statement</strong> - executes some code if the condition is true and different code if condition is false</p>
-<pre>
+          <p>
+            <strong>If...Else Statement</strong>
+            - executes some code if the condition is true and different code if condition is false
+          </p>
+          <pre>
 if (condition) {
-  	execute this code if condition is true
+    execute this code if condition is true
 } else {
-	execute this code if condition is not true
+  execute this code if condition is not true
 }
 </pre>
 
-<p><strong>If...Else If...Else Statement</strong> - use this statement to execute different code for multiple conditions</p>
-<pre>
+          <p>
+            <strong>If...Else If...Else Statement</strong>
+            - use this statement to execute different code for multiple conditions
+          </p>
+          <pre>
 if (condition) {
-  	execute this code if the first condition is true
+    execute this code if the first condition is true
 } else if (condition) {
-	execute this code if the second condition is true
+  execute this code if the second condition is true
 } else {
-	execute this code if neither conditions are true
+  execute this code if neither conditions are true
 }
 </pre>
-</article>
+        </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Conditional Statements (cont.)</h2>
-	<p>Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!</p>  
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>Conditional Statements (cont.)</h2>
+          <p>
+            Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!
+          </p>
 
-<textarea class='coder-editor'>
-<script>
+          <textarea class='coder-editor'>
+            <script>
 var regularPrice = 200;
 var salePrice = 19.99;
 
@@ -470,139 +658,177 @@ if ( salePrice > regularPrice ) {
   //console.log("Buy two in different colours!");
 }
 </script>
-</textarea>
-</article>
+          </textarea>
+        </article>
 
+        <!-- new slide -->
+        <article class='slide slide-list'>
+          <h2>
+            Rewind: JavaScript Comparison and
+            <br/>
+            Logical Operators
+          </h2>
+          <p>
+            Let's take a step back and look at the different operators that can be used in conditional statements.
+            <br />
+            Using these two variables,
+            <strong>var two = 2</strong>
+            and
+            <strong>var ten = 10</strong>
+            , the examples below show how the statements would return true using the various operators.
+          </p>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Rewind: JavaScript Comparison and<br/> Logical Operators</h2>
-	<p>Let's take a step back and look at the different operators that can be used in conditional statements.<br />
-	Using these two variables, <strong>var two = 2</strong> and <strong>var ten = 10</strong>, the examples below show how the statements would return true using the various operators.</p>
+          <table class="comparison-table" style="float:left; margin-right:20px;">
+            <tr>
+              <th colspan="3" align="left">Comparison operators</th>
+            </tr>
+            <tr>
+              <td width="15%">==</td>
+              <td width="50%">is equal to</td>
+              <td width="35%">ten == two * 5</td>
+            </tr>
+            <tr>
+              <td width="15%">===</td>
+              <td width="50%">
+                is exactly equal to
+                <br />
+                (value and type)
+              </td>
+              <td width="35%">
+                ten === 10
+                <br />
+                ten === "10" (false)
+              </td>
+            </tr>
+            <tr>
+              <td width="15%">!=</td>
+              <td width="50%">is not equal to</td>
+              <td width="35%">ten !== two</td>
+            </tr>
+            <tr>
+              <td width="15%">></td>
+              <td width="50%">greater than</td>
+              <td width="35%">ten > two</td>
+            </tr>
+            <tr>
+              <td width="15%">
+                < </td>
+                  <td width="50%">less than</td>
+                  <td width="35%">
+                    two
+                    < ten</td></tr>
+                    <tr>
+                      <td width="15%">>=</td>
+                      <td width="50%">greater than or equal to</td>
+                      <td width="35%">
+                        ten >= two * 5
+                        <br />
+                        ten >= two * 5 + 1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="15%">
+                        <= </td>
+                          <td width="50%">less than for equal to</td>
+                          <td width="35%">
+                            two
+                            <= ten<br />
+                            two
+                            <= 2
+      </td></tr>
+                          </table>
 
-	<table class="comparison-table" style="float:left; margin-right:20px;">
-		<tr>
-			<th colspan="3" align="left">Comparison operators</th>			
-		</tr>
-		<tr>
-			<td width="15%">==</td>
-			<td width="50%">is equal to </td>
-			<td width="35%">ten == two * 5</td>
-		</tr>
-		<tr>
-			<td width="15%">===</td>
-			<td width="50%">
-				is exactly equal to<br />
-				(value and type)
-			</td>
-			<td width="35%">
-				ten === 10 <br />
-				ten === "10" (false)
-			</td>
-		</tr>
-		<tr>
-			<td width="15%">!=</td>
-			<td width="50%">is not equal to</td>
-			<td width="35%">ten !== two</td>
-		</tr>
-		<tr>
-			<td width="15%">></td>
-			<td width="50%">greater than</td>
-			<td width="35%">ten > two</td>
-		</tr>
-		<tr>
-			<td width="15%">< </td>
-			<td width="50%">less than</td>
-			<td width="35%">two < ten</td>
-		</tr>
-		<tr>
-			<td width="15%">>= </td>
-			<td width="50%">greater than or equal to</td>
-			<td width="35%">
-				ten >= two * 5<br />
-				ten >= two * 5 + 1
-			</td>
-		</tr>
-		<tr>
-			<td width="15%"><= </td>
-			<td width="50%">less than for equal to</td>
-			<td width="35%">
-				two <= ten<br />
-				two <= 2
-			</td>
-		</tr>
-	</table>
-	
-	<table class="comparison-table" style="float:left;">
-		<tr>
-			<th colspan="3" align="left">Logical operators</th>			
-		</tr>
-		<tr>
-			<td width="15%">&amp;&amp;</td>
-			<td width="20%">and</td>
-			<td width="65%">(ten < 11 &amp;&amp; ten > 9)</td>
-		</tr>
-		<tr>
-			<td width="15%">||</td>
-			<td width="20%">or</td>
-			<td width="65%">(ten == 10 || two == 2)</td>
-		</tr>
-		<tr>
-			<td width="15%">!</td>
-			<td width="20%">not</td>
-			<td width="65%">!(ten == two)</td>
-		</tr>
-	</table>
-</article>	 
- 
+                          <table class="comparison-table" style="float:left;">
+                            <tr>
+                              <th colspan="3" align="left">Logical operators</th>
+                            </tr>
+                            <tr>
+                              <td width="15%">&amp;&amp;</td>
+                              <td width="20%">and</td>
+                              <td width="65%">
+                                (ten
+                                < 11 &amp;&amp; ten >9)</td>
+                              </tr>
+                              <tr>
+                                <td width="15%">||</td>
+                                <td width="20%">or</td>
+                                <td width="65%">(ten == 10 || two == 2)</td>
+                              </tr>
+                              <tr>
+                                <td width="15%">!</td>
+                                <td width="20%">not</td>
+                                <td width="65%">!(ten == two)</td>
+                              </tr>
+                            </table>
+                          </article>
 
+                          <!-- new slide -->
+                          <article class='slide slide-list'>
+                            <h2>Variables, Operators, Concatenation and Conditionals</h2>
+                            <p>
+                              Now that we know what variables, operators and conditionals are, let's put them all into action using dynamic content.
+                            </p>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Variables, Operators, Concatenation and Conditionals</h2>
-	<p>Now that we know what variables, operators and conditionals are, let's put them all into action using dynamic content.</p>  
-
-<textarea class='coder-editor'>
-<script>
+                            <textarea class='coder-editor'>
+                              <script>
   prompt("How much are those shoes?");
   //var shoePrice = prompt("How much are those shoes?");
   if ( shoePrice <= 100 ) {
-	document.write("$" + shoePrice + " isn't bad. Buy them!");
+  document.write("$" + shoePrice + " isn't bad. Buy them!");
   } else {
-	document.write("$" + shoePrice + "? Good Lawd! That's a lot of money!");
+  document.write("$" + shoePrice + "? Good Lawd! That's a lot of money!");
   }
-</script>
-</textarea>
-</article>
+</script></textarea>
+                          </article>
 
+                          <!-- new slide -->
+                          <article class='slide slide-list'>
+                            <h2>Functions &amp; Methods</h2>
+                            <p>
+                              The browser executes the JavaScript as soon as the page loads.  But sometimes you need to control when it executes. This is where
+                              <strong>functions</strong>
+                              come into play.
+                            </p>
+                            <ul>
+                              <strong>Functions:</strong>
+                              <li>
+                                group together related lines of code and stores them into descriptive names.
+                              </li>
+                              <li>can be reused just by calling the function name</li>
+                              <li>
+                                created by using
+                                <span class="var">function</span>
+                                keyword
+                              </li>
+                              <li>
+                                use
+                                <strong>parameters</strong>
+                                to vary the output using different inputs
+                              </li>
+                              <li> <em>define</em>
+                                the function first but it will not be executed until you <em>call</em>
+                                the function
+                              </li>
+                              <li>
+                                Functions and methods are pretty much the same thing in JavaScript except that methods are associated with an object and functions are not.  Basically, they make things happen. (We will be talking about objects in greater detail later on.)
+                              </li>
+                            </ul>
+                          </article>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Functions &amp; Methods</h2>
-	<p>The browser executes the JavaScript as soon as the page loads.  But sometimes you need to control when it executes. This is where <strong>functions</strong> come into play.</p>
-	<ul><strong>Functions: </strong>
-		<li>group together related lines of code and stores them into descriptive names.</li>
-		<li>can be reused just by calling the function name</li>
-		<li>created by using <span class="var">function</span> keyword</li>
-		<li>use <strong>parameters</strong> to vary the output using different inputs</li>
-		<li><em>define</em> the function first but it will not be executed until you <em>call</em> the function</li>
-		<li>Functions and methods are pretty much the same thing in JavaScript except that methods are associated with an object and functions are not.  Basically, they make things happen. (We will be talking about objects in greater detail later on.) </li>
-	</ul>
-</article>
-
-
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Defining and Calling a Function</h2>
-	<p>There are different ways to define a function.  Below is the most common way of writing a function. (We'll talk about another way later!)</p>  
-Function syntax:
-<pre>
+                          <!-- new slide -->
+                          <article class='slide slide-list'>
+                            <h2>Defining and Calling a Function</h2>
+                            <p>
+                              There are different ways to define a function.  Below is the most common way of writing a function. (We'll talk about another way later!)
+                            </p>
+                            Function syntax:
+                            <pre>
 function nameOfFunction() {
   //Instructions here
-}	
-</pre>	
-<textarea class='coder-editor'>
-<script>
+} 
+</pre>
+                            <textarea class='coder-editor'>
+                              <script>
   //define the function
   function sayMyName() {
     alert("Christina");
@@ -612,19 +838,21 @@ function nameOfFunction() {
   sayMyName();
 </script>
 
-<!-- call function from a button click -->
-<input type="button" onclick="sayMyName()" value="Say my name!">
-</textarea>
-</article>
+                              <!-- call function from a button click -->
+                              <input type="button" onclick="sayMyName()" value="Say my name!"></textarea>
+                          </article>
 
+                          <!-- new slide -->
+                          <article class='slide slide-list'>
+                            <h2>Functions and Parameters</h2>
+                            <p>
+                              Using
+                              <strong>parameters</strong>
+                              makes functions more flexible. Functions can be used with one parameter, more than one parameter or none at all.  When using a function without parameters, you can't change the output by changing the parameters in the function call.
+                            </p>
 
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Functions and Parameters</h2>
-	<p>Using <strong>parameters</strong> makes functions more flexible. Functions can be used with one parameter, more than one parameter or none at all.  When using a function without parameters, you can't change the output by changing the parameters in the function call.</p>  
-	
-<textarea class='coder-editor'>
-<script>
+                            <textarea class='coder-editor'>
+                              <script>
   // declaring a function without a parameter
   function sayMyName() {
     document.write("Christina" + "<br />");
@@ -646,67 +874,84 @@ function nameOfFunction() {
   }
   //sayMyFullName("Christina", "Truong");
 </script>
-</textarea>
-</article>
+                            </textarea>
+                          </article>
 
+                          <!-- new slide -->
+                          <article class='slide slide-list'>
+                            <h2>
+                              Parameters vs Local Variables vs
+                              <br />
+                              Global Variables
+                            </h2>
+                            <p>
+                              Now let's try getting the function (without a parameter) to alert your name using a variable.
+                            </p>
 
-
-<!-- new slide -->
-<article class='slide slide-list'>
-	<h2>Parameters vs Local Variables vs <br />Global Variables</h2>
-	<p>Now let's try getting the function (without a parameter) to alert your name using a variable.</p>  
-	
-<textarea class='coder-editor'>
-<script>
+                            <textarea class='coder-editor'>
+                              <script>
 var name = "Christina";
 // declare the function
 function sayMyName() {
-	alert(name);	
+  alert(name);  
 }
 
 //call the function 
 sayMyName();
 </script>
-</textarea>
-</article>
+                            </textarea>
+                          </article>
 
+                          <!-- CODERDECK EXAMPLES -->
+                          <!-- Apply a class of "coder-editor" to a textarea to make it show up as runnable code -->
+                          <article class='slide slide-list'>
+                            <h2>Basic Code Editor</h2>
+                            <p>
+                              Basic split code editor is created by adding a class of "coder-editor" to a textarea.
+   Press run, then modify some code and press "run" again
+                            </p>
 
+                            <textarea class='coder-editor'>
+                              <header>
+                                <h1>My Site!</h1>
+                                <nav>
+                                  <ul>
+                                    <li>
+                                      <a href='#'>Link 1</a>
+                                    </li>
+                                    <li>
+                                      <a href='#'>Link 2</a>
+                                    </li>
+                                  </ul>
+                                </nav>
+                              </header>
 
+                              <section id='content'>
+                                <article class='blog-post'>
+                                  <h1>Blog Post 1</h1>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa
+                                  </p>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa
+                                  </p>
+                                </article>
+                              </section>
+                              <footer>
+                                <a href='#'>Link 1</a>
+                                |
+                                <a href='#'>Link 2</a>
+                              </footer>
+                            </textarea>
+                          </article>
 
-<!-- CODERDECK EXAMPLES -->
-<!-- Apply a class of "coder-editor" to a textarea to make it show up as runnable code -->
-<article class='slide slide-list'>
-<h2>Basic Code Editor</h2>
-<p>Basic split code editor is created by adding a class of "coder-editor" to a textarea.
-   Press run, then modify some code and press "run" again</p>
-
-<textarea class='coder-editor'>
-<header>
-  <h1>My Site!</h1>
-  <nav><ul>
-    <li><a href='#'>Link 1</a></li>
-    <li><a href='#'>Link 2</a></li>
-  </ul></nav>
-</header>
-
-<section id='content'>
-  <article class='blog-post'>
-    <h1>Blog Post 1</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
-  </article>
-</section>
-<footer>
-  <a href='#'>Link 1</a> | <a href='#'>Link 2</a>
-</footer>	
-</textarea>
-</article>
-
-<article class='slide slide-list'>
-<h2>How to use it?</h2>
-<p>Download a release and modify the index.html with your slide. Slides are created with by adding a class='slide' to any element. CoderDeck areas are created
-	by adding a class of 'coder-editor' to a text area, for example (prettyprint is also bundled, so, as below just use a &lt;pre class='prettyprint'&gt;.. to highlight static code):</p>
-<pre class='prettyprint'>
+                          <article class='slide slide-list'>
+                            <h2>How to use it?</h2>
+                            <p>
+                              Download a release and modify the index.html with your slide. Slides are created with by adding a class='slide' to any element. CoderDeck areas are created
+  by adding a class of 'coder-editor' to a text area, for example (prettyprint is also bundled, so, as below just use a &lt;pre class='prettyprint'&gt;.. to highlight static code):
+                            </p>
+                            <pre class='prettyprint'>
 &lt;article class='slide slide-list'&gt;
   &lt;h2&gt;This is a second level heading!&lt;/h2&gt;
   &lt;p&gt;Here is some descriptive text, followed by a split editor. &lt;/p&gt;
@@ -718,91 +963,108 @@ sayMyName();
 &lt;/article&gt;
 </pre>
 
-</article>
+                          </article>
 
+                          <!-- Apply a class of "coder-editor-full" along with "coder-editor" to a textarea to make it show up as runnable code -->
+                          <article class='slide slide-list'>
+                            <h2>Full Page Code Editor</h2>
+                            <p>
+                              Basic full page code editor is created by adding a class of "coder-editor-full" along with "coder-editor" to a textarea.
+   Press run, then press "back", then modify some code and press "run" again
+                            </p>
 
-<!-- Apply a class of "coder-editor-full" along with "coder-editor" to a textarea to make it show up as runnable code -->
-<article class='slide slide-list'>
-<h2>Full Page Code Editor</h2>
-<p>Basic full page code editor is created by adding a class of "coder-editor-full" along with "coder-editor" to a textarea.
-   Press run, then press "back", then modify some code and press "run" again</p>
+                            <textarea class='coder-editor coder-editor-full'>
+                              <header>
+                                <h1>My Site!</h1>
+                                <nav>
+                                  <ul>
+                                    <li>
+                                      <a href='#'>Link 1</a>
+                                    </li>
+                                    <li>
+                                      <a href='#'>Link 2</a>
+                                    </li>
+                                  </ul>
+                                </nav>
+                              </header>
 
-<textarea class='coder-editor coder-editor-full'>
-<header>
-  <h1>My Site!</h1>
-  <nav><ul>
-    <li><a href='#'>Link 1</a></li>
-    <li><a href='#'>Link 2</a></li>
-  </ul></nav>
-</header>
+                              <section id='content'>
+                                <article class='blog-post'>
+                                  <h1>Blog Post 1</h1>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa
+                                  </p>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa
+                                  </p>
+                                </article>
+                              </section>
+                              <footer>
+                                <a href='#'>Link 1</a>
+                                |
+                                <a href='#'>Link 2</a>
+                              </footer>
+                            </textarea>
+                          </article>
 
-<section id='content'>
-  <article class='blog-post'>
-    <h1>Blog Post 1</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit at nisl sagittis consequat sed eget tellus. Aliquam gravida, nunc sit amet viverra dictum, nibh justo semper massa</p>
-  </article>
-</section>
-<footer>
-  <a href='#'>Link 1</a> | <a href='#'>Link 2</a>
-</footer>	
-</textarea>
-</article>
+                          <!-- use a class of gist and a data-gist-id to pull the code example from a gist -->
+                          <article class='slide slide-list'>
+                            <h2>Pulling from Gists</h2>
+                            <p>
+                              Use a class of 'gist' and an attribute of data-gist-id for the Gist ID
+                            </p>
+                            <div class='gist' data-gist-classes='coder-editor coder-editor-full' data-gist-id='1262553'></div>
+                          </article>
 
-
-<!-- use a class of gist and a data-gist-id to pull the code example from a gist -->
-<article class='slide slide-list'>
-<h2>Pulling from Gists</h2>
-<p>Use a class of 'gist' and an attribute of data-gist-id for the Gist ID</p>
-<div class='gist' data-gist-classes='coder-editor coder-editor-full' data-gist-id='1262553'></div>
-</article>
-
-<!-- add a "data-coder-template" to use a different template (see the template definitions at the top)
+                          <!-- add a "data-coder-template" to use a different template (see the template definitions at the top)
      add a "data-language" to use a different CodeMirror2 mode other than htmlmixed. Options include "html", "javascript", "css", "xml" and any other mode supported by CodeMirror2
 -->
-<article class='slide slide-list'>
-<h2>Custom template and custom language</h2>
-<p>You can create custom reusable templates for wrapping the editor code with custom &lt;script&gt; tags. You can also specify the mode the editor should display (xml, css, javascript or the default htmlmixed ) </p>
+                          <article class='slide slide-list'>
+                            <h2>Custom template and custom language</h2>
+                            <p>
+                              You can create custom reusable templates for wrapping the editor code with custom &lt;script&gt; tags. You can also specify the mode the editor should display (xml, css, javascript or the default htmlmixed )
+                            </p>
 
-<textarea class='coder-editor' data-coder-template="coderdeck-style-example" data-language="css">
-h1 { color:blue; }
+                            <textarea class='coder-editor' data-coder-template="coderdeck-style-example" data-language="css">
+                              h1 { color:blue; }
 h2 { color:red;}
 p  { color:pink;}
 .stuff  { color:purple;}
 #my-div { color:teal;}
-</textarea>
-</article>
+                            </textarea>
+                          </article>
 
+                          <!-- add a "data-coder-instant" to do on-the-fly updating-->
+                          <article class='slide slide-list'>
+                            <h2>Instant Update Sample</h2>
+                            <p>
+                              Try modifying any of the HTML on the left, the right side should updated periodically as you type. This is done by adding a class of "coder-editor-instant" to the textarea
+                            </p>
 
-
-<!-- add a "data-coder-instant" to do on-the-fly updating-->
-<article class='slide slide-list'>
-<h2>Instant Update Sample</h2>
-<p>Try modifying any of the HTML on the left, the right side should updated periodically as you type. This is done by adding a class of "coder-editor-instant" to the textarea</p>
-
-<textarea class='coder-editor coder-editor-instant' data-coder-template="coderdeck-style-example" data-language="css">
-h1 { color:blue; }
+                            <textarea class='coder-editor coder-editor-instant' data-coder-template="coderdeck-style-example" data-language="css">
+                              h1 { color:blue; }
 h2 { color:red;}
 p  { color:pink;}
 .stuff  { color:purple;}
 #my-div { color:teal;}
-</textarea>
-</article>
+                            </textarea>
+                          </article>
 
-
-<!-- Javascript works normally as well, libraries and external css (including jquery) can be included in template -->
-<article class='slide slide-list'>
-<h2>Javascript/jQuery Example</h2>
-<p> Javascript works normally as well, libraries and external css (including jquery) can be included in the coderdeck template.</p>
-<textarea class='coder-editor'>
-<script>
+                          <!-- Javascript works normally as well, libraries and external css (including jquery) can be included in template -->
+                          <article class='slide slide-list'>
+                            <h2>Javascript/jQuery Example</h2>
+                            <p>
+                              Javascript works normally as well, libraries and external css (including jquery) can be included in the coderdeck template.
+                            </p>
+                            <textarea class='coder-editor'>
+                              <script>
   $(function() {
     $(".box").animate({ 
         'top':"50%", 
         'left':"50%" });
   });
 </script>
-<style>
+                              <style>
   .box { 
     top:0px; left:0px;
     width:50px; height:50px; 
@@ -810,73 +1072,76 @@ p  { color:pink;}
     background-color:red;
   }
 </style>
-<div class='box'></div>
-</textarea>
-</article>
+                              <div class='box'></div>
+                            </textarea>
+                          </article>
 
+                          <article class='slide slide-list'>
+                            <h2>Local Storage</h2>
+                            <p>
+                              If you want your changes to a slide to survive between page reloads you can define a data-save attribute which will save it to the attributes value in localstorage. Make a code change, hit run/save and reload this slide.
+                            </p>
+                            <p>
+                              You can also use the same 'data-save'  attribute on mulitiple slides to keep the same code moving forwad
+                            </p>
+                            <textarea class='coder-editor' data-save='dummy'>
+                              <h1>This is some dummy content..</h1>
+                            </textarea>
+                          </article>
 
+                          <article class='slide slide-list'>
+                            <h2>Solutions</h2>
+                            <p>
+                              If you want to add a solution to an exercise, you can add a coderdeck-solution script tag in the slide
+                            </p>
+                            <textarea class='coder-editor'>
 
-<article class='slide slide-list'>
-<h2>Local Storage</h2>
-<p>  If you want your changes to a slide to survive between page reloads you can define a data-save attribute which will save it to the attributes value in localstorage. Make a code change, hit run/save and reload this slide.</p>
-<p> You can also use the same 'data-save'  attribute on mulitiple slides to keep the same code moving forwad</p>
-<textarea class='coder-editor' data-save='dummy'>
-  <h1>This is some dummy content..</h1>
-</textarea>
-</article>
-
-
-<article class='slide slide-list'>
-<h2>Solutions</h2>
-<p>If you want to add a solution to an exercise, you can add a coderdeck-solution script tag in the slide </p>
-<textarea class='coder-editor'>
-
-<script>
+                              <script>
     // Display an alert message
     // if a confirm dialog returns true
 </script>
-</textarea>
+                            </textarea>
 
-<script type='coder-solution'>
+                            <script type='coder-solution'>
 SCRIPT
   if(confirm("Do you want an alert?")) {
       alert("Yay!");
   }
 SCRIPTEND
 </script>
-</article>
+                          </article>
 
-</div><!-- END div id=presentation -->
+                        </div>
+                        <!-- END div id=presentation -->
 
+                        <script src='src/jquery.min.js'></script>
+                        <script src="src/modernizr.js"></script>
 
-<script src='src/jquery.min.js'></script>
-<script src="src/modernizr.js"></script>
+                        <!-- Update these paths to point to the correct files. -->
+                        <script src="src/jquery.tmpl.min.js"></script>
+                        <script src="src/deck.js/core/deck.core.js"></script>
 
-<!-- Update these paths to point to the correct files. -->
-<script src="src/jquery.tmpl.min.js"></script>
-<script src="src/deck.js/core/deck.core.js"></script>
+                        <!-- Code Mirror -->
+                        <script src="src/codemirror/lib/codemirror.js"></script>
+                        <script src="src/codemirror/mode/xml/xml.js"></script>
+                        <script src="src/codemirror/mode/css/css.js"></script>
+                        <script src="src/codemirror/mode/javascript/javascript.js"></script>
+                        <script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
-<!-- Code Mirror -->
-<script src="src/codemirror/lib/codemirror.js"></script>
-<script src="src/codemirror/mode/xml/xml.js"></script>
-<script src="src/codemirror/mode/css/css.js"></script>
-<script src="src/codemirror/mode/javascript/javascript.js"></script>
-<script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+                        <!-- Prettify -->
+                        <script src="src/prettify.js"></script>
 
-<!-- Prettify -->
-<script src="src/prettify.js"></script>
+                        <!-- Deck Core and extensions -->
+                        <script src="src/deck.js/extensions/status/deck.status.js"></script>
+                        <script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
+                        <script src='src/deck.coder.js'></script>
+                        <script src="src/deck.js/extensions/hash/deck.hash.js"></script>
+                        <script src="src/deck.js/extensions/menu/deck.menu.js"></script>
 
-<!-- Deck Core and extensions -->
-<script src="src/deck.js/extensions/status/deck.status.js"></script>
-<script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
-<script src='src/deck.coder.js'></script>
-<script src="src/deck.js/extensions/hash/deck.hash.js"></script>
-<script src="src/deck.js/extensions/menu/deck.menu.js"></script>
-
-<script>
-	$(function() {
-		$.deck('.slide');
-	});
+                        <script>
+  $(function() {
+    $.deck('.slide');
+  });
 </script>
 </body>
-</html>
+                      </html>

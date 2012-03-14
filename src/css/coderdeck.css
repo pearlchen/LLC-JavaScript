@@ -35,7 +35,7 @@ html, body {
   border-radius: 10px;
   -moz-border-radius: 10px;
   margin: 0 auto;
-  padding: 40px 50px;
+  padding: 30px 50px 10px 50px;
 }
 
 .deck-container .slide-title {
@@ -43,30 +43,27 @@ html, body {
   text-align: center; 
 }
 .deck-container .slide-title .workshop_title {
-  margin: 60px 0;
+  margin: 30px 0 0 0;
 }
-.deck-container .slide-title .workshop_title .download_link {
+.deck-container .slide-title .download_link {
   font-size: 1.3em; 
-  margin: 2.5em 0 0.5em 0;
   letter-spacing: 0.05em;
-  line-height: 2em;
 }
-.deck-container .slide-title .workshop_title .download_link a {
+.deck-container .slide-title .download_link a {
   font-size: 1.3em;
   font-weight: bold;
   letter-spacing: 0.03em;
-  color: #b1009a;
   text-decoration: none;
 }
 
 .deck-container .instructor_holder {
   width: 560px;
-  margin: 0px auto;
+  margin: 110px auto;
 }
 .deck-container .instructor_holder h2 {
   text-transform: uppercase;
-  font-size: 1.8em;
-  margin-bottom: 0.8em;
+  font-size: 2em;
+  margin-bottom: 1.5em;
 }
 .deck-container .instructor_holder div {
   width: 50%;
@@ -220,4 +217,32 @@ table.comparison-table tr {
 }
 table.comparison-table tr td, table.comparison-table tr th {
 	padding: 5px 10px;
+}
+
+
+.deck-container img {
+ display: inline;
+}
+
+.centered {
+  text-align: center;
+}
+
+.sidenote {
+  font-size: 12px !important; 
+}
+
+.stickynote {
+  border: 1px solid #ccc;
+  background: url(../assets/icon-note.jpg) top left no-repeat;
+}
+.contains_sidebyside_icons {
+  width: 400px;
+  margin: 0 auto !important;
+}
+
+.sidebyside_download_icon {
+  float: left;
+  width: 200px;
+  text-align: center;
 }
