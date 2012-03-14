@@ -23,6 +23,7 @@
   <style type="text/css"></style>
 
 </head>
+
 <body class="deck-container">
 
   <script type='text/coderdeck' id='coderdeck-default'>
@@ -30,8 +31,8 @@
     <head>
       <script src='src/jquery.min.js'>SCRIPTEND</head>
     <body>CODE</body>
-</html>
-</script>
+  </html>
+  </script>
 
   <script type='text/coderdeck' id='coderdeck-style-example'>
   <html>
@@ -247,7 +248,6 @@
 
 </script>
         </textarea>
-</script>
       </article>
 
       <!-- SLIDE: VARIABLES (cont'd) shipping example -->
@@ -263,7 +263,7 @@
       <article class='slide slide-list'>
         <h2>An Aside...</h2>
 		<br />
-        <p>Here’s a few helpful JavaScript built-ins that will help for testing and writing code. </p>
+        <p>Here's a few helpful JavaScript built-ins that will help with testing and writing code. </p>
 		<textarea class='coder-editor coder-editor-full'>
 <script>
 
@@ -275,7 +275,7 @@ document.write("document.write<br />outputs text into the page.");
         </textarea>
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE: VARIABLES HOW-TO -->
       <article class='slide slide-list'>
         <h2>Variables How-to</h2>
         <p>Declare variables with the keyword <strong>var</strong>.</p>
@@ -285,105 +285,102 @@ document.write("document.write<br />outputs text into the page.");
           End the <strong>statement</strong> with a semicolon (;).
         </p>
         <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
-        <p>Now the computer knows my email address!</p>
-        
-		<p class="reminders"><img src="assets/icon-reminder.jpg" width="80" height="70" />
-          <strong>Statements</strong>
-          are commands that tell the computer what to do. Ending the statement with a semicolon is like ending a sentence with a period. We are telling the computer that the statement is done.
-        </p>
+        <p>Now the computer knows my email address!</p>       
+		<br />
+		<div class="reminders">
+			<img src="assets/icon-reminder.jpg" width="80" height="70" />
+			<p><strong>Statements</strong> are commands that tell the computer what to do.<br />
+			  Ending the statement with a semicolon is like ending a sentence <br /> 
+			  with a period. It tells the computer that the statement is done.</p>		
+		</div>
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE: VARIOUS VARIABLES  -->
       <article class='slide slide-list'>
         <h2>Various Variables</h2>
         <p>Different types of variables hold different kinds of values.</p>
         <p>1. Numeric variable (integers &amp; decimals)</p>
-        <pre class='prettyprint'>
+<pre class='prettyprint'>
 var someIntegerNumber = 10;
 var someDecimalNumber = 10.5;
 </pre>
         <p>2. String variable (letters, words &amp; sentences)</p>
-        <pre class='prettyprint'>
+<pre class='prettyprint'>
 var singleWordString = "hello";
 var sentenceString = "Hello, good day to you!";
 var numberString = "10";
 </pre>
-        <strong>Note:</strong>
-        string values are always written inside double quotes(")
-        <br />
         <br />
         <p>3. Boolean variable (true/false)</p>
-        <pre class='prettyprint'>
+<pre class='prettyprint'>
 var isSaturday = false;
 var isSunday = true;
 </pre>
+		<div class="reminders">
+			<img src="assets/icon-reminder.jpg" width="80" height="70" />
+			<p>String values are always written inside double quotes ("string").</p>		
+		</div>
+		<br />
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE:  VARIABLES - UNDERSCORES AND $ SIGNS -->
       <article class='slide slide-list'>
         <h2>Variables: Tips &amp; Best Practices</h2>
-        <p>
-          Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).
-          <p>
-            <textarea class='coder-editor'>
-              <script>
+        <p>Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).</p>
+		<div class="reminders">
+			<img src="assets/icon-reminder.jpg" width="80" height="70" />
+			<p>Although it's valid to use underscore or a dollar sign, it is not used often<br /> 
+			and usually in special circumstances.</p>		
+		</div>
+		<br />
+<textarea class='coder-editor'>
+<script>
   var 3hundred = 300;
   document.write(3hundred);
 
-  var $300 = 300;
-  document.write($300);
+  //var $1000 = 1000;
+  //document.write($1000);
 </script>
-            </textarea>
-          </article>
+</textarea>
+      </article>
+	
+		<!-- SLIDE: VARIABLE NAMES - NO SPACES -->
+       <article class='slide slide-list'>
+         <h2>Variables: Tips &amp; Best Practices</h2>
+         <p>Variables cannot contain spaces. Use a convention called <strong>camel case</strong>.
+			<br /> 
+			Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
+		 </p>
+         <p>JavaScript is case sensitive so variable names are also case sensitive.</p>
+		<p>Another convention is to use underscores <strong>to_separate_words</strong>. This is common in other programming languages (like PHP).</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var greetMe = prompt("Hello, what's your name?");
+  var greetme = prompt("Bonjour, quel est ton nom?");
+  var greet_me = prompt("Hola, ¿cómo te llamas?");
 
-          <!-- new slide -->
-          <article class='slide slide-list'>
-            <h2>Variables: Tips &amp; Best Practices</h2>
-            <p>
-              Variables cannot contain spaces. Use a convention called
-              <strong>camel case</strong>
-              in which every new word is capitalized. It's called
-              <strong>camel case</strong>
-              because it looks
-              <strong>likeCamelHumps</strong>
-            </p>
-            <p>
-              JavaScript is case sensitive so variable names are also case sensitive. These two variable names below are not the same.
-            </p>
-            <pre class='prettyprint'>
-var camelCaseVariable = "Hello";
-var camelcasevariable = "Goodbye";
-</pre>
-            <p>
-              Another convention is using underscores to separate words. This is common in other programming languages (like PHP).
-            </p>
-            <pre class='prettyprint'>var spread_out_words = "Hello";</pre>
-            <p>
-              It is important to choose one method and be consistent throughout the entire project.
-            </p>
-          </article>
-        </pre>
-
-        <!-- new slide -->
+  document.write(greetMe);
+  document.write("<br />");
+  document.write(greetme);
+  document.write("<br />");
+  document.write(greet_me);
+</script>
+</textarea>
+       </article>
+     </pre>
+		
+        <!-- SLIDE: VARIABLES - DESCRIPTIVE NAMES -->
         <article class='slide slide-list'>
           <h2>Variables: Tips &amp; Best Practices</h2>
-          <p>
-            When naming a variable, it's best to give it a descriptive name.
-          </p>
-          <p>
-            It makes it easier to see at a glance, what kind of value that variable is going to hold.
-          </p>
-          <p>
-            This is especially useful when sharing code with others who may not use the same kinds of abbreviations.
-          </p>
-          <pre class='prettyprint'>
-var firstName = "Clear that first name will go here";
-var fn = "Not as obvious as firstName";
-var x = "Not clear at all.";
-</pre>
+          <p> When naming a variable, it's best to give it a descriptive name.</p>
+          <p>It makes it easier to see at a glance, what kind of value that variable is going to hold.</p>
+          <p>This is especially useful when sharing code with others who may not use the same kinds of abbreviations.</p>
+		  <p><strong>var firstName;</strong> &larr; Clear that first name will go here.<br />
+			<strong>var fn;</strong> &larr; Not as obvious as firstName.<br />
+			<strong>var x;</strong> &larr; Not clear at all.</p>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>Comments</h2>
           <p>
@@ -407,7 +404,7 @@ want to write a longer message */
           </p>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>JavaScript Arithmetic Operators</h2>
           <p>
@@ -434,7 +431,7 @@ want to write a longer message */
           </textarea>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>JavaScript Arithmetic Operators (cont.)</h2>
           <p>
@@ -470,7 +467,7 @@ want to write a longer message */
           </textarea>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>JavaScript Arithmetic Operators (cont.)</h2>
           <p>
@@ -491,7 +488,7 @@ want to write a longer message */
           </textarea>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>Who loves LadiesLearningCode? I do!</h2>
           <p>
@@ -531,7 +528,7 @@ want to write a longer message */
           </textarea>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>Concatenation</h2>
           <p>
@@ -562,7 +559,7 @@ want to write a longer message */
           </textarea>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>Conditional Statements</h2>
           <p>
@@ -608,7 +605,7 @@ if (condition) {
 </pre>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>Conditional Statements (cont.)</h2>
           <p>
@@ -643,7 +640,7 @@ if ( salePrice > regularPrice ) {
           </textarea>
         </article>
 
-        <!-- new slide -->
+        <!-- SLIDE:  -->
         <article class='slide slide-list'>
           <h2>
             Rewind: JavaScript Comparison and
@@ -744,7 +741,7 @@ if ( salePrice > regularPrice ) {
                             </table>
                           </article>
 
-                          <!-- new slide -->
+                          <!-- SLIDE:  -->
                           <article class='slide slide-list'>
                             <h2>Variables, Operators, Concatenation and Conditionals</h2>
                             <p>
@@ -763,7 +760,7 @@ if ( salePrice > regularPrice ) {
 </script></textarea>
                           </article>
 
-                          <!-- new slide -->
+                          <!-- SLIDE:  -->
                           <article class='slide slide-list'>
                             <h2>Functions &amp; Methods</h2>
                             <p>
@@ -797,7 +794,7 @@ if ( salePrice > regularPrice ) {
                             </ul>
                           </article>
 
-                          <!-- new slide -->
+                          <!-- SLIDE:  -->
                           <article class='slide slide-list'>
                             <h2>Defining and Calling a Function</h2>
                             <p>
@@ -824,7 +821,7 @@ function nameOfFunction() {
                               <input type="button" onclick="sayMyName()" value="Say my name!"></textarea>
                           </article>
 
-                          <!-- new slide -->
+                          <!-- SLIDE:  -->
                           <article class='slide slide-list'>
                             <h2>Functions and Parameters</h2>
                             <p>
@@ -859,7 +856,7 @@ function nameOfFunction() {
                             </textarea>
                           </article>
 
-                          <!-- new slide -->
+                          <!-- SLIDE:  -->
                           <article class='slide slide-list'>
                             <h2>
                               Parameters vs Local Variables vs

@@ -80,10 +80,11 @@ html, body {
   top: 0%;
 }
 
-.deck-container .slide-list p.reminders {
+.deck-container .slide-list .reminders p {
 	font-size: 1.2em;
+	padding-top: 8px;
 }
-.deck-container .slide-list p.reminders img {
+.deck-container .slide-list .reminders img {
 	float: left;
 	padding-right: 10px;
 }
