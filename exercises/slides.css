@@ -27,3 +27,15 @@
 	#exercise2 input#updateTotal {
 		width: 66px;
 	}
+
+/* Slide: Mini-exercise #5 */
+.item {
+	width: 200px;
+	text-align: center;
+}
+	.item input#updateQuantity {
+		width: 20px;
+	}
+	.item input#updateTotal {
+		width: 66px;
+	}

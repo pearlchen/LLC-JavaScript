@@ -206,106 +206,88 @@
         <p>Programming and JavaScript</p>
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE: JS THEORY-->
       <article class='slide slide-subhead'>
-        <h1>JavaScript Hands-on</h1>
-        <p>Programming Language (Behaviour)</p>
+        <h1>JavaScript Theory<br /> Hands-on</h1>
+        <p>Part 1</p>
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE: EXERCISE OVERVIEW -->
       <article class='slide slide-list'>
         <h2>JavaScript Exercise Overview</h2>
         <br />
         <br />
-        <p>
-          In this first part, we'll be creating a shopping cart checkout form.
-        </p>
-        <br />
-        <p>
-          In order to do this, we will need to learn how to use <strong>VARIABLES</strong>
-          , <strong>FUNCTIONS</strong>
-          ,
-          <strong>OBJECTS</strong>
-          ,
-          <strong>ARRAYS</strong>
-          and
-          <strong>LOOPS</strong>
-          .
-        </p>
-        <br />
-        <p>
-          This will be our
-          <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_final.html">end goal</a>
-          .
-        </p>
-        <br />
-        <p>
-          But before we get there, we'll work on getting a
-          <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart.html">working prototype first</a>
-          .
-        </p>
+        <p>In this first part, we'll be creating a shopping cart checkout form.</p><br />
+        <p>In order to do this, we will need to learn how to use <strong>VARIABLES</strong>, <strong>FUNCTIONS</strong>,          <strong>OBJECTS</strong>, <strong>ARRAYS</strong> and <strong>LOOPS</strong>.</p><br />
+        <p>This will be our <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_final.html">end goal</a>.</p><br />
+        <p>But before we get there, we'll be working on getting a few <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart.html">working prototypes first</a>.</p>
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE: VARIABLES -->
       <article class='slide slide-list'>
         <h2>Variables</h2>
         <br />
         <p>Variables are used to store values.</p>
-        <p>
-          <strong>Declaring</strong>
-          a variable tells the computer that it exists. Otherwise,
-          <br />
-          values will just disappear.
-        </p>
+        <p><strong>Declaring</strong> a variable tells the computer that it exists. Otherwise,
+          <br />values will just disappear.</p>
+		<p>Variables are like boxes, it can be used to store different objects.</p>
         <br />
-        <p>
-          <img src="http://placehold.it/550x150&text=box+images"></p>
+        <p><img src="http://placehold.it/550x150&text=box+images"></p>
       </article>
 
-      <!-- new slide -->
+      <!-- SLIDE: VARIABLES (cont'd) -->
       <article class='slide slide-list'>
         <h2>Variables (cont'd)</h2>
-        <p>
-          Variables are like the computer's short-term memory. In this example, the computer can't remember any one's name!
-        </p>
+        <p>Variables can also be like the computer's short-term memory. In this example, the computer can't remember any one's name!</p>
+        <textarea class='coder-editor coder-editor-full'>
+<script>
 
-        <textarea class='coder-editor'>
-          <script>
   prompt("What's your name?");
   document.write("Hello....?");
+
+</script>
+        </textarea>
+</script>
+      </article>
+
+      <!-- SLIDE: VARIABLES (cont'd) shipping example -->
+      <article class='slide slide-list'>
+        <h2>Variables (cont'd)</h2>
+		<br />
+        <p>If variables were applied to a web checkout form that asks for your name and address, it will store the information and can be used to create things like shipping labels.</p>
+		<br />
+        <p><img src="assets/var-shipping-example.jpg" width="594" height="193" /></p>
+      </article>
+
+	  <!-- SLIDE: AN ASIDE -->
+      <article class='slide slide-list'>
+        <h2>An Aside...</h2>
+		<br />
+        <p>Here’s a few helpful JavaScript built-ins that will help for testing and writing code. </p>
+		<textarea class='coder-editor coder-editor-full'>
+<script>
+
+alert("This is an alert box.");
+prompt("This is a prompt box. Enter some info");
+document.write("document.write<br />outputs text into the page.");
+
 </script>
         </textarea>
       </article>
 
       <!-- new slide -->
       <article class='slide slide-list'>
-        <h2>Variables (cont'd)</h2>
-        <p>
-          Applied, it's a web checkout form that asks for your name, address, and email so it knows where to send your package.
-        </p>
-        <p>
-          <img src="http://placehold.it/550x150&text=contact+form"></p>
-      </article>
-
-      <!-- new slide -->
-      <article class='slide slide-list'>
         <h2>Variables How-to</h2>
-        <p>
-          Declare variables with the keyword
-          <strong>var</strong>
-          .
-        </p>
+        <p>Declare variables with the keyword <strong>var</strong>.</p>
         <pre class='prettyprint'>var email</pre>
-        <p>
-          Assign a values to the variable using the equals (=) sign.
+        <p>Assign a values to the variable using the equals (=) sign.
           <br />
-          End the
-          <strong>statement</strong>
-          with a semicolon (;).
+          End the <strong>statement</strong> with a semicolon (;).
         </p>
         <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
         <p>Now the computer knows my email address!</p>
-        <p>
+        
+		<p class="reminders"><img src="assets/icon-reminder.jpg" width="80" height="70" />
           <strong>Statements</strong>
           are commands that tell the computer what to do. Ending the statement with a semicolon is like ending a sentence with a period. We are telling the computer that the statement is done.
         </p>

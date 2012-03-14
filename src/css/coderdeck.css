@@ -6,6 +6,7 @@ html, body {
   background: url(../../assets/ladieslearningcode-125x125.gif) 10px -10px no-repeat;
   /*border-top: 7px #b1009a solid;*/
 }
+
 .deck-container #presentation {
 	
 }
@@ -79,6 +80,13 @@ html, body {
   top: 0%;
 }
 
+.deck-container .slide-list p.reminders {
+	font-size: 1.2em;
+}
+.deck-container .slide-list p.reminders img {
+	float: left;
+	padding-right: 10px;
+}
 .deck-container .slide-list h2 {
   font-size: 3.5em;
   padding-bottom: .07em;
@@ -112,6 +120,7 @@ html, body {
 
 .deck-container .slide-subhead h1 {
   font-size: 4em;
+  line-height: 1em;
   margin: 0px;
   padding: 2em 0 0.5em 0;
   position: static;
