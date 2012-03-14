@@ -256,3 +256,8 @@ table.comparison-table tr td, table.comparison-table tr th {
   width: 200px;
   text-align: center;
 }
+
+.keyword {
+	font-weight: 700;
+	text-transform: uppercase;
+}
