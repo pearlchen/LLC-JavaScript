@@ -252,6 +252,7 @@ table.comparison-table tr td, table.comparison-table tr th {
 .keyword {
 	font-weight: 700;
 	text-transform: uppercase;
+	color: #2E2E2E;
 }
 .deck-container .reminders {
 	background: url("../../assets/icon-reminder.jpg") no-repeat;
@@ -261,4 +262,10 @@ table.comparison-table tr td, table.comparison-table tr th {
 }
 .deck-container .reminders p {
 	font-size: 1em;
+}
+span.marker {
+ 	position: absolute;
+ 	bottom: 3px;
+    left: 15px;
+    font-size: 1.3em;    
 }

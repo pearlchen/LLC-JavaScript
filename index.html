@@ -256,7 +256,7 @@
 		<br />
         <p>If variables were applied to a web checkout form that asks for your name and address, it will store the information and can be used to create things like shipping labels.</p>
 		<br />
-        <p><img src="assets/var-shipping-example.jpg" width="594" height="193" /></p>
+        <p style="text-align: center;"><img src="assets/var-shipping-example.jpg" width="594" height="193" /></p>
       </article>
 
 	  <!-- SLIDE: AN ASIDE -->
@@ -269,7 +269,7 @@
 
 alert("This is an alert box.");
 prompt("This is a prompt box. Enter some info");
-document.write("document.write<br />outputs text into the page.");
+document.write("document.write<br />outputs text and HTML into the page.");
 
 </script>
         </textarea>
@@ -285,7 +285,7 @@ document.write("document.write<br />outputs text into the page.");
           End the <strong>statement</strong> with a semicolon (;).
         </p>
         <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
-        <p>Now the computer knows my email address!</p>       
+        <p>Now the computer will remember my email address!</p>       
 		<br />
 		<div class="reminders">
 			<img src="assets/icon-reminder.jpg" width="80" height="70" />
@@ -380,7 +380,25 @@ var isSunday = true;
 			<strong>var x;</strong> &larr; Not clear at all.</p>
         </article>
 
-        <!-- SLIDE:  -->
+		<!-- SLIDE: WHITESPACE -->
+        <article class='slide slide-list'>
+          <h2>Whitespace in JavaScript</h2>
+          <p>Whitespace refers to blank characters and includes space characters, tabs and line breaks.
+		JavaScript ignores whitespace except when used in a string.</p>
+<pre class='prettyprint'>
+  var name="Christina";
+  //same as
+  var name = "Christina";
+</pre>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  alert("Whitespace     in    a    string");
+  document.write("Whitespace     in    a    string");
+</script>
+</textarea>        
+        </article>
+
+        <!-- SLIDE: COMMENTS -->
         <article class='slide slide-list'>
           <h2>Comments</h2>
           <p>
