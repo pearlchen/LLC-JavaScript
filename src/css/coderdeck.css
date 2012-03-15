@@ -261,3 +261,13 @@ table.comparison-table tr td, table.comparison-table tr th {
 	font-weight: 700;
 	text-transform: uppercase;
 }
+
+.assignment {
+	font-weight: 900;
+	color: red;
+}
+
+.hint {
+	font-style: italic;
+}
+	
