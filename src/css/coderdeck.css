@@ -36,7 +36,7 @@ html, body {
   border-radius: 10px;
   -moz-border-radius: 10px;
   margin: 0 auto;
-  padding: 30px 50px 10px 50px;
+  padding: 30px 50px 40px 50px;
 }
 
 .deck-container .slide-title {
@@ -277,4 +277,17 @@ span.marker {
 .hint {
 	font-style: italic;
 }
-	
+
+.deck-container .hint {
+	background: url("../../assets/icon-hint.jpg") no-repeat;
+	font-size: 1.2em;
+	min-height: 60px;
+	padding: 8px 0 0 90px;
+}
+.deck-container .hint p {
+	font-size: 1em;
+}
+
+.var {
+	color: #770088;
+}	
