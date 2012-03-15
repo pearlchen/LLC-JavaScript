@@ -80,14 +80,6 @@ html, body {
   top: 0%;
 }
 
-.deck-container .slide-list .reminders p {
-	font-size: 1.2em;
-	padding-top: 8px;
-}
-.deck-container .slide-list .reminders img {
-	float: left;
-	padding-right: 10px;
-}
 .deck-container .slide-list h2 {
   font-size: 3.5em;
   padding-bottom: .07em;
@@ -260,4 +252,13 @@ table.comparison-table tr td, table.comparison-table tr th {
 .keyword {
 	font-weight: 700;
 	text-transform: uppercase;
+}
+.deck-container .reminders {
+	background: url("../../assets/icon-reminder.jpg") no-repeat;
+	font-size: 1.2em;
+	min-height: 60px;
+	padding: 8px 0 0 90px;
+}
+.deck-container .reminders p {
+	font-size: 1em;
 }
