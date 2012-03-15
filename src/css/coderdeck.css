@@ -269,3 +269,12 @@ span.marker {
     left: 15px;
     font-size: 1.3em;    
 }
+.assignment {
+	font-weight: 900;
+	color: red;
+}
+
+.hint {
+	font-style: italic;
+}
+	
