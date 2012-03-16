@@ -223,7 +223,7 @@ table.comparison-table tr td, table.comparison-table tr th {
 
 
 .deck-container img {
- display: inline;
+ display: block;
 }
 
 .centered {

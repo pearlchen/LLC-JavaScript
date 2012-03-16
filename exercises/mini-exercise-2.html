@@ -18,7 +18,6 @@
   function refreshTotal() {					
 	var totalCost = quantity * 20; //quantity * fixed price
 	document.getElementById('updateQuantity').value = quantity; //updates
-	document.getElementById('updateTotal').value = totalCost; //updates
   }
 </script>
 
@@ -28,7 +27,7 @@
   <button onclick="addItem();">Add</button>
   <button onclick="removeItem();">Remove</button><br />
   Quantity
-  <input type="text" id="updateQuantity" value="0" readonly="readonly" /><br />
+  <input type="text" id="updateQuantity" value="0" readonly="readonly" />
 </div>
 </body>
 

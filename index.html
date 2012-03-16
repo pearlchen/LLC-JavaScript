@@ -522,11 +522,11 @@ document.write("Hello, " + name);</pre>
       <h2>Variables How-to</h2>
       <p>Declare variables with the keyword <strong>var</strong>.</p>
       <pre class='prettyprint'>var email;</pre>
-      <p>Assign a values to the variable using the equals (=) sign.
+      <p>Assign a value to the variable using the equals (=) sign.
         <br />End the <strong>statement</strong> with a semicolon (;).
       </p>
       <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
-      <p>Now the computer knows my email address!</p>
+      <p>Now the computer will remember my email address!</p>
       <br />
       <div class="reminders">
         <p><strong>Statements</strong> are commands that tell the computer what to do.
@@ -591,7 +591,7 @@ var isSunday = true;
     <!-- SLIDE: VARIABLE NAMES - NO SPACES -->
     <article class='slide slide-list'>
       <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>Variables cannot contain spaces. Use a convention called <span class="keyword">camel case</span>.
+      <p>Variables can't contain spaces. Use a convention called <span class="keyword">camel case</span>.
         <br />Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
       </p>
       <p>JavaScript is case sensitive so variable names are also case sensitive.</p>
@@ -761,7 +761,7 @@ SCRIPTEND
       <br />
       <p>Remember there were different variable types?  Arithmetic operators can only be performed on numerical values.</p>
       <p>But numbers can be declared as strings too so be careful!</p>
-      <p>If you put double quotes (" ") or single quotes (' ') around the value, the computer will thinks it’s a string.</p>
+      <p>If you put double quotes (" ") or single quotes (' ') around the value, the computer will thinks it's a string.</p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
   var firstNumber = "20";
@@ -779,7 +779,7 @@ SCRIPTEND
       <div class="reminders">
         addition (+), subtraction (-), multiplication (*), division (/)
       </div>
-      <br />
+
 <textarea class='coder-editor coder-editor-full'>
 <script>
   var tshirtPrice = 25;
@@ -857,138 +857,186 @@ SCRIPTEND
     <!-- SLIDE: MINI-EXERCISE #2 - ADD/REMOVE ITEMS - ONE PRODUCT  -->
     <article class='slide slide-list'>
       <h2>Mini-exercise #2 (5-10 minutes)</h2>
-      <p>
-        Here's a one-product shopping page. You can add or remove things from the shopping cart. Here's what it should look like.
-      </p>
-      <p class="assignment">TODO: See the code for your FOUR tasks.</p>
-      <div class="hint">
-      	<p>How do you increment or decrement variables?</p>
-      </div>
       <br />
+      <p>Here's a one-product shopping page where you can update the<br />
+      quantity by adding or removing it from the shopping cart.</p>
+      <p>Here's what it should <a href="exercises/mini-exercise-2.html">look like</a>.</p>
+	</article>
+	
+	<!-- SLIDE: MINI-EXERCISE #2 : Code page -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #2: Go!</h2>
+      <div class="hint">
+      	<p>How do you increment and decrement variables?</p>
+      </div>
 <textarea class='coder-editor coder-editor-full'>
-<link rel="stylesheet" href="slides.css" type="text/css" />
 <script>
-
-/* 1. set var 'quantity' below to start at 0. This is the variable will be used to hold 
-the value for the quantity of robots */   
+  /* 1. set var 'quantity' to start at 0. This will be
+  used to hold the value for the quantity of robots */   
   var quantity =    
     
   function addItem(){
     // CODE HERE EXECUTES WHEN YOU PRESS THE 'ADD' BUTTON 
     //2. set the variable 'quantity' to increment HERE
-    
-       
+     
     refreshTotal();
   }
   function removeItem(){
-// CODE HERE EXECUTES WHEN YOU PRESS THE 'REMOVE' BUTTON  
+    // CODE HERE EXECUTES WHEN YOU PRESS THE 'REMOVE' BUTTON  
     //3. set the variable 'quantity' to decrement HERE
-    
-      
+       
     refreshTotal();
   }   
   function refreshTotal() {         
-  var totalCost = quantity * 20; //quantity * fixed price
-  document.getElementById('updateQuantity').value = quantity; //updates
+    var totalCost = quantity * 20; //quantity * fixed price
+    document.getElementById('updateQuantity').value = quantity; //updates
   }
 </script>
 
-        <div id="exercise2">
-          <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-          <br />
-          <button onclick="addItem();">Add</button>
-          <button onclick="removeItem();">Remove</button>
-          <br />
-          Quantity
-          <input type="text" id="updateQuantity" value="0" readonly />
-          <br />
-        </div>
-      </textarea>
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
+  <br />
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button>
+  <br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly />
+  <br />
+</div>
+</textarea>
+
+<script type='coder-solution'>
+<!-- SOLUTION -->
+SCRIPT
+  /* 1. set var 'quantity' below to start at 0. This is the variable will be used to hold 
+the value for the quantity of robots */		
+  var quantity = 0;		
+		
+  function addItem(){	
+    //2. set the variable 'quantity' to increment HERE
+    quantity++;
+			 
+    refreshTotal();
+  }
+  function removeItem(){	
+    //3. set the variable 'quantity' to decrement HERE
+    quantity--; 
+			
+    refreshTotal();
+  }		
+  function refreshTotal() {					
+    var totalCost = quantity * 20; //quantity * fixed price
+    document.getElementById('updateQuantity').value = quantity; //updates
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
+  <br />
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button>
+  <br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly />
+  <br />
+</div>
+</script>
     </article>
 
-    <!-- SLIDE:  -->
+    
+    <!-- SLIDE: CONCATENATION -->
     <article class='slide slide-list'>
       <h2>Concatenation</h2>
-      <p>
-        Now that we've calculated numerical totals, how do we format the output to include non-numerical values like a dollar sign?
-        <br />
-        We can use a technique called
-        <span class="keyword">concatenation</span>
-        using the plus (+) operator to combine strings.
+      <p>Now that we’ve calculated numerical totals, how do we format the output to add a non-numerical value like a dollar sign?
+        We use <span class="keyword">concatenation</span>. </p>
+      <p><span class="keyword">Concatenation</span> is the joining of two strings, using the (+) symbol.</p>
+      <p>Does the (+) symbol look familiar? Yep! It's the same as the addition operator.</p>
+      <p>Remember this example?</p>          
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Slide: Arithmetic Operators, Numbers and Strings
+  var firstNumber = "20";
+  var secondNumber = 10;
+  document.write(firstNumber + secondNumber);
+</script>
+</textarea>
+	  <span class="marker">*</span>
+	</article>
+
+
+  	<!-- SLIDE: CONCATENATION -->
+  	<article class='slide slide-list'>
+      <h2>Concatenation and Strings</h2>
+      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string. Only the addition (+) operator can be used to combine strings.
       </p>
-      <p>
-        <strong>Note:</strong>
-        this is the same symbol used for the mathematical addition operator.
-        <br />
-        If you use the + operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string. Only the addition (+) operator can be used with strings.
-      </p>
-      <textarea class='coder-editor'>
-        <script>
-//Addition with the + operator
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Addition with the + operator
   var tshirtPrice = 25;
   var androidPrice = 10;
   var shoppingTotal = tshirtPrice + androidPrice;
   document.write(shoppingTotal);
   document.write("<br />");
 
-//Concatenation with the + operator
-//document.write("Your total is: " + "$" + shoppingTotal);
-//document.write("<br />");
+  //Concatenation with the + operator
+  //document.write("Your total is: " + "$" + shoppingTotal);
+  //document.write("<br />");
 
-//no nos
-//document.write("Your total is:" * shoppingTotal);
-//document.write("$" + 20 + 1);
+  //no nos
+  //document.write("Your total is:" * shoppingTotal);
+  //document.write("<br />");
+  //document.write("$" + 20 + 1);
 </script>
       </textarea>
     </article>
 
-    <!-- SLIDE:  -->
+    <!-- SLIDE: Concatenation - update exercise #2 -->
     <article class='slide slide-list'>
       <h2>Concatenation in action (results)</h2>
-      <p>Here's the final result of it:</p>
-      <textarea class='coder-editor'>
-        <link rel="stylesheet" href="slides.css" type="text/css" media="screen" />
-        <script>  
-  var quantity = 0;   
-    
-  function addItem(){ 
-    quantity++;      
+      <p>Let's re-visit mini-exercise #2 and add a total cost field.</p>
+
+<textarea class='coder-editor coder-editor-full'>
+<script>	
+  var quantity = 0;		
+		
+  function addItem(){	
+    quantity++;			 
     refreshTotal();
   }
-  function removeItem(){  
+  function removeItem(){	
     quantity--; 
     refreshTotal();
-  }   
-  function refreshTotal() {         
-  var totalCost = quantity * 20; //quantity * fixed price
-  document.getElementById('updateQuantity').value = quantity; //updates
-  //Use concatenation to add a $ to the output
-  document.getElementById('updateTotal').value = totalCost; //updates
+  }		
+  function refreshTotal() {					
+    //this will update the HTML textfield
+    document.getElementById('updateQuantity').value = quantity; 
+
+    //EXAMPLE: Use concatenation to add a human readable $ sign to the price
+    var totalCost = quantity * 20; //quantity * fixed price OF $20
+    //var totalCostToShow = 
+
+    //this will update the HTML textfield
+    document.getElementById('updateTotal').value = totalCost;
   }
 </script>
-        <div id="exercise2">
-          <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-          <br />
-          <button onclick="addItem();">Add</button>
-          <button onclick="removeItem();">Remove</button>
-          <br />
-          Quantity
-          <input type="text" id="updateQuantity" value="0" readonly />
-          <br />
-          Total Cost:
-          <input type="text" id="updateTotal" value="0" readonly />
-        </div>
-      </textarea>
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />   
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly="readonly" /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly="readonly" />
+</div>
+</textarea>
     </article>
 
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Concatenation in action</h2>
-      <p>Let's re-visit mini-exercise #2 and add a total cost field.</p>
-      <textarea class='coder-editor'>
-        var totalCost = quantity * 20; //quantity * fixed price of $20
-      </textarea>
-    </article>
+
+
+
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
@@ -1376,11 +1424,6 @@ if ( salePrice > regularPrice ) {
       </p>
     </article>
 
-    <!-- SLIDE:  -->
-    <article class='slide slide-subhead'>
-      <h1>Mentor Introductions</h1>
-      <p>[Can we list everyone's name here?]</p>
-    </article>
 
     <!-- new slide -->
     <article class='slide slide-subhead'>
