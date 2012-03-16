@@ -223,7 +223,7 @@ table.comparison-table tr td, table.comparison-table tr th {
 
 
 .deck-container img {
- display: inline;
+ /*display: inline;*/
 }
 
 .centered {
@@ -231,7 +231,7 @@ table.comparison-table tr td, table.comparison-table tr th {
 }
 
 .sidenote {
-  font-size: 12px !important; 
+  font-size: 14px !important; 
 }
 
 .stickynote {

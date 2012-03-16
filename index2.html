@@ -26,112 +26,143 @@
 
 <body class="deck-container">
 
-  <script type='text/coderdeck' id='coderdeck-default'>
-  <html>
-    <head>
-      <script src='src/jquery.min.js'>SCRIPTEND</head>
-    <body>CODE</body>
-  </html>
-  </script>
+  <div id="presentation">
 
-  <script type='text/coderdeck' id='coderdeck-style-example'>
-  <html>
-    <title>test</title>
-    <style>CODE</style>
-    <body>
-      <h1>I'm a H1 heading</h1>
-      <h2>I'm a H2 heading</h2>
-      <p>Pargraph of text &lt;p&gt; here</p>
-      <div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
-      <div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
-    </body>
-  </html>
-</script>
+    <!-- SLIDE: ARCADE FIRE VIDEO -->
+    <article class='slide slide-list'>
+      <h2>Some JavaScript Inspiration...</h2>
+      <p>
+        What kind of crazy stuff can you do with HTML5 and JavaScript?
+      </p>
+      <p align="center">
+        <a href="http://www.chromeexperiments.com/arcadefire/" target="_blank">
+          <img src="assets/Chrome-Experiments-Arcade-Fire.gif" width="700" height="472" alt="Arcade Fire's The Wilderness Downtown" class="centered" />
+        </a>
+      </p>
+      <p class="hint">
+        Arcade Fire's interactive music video:
+        <a href="http://www.chromeexperiments.com/arcadefire/" target="_blank">The Wilderness Downtown</a>
+        .
+        <span class="sidenote">
+          (Dynamic content, Canvas 3D, Google Maps, drawing tools, and more!)
+        </span>
+      </p>
+    </article>
 
-	<div id="presentation">
-		<!-- SLIDE: ARCADE FIRE VIDEO -->
-		<article class='slide slide-list'>
-	  		<h2>JavaScript Inspirations and Aspirations...</h2>
-	  		<p>There's all sorts of crazy stuff you can do now within the browser! Case in point: Arcade Fire's interactive music video <a href="http://www.chromeexperiments.com/arcadefire/">The Wilderness Downtown</a>.</p>
-	  	</article>
-	  	
-	  	<!-- SLIDE: JS THEORY Part 2 -->
-	  	<article class='slide slide-subhead'>
-	  		<h1>Now Back To Your Regularly Programmed Workshop...</h1>
-	  		<p>&nbsp;</p>
-		</article>
-		
-		<!-- SLIDE: JS THEORY Part 2 -->
-  		<article class='slide slide-subhead'>
-	    	<h1>JavaScript Theory<br /> Hands-on</h1>
-	        <p>Part 2</p>
-	  	</article>
-		
-		<!-- SLIDE: FUNCTIONS AND METHODS -->
-		<article class='slide slide-list'>
-		  	<h2>Functions &amp; Methods</h2>
-		  	<p>What is something that you do that's very repetitive or a hassle? Wouldn't it be great if it was automated? Or at least faster?</p>
-			<table width="80%">
-			<p style="margin-bottom:10px;">Paying for parking:</p>
-				<tr>
-					<td width="50%"><p>The old way</p>	
-						<ol style="font-size:24px;line-height: 24px;">
-							<li>Find bank machine</li>
-							<li>Pull out bank card</li>
-							<li>Get money out from ATM</li>
-							<li>Buy chips so you can make change</li>
-							<li>Put change into machine</li>
-							<li>Take receipt</li>
-						</ol>
-					</td>
-					<td width="50%"><p>The new and improved way</p>
-						<ol style="font-size: 22px;">
-							<li>Pull the PayPass credit card from your wallet</li>
-							<li>Tap</li>
-							<li>Take receipt</li>
-						</ol>
-					</td>
-				</tr>
-			</table>
-		</article>
-        
-        <!-- SLIDE: FUNCTIONS -->    
-      	<article class='slide slide-list'>
-      	  	<h2>Functions in JavaScript</h2>
-      	  	<br />
-      	  	<p>Functions are used to make the code "do things."</p>
-   	    	<p><span class="keyword">prompt()</span> and <span class="keyword">alert()</span> are two functions that are pre-written into JavaScript.</p>
-   	    	<p>Someone already did the hard work for us by writing these functions to show us popups in the browser.</p>
-   	    	<p>But we can also write our own!</p>
-   	    </article>
-		
-		<!-- SLIDE: DEFINING FUNCTIONS -->
-	  	<article class='slide slide-list'>
-			<h2>Defining a Function</h2>
-		  	<p>Create your own functions to group together your own repetitive tasks.</p>
-		  	<p>To create a function, it needs to be <strong>defined</strong> first.</p>
-			<p>There are different ways to define a function but the most common way is using the <span class="keyword">Function</span> keyword.</p>
-<pre class='prettyprint'>
+    <!-- SLIDE:  -->
+    <article class='slide slide-subhead'>
+      <h1>Mentor Introductions</h1>
+      <p>[Can we list everyone's name here?]</p>
+    </article>
+
+    <!-- SLIDE: JS THEORY Part 2 -->
+    <article class='slide slide-subhead'>
+      <h1>Now Back To Your Regularly Programmed Workshop...</h1>
+    </article>
+
+    <!-- SLIDE: JS THEORY Part 2 -->
+    <article class='slide slide-subhead'>
+      <h1>
+        JavaScript Theory
+        <br />
+        Hands-on
+      </h1>
+      <p>Part 2</p>
+    </article>
+
+    <!-- SLIDE: FUNCTIONS AND METHODS -->
+    <article class='slide slide-list'>
+      <h2>Functions &amp; Methods</h2>
+      <p>
+        What is something that you do that's very repetitive or a hassle? Wouldn't it be great if it was automated? Or at least hidden away?
+      </p>
+      <table width="100%">
+        <tr>
+          <th colspan="2" s>Paying for parking</th>
+        </tr>
+        <tr>
+          <th width="50%">The old way</th>
+          <th width="50%">The improved way</th>
+        </tr>
+        <tr>
+
+          <td>
+            <ol style="font-size:24px;line-height: 24px;">
+              <li>Find bank machine</li>
+              <li>Pull out bank card</li>
+              <li>Get money out from ATM</li>
+              <li>Buy chips so you can make change</li>
+              <li>Put change into machine</li>
+              <li>Take receipt</li>
+            </ol>
+          </td>
+          <td>
+            <ol style="font-size: 24px;">
+              <li>Pull the PayPass credit card from your wallet</li>
+              <br>
+              <br>
+              <br>
+              <li>Tap</li>
+              <li>Take receipt</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </article>
+
+    <!-- SLIDE: FUNCTIONS -->
+    <article class='slide slide-list'>
+      <h2>Functions in JavaScript</h2>
+      <br />
+      <p>Functions are used to make the code "do things."</p>
+      <p>
+        <span class="keyword">prompt()</span>
+        and
+        <span class="keyword">alert()</span>
+        are two functions that are pre-written into JavaScript.
+      </p>
+      <p>
+        Someone already did the hard work for us by writing these functions to show us popups in the browser.
+      </p>
+      <p>But we can also write our own!</p>
+    </article>
+
+    <!-- SLIDE: DEFINING FUNCTIONS -->
+    <article class='slide slide-list'>
+      <h2>Defining a Function</h2>
+      <p>
+        Create your own functions to group together your own repetitive tasks.
+      </p>
+      <p>
+        To create a function, it needs to be <strong>defined</strong>
+        first.
+      </p>
+      <p>
+        There are different ways to define a function but the most common way is using the
+        <span class="keyword">Function</span>
+        keyword.
+      </p>
+      <pre class='prettyprint'>
 function nameOfFunction() {
   //code to execute
 }
 </pre>
-<textarea class='coder-editor'>
-<script>
-  alert("Christina");
-  
-</script>
-</textarea>
-		<span class="marker">*</span>
-		</article>
-		
-		<!-- SLIDE: CALLING FUNCTIONS -->
-	  	<article class='slide slide-list'>
-		  	<h2>Calling a Function</h2>
-		  	<p>The code within functions don't execute until it's <strong>called</strong>!</p>
-		  	<p>Let's try that again.</p>
-<textarea class='coder-editor'>
-<script>
+      <textarea class='coder-editor'>
+        <script>alert("Christina");</script>
+      </textarea>
+      <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: CALLING FUNCTIONS -->
+    <article class='slide slide-list'>
+      <h2>Calling a Function</h2>
+      <p>
+        The code within functions don't execute until it's <strong>called</strong>
+        !
+      </p>
+      <p>Let's try that again.</p>
+      <textarea class='coder-editor'>
+        <script>
   //defining the function
   function sayMyName() {
     alert("Christina");
@@ -140,487 +171,707 @@ function nameOfFunction() {
   //Calling the function
   sayMyName();
 </script>
-</textarea>
-		</article>
-		
-		<!-- SLIDE: CALLING FUNCTIONS FROM EVENTS -->
-		<article class='slide slide-list'>
-		  	<h2>Functions &amp; Events</h2>
-		  	<p>The browser executes the JavaScript as soon as the page loads.</p>
-		  	<p>But sometimes you need to control when it executes. For example,<br />
-		  	 if someone rolls over a nav menu or presses a Submit button.<br />
-		  	</p>
-		  	<p>This is where functions also come into play.</p>		  	
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      </textarea>
+    </article>
+
+    <!-- SLIDE: CALLING FUNCTIONS FROM EVENTS -->
+    <article class='slide slide-list'>
+      <h2>Functions &amp; Events</h2>
+      <p>
+        The browser executes the JavaScript as soon as the page loads.
+      </p>
+      <p>
+        But sometimes you need to control when it executes. For example,
+        <br />
+        if someone rolls over a nav menu or presses a Submit button.
+        <br />
+      </p>
+      <p>This is where functions also come into play.</p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   function sayMyName() {
     alert("Christina");
-  }		 
+  }    
 </script>
 
-<!-- call function from a button click -->
-<input type="button" onclick="sayMyName()" value="Say my name!">
+        <!-- call function from a button click -->
+        <input type="button" onclick="sayMyName()" value="Say my name!">
 
-<br /><br />
+        <br />
+        <br />
 
-<!-- call function from a HTML code click -->
-<div onclick="sayMyName();">
-  Click here to call the function!
-</div>
-</textarea>
-		</article>
-		
-		
-		<!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
-        <article class='slide slide-list'>
-          	<h2>Functions in Functions</h2>
-          	<p>Let's take another look at our shopping cart and figure out what the functions are doing.</p>
-			
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  var quantity = 0;	
-		
-  function addItem(){	
-    quantity++;			 
+        <!-- call function from a HTML code click -->
+        <div onclick="sayMyName();">Click here to call the function!</div>
+      </textarea>
+    </article>
+
+    <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
+    <article class='slide slide-list'>
+      <h2>Functions in Functions</h2>
+      <p>
+        Let's take another look at our shopping cart and figure out what the functions are doing.
+      </p>
+
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
+  var quantity = 0; 
+    
+  function addItem(){ 
+    quantity++;      
     refreshTotal(); 
   }
-  function removeItem(){	
+  function removeItem(){  
     if (quantity > 0) {
       quantity--; 
     }
     refreshTotal();  
   }
 
-  function refreshTotal() {					
+  function refreshTotal() {         
     var totalCost = quantity * 20; //quantity * fixed price
     document.getElementById('updateQuantity').value = quantity; //updates
     document.getElementById('updateTotal').value = ("$" + totalCost); //updates
   }
 </script>
 
-<link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />   
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button><br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly="readonly" /><br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly="readonly" />
-</div>
-</textarea>
-<span class="marker">*</span>
-		</article>
+        <link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
+        <div class="item">
+          <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
+          <br />
+          <button onclick="addItem();">Add</button>
+          <button onclick="removeItem();">Remove</button>
+          <br />
+          Quantity
+          <input type="text" id="updateQuantity" value="0" readonly />
+          <br />
+          Total Cost:
+          <input type="text" id="updateTotal" value="0" readonly />
+        </div>
+      </textarea>
+      <span class="marker">*</span>
+    </article>
 
-		
-		<!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
-		<article class='slide slide-list'>
-		  <h2>Review: What do we know about functions so far?</h2>
-		  - created by using function keyword<br />
-		  - group together related lines of code and stores them into descriptive names.<br />
-		  - can be reused just by calling the function name<br />
-		  - define the function first but it will not be executed until you call the function<br />
-	    - can be used inside another function</article>
-		
-		<article class='slide slide-list'>
-		  <h2>Functions and Pizza</h2>
-		  Let's order a pizza!  We'll create a function called orderPizza that will represent all the steps it takes to place an order (find the pizza place's phone number, call them, give them your address, etc).  Inside the function is where the pizza place will hold our options like toppings, crust type and size of pizza, so that they can save that information and make our order!<br />
-		  <br />
-		  function orderPizza() {<br />
-  var pizzaOptions = "";<br />
-  pizzaOptions += "cheese,";<br />
-  pizzaOptions += " thin crust,";<br />
-  pizzaOptions += " medium";<br />
-  document.write(pizzaOptions);<br />
-}<br />
-orderPizza();<br />
-<br />
-What if we want to order another pizza but with different options?  Let's order another pizza.<br />
-<br />
-function orderAnotherPizza() {<br />
-  var pizzaOptions = "";<br />
-  pizzaOptions += "pepperoni,";<br />
-  pizzaOptions += " stuffed crust,";<br />
-  pizzaOptions += " small";<br />
-  document.write(pizzaOptions); <br />
-}<br />
-orderAnotherPizza();</article>
-		
-		<article class='slide slide-list'>
-		  <h2>Global Variables</h2>
-		  Let's say we want cheese to always be included as an option in our makePizza function.<br />
-		  <br />
-		  var baseTopping = "cheese";<br />
-		  function makePizza() {<br />
- var pizzaOptions = "";<br />
- pizzaOptions += baseTopping + ",";<br />
- pizzaOptions += " bacon,";<br />
- pizzaOptions += " thin crust,";<br />
- pizzaOptions += " medium";<br />
- document.write(pizzaOptions);<br />
-}<br />
-makePizza();<br />
-<br />
-This is an example of a global variable, since it is declared outside of the function and is accessible from anywhere in the program. </article>
-		
-		<article class='slide slide-list'>Global Variables vs Local Variables <br />
-		  What happens if we use the same baseTopping variable inside the function?<br />
-		  <br />
-		  var baseTopping = "cheese";<br />
-		  function makePizza() {<br />
- var baseTopping = "tomato sauce";<br />
- var pizzaOptions = "";<br />
- pizzaOptions += baseTopping + ",";<br />
- pizzaOptions += " bacon,";<br />
- pizzaOptions += " thin crust,";<br />
- pizzaOptions += " medium";<br />
- document.write(pizzaOptions);<br />
-}<br />
-makePizza();<br />
-<br />
-What happened to the cheese!?<br />
-A local variable is declared inside the function and can only be used within that function.<br />
-<br />
-document.write(baseTopping); //will return &ldquo;cheese&rdquo;
-</article>
+    <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
+    <article class='slide slide-list'>
+      <h2>Review: What do we know about functions so far?</h2>
+      - created by using function keyword
+      <br />
+      - group together related lines of code and stores them into descriptive names.
+      <br />
+      - can be reused just by calling the function name
+      <br />
+      - define the function first but it will not be executed until you call the function
+      <br />
+      - can be used inside another function
+    </article>
 
-<article class='slide slide-list'>
-  <h2>Functions, Pizza and Parameters<br />
-  </h2>
-  This could get cumbersome if we wanted to make a lot of pizzas.  If the steps required to make a pizza are the same and only the options change, how can we re-use the makePizza function instead of creating multiple functions?  We use PARAMETERS.  <br />
-  <br />
-  Functions can be used with one parameter, more than one parameter or none at all. <br />
-  <br />
-  Live code: start with one parameter and work up to three<br />
-  <br />
-  function makePizza(topping, crust, size) {<br />
-  var pizzaOptions = "";<br />
-  pizzaOptions += topping + ",";<br />
-  pizzaOptions += " " + crust + ",";<br />
-  pizzaOptions += " " + size;<br />
-  document.write(pizzaOptions); <br />
-}<br />
-makePizza("pepperoni", "thick", "large");<br />
-makePizza("cheese", "thin", "small");
+    <article class='slide slide-list'>
+      <h2>Functions and Pizza</h2>
+      Let's order a pizza!  We'll create a function called orderPizza that will represent all the steps it takes to place an order (find the pizza place's phone number, call them, give them your address, etc).  Inside the function is where the pizza place will hold our options like toppings, crust type and size of pizza, so that they can save that information and make our order!
+      <br />
+      <br />
+      function orderPizza() {
+      <br />
+      var pizzaOptions = "";
+      <br />
+      pizzaOptions += "cheese,";
+      <br />
+      pizzaOptions += " thin crust,";
+      <br />
+      pizzaOptions += " medium";
+      <br />
+      document.write(pizzaOptions);
+      <br />
+      }
+      <br />
+      orderPizza();
+      <br />
+      <br />
+      What if we want to order another pizza but with different options?  Let's order another pizza.
+      <br />
+      <br />
+      function orderAnotherPizza() {
+      <br />
+      var pizzaOptions = "";
+      <br />
+      pizzaOptions += "pepperoni,";
+      <br />
+      pizzaOptions += " stuffed crust,";
+      <br />
+      pizzaOptions += " small";
+      <br />
+      document.write(pizzaOptions);
+      <br />
+      }
+      <br />
+      orderAnotherPizza();
+    </article>
 
-</article>
+    <article class='slide slide-list'>
+      <h2>Global Variables</h2>
+      Let's say we want cheese to always be included as an option in our makePizza function.
+      <br />
+      <br />
+      var baseTopping = "cheese";
+      <br />
+      function makePizza() {
+      <br />
+      var pizzaOptions = "";
+      <br />
+      pizzaOptions += baseTopping + ",";
+      <br />
+      pizzaOptions += " bacon,";
+      <br />
+      pizzaOptions += " thin crust,";
+      <br />
+      pizzaOptions += " medium";
+      <br />
+      document.write(pizzaOptions);
+      <br />
+      }
+      <br />
+      makePizza();
+      <br />
+      <br />
+      This is an example of a global variable, since it is declared outside of the function and is accessible from anywhere in the program.
+    </article>
 
-<article class='slide slide-list'>
-  <h1 dir="ltr">JavaScript Theory Applied</h1>
-  <p dir="ltr">Putting it together on an actual HTML page</p>
+    <article class='slide slide-list'>
+      Global Variables vs Local Variables
+      <br />
+      What happens if we use the same baseTopping variable inside the function?
+      <br />
+      <br />
+      var baseTopping = "cheese";
+      <br />
+      function makePizza() {
+      <br />
+      var baseTopping = "tomato sauce";
+      <br />
+      var pizzaOptions = "";
+      <br />
+      pizzaOptions += baseTopping + ",";
+      <br />
+      pizzaOptions += " bacon,";
+      <br />
+      pizzaOptions += " thin crust,";
+      <br />
+      pizzaOptions += " medium";
+      <br />
+      document.write(pizzaOptions);
+      <br />
+      }
+      <br />
+      makePizza();
+      <br />
+      <br />
+      What happened to the cheese!?
+      <br />
+      A local variable is declared inside the function and can only be used within that function.
+      <br />
+      <br />
+      document.write(baseTopping); //will return &ldquo;cheese&rdquo;
+    </article>
 
-</article>
+    <article class='slide slide-list'>
+      <h2>
+        Functions, Pizza and Parameters
+        <br />
+      </h2>
+      This could get cumbersome if we wanted to make a lot of pizzas.  If the steps required to make a pizza are the same and only the options change, how can we re-use the makePizza function instead of creating multiple functions?  We use PARAMETERS.
+      <br />
+      <br />
+      Functions can be used with one parameter, more than one parameter or none at all.
+      <br />
+      <br />
+      Live code: start with one parameter and work up to three
+      <br />
+      <br />
+      function makePizza(topping, crust, size) {
+      <br />
+      var pizzaOptions = "";
+      <br />
+      pizzaOptions += topping + ",";
+      <br />
+      pizzaOptions += " " + crust + ",";
+      <br />
+      pizzaOptions += " " + size;
+      <br />
+      document.write(pizzaOptions);
+      <br />
+      }
+      <br />
+      makePizza("pepperoni", "thick", "large");
+      <br />
+      makePizza("cheese", "thin", "small");
+    </article>
 
-<article class='slide slide-list'>
-  <h2>Inline JavaScript</h2>
-  No one actually writes a website in a presentation slidedeck, so where do we put all this JavaScript?<br />
-  <br />
-  JavaScript can appear inline in a webpage in several spots. Either in the head section or anywhere in the body section.<br />
-  If you need to manipulate something that appears as an html tag, it's best to put the JavaScript before the closing body tag.<br />
-  <br />
-  &lt;html&gt;<br />
- &lt;head&gt;<br />
-   &lt;title&gt;JavaScript example!&lt;/title&gt;    <br />
-   &lt;script type="text/javascript"&gt;<br />
-     alert("I'm in the head tag!");<br />
-   &lt;/script&gt;<br />
- &lt;/head&gt;<br />
- &lt;body&gt;<br />
-   &lt;div id="example"&gt;This is an example.&lt;/div&gt;<br />
-   &lt;script type="text/javascript"&gt;    <br />
-     alert("I'm in the body tag!");<br />
-   &lt;/script&gt;<br />
- &lt;/body&gt;<br />
+    <article class='slide slide-subhead'>
+      <h1>JavaScript Theory Applied</h1>
+      <p>Putting it together on an actual HTML page</p>
+
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Inline JavaScript</h2>
+      <p>
+        JavaScript can appear
+        <strong>inline</strong>
+        in a webpage in several spots. Either in the
+        <code>&lt;head&gt;</code>
+        section or anywhere in the
+        <code>&lt;body&gt;</code>
+        section.
+      </p>
+      <pre class="prettyprint">
+ &lt;html&gt;
+ &lt;head&gt;
+   &lt;title&gt;JavaScript example!&lt;/title&gt;    
+   &lt;script type="text/javascript"&gt;
+     alert("I'm in the head tag!");
+   &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;div id="example"&gt;This is an example.&lt;/div&gt;
+   &lt;script type="text/javascript"&gt;    
+     alert("I'm in the body tag!");
+   &lt;/script&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
+</pre>
+      <p class="reminders">
+        Need to manipulate an html tag or have a quick loading page? Put the JavaScript just before the
+        <strong>closing</strong>
+        <code>&lt;body&gt;</code>
+        tag.
+      </p>
+    </article>
 
-</article>
+    <!-- SLIDE: Code Editor -->
+    <article class='slide slide-list'>
+      <h2>Using a Code Editor</h2>
+      <p>Open up this file:</p>
+      <div class="centered contains_sidebyside_icons">
+        <div class="sidebyside_download_icon">
+          <img src="assets/Notepad.png" width="169" height="125" alt="Notepad++" />
+        </div>
+        <div class="sidebyside_download_icon">
+          <img src="assets/textWranglerIcon.png" width="125" height="125" alt="Text Wrangler" />
+        </div>
+      </div>
+      <br clear="all" />
+      <p class="reminders">
+        Take note of how your code is being coloured. It's the first sign of a possible syntax error and will save you headaches later.
+      </p>
+    </article>
 
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #6</h2>
+      <p>
+        Let's revisit the optional lunchtime shipping form of exercise #5. That was a lot of typing to verify only 4 fields right?
+        <br />
+        <br />
+        Now imagine that shoppers have been requesting the ability to buy robots as gifts for their friends. What lucky friends!
+      </p>
+      <p>
+        However this means you need to have separate billing and shipping address forms. Look at how the code has doubled:
+        <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_shipping_final.html">shopping_cart_shipping_start.html</a>
+      </p>
+      <p>It'll get only even longer if you add 4 more fields.</p>
+    </article>
 
-<article class='slide slide-list'>Let's open up Notepad++ or TextWrangler. Copy and paste the previous or download this file.<br />
-  Look at the pretty colour coding!<br />
-  (Maybe I'll even bring my Windows laptop... so there's a Windows frame of reference if necessary)<br />
-  <br />
-  Save the file and open it up in Chrome. Ooooh!<br />
-  Now make a change to the file and look at Chrome? What? Where's my stuff?<br />
-  Go back to html and save it. Return to Chrome.  Ahhh, there it is!
+    <article class='slide slide-list'>
+      <h2>Arrays</h2>
+      An array is a special variable, it can hold more than one value at a time in a single variable.
+      <br />
+      If a variable is like a box, then an array is a box with slots for packing wine glasses.
+      <br />
+      In JavaScript words, arrays store an ordered list of values in slots, in an &ldquo;indexed&rdquo; way.
+      <br />
+      <br />
+      Declare Arrays (yes, capital A) using the NEW keyword.
+      <br />
+      var robots = new Array();
+      <br />
+      <br />
+      You can set values using a square bracket [ ] notation.
+      <br />
+      <br />
+      var robots = new Array();
+      <br />
+      robots[0] = "Wall-e"; //value for the 1st slot in the array
+      <br />
+      robots[1] = "Eva"; //value for the 2nd slot in the array
+      <br />
+      robots[2] = "The tin man"; //value for the 3rd slot in the array
+      <br />
+      <br />
+      The numbers inside the square brackets [ ] are referred to as the index number.
+      <br />
+      Array indexes always start at zero.
+    </article>
 
-</article>
+    <article class='slide slide-list'>
+      Arrays and Indexes
+      <br />
+      The index numbers are also used to access the value of the specific slot in the array.
+      <br />
+      To access the value of the first robot in the robot array, index 0 is the first item in the list.
+      <br />
+      <br />
+      var robots = new Array();
+      <br />
+      robots[0] = "Wall-e";
+      <br />
+      robots[1] = "Eva";
+      <br />
+      robots[2] = "The tin man";
+      <br />
+      document.write("The 2nd robot is " + robots[1] + " even though the index is 1" + ".");
+      <br />
+      <br />
+      Note: There are other ways to declare an array but we will stick to this syntax for the remainder of the workshop.
+      <br />
+      More info here: http://www.w3schools.com/js/js_obj_array.asp
+    </article>
 
+    <article class='slide slide-list'>
+      <h2>
+        Arrays and Properties
+        <br />
+      </h2>
+      So far we've looked at variables and arrays.  Guess what? They are also OBJECTS.
+      <br />
+      We'll be discussing later on what exactly an object is but for now we are going to take a look at object PROPERTIES.
+      <br />
+      PROPERTIES are values associated with a particular object.
+      <br />
+      <br />
+      For example, an image on a web page would have properties like height, width and file name associated with it.
+      <br />
+      <br />
+      Using properties is very useful because we can access the properties and make changes to them.
+      <br />
+      <br />
+      Let's look a the Length property. When used with a STRING, the Length property returns the number of characters in the string.
+      <br />
+      When used with an Array, the Length property returns the number of elements in the array.
+      <br />
+      <br />
+      [live code]
+      <br />
+      var name = "Christina";
+      <br />
+      //document.write(name.length);
+      <br />
+      //document.write("&lt;br /&gt;");
+      <br />
+      <br />
+      var robots = new Array();
+      <br />
+      robots[0] = "Wall-e";
+      <br />
+      robots[1] = "Eva";
+      <br />
+      robots[2] = "The tin man";
+      <br />
+      //document.write(robots.length);
+      <br />
+      <br />
+      **Remember, the index starts at 0, but length will return 3 since there are 3 elements in the array.
+    </article>
+    <article class='slide slide-list'>
+      <h2>Arrays &amp; Length:  Why is this important?</h2>
+      Often times, we&rsquo;ll need to run through a list of values and apply some code to it.
+      <br />
+      Also, sometimes we don&rsquo;t know how many there are in total, or the totals may need to change dynamically.
+      <br />
+      <br />
+      Let&rsquo;s look at this photo gallery from
+      <a href="http://www.theglobeandmail.com/multimedia/camera-club/your-best-photos-of-movement/article2355552/">theglobeandmail.com</a>
+      <br />
+      Length could be used to determine the number of photos to display something like &ldquo;18 of 122&rdquo;.
+      <br />
+      Length can also be used for looping through the image gallery backwards and forwards.
+      <br />
+      <br />
+      [ discuss in a bit more detail how this would work ]
+    </article>
+    <article class='slide slide-list'>
+      <h3 dir="ltr">Arrays &amp; Length and the 0 Index</h3>
+      <br />
+      How do we access a particular value?
+      <br />
+      By using the index number.
+      <br />
+      <br />
+      var robots = new Array();
+      <br />
+      robots[0] = "Wall-e";
+      <br />
+      robots[1] = "Eva";
+      <br />
+      robots[2] = "The tin man";
+      <br />
+      <br />
+      So, to access the last index value, you can use robots[2].
+      <br />
+      BUT...
+      <br />
+      You can also use robots[ robots.length-1 ].
+      <br />
+      <br />
+      Huh?
+      <br />
+      <br />
+      robots.length would return a value of 3 because there are 3 elements in the array.
+      <br />
+      But the index of the last element is actually [2] because the array starts at [0].
+      <br />
+      robots.length = 3
+      <br />
+      index of last element = 2
+      <br />
+      robots[2] = robots[robots.length-1]
+      <br />
+      <br />
+      Since the index begins at 0, the last index value is always length-1.
+      <br />
+      This can be useful if you want to always access the last index despite new additions.
+      <br />
+      <br />
+      [Live code: Add a 4th element to show how robots[2] will no longer return the last item.]
+    </article>
+    <article class='slide slide-list'>
+      <h2>Loopty-Loops</h2>
+      Loops are used to execute the same code continuously using conditional statements to test when the code will begin and stop.
+      <br />
+      <br />
+      Why use loops?  Because sometimes we need to execute repetitive code through a list of values or for a specified number of times.
+      <br />
+      <br />
+      It's like creating a playlist on your favorite music player.
+      <br />
+      You create a list of songs, press play and then each song is played automatically in the order set out in the playlist.
+      <br />
+      When it reaches the end of the playlist, it stops.
+      <br />
+      <br />
+      We will be discussing while loops and for loops.
+    </article>
+    <article class='slide slide-list'>
+      <h2>While Loop</h2>
+      <br />
+      The while loop executes the block of code contained in the loop while the condition is true.
+      <br />
+      An index variable is required to keep track of its place in the loop.
+      <br />
+      The while loop will stop executing the code once the condition becomes false.
+      <br />
+      <br />
+      If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.
+      <br />
+      <br />
+      //declare index variable
+      <br />
+      var i = 0;
+      <br />
+      while ( i &lt; playlist.length ) {
+      <br />
+      // play current song represented by var i
+      <br />
+      i++;
+      <br />
+      // i++ will add 1 to var i so it moves to the next song
+      <br />
+      }
+      <br />
+      <br />
+      <br />
+      NOTE:  If the condition is always true, the loop will run infinitely and will never exit the while loop.
+      <br />
+      This can cause your browser to crash!
+    </article>
+    <article class='slide slide-list'>
+      <h3 dir="ltr">While Loop in Action!</h3>
+      Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.  The formula is:
+      <br />
+      Temperature = Temperature * 9 / 5 + 32
+      <br />
+      This example uses a while loop to output the calculation and will stop when we reach 30 degrees Celsius.
+      <br />
+      &lt;style&gt;
+      <br />
+      table {
+      <br />
+      <p dir="ltr">border: 1px solid #C12AAA;</p>
+      }
+      <br />
+      table tr td {
+      <br />
+      border: 1px solid #C12AAA;
+      <br />
+      padding: 4px;
+      <br />
+      }
+      <br />
+      &lt;/style&gt;
+      <br />
+      &lt;table border="0" cellspacing="0"&gt;
+      <br />
+      &lt;tr&gt;
+      <br />
+      &lt;td&gt;Celsius&lt;/td&gt;
+      <br />
+      &lt;td&gt;Fahrenheit&lt;/td&gt;
+      <br />
+      &lt;/tr&gt;
+      <br />
+      &lt;script&gt;
+      <br />
+      var celsius = 0;
+      <br />
+      while (celsius &lt;= 30) {
+      <br />
+      document.write("&lt;tr&gt;&lt;td&gt;" + celsius + "&lt;/td&gt;&lt;td&gt;"
+      <br />
+      <p dir="ltr">+ ((celsius * 9 / 5) + 32) + "&lt;/td&gt;&lt;/tr&gt;");</p>
+      celsius++;
+      <br />
+      }
+      <br />
+      &lt;/script&gt;
+      <br />
+      &lt;/table&gt;
+    </article>
+    <article class='slide slide-list'>
+      <h3 dir="ltr">For Loops</h3>
+      <br />
+      A for loop loops through a block of code a specified number of times.
+      <br />
+      The index, conditional test and incrementer are all declared in one line.
+      <br />
+      The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value.
+      <br />
+      <br />
+      // start value, condition, increment
+      <br />
+      for ( var i = 0; i &lt; 3; i++ ) {
+      <br />
+      //code to be executed
+      <br />
+      document.write("The current index is: " + i + "&lt;br /&gt;");
+      <br />
+      }
+      <br />
+      document.write("The for loop is now complete.");
+    </article>
+    <article class='slide slide-list'>
+      <h3 dir="ltr">For Loops and Arrays</h3>
+      For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.
+      <br />
+      <br />
+      Back to our robot store.  It wouldn't be much of a store if there was only one product!
+      <br />
+      We can create a list of different products with various prices by creating an array.
+      <br />
+      <br />
+      var productPrices = new Array();
+      <br />
+      productPrices[0] = 17.99;
+      <br />
+      productPrices[1] = 25;
+      <br />
+      productPrices[2] = 13.99;
+      <br />
+      productPrices[3] = 9.99;
+      <br />
+      productPrices[4] = 24.99;
+      <br />
+      productPrices[5] = 8.99;
+      <br />
+      <br />
+      Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.
+      <br />
+      <br />
+      [ Live code for loop condition, var value and if condition ]
+      <br />
+      for (i=0; i &lt; productPrices.length; i++) {
+      <br />
+      var value = productPrices[i];
+      <br />
+      if (value &lt; 15){
+      <br />
+      document.write("Product " + (i+1) + " is on sale.&lt;br /&gt;");
+      <br />
+      } else {
+      <br />
+      document.write("Product " + (i+1) + " is not on sale.&lt;br /&gt;");
+      <br />
+      }
+      <br />
+      }
+    </article>
 
-<article class='slide slide-list'>
-  <h2>Mini-exercise #6</h2>
-  Let's revisit the shipping form of exercise #4c. That was a lot of typing to verify only 4 fields right?<br />
-  <br />
-  Now image that shoppers have been requesting the ability to buy robots as gifts for their friends. What lucky friends! However this means you need to have separate billing and shipping address forms. Look at how the code has doubled: <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_shipping_final.html">http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_shipping_final.html</a>
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #7 (10-15 minutes)</h2>
+      <p>
+        As owner of Planet Robot, you decide to have a special members-only sale: 50% off all items with a secret password! (p.s. the password is "llc"!)
+      </p>
+      <p>
+        Sounds like a great deal for the customer but all you have is a static HTML page right now. Are you going to go through every single product, calculate the discounted price, and then update every entry manually? No, you're going to use loops and arrays!
+      </p>
+      <p>
+        Download the HTML exercise file:
+        <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_start.html">exercises/shopping_cart_products_start.html</a>
+      </p>
+      <p class="assignment">TODO: Check within the code for your THREE tasks.</p>
 
-</article>
+      <p class="sidenote">
+        If you're stuck, here's the solution file:
+        <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_final.html">
+          http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_final.html
+        </a>
+      </p>
+    </article>
 
-<article class='slide slide-list'>
-  <h2>Arrays</h2>
-  An array is a special variable, it can hold more than one value at a time in a single variable.<br />
-  If a variable is like a box, then an array is a box with slots for packing wine glasses.<br />
-  In JavaScript words, arrays store an ordered list of values in slots, in an &ldquo;indexed&rdquo; way.<br />
-  <br />
-  Declare Arrays (yes, capital A) using the NEW keyword. <br />
-  var robots = new Array();<br />
-  <br />
-  You can set values using a square bracket [ ] notation. <br />
-  <br />
-  var robots = new Array();<br />
-  robots[0] = "Wall-e"; //value for the 1st slot in the array<br />
-  robots[1] = "Eva"; //value for the 2nd slot in the array<br />
-  robots[2] = "The tin man"; //value for the 3rd slot in the array<br />
-  <br />
-  The numbers inside the square brackets [ ] are referred to as the index number.<br />
-  Array indexes always start at zero. 
+    <article class='slide slide-list'></article>
 
-</article>
+    <article class='slide slide-list'></article>
 
-<article class='slide slide-list'>Arrays and Indexes<br />
-  The index numbers are also used to access the value of the specific slot in the array.<br />
-  To access the value of the first robot in the robot array, index 0 is the first item in the list.<br />
-  <br />
-  var robots = new Array();<br />
-  robots[0] = "Wall-e";<br />
-  robots[1] = "Eva";<br />
-  robots[2] = "The tin man";<br />
-  document.write("The 2nd robot is " + robots[1] + " even though the index is 1" + ".");<br />
-  <br />
-  Note: There are other ways to declare an array but we will stick to this syntax for the remainder of the workshop.  <br />
-  More info here: http://www.w3schools.com/js/js_obj_array.asp
+    <article class='slide slide-list'></article>
 
-</article>
+  </div>
+  <!-- END div id=presentation -->
 
-<article class='slide slide-list'>
-  <h2>Arrays and Properties<br />
-  </h2>
-  So far we've looked at variables and arrays.  Guess what? They are also OBJECTS. <br />
-  We'll be discussing later on what exactly an object is but for now we are going to take a look at object PROPERTIES.<br />
-  PROPERTIES are values associated with a particular object.<br />
-  <br />
-  For example, an image on a web page would have properties like height, width and file name associated with it.  <br />
-  <br />
-  Using properties is very useful because we can access the properties and make changes to them.<br />
-  <br />
-  Let's look a the Length property. When used with a STRING, the Length property returns the number of characters in the string.  <br />
-  When used with an Array, the Length property returns the number of elements in the array.<br />
-  <br />
-  [live code]<br />
-  var name = "Christina";<br />
-  //document.write(name.length);<br />
-  //document.write("&lt;br /&gt;");<br />
-  <br />
-  var robots = new Array();<br />
-  robots[0] = "Wall-e";<br />
-  robots[1] = "Eva";<br />
-  robots[2] = "The tin man";<br />
-  //document.write(robots.length);<br />
-  <br />
-  **Remember, the index starts at 0, but length will return 3 since there are 3 elements in the array.
+  <script src='src/jquery.min.js'></script>
+  <script src="src/modernizr.js"></script>
 
-</article>
-<article class='slide slide-list'>
-  <h2>Arrays &amp; Length:  Why is this important?</h2>
-  Often times, we&rsquo;ll need to run through a list of values and apply some code to it.  <br />
-  Also, sometimes we don&rsquo;t know how many there are in total, or the totals may need to change dynamically.<br />
-  <br />
-  Let&rsquo;s look at this photo gallery from <a href="http://www.theglobeandmail.com/multimedia/camera-club/your-best-photos-of-movement/article2355552/">theglobeandmail.com</a><br />
-  Length could be used to determine the number of photos to display something like &ldquo;18 of 122&rdquo;.  <br />
-  Length can also be used for looping through the image gallery backwards and forwards.<br />
-  <br />
-  [ discuss in a bit more detail how this would work ]
+  <!-- Update these paths to point to the correct files. -->
+  <script src="src/jquery.tmpl.min.js"></script>
+  <script src="src/deck.js/core/deck.core.js"></script>
 
-</article>
-<article class='slide slide-list'>
-  <h3 dir="ltr">Arrays &amp; Length and the 0 Index</h3>
-  <br />
-  How do we access a particular value?<br />
-  By using the index number.<br />
-  <br />
-  var robots = new Array();<br />
-  robots[0] = "Wall-e";<br />
-  robots[1] = "Eva";<br />
-  robots[2] = "The tin man";<br />
-  <br />
-  So, to access the last index value, you can use robots[2]. <br />
-  BUT...<br />
-  You can also use robots[ robots.length-1 ].<br />
-  <br />
-  Huh?<br />
-  <br />
-  robots.length would return a value of 3 because there are 3 elements in the array.<br />
-  But the index of the last element is actually [2] because the array starts at [0].<br />
-  robots.length = 3 <br />
-  index of last element = 2<br />
-  robots[2] = robots[robots.length-1]<br />
-  <br />
-  Since the index begins at 0, the last index value is always length-1. <br />
-  This can be useful if you want to always access the last index despite new additions. <br />
-  <br />
-  [Live code: Add a 4th element to show how robots[2] will no longer return the last item.]
+  <!-- Code Mirror -->
+  <script src="src/codemirror/lib/codemirror.js"></script>
+  <script src="src/codemirror/mode/xml/xml.js"></script>
+  <script src="src/codemirror/mode/css/css.js"></script>
+  <script src="src/codemirror/mode/javascript/javascript.js"></script>
+  <script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
-</article>
-<article class='slide slide-list'>
-  <h2>Loopty-Loops</h2>
-  Loops are used to execute the same code continuously using conditional statements to test when the code will begin and stop.<br />
-  <br />
-  Why use loops?  Because sometimes we need to execute repetitive code through a list of values or for a specified number of times.<br />
-  <br />
-  It's like creating a playlist on your favorite music player.  <br />
-  You create a list of songs, press play and then each song is played automatically in the order set out in the playlist.  <br />
-  When it reaches the end of the playlist, it stops.<br />
-  <br />
-  We will be discussing while loops and for loops.
+  <!-- Prettify -->
+  <script src="src/prettify.js"></script>
 
-</article>
-<article class='slide slide-list'>
-  <h2>While Loop</h2>
-  <br />
-  The while loop executes the block of code contained in the loop while the condition is true.   <br />
-  An index variable is required to keep track of its place in the loop.  <br />
-  The while loop will stop executing the code once the condition becomes false.<br />
-  <br />
-  If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.<br />
-  <br />
-  //declare index variable<br />
-  var i = 0;<br />
-  while ( i &lt; playlist.length ) {<br />
- // play current song represented by var i<br />
- i++; <br />
- // i++ will add 1 to var i so it moves to the next song<br />
-}<br />
-<br />
-<br />
-NOTE:  If the condition is always true, the loop will run infinitely and will never exit the while loop.  <br />
-This can cause your browser to crash!
+  <!-- Deck Core and extensions -->
+  <script src="src/deck.js/extensions/status/deck.status.js"></script>
+  <script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
+  <script src='src/deck.coder.js'></script>
+  <script src="src/deck.js/extensions/hash/deck.hash.js"></script>
+  <script src="src/deck.js/extensions/menu/deck.menu.js"></script>
 
-</article>
-<article class='slide slide-list'>
-  <h3 dir="ltr">While Loop in Action!</h3>
-  Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.  The formula is:<br />
-  Temperature = Temperature * 9 / 5 + 32<br />
-  This example uses a while loop to output the calculation and will stop when we reach 30 degrees Celsius.<br />
-  &lt;style&gt;<br />
- table {<br />
-<p dir="ltr">border: 1px solid #C12AAA;</p>
- }<br />
- table tr td {<br />
-border: 1px solid #C12AAA;<br />
-padding: 4px;<br />
- }<br />
-&lt;/style&gt;<br />
-&lt;table border="0" cellspacing="0"&gt;<br />
- &lt;tr&gt;<br />
-&lt;td&gt;Celsius&lt;/td&gt;<br />
-&lt;td&gt;Fahrenheit&lt;/td&gt;<br />
- &lt;/tr&gt;<br />
- &lt;script&gt;<br />
-var celsius = 0;<br />
-while (celsius &lt;= 30) {<br />
- document.write("&lt;tr&gt;&lt;td&gt;" + celsius + "&lt;/td&gt;&lt;td&gt;" <br />
-<p dir="ltr">  + ((celsius * 9 / 5) + 32) + "&lt;/td&gt;&lt;/tr&gt;");</p>
- celsius++;<br />
-  	}<br />
- &lt;/script&gt;<br />
-&lt;/table&gt;
-
-</article>
-<article class='slide slide-list'>
-  <h3 dir="ltr">For Loops</h3>
-  <br />
-  A for loop loops through a block of code a specified number of times.  <br />
-  The index, conditional test and incrementer are all declared in one line. <br />
-  The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value.  <br />
-  <br />
-  // start value, condition, increment<br />
-  for ( var i = 0; i &lt; 3; i++ ) {<br />
- //code to be executed<br />
- document.write("The current index is: " + i + "&lt;br /&gt;");<br />
-}<br />
-document.write("The for loop is now complete.");
-
-</article>
-<article class='slide slide-list'>
-  <h3 dir="ltr">For Loops and Arrays</h3>
-  For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.  <br />
-  <br />
-  Back to our robot store.  It wouldn't be much of a store if there was only one product!<br />
-  We can create a list of different products with various prices by creating an array.  <br />
-  <br />
-  var productPrices = new Array();<br />
-  productPrices[0] = 17.99;<br />
-  productPrices[1] = 25;<br />
-  productPrices[2] = 13.99;<br />
-  productPrices[3] = 9.99;<br />
-  productPrices[4] = 24.99;<br />
-  productPrices[5] = 8.99;<br />
-  <br />
-  Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.<br />
-  <br />
-  [ Live code for loop condition, var value and if condition ]<br />
-  for (i=0; i &lt; productPrices.length; i++) {<br />
-var value = productPrices[i];<br />
-if (value &lt; 15){<br />
-document.write("Product " + (i+1) + " is on sale.&lt;br /&gt;");<br />
-} else {<br />
-document.write("Product " + (i+1) + " is not on sale.&lt;br /&gt;");<br />
-}<br />
-}
-
-</article>
-
-<article class='slide slide-list'>
-  <h2>Mini-exercise #7 (10-15 minutes)</h2>
-  As owner of Planet Robot, you decide to have a special members-only sale: 50% off all items with a secret password! (p.s. the password is "llc"!) <br />
-  <br />
-  Sounds like a great deal for the customer but all you have is a static HTML page right now. Are you going to go through every single product, calculate the discounted price, and then update every entry manually? No, you're going to use loops and arrays!<br />
-  <br />
-  TODO: Download the HTML exercise file. Check within the code for your THREE tasks.<br />
-  <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_start.html">http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_start.html</a>
-  
-  <br />
-If you're stuck, here's the solution file: <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_final.html">http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_products_final.html</a></article>
-
-<article class='slide slide-list'>
-</article>
-
-<article class='slide slide-list'>
-</article>
-
-<article class='slide slide-list'>
-</article>
-
-</div>
-    <!-- END div id=presentation -->
-
-  	<script src='src/jquery.min.js'></script>
-    <script src="src/modernizr.js"></script>
-
-    <!-- Update these paths to point to the correct files. -->
-    <script src="src/jquery.tmpl.min.js"></script>
-    <script src="src/deck.js/core/deck.core.js"></script>
-
-    <!-- Code Mirror -->
-    <script src="src/codemirror/lib/codemirror.js"></script>
-    <script src="src/codemirror/mode/xml/xml.js"></script>
-    <script src="src/codemirror/mode/css/css.js"></script>
-    <script src="src/codemirror/mode/javascript/javascript.js"></script>
-    <script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-
-     <!-- Prettify -->
-    <script src="src/prettify.js"></script>
-
-    <!-- Deck Core and extensions -->
-    <script src="src/deck.js/extensions/status/deck.status.js"></script>
-    <script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
-    <script src='src/deck.coder.js'></script>
-    <script src="src/deck.js/extensions/hash/deck.hash.js"></script>
-    <script src="src/deck.js/extensions/menu/deck.menu.js"></script>
-
-    <script>
-  		$(function() {
-    		$.deck('.slide');
-  		});
-	</script>
+  <script>
+      $(function() {
+        $.deck('.slide');
+      });
+  </script>
 </body>
 </html>
