@@ -25,7 +25,27 @@
 </head>
 
 <body class="deck-container">
-
+	<script type='text/coderdeck' id='coderdeck-default'>
+	  <html>
+	    <head>
+	      <script src='src/jquery.min.js'>SCRIPTEND</head>
+	    <body>CODE</body>
+	  </html>
+	  </script>
+	
+	  <script type='text/coderdeck' id='coderdeck-style-example'>
+	  <html>
+	    <title>test</title>
+	    <style>CODE</style>
+	    <body>
+	      <h1>I'm a H1 heading</h1>
+	      <h2>I'm a H2 heading</h2>
+	      <p>Pargraph of text &lt;p&gt; here</p>
+	      <div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
+	      <div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
+	    </body>
+	  </html>
+	</script>
   <div id="presentation">
 
     <!-- SLIDE: ARCADE FIRE VIDEO -->
@@ -76,18 +96,17 @@
       <p>
         What is something that you do that's very repetitive or a hassle? Wouldn't it be great if it was automated? Or at least hidden away?
       </p>
-      <table width="100%">
+      <table width="100%" style="font-size:24px;">
         <tr>
-          <th colspan="2" s>Paying for parking</th>
+          <th colspan="2" height="50" align="left">Paying for parking:</th>
         </tr>
         <tr>
-          <th width="50%">The old way</th>
-          <th width="50%">The improved way</th>
+          <th width="50%" align="left">The old way <img src="assets/thumb-down.png" alt="thumb-down" width="32" height="32" style="float:left;margin-bottom:0;" /></th>
+          <th width="50%" align="left">The improved way <img src="assets/thumb-up.png" alt="thumb-up" width="32" height="32" style="float:left;margin-bottom:0;" /></th>
         </tr>
         <tr>
-
           <td>
-            <ol style="font-size:24px;line-height: 24px;">
+            <ol>
               <li>Find bank machine</li>
               <li>Pull out bank card</li>
               <li>Get money out from ATM</li>
@@ -97,17 +116,19 @@
             </ol>
           </td>
           <td>
-            <ol style="font-size: 24px;">
+            <ol>
               <li>Pull the PayPass credit card from your wallet</li>
-              <br>
-              <br>
-              <br>
+              <br />
+              <br />
+              <br />
+              <br />              
               <li>Tap</li>
               <li>Take receipt</li>
             </ol>
           </td>
         </tr>
       </table>
+      <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: FUNCTIONS -->
@@ -115,54 +136,37 @@
       <h2>Functions in JavaScript</h2>
       <br />
       <p>Functions are used to make the code "do things."</p>
-      <p>
-        <span class="keyword">prompt()</span>
-        and
-        <span class="keyword">alert()</span>
-        are two functions that are pre-written into JavaScript.
-      </p>
-      <p>
-        Someone already did the hard work for us by writing these functions to show us popups in the browser.
-      </p>
+      <p><span class="keyword">prompt()</span> and <span class="keyword">alert()</span>are two functions that are pre-written into JavaScript.</p>
+      <p>Someone already did the hard work for us by writing these functions to show us popups in the browser.</p>
       <p>But we can also write our own!</p>
     </article>
 
     <!-- SLIDE: DEFINING FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Defining a Function</h2>
-      <p>
-        Create your own functions to group together your own repetitive tasks.
-      </p>
-      <p>
-        To create a function, it needs to be <strong>defined</strong>
-        first.
-      </p>
-      <p>
-        There are different ways to define a function but the most common way is using the
-        <span class="keyword">Function</span>
-        keyword.
-      </p>
-      <pre class='prettyprint'>
+      <p>Create your own functions to group together your own repetitive tasks.</p>
+      <p>To create a function, it needs to be <strong>defined</strong> first.</p>
+      <p>There are different ways to define a function but the most common way is using the <span class="keyword">Function</span> keyword and enclosing one or more lines of code within curly braces { }.</p>
+<pre class='prettyprint'>
 function nameOfFunction() {
   //code to execute
 }
 </pre>
-      <textarea class='coder-editor'>
-        <script>alert("Christina");</script>
-      </textarea>
+<textarea class='coder-editor'>
+<script>
+  alert("Christina");
+</script>
+</textarea>
       <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: CALLING FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Calling a Function</h2>
-      <p>
-        The code within functions don't execute until it's <strong>called</strong>
-        !
-      </p>
+      <p>The code within functions don't execute until it's <strong>called</strong>!</p>
       <p>Let's try that again.</p>
       <textarea class='coder-editor'>
-        <script>
+<script>
   //defining the function
   function sayMyName() {
     alert("Christina");
@@ -188,21 +192,20 @@ function nameOfFunction() {
       </p>
       <p>This is where functions also come into play.</p>
       <textarea class='coder-editor coder-editor-full'>
-        <script>
+<script>
+  //define function
   function sayMyName() {
     alert("Christina");
   }    
 </script>
 
-        <!-- call function from a button click -->
-        <input type="button" onclick="sayMyName()" value="Say my name!">
-
-        <br />
-        <br />
-
-        <!-- call function from a HTML code click -->
-        <div onclick="sayMyName();">Click here to call the function!</div>
+<!-- call function from a button click -->
+<input type="button" onclick="sayMyName()" value="Say my name!">
+<br /><br />
+<!-- call function from an HTML tag -->
+<div onclick="sayMyName();">Click here to call the function!</div>
       </textarea>
+      <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
@@ -212,8 +215,8 @@ function nameOfFunction() {
         Let's take another look at our shopping cart and figure out what the functions are doing.
       </p>
 
-      <textarea class='coder-editor coder-editor-full'>
-        <script>
+<textarea class='coder-editor coder-editor-full'>
+<script>
   var quantity = 0; 
     
   function addItem(){ 
@@ -229,182 +232,157 @@ function nameOfFunction() {
 
   function refreshTotal() {         
     var totalCost = quantity * 20; //quantity * fixed price
+    var totalCostToShow = "$" + totalCost;
     document.getElementById('updateQuantity').value = quantity; //updates
-    document.getElementById('updateTotal').value = ("$" + totalCost); //updates
+    document.getElementById('updateTotal').value = totalCostToShow; //updates
   }
 </script>
 
-        <link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
-        <div class="item">
-          <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-          <br />
-          <button onclick="addItem();">Add</button>
-          <button onclick="removeItem();">Remove</button>
-          <br />
-          Quantity
-          <input type="text" id="updateQuantity" value="0" readonly />
-          <br />
-          Total Cost:
-          <input type="text" id="updateTotal" value="0" readonly />
-        </div>
-      </textarea>
+<link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
+  <br />
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button>
+  <br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly />
+  <br /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</textarea>
       <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
     <article class='slide slide-list'>
-      <h2>Review: What do we know about functions so far?</h2>
-      - created by using function keyword
+      <h2>Review: What do we know about Functions so far?</h2>
       <br />
-      - group together related lines of code and stores them into descriptive names.
-      <br />
-      - can be reused just by calling the function name
-      <br />
-      - define the function first but it will not be executed until you call the function
-      <br />
-      - can be used inside another function
+      <p>Created &amp; defined by using the <span class="keyword">function</span> keyword</p>
+      <p>Used to group together related lines of code and stores them into descriptive names</p>
+      <p>Can be reused just by calling the function name</p>
+      <p><strong>Define</strong> the function first but it will not run until you <strong>call</strong> the function</p>
+      <p>Can be used inside another function</p>
     </article>
-
+	
+	<!-- SLIDE: FUNCTIONS PIZZA #1 -->
     <article class='slide slide-list'>
       <h2>Functions and Pizza</h2>
-      Let's order a pizza!  We'll create a function called orderPizza that will represent all the steps it takes to place an order (find the pizza place's phone number, call them, give them your address, etc).  Inside the function is where the pizza place will hold our options like toppings, crust type and size of pizza, so that they can save that information and make our order!
-      <br />
-      <br />
-      function orderPizza() {
-      <br />
-      var pizzaOptions = "";
-      <br />
-      pizzaOptions += "cheese,";
-      <br />
-      pizzaOptions += " thin crust,";
-      <br />
-      pizzaOptions += " medium";
-      <br />
-      document.write(pizzaOptions);
-      <br />
-      }
-      <br />
-      orderPizza();
-      <br />
-      <br />
-      What if we want to order another pizza but with different options?  Let's order another pizza.
-      <br />
-      <br />
-      function orderAnotherPizza() {
-      <br />
-      var pizzaOptions = "";
-      <br />
-      pizzaOptions += "pepperoni,";
-      <br />
-      pizzaOptions += " stuffed crust,";
-      <br />
-      pizzaOptions += " small";
-      <br />
-      document.write(pizzaOptions);
-      <br />
-      }
-      <br />
-      orderAnotherPizza();
+      <p>Let's order a pizza!  The <strong>orderPizza</strong> function below represents all the steps it takes to place an order (find the pizza place's phone number, call them, give them your address, etc).</p>
+      <p>Inside the function is where the pizza restaurant will hold our options (toppings, crust type and size of pizza). Now they can use this stored information to make our order.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  function orderPizza() {
+    var topping = "cheese";
+    var crust = "thin crust";
+    var size = "medium";
+
+    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+  }
+
+  orderPizza();
+</script>
+</textarea>
+    </article>
+    
+    <!-- SLIDE: FUNCTIONS PIZZA #2 -->
+    <article class='slide slide-list'>
+      <h2>More Pizza!</h2>
+      <p>What if we want to order another pizza but with different options?<br />
+      Let's order another pizza.</p>
+      <textarea class='coder-editor coder-editor-full'>
+<script>
+  function orderAnotherPizza() {
+    var topping = "pepperoni";
+    var crust = "stuffed crust";
+    var size = "small";
+
+    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+  }
+
+  orderAnotherPizza();
+</script>
+</textarea>
+    </article>
+	
+	<!-- SLIDE: FUNCTIONS PIZZA - GLOBAL VS LOCAL -->
+    <article class='slide slide-list'>
+      <h2>Global vs Local Variables</h2>
+     <p>Let's say the pizza place always want to include cheese as a basic topping in all of the pizzas. We can declare a <strong>baseTopping</strong> variable outside of the function so it can be accessible from anywhere in the program.</p>
+     <textarea class='coder-editor coder-editor-full'>
+<script>
+  var baseTopping = "cheese";
+  
+  function orderPizza() {
+    var topping = "bacon";
+    var crust = "thin crust";
+    var size = "medium";
+    document.write("Pizza order:<br />" + baseTopping 
+    + "<br />" + topping + ", " + crust + ", " + size + "<br /><br />");
+  } 
+  function orderAnotherPizza() {
+    var topping = "pepperoni";
+    var crust = "stuffed crust";
+    var size = "small";
+    document.write("Pizza order:<br />" + baseTopping 
+    + "<br />" + topping + ", " + crust + ", " + size);
+  }
+  
+  orderPizza();	
+  orderAnotherPizza();
+</script>
+</textarea> 
+	  <span class="marker">*</span>    
     </article>
 
     <article class='slide slide-list'>
-      <h2>Global Variables</h2>
-      Let's say we want cheese to always be included as an option in our makePizza function.
+      <h2>Functions, Pizza and Parameters</h2>
       <br />
-      <br />
-      var baseTopping = "cheese";
-      <br />
-      function makePizza() {
-      <br />
-      var pizzaOptions = "";
-      <br />
-      pizzaOptions += baseTopping + ",";
-      <br />
-      pizzaOptions += " bacon,";
-      <br />
-      pizzaOptions += " thin crust,";
-      <br />
-      pizzaOptions += " medium";
-      <br />
-      document.write(pizzaOptions);
-      <br />
-      }
-      <br />
-      makePizza();
-      <br />
-      <br />
-      This is an example of a global variable, since it is declared outside of the function and is accessible from anywhere in the program.
-    </article>
+      <p>This could get cumbersome if we wanted to make a lot of pizzas.  If the steps required to make a pizza are the same and only the options change, how can we re-use the makePizza function instead of creating multiple functions?  We use <span class="keyword">PARAMETERS</a>.</p>
+      <p>Functions can be used with one parameter, more than one parameter or none at all.</p>
+     <textarea class='coder-editor coder-editor-full'>
+<script>
+  var baseTopping = "cheese";
+  
+  function orderPizza() {
+    var topping = "bacon";
+    var crust = "thin crust";
+    var size = "medium";
+    document.write("Pizza order:<br />" + baseTopping 
+    + "<br />" + topping + ", " + crust + ", " + size + "<br /><br />");
+  } 
+  function orderAnotherPizza() {
+    var topping = "pepperoni";
+    var crust = "stuffed crust";
+    var size = "small";
+    document.write("Pizza order:<br />" + baseTopping 
+    + "<br />" + topping + ", " + crust + ", " + size);
+  }
+  
+  orderPizza();	
+  orderAnotherPizza();
+</script>
+</textarea>    
 
-    <article class='slide slide-list'>
-      Global Variables vs Local Variables
-      <br />
-      What happens if we use the same baseTopping variable inside the function?
-      <br />
-      <br />
-      var baseTopping = "cheese";
-      <br />
-      function makePizza() {
-      <br />
-      var baseTopping = "tomato sauce";
-      <br />
-      var pizzaOptions = "";
-      <br />
-      pizzaOptions += baseTopping + ",";
-      <br />
-      pizzaOptions += " bacon,";
-      <br />
-      pizzaOptions += " thin crust,";
-      <br />
-      pizzaOptions += " medium";
-      <br />
-      document.write(pizzaOptions);
-      <br />
-      }
-      <br />
-      makePizza();
-      <br />
-      <br />
-      What happened to the cheese!?
-      <br />
-      A local variable is declared inside the function and can only be used within that function.
-      <br />
-      <br />
-      document.write(baseTopping); //will return &ldquo;cheese&rdquo;
-    </article>
 
-    <article class='slide slide-list'>
-      <h2>
-        Functions, Pizza and Parameters
-        <br />
-      </h2>
-      This could get cumbersome if we wanted to make a lot of pizzas.  If the steps required to make a pizza are the same and only the options change, how can we re-use the makePizza function instead of creating multiple functions?  We use PARAMETERS.
-      <br />
-      <br />
-      Functions can be used with one parameter, more than one parameter or none at all.
-      <br />
-      <br />
-      Live code: start with one parameter and work up to three
-      <br />
-      <br />
-      function makePizza(topping, crust, size) {
-      <br />
-      var pizzaOptions = "";
-      <br />
-      pizzaOptions += topping + ",";
-      <br />
-      pizzaOptions += " " + crust + ",";
-      <br />
-      pizzaOptions += " " + size;
-      <br />
-      document.write(pizzaOptions);
-      <br />
-      }
-      <br />
-      makePizza("pepperoni", "thick", "large");
-      <br />
-      makePizza("cheese", "thin", "small");
-    </article>
+<script type='coder-solution'>
+SCRIPT
+  var baseTopping = "cheese";
+  
+  function orderPizza(topping, crust, size) {
+    document.write("Pizza order:<br />" + baseTopping 
+    + "<br />" + topping + ", " + crust + ", " + size + "<br /><br />");
+  } 
+  
+  orderPizza("pepperoni", "thin crust", "medium");
+  orderPizza("mushrooms", "stuffed crust", "large");
+  orderPizza("chicken", "regular crust", "small");
+
+SCRIPTEND
+</script> 
+	  <span class="marker">*</span>  
+	</article>
 
     <article class='slide slide-subhead'>
       <h1>JavaScript Theory Applied</h1>
