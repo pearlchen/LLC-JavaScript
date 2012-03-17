@@ -446,18 +446,19 @@ document.write("Hello, " + name);</pre>
 
     <!-- SLIDE: EXERCISE OVERVIEW -->
     <article class='slide slide-list'>
-      <h3>Planet Robots</h3>
-      <p>As the owner of a thriving store that sells all things robots, you want to make sure you have to have a top notch website.</p>
-      <img src="assets/planet-robots-wide.jpg" alt="planet-robots" />
+      <p>As the owner of the thriving store, <span style="color:#B1009A;font-weight:bold;">Planet Robots</span>, you have to make sure you have a top notch website.</p>
+      <img src="assets/planet-robots.jpg" alt="planet-robots" />
 
     </article>
     
     <!-- SLIDE: EXERCISE OVERVIEW -->
     <article class='slide slide-list'>
       <h2>JavaScript Exercise Overview</h2>
-     <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with member's only sales!
-You'll also want to make sure that everything works properly as well.  That means customers can't submit empty forms and product totals are calculated properly in their shopping carts.</p>
-In order to create a website that can handle these requirements, we will need to learn how to use VARIABLES,FUNCTIONS, OBJECTS, ARRAYS and LOOPS.
+      <br />
+     <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with member's only sales!</p>
+     <p>You'll also want to make sure that everything works properly as well.</p>
+     <p>That means customers can't submit empty forms and product totals are calculated properly in their shopping carts.</p>
+     <p>In order to create a website that can handle these requirements, we will need to learn how to use <span class="keyword">variables</span>, <span class="keyword">functions</span>, <span class="keyword">objects</span>, <span class="keyword">arrays</span> and <span class="keyword">loops</span>.</p>
    </article>
    
     <!-- SLIDE: VARIABLES -->
@@ -467,24 +468,22 @@ In order to create a website that can handle these requirements, we will need to
       <p>Variables are used to store values.</p>
       <p><strong>Declaring</strong> a variable tells the computer that it exists<br />
         and to remember it.</p>
-      <p>Variables are like boxes, it can be used to store different objects.</p>
-      <br />
-      <p>
-        <img src="http://placehold.it/550x150&text=box+images"></p>
+      <p>Variables are like boxes, it can be used to store different things.</p>
+      <img src="assets/gift-boxes.jpg" alt="gift-boxes" width="400" height="300" />
+      
     </article>
 
     <!-- SLIDE: VARIABLES (cont'd) -->
     <article class='slide slide-list'>
       <h2>Variables (cont'd)</h2>
       <br />
-      <p>Variables are also be like the computer's short-term memory. In this example, the computer can't remember any one's name! </p>
+      <p>Variables are also be like the computer's short-term memory. It doesn't remember anything unless you tell it to.
+      In this example, the computer can't remember any one's name!</p>
       <br />
 <textarea class='coder-editor coder-editor-full'>
 <script>
-
   prompt("What's your name?");
-  document.write("Hello....?");
-  
+  document.write("Hello....?"); 
 </script>
 </textarea>
 	<span class="marker">*</span>
@@ -539,6 +538,22 @@ In order to create a website that can handle these requirements, we will need to
           with a period. It tells the computer that the statement is done.
         </p>
       </div>
+    </article>
+    
+     <!-- SLIDE: VARIABLES - assignment operator -->
+    <article class='slide slide-list'>
+      <h2>Assigning Variables</h2>
+      <br />
+      <p><span class="assignment">IMPORTANT!</span></p>
+      
+      <p>Using the equals (=) symbol in Javascript is NOT the same as in math.</p>
+      
+      <p><strong>var total = 1 + 1</strong>
+      is not the same as
+      <strong>1 + 1 = 2</strong>
+      </p>
+      <p>You will see later that we can change the <strong>value</strong> of a variable.</p>
+      <p>Variables can also be assigned any kind of value but in math, 1 + 1 will always equal 2.</p>
     </article>
 
     <!-- SLIDE: VARIOUS VARIABLES  -->
@@ -812,20 +827,25 @@ SCRIPTEND
 
     <!-- SLIDE: INCREMENT AND DECREMENT -->
     <article class='slide slide-list'>
-      <h2>Arithmetic Operators (cont.)</h2>
-      <p>JavaScript can also increase or decrease values up or down by 1 using the increment (++) or decrement (--) operators.  This will come in handy when we discuss
-        <strong class="keyword">Loops</strong>
-        later on.
+      <h2>Re-assigning Variables</h2>
+      <p>Even after a variable has been declared with a value, we can still<br />
+      <strong>re-assign</strong> the value.  For example, we may want to increase or decrease values up or down by 1.  This will come in handy when we discuss <strong class="keyword">Loops</strong> later on.
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
+  //declaring variable
   var numberOfCookies = 0;
-  numberOfCookies++;
+  
+  //re-assigning the value by adding 1
+  numberOfCookies = numberOfCookies + 1;
   alert("I will only have " + numberOfCookies + ".");
-    
+  
+  //declaring another variable  
   var remainingCookies = 4;
-  remainingCookies--;
-  //alert("I just ate 1 cookie. Now I have " + remainingCookies + " left."); 
+  
+  //re-assigning the value by subtracting 1
+  remainingCookies = remainingCookies - 1;
+  alert("I just ate a cookie. Now I have " + remainingCookies + " left."); 
 </script>
 </textarea>
     </article>
@@ -843,7 +863,7 @@ SCRIPTEND
   var loves = 0;
   function moreLove(){
      //increment operator in action!
-     loves++;
+     loves = loves + 1;
      document.getElementById('update').innerHTML = loves;
   }
 </script>
@@ -859,7 +879,7 @@ SCRIPTEND
 
     <!-- SLIDE: MINI-EXERCISE #2 - ADD/REMOVE ITEMS - ONE PRODUCT  -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #2 (5-10 minutes)</h2>
+      <h2>Mini-exercise #2</h2>
       <br />
       <p>Here's a one-product shopping page where you can update the<br />
       quantity by adding or removing it from the shopping cart.</p>
@@ -868,9 +888,9 @@ SCRIPTEND
 	
 	<!-- SLIDE: MINI-EXERCISE #2 : Code page -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #2: Go!</h2>
+      <h2>Mini-exercise #2: Go! (5-10 minutes)</h2>
       <div class="hint">
-      	<p>How do you increment and decrement variables?</p>
+      	<p>How do we increase or decrease the value of the variable?</p>
       </div>
 <textarea class='coder-editor coder-editor-full'>
 <script>
@@ -880,13 +900,13 @@ SCRIPTEND
     
   function addItem(){
     // CODE HERE EXECUTES WHEN YOU PRESS THE 'ADD' BUTTON 
-    //2. set the variable 'quantity' to increment HERE
-     
+    //2. set the variable 'quantity' to increase by 1 HERE
+         
     refreshTotal();
   }
   function removeItem(){
     // CODE HERE EXECUTES WHEN YOU PRESS THE 'REMOVE' BUTTON  
-    //3. set the variable 'quantity' to decrement HERE
+    //3. set the variable 'quantity' to decrease HERE
        
     refreshTotal();
   }   
@@ -917,14 +937,14 @@ the value for the quantity of robots */
   var quantity = 0;		
 		
   function addItem(){	
-    //2. set the variable 'quantity' to increment HERE
-    quantity++;
+    //2. set the variable 'quantity' to increase by 1 HERE
+    quantity = quantity + 1;
 			 
     refreshTotal();
   }
   function removeItem(){	
-    //3. set the variable 'quantity' to decrement HERE
-    quantity--; 
+    //3. set the variable 'quantity' to decrease by 1 HERE
+    quantity = quantity - 1; 
 			
     refreshTotal();
   }		
@@ -1005,11 +1025,11 @@ SCRIPTEND
   var quantity = 0;		
 		
   function addItem(){	
-    quantity++;			 
+    quantity = quantity + 1;			 
     refreshTotal();
   }
   function removeItem(){	
-    quantity--; 
+    quantity = quantity - 1; 
     refreshTotal();
   }		
   function refreshTotal() {					
