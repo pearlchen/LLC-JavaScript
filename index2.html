@@ -43,7 +43,7 @@
       </html>
     </script>
     
-  <div id="presentation">
+<div id="presentation">
 
     <!-- SLIDE: ARCADE FIRE VIDEO -->
     <article class='slide slide-list'>
@@ -637,7 +637,7 @@ var arrayObject = [ ];</pre>
       <h2>Built-in JavaScript Properties</h2>
       <p>In this workshop we won't be creating any of our own objects but JavaScript already has many objects built into the language.</p>
       <p>Let's look at a string object and the length property which returns the number of characters in a string.  Try putting your own name in here.</p>
-      <textarea class="code">
+      <textarea class='coder-editor'>
 var firstName = "Christina";
 
 var numberOfLetters = firstName.length;
@@ -697,7 +697,7 @@ welcomeTeam.sayHello();
       <h3>Object methods (cont'd)</h3>
       <p>When a function is associated with an object we call it a <span class="keyword">METHOD</span>.</p>
       <p>Let's say you're having a robot sale! Everything is 50% off. But, after doing the math, you notice that the sale price is a bit off.. Let’s declare a sale price and manipulate it using toFixed(). When you use a method, it gives you access to all the hard work that someone else did and it only takes you one line to use it!</p>
-      <textarea>var salePrice1 = 20.00 * 0.50;
+      <textarea class='coder-editor'>var salePrice1 = 20.00 * 0.50;
 var salePrice2 = 35.00 * 0.50;
 var salePrice3 = 25.99 * 0.50;
 
@@ -1159,13 +1159,314 @@ productPrices[5] = 8.99;
       </p>
     </article>
 
-    <article class='slide slide-list'></article>
 
-    <article class='slide slide-list'></article>
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>Regroup before break</h1>
+        <p>Share your mistakes so we can learn from each other!</p>
+      </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>Break time!</h1>
+        <p>Come back in 15 minutes</p>
+      </article>
+            
+      <!-- SLIDE:  -->
+<article class='slide slide-subhead'>
+        <h1>Document Object Model (DOM)</h1>
+        <p>Manipulating objects on a real HTML page</p>
+      </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>The Components of a Web Page</h2>
+        <p>Think about your HTML web page (your &quot;browser <span class="keyword">document</span>&quot;) as being made up of many blocks.</p>
+        <p class="centered"><img src="http://placehold.it/500x350" /></p>
+      </article>
+      
+            
+      <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2>Pre-defined Blocks</h2>
+        <p>Think about your HTML web page (your &quot;browser <span class="keyword">document</span>&quot;) as being made up of many blocks. </p>
+  <p class="centered"><img src="http://placehold.it/500x350" /></p>
+  <p class="centered">[This is your web browser window with our web page.]</p>
+      </article>
+      
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>User-defined Blocks</h2>
+        <p>And some blocks we made ourselves (e.g. fieldset, div, and img HTML tags).</p>
+        <p class="centered"><img src="http://placehold.it/500x350" /></p>
+ 		<p class="centered">A &lt;div&gt;&lt;/div&gt; block.</p>
+      </article>
+      </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Document Objects</h2>
+        <p>All of these blocks are <span class="keyword">objects</span> -- just like the ones we covered earlier! And all these objects have pre-written functions/methods you can use.</p>
+        <p>Does the line of code below make more sense now? <code>document</code> is one of the main objects of a web page and it has a method named <code>write</code> that accepts a string as a parameter. <code>document</code> has lots of other properties and methods too: <a href="http://dochub.io/#dom/document" target="_blank">check out this list</a>.</p>
+       <textarea class='coder-editor'><script>
+document.write("Hello!");
+</script>
+       </textarea>
+</article>
 
-    <article class='slide slide-list'></article>
+	  <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>HTML Element Objects</h2>
+        <p>The most repetitive thing you'll ever do with JavaScript is getting references to your HTML tags (&quot;elements&quot;) using document.getElementById(). (It's important that your HTML tag has an id attribute in order to do this!)</p>
+        <p>For example, let's dynamically find out what the text is a paragraph tag by reading its innerHTML property. (You can find all the things you can do with elements <a href="http://dochub.io/#dom/element" target="_blank">here</a>.)</p>
+               <textarea class='coder-editor'>
+<p id="text" style="border: 1px solid red;">
+  I am a regular paragraph.
+</p>
 
-  </div>
+<script>
+
+</script>
+       </textarea>
+      </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>HTML Element Objects (cont'd)</h2>
+        <p>You used the DOM to find out how many items in the previous example: var selectedProducts = document.shoppingForm.elements[&quot;product&quot;]; And also to see if it was checked: if (selectedProducts[i].checked) {  } </p>
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>HTML Element Objects (cont'd)</h2>
+        <p>You can also use innerHTML to replace what's already in a element.</p>               <textarea class='coder-editor'>
+<p id="text" style="border: 1px solid red;">
+  I am a regular paragraph.
+</p>
+
+<script>
+  var existingElement = document.getElementById("text");
+
+</script>
+       </textarea>
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>HTML Element Objects (cont'd)</h2>
+        <p>Or let's dynamically swap out one image for another by updating the src attribute of an image tag.</p>
+        <textarea class='coder-editor'>
+<img id="cupcake"
+src="http://pchen.github.com/LLC-JavaScript/exercises/assets/cupcake.jpg" />
+
+<script>
+
+</script>
+       </textarea>
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Updating CSS Styles</h2>
+        <p>You can even update a HTML element's CSS styles dynamically using it's style property.</p>
+        <p>Consider how you might program a button toggle effect to show the difference between &quot;selected&quot; or &quot;deselected&quot; states. (Note the differences between how properties are written in CSS to how they appear in JavaScript -- background-color versus backgroundColor.</p>
+                <textarea class='coder-editor'>
+<style>
+  #clickme {
+    text-align: center;
+    width: 100px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+</style>
+
+<div id="clickme" onclick="restyle();">
+Click me!
+</div>
+
+<script>
+  var button = document.getElementById("clickme");
+  function restyle() {
+    if ( button ) {
+    
+    }else{
+    
+    }
+  }
+</script>
+       </textarea>
+       
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Updating CSS Styles (cont'd)</h2>
+        <p>You could even update several style properties at once if you use CSS classes and update a element's class attribute.</p>
+   <textarea class='coder-editor'>
+<style>
+  #clickme {
+    text-align: center;
+    width: 100px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+</style>
+
+<div id="clickme" onclick="restyle();">
+Click me!
+</div>
+
+<script>
+  var button = document.getElementById("clickme");
+  function restyle() {
+    if ( button.style.color == "white" ) {
+    
+    }else{
+    
+    }
+  }
+</script>
+        </textarea>
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Other uses</h2>
+        <p>Very useful if you're making a tabbed navigation! [Demo but no hands on]</p>
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Make DOM Elements Magically Appear!</h2>
+        <p>You can even create completely new elements out of thin air! Use document.createElement() and   <textarea class='coder-editor'>
+        
+        <div id="emptyDiv" style="border: 1px solid red; padding: 10px;">
+</div>
+
+<script>
+  // create a new paragraph out of thin air
+
+  //insert it into the currently empty div
+
+</script>
+        </textarea>
+        
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>Going Beyond JavaScript Basics</h1>
+        <p>You're getting to be quite the pro!</p>
+      </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>Debugging!</h1>
+        <p>Squash those crawly things in your code.</p>
+</article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>What's a Bug?</h2>
+        <p>As <a href="http://en.wikipedia.org/wiki/Grace_Hopper#Anecdotes" target="_blank">the story</a> goes, the term &quot;software bug&quot; got its name because a real moth flew into a computer system causing strange, unexpected behaviours to happen in a computer program. </p>
+        <p>Nowadays, bugs are mostly due to human error in one of two areas: <br>
+        Syntax - missing semi-colons, typos, case-sensitivity <br>
+        Logic - trying to access a variable that doesn't exist yet, writing an incorrect conditional test</p>
+        <p>Luckily there's a few things to help us hunt them down quicker...</p>
+      </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Chrome Developer Console</h2>
+        <p>Use the built in developer tools in Chrome to debug your code. (Firefox+Firebug is similar but not exactly the same.)</p>
+        <p>[Wrench Icon] &gt; Tools &gt; Developer Tools ( Alt+Cmd+L for Mac, Ctrl+L for Windows) Click on the Console tab.</p>
+        <p><img src="assets/ChromeConsole.gif" width="632" height="84" alt="Chrome debugger tabs" /></p>
+</article>
+
+<!-- SLIDE:  -->
+<article class='slide slide-list'>
+  <h2>Right click &gt; Inspect Element</h2>
+  <p>Easiest way to remember is to right-click on any web page and select "Inspect Element". In the new panel, select the "Console" tab to see JavaScript errors or to play in the console sandbox.</p>
+        <p><img src="assets/ChromeInspector.gif" width="243" height="248" alt="Right click to see Inspect Element in the popup" /></p>
+  </article>
+      
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Inspecting the DOM</h2>
+        <p>You can inspect any webpage with the debugger. </p>
+        <p>Let's open up the Ladies Learning Code Events page: http://ladieslearningcode.com/events/ </p>
+        <p>How can we use the console to find out how many events are listed on this page?</p>
+</article>
+
+<!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>More info</h2>
+        <p>Watch these videos.</p>
+      </article>
+   
+
+            
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>External JavaScript</h1>
+        <p>Keeping it organized and working with others</p>
+</article>
+   
+   <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>&lt;script src=""&gt;</h2>
+        <p>As you write bigger pieces of JavaScript, you will want to start putting your code into their own files so they are easier to manage. Or you might want to enlist the help of others to write JavaScript for your website so you can work on different sections separately. A big site could have thousands of lines of code written by many different people!</p>
+        <p>To link to an external JavaScript file:</p>
+        <pre class="prettyprint">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript example!&lt;/title&gt;
+    &lt;script type="text/javascript" src="scripts.js"&gt;&lt;/script&gt;    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="example"&gt;This is an example.&lt;/div&gt;    
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+      </article>   
+      
+      <!-- SLIDE:  -->
+<article class='slide slide-list'>
+  <h2>In the external file</h2>
+  <p>In the <a href="http://pchen.github.com/LLC-JavaScript/exercises/scripts.js" target="_blank">external JavaScript file (scripts.js)</a> you don't include script tags; just JavaScript code. </p>
+        <p>View this example: <a href="http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html" target="_blank">http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html</a></p>
+  </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>script tag gotchas</h2>
+        <p>Even though you're not writing JavaScript between the script tags, you must use a closing <code>&lt;/script&gt;</code> tag. A self-closing tag such as <code>&lt;script src="scripts.js" /&gt;</code> will not work. The correct way is highlighted below:</p>
+        <p><code>&lt;script type=&quot;text/javascript&quot; src="scripts.js"&gt;&lt;/script&gt;</code></p>
+      </article>
+            
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>JQuery</h1>
+        <p>The Write Less, Do More, JavaScript Library</p>
+</article>
+
+<!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>jQuery</h2>
+        <p>...</p>
+      </article>
+
+ 
+</div>
   <!-- END div id=presentation -->
 
   <script src='src/jquery.min.js'></script>
