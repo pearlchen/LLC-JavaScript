@@ -644,59 +644,45 @@ while ( i < playlist.length ) {
 </pre>
     </article>
     
-    <!-- WHILE LOOP -->
+    <!-- WHILE LOOP - TEMP CONVERSION -->
     <article class='slide slide-list'>
-      <h3 dir="ltr">While Loop in Action!</h3>
-      Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.  The formula is:
+      <h2>While Loop in Action!</h2>
       <br />
-      Temperature = Temperature * 9 / 5 + 32
-      <br />
-      This example uses a while loop to output the calculation and will stop when we reach 30 degrees Celsius.
-      <br />
-      &lt;style&gt;
-      <br />
-      table {
-      <br />
-      <p dir="ltr">border: 1px solid #C12AAA;</p>
-      }
-      <br />
-      table tr td {
-      <br />
-      border: 1px solid #C12AAA;
-      <br />
-      padding: 4px;
-      <br />
-      }
-      <br />
-      &lt;/style&gt;
-      <br />
-      &lt;table border="0" cellspacing="0"&gt;
-      <br />
-      &lt;tr&gt;
-      <br />
-      &lt;td&gt;Celsius&lt;/td&gt;
-      <br />
-      &lt;td&gt;Fahrenheit&lt;/td&gt;
-      <br />
-      &lt;/tr&gt;
-      <br />
-      &lt;script&gt;
-      <br />
-      var celsius = 0;
-      <br />
-      while (celsius &lt;= 30) {
-      <br />
-      document.write("&lt;tr&gt;&lt;td&gt;" + celsius + "&lt;/td&gt;&lt;td&gt;"
-      <br />
-      <p dir="ltr">+ ((celsius * 9 / 5) + 32) + "&lt;/td&gt;&lt;/tr&gt;");</p>
-      celsius++;
-      <br />
-      }
-      <br />
-      &lt;/script&gt;
-      <br />
-      &lt;/table&gt;
+      <p>Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.</p>
+      <p>(The formula is: Temperature = Temperature * 9 / 5 + 32)</p>
+	  <p>This example uses a while loop to output the calculation and the HTML to dynamically add new rows containing the temperature conversion.  It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).</p>
+	  <p>See next slide for code.</p>
     </article>
+    
+    <!-- WHILE LOOP - TEMP CONVERSION CODE -->
+    <article class='slide slide-list'>
+  	  <h2>While Loop Temperature Conversion</h2>
+
+<textarea class='coder-editor coder-editor-full'>
+<link rel="stylesheet" href="/exercises/slides.css" type="text/css" />
+<table id="temperature">
+  <tr>
+	<td>Celsius</td>
+	<td>Fahrenheit</td>
+  </tr>
+
+  <script>
+	var celsius = 0;
+	while (celsius <= 30) {
+	  toFarenheit();
+	  celsius = celsius + 1;
+   	}
+   	
+ 	// Calculates the temperature conversion and adds table HTML
+   	function toFarenheit() {
+   		document.write("<tr><td>" + celsius + "</td><td>" 
+   		+ ((celsius * 9 / 5) + 32) + "</td></tr>");
+   	}
+  </script>
+</table>
+</textarea>
+</article>
+    
     <article class='slide slide-list'>
       <h3 dir="ltr">For Loops</h3>
       <br />
