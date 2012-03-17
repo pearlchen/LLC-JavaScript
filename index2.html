@@ -472,7 +472,7 @@ SCRIPTEND
       <h2>Arrays How-to</h2>
 <pre class='prettyprint'>
 //declaring an empty array
-var eggspressions = [ ];
+var eggspressions = [];
 </pre>
       <p>Set values using a square bracket [ ] notation.</p>  
 <pre class='prettyprint'>
@@ -642,6 +642,11 @@ while ( i < playlist.length ) {
   i = i + 1; // adds 1 to the current index so it moves to the next song  
 }
 </pre>
+
+	<div class="reminders">
+		<p>If the condition is always true, the loop will run infinitely and will never exit the while loop.  
+This can cause your browser to crash!</p>
+    </div>
     </article>
     
     <!-- WHILE LOOP - TEMP CONVERSION -->
@@ -650,108 +655,85 @@ while ( i < playlist.length ) {
       <br />
       <p>Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.</p>
       <p>(The formula is: Temperature = Temperature * 9 / 5 + 32)</p>
-	  <p>This example uses a while loop to output the calculation and the HTML to dynamically add new rows containing the temperature conversion.  It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).</p>
-	  <p>See next slide for code.</p>
+	  <p>This next example uses a while loop to output the calculation into dynamically added HTML table rows containing the results of the temperature conversion.</p>
+	  <p>It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).</p>
+	  <p>See next slide for the example.</p>
     </article>
     
     <!-- WHILE LOOP - TEMP CONVERSION CODE -->
     <article class='slide slide-list'>
   	  <h2>While Loop Temperature Conversion</h2>
+  	  <p>Let's look at the temperature conversion table with and without JavaScript and compare the difference in the amount of repetitive code required to create a table like this manually.</p>
+	  <p>Conversion table using a <a href="exercises/temperature.html">while loop</a>.</p>
+	  <p>Conversion table <a href="exercises/temperature-nojs.html">without JavaScript</a>.</p>	
+	  <p>View source and compare the difference between the amount of code.</p>
+	  [add small screenshot here]
+	</article>
+    
+    <!-- FOR LOOP -->
+    <article class='slide slide-list'>
+      <h2>For Loops</h2>
+      <p>A for loop loops through a block of code a specified number of times.</p>  
+	  <p>The index, conditional test and incrementer are all declared in one line.</p> 
+	  <p>The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value. </p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  // start value, condition, increment
+for ( var i = 0; i < 3; i++ ) {
+  //code to be executed
+  document.write("The current index is: " + i + "<br />");
+}
+document.write("The for loop is now complete.");
+</script>
+</textarea> 
+    </article>
+    
+    <!-- FOR LOOP and ARRAYS -->
+    <article class='slide slide-list'>
+      <h2>For Loops and Arrays</h2>
+      <p>For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.</p>
+      <p>Back to our robot store.  It wouldn’t be much of a store if there was only one product!
+We can create a list of different products with various prices by creating an array.</p>
+<pre class='prettyprint'>
+var productPrices = [];
+productPrices[0] = 17.99;
+productPrices[1] = 25;
+productPrices[2] = 13.99;
+productPrices[3] = 9.99;
+productPrices[4] = 24.99;
+productPrices[5] = 8.99;
+</pre>
+	</article>
+	
+	 <!-- FOR LOOP and ARRAYS w/robot store -->
+    <article class='slide slide-list'>
+      <h2>For Loops, Arrays, Robots and Sales</h2>
+      <p>Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.</p>
 
 <textarea class='coder-editor coder-editor-full'>
-<link rel="stylesheet" href="/exercises/slides.css" type="text/css" />
-<table id="temperature">
-  <tr>
-	<td>Celsius</td>
-	<td>Fahrenheit</td>
-  </tr>
+<script>
+  var productPrices = [];
+  productPrices[0] = 17.99;
+  productPrices[1] = 25;
+  productPrices[2] = 13.99;
+  productPrices[3] = 9.99;
+  productPrices[4] = 24.99;
+  productPrices[5] = 8.99;
 
-  <script>
-	var celsius = 0;
-	while (celsius <= 30) {
-	  toFarenheit();
-	  celsius = celsius + 1;
-   	}
-   	
- 	// Calculates the temperature conversion and adds table HTML
-   	function toFarenheit() {
-   		document.write("<tr><td>" + celsius + "</td><td>" 
-   		+ ((celsius * 9 / 5) + 32) + "</td></tr>");
-   	}
-  </script>
-</table>
-</textarea>
-</article>
-    
-    <article class='slide slide-list'>
-      <h3 dir="ltr">For Loops</h3>
-      <br />
-      A for loop loops through a block of code a specified number of times.
-      <br />
-      The index, conditional test and incrementer are all declared in one line.
-      <br />
-      The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value.
-      <br />
-      <br />
-      // start value, condition, increment
-      <br />
-      for ( var i = 0; i &lt; 3; i++ ) {
-      <br />
-      //code to be executed
-      <br />
-      document.write("The current index is: " + i + "&lt;br /&gt;");
-      <br />
-      }
-      <br />
-      document.write("The for loop is now complete.");
+  for (i=0; i < productPrices.length; i++) {
+    var value = productPrices[i];
+    if (value < 15){
+      document.write("Product " + (i+1) + " is on sale.<br />");
+    } else {
+      document.write("Product " + (i+1) + " is not on sale.<br />");
+    }
+  }
+</script>
+</textarea>    
     </article>
-    <article class='slide slide-list'>
-      <h3 dir="ltr">For Loops and Arrays</h3>
-      For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.
-      <br />
-      <br />
-      Back to our robot store.  It wouldn't be much of a store if there was only one product!
-      <br />
-      We can create a list of different products with various prices by creating an array.
-      <br />
-      <br />
-      var productPrices = new Array();
-      <br />
-      productPrices[0] = 17.99;
-      <br />
-      productPrices[1] = 25;
-      <br />
-      productPrices[2] = 13.99;
-      <br />
-      productPrices[3] = 9.99;
-      <br />
-      productPrices[4] = 24.99;
-      <br />
-      productPrices[5] = 8.99;
-      <br />
-      <br />
-      Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.
-      <br />
-      <br />
-      [ Live code for loop condition, var value and if condition ]
-      <br />
-      for (i=0; i &lt; productPrices.length; i++) {
-      <br />
-      var value = productPrices[i];
-      <br />
-      if (value &lt; 15){
-      <br />
-      document.write("Product " + (i+1) + " is on sale.&lt;br /&gt;");
-      <br />
-      } else {
-      <br />
-      document.write("Product " + (i+1) + " is not on sale.&lt;br /&gt;");
-      <br />
-      }
-      <br />
-      }
-    </article>
-
+	
+	
+	
     <article class='slide slide-list'>
       <h2>Mini-exercise #7 (10-15 minutes)</h2>
       <p>
