@@ -117,11 +117,7 @@
           </td>
           <td>
             <ol>
-              <li>Pull the PayPass credit card from your wallet</li>
-              <br />
-              <br />
-              <br />
-              <br />              
+              <li>Pull the PayPass credit card from your wallet</li>            
               <li>Tap</li>
               <li>Take receipt</li>
             </ol>
@@ -136,7 +132,7 @@
       <h2>Functions in JavaScript</h2>
       <br />
       <p>Functions are used to make the code "do things."</p>
-      <p><span class="keyword">prompt()</span> and <span class="keyword">alert()</span>are two functions that are pre-written into JavaScript.</p>
+      <p><span class="keyword">prompt()</span> and <span class="keyword">alert()</span> are two functions that are pre-written into JavaScript.</p>
       <p>Someone already did the hard work for us by writing these functions to show us popups in the browser.</p>
       <p>But we can also write our own!</p>
     </article>
@@ -457,169 +453,156 @@ SCRIPTEND
       </p>
       <p>It'll get only even longer if you add 4 more fields.</p>
     </article>
-
+	
+	<!-- SLIDE: ARRAYS INTRO -->
     <article class='slide slide-list'>
       <h2>Arrays</h2>
-      An array is a special variable, it can hold more than one value at a time in a single variable.
       <br />
-      If a variable is like a box, then an array is a box with slots for packing wine glasses.
+      <p>An <span class="keyword">array</span> is a special variable because it can hold more than one value at a time in a single variable.</p>
       <br />
-      In JavaScript words, arrays store an ordered list of values in slots, in an &ldquo;indexed&rdquo; way.
-      <br />
-      <br />
-      Declare Arrays (yes, capital A) using the NEW keyword.
-      <br />
-      var robots = new Array();
-      <br />
-      <br />
-      You can set values using a square bracket [ ] notation.
-      <br />
-      <br />
-      var robots = new Array();
-      <br />
-      robots[0] = "Wall-e"; //value for the 1st slot in the array
-      <br />
-      robots[1] = "Eva"; //value for the 2nd slot in the array
-      <br />
-      robots[2] = "The tin man"; //value for the 3rd slot in the array
-      <br />
-      <br />
-      The numbers inside the square brackets [ ] are referred to as the index number.
-      <br />
-      Array indexes always start at zero.
+      <p>Arrays are similar to egg cartons. All the eggs are in one carton but each egg has it's own slot.</p>
+      <br />     
+      <p>In other words, <span class="keyword">arrays</span> store an ordered list of values in slots, in an "indexed" way.</p>
+    </article>
+    
+    <!-- SLIDE: ARRAYS HOW-TO -->
+    <article class='slide slide-list'>
+      <h2>Arrays How-to</h2>
+      <p>Declare <span class="keyword">Arrays</span> (yes, capital A) using the <span class="keyword">new</span> keyword.</p>
+<pre class='prettyprint'>
+var robots = new Array();
+</pre>
+      <p>You can set values using a square bracket [ ] notation.</p>  
+<pre class='prettyprint'>
+var robots = new Array();
+robots[0] = "Wall-e"; //value for the 1st slot in the array
+robots[1] = "Eva"; //value for the 2nd slot in the array
+robots[2] = "The tin man"; //value for the 3rd slot in the array
+</pre>
+	  <p>The numbers inside the square brackets [ ] are referred to as the<br />
+	  <strong>index</strong> number. Array indexes <strong>always</strong> start at <strong>zero</strong>.</p>
+	  
+	  <div class="reminders">
+	  	<p>Arrays can be declared in different ways.<br />
+	  	   The above example can also be declared like this:<br />
+		   var robots = ["Wall-e","Eva","The tin man"];<br />
+		   See more info here: <a href="http://www.w3schools.com/js/js_obj_array.asp">http://www.w3schools.com/js/js_obj_array.asp</a>
+		</p>
+	  </div>
+    </article>
+	
+	<!-- SLIDE: ARRAYS - ACCESSING VALUES -->
+    <article class='slide slide-list'>
+      <h2>Arrays and Indexes</h2>
+      <p>Index numbers are used to <strong>assign</strong> values.</p>
+      <p>Index numbers are also used to <strong>access</strong> values.</p>
+      <p>Specific index numbers are used to access the same slot in the array. For example, to access the value of the first robot in the <strong>robots</strong> array, use index 0.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var robots = new Array();
+  robots[0] = "Wall-e";
+  robots[1] = "Eva";
+  robots[2] = "The tin man";
+  document.write("The 2nd robot is " + robots[1] + " even though the index is 1.");
+</script>
+</textarea>         
     </article>
 
+	<!-- SLIDE: ARRAYS & PROPERTIES -->
     <article class='slide slide-list'>
-      Arrays and Indexes
-      <br />
-      The index numbers are also used to access the value of the specific slot in the array.
-      <br />
-      To access the value of the first robot in the robot array, index 0 is the first item in the list.
-      <br />
-      <br />
-      var robots = new Array();
-      <br />
-      robots[0] = "Wall-e";
-      <br />
-      robots[1] = "Eva";
-      <br />
-      robots[2] = "The tin man";
-      <br />
-      document.write("The 2nd robot is " + robots[1] + " even though the index is 1" + ".");
-      <br />
-      <br />
-      Note: There are other ways to declare an array but we will stick to this syntax for the remainder of the workshop.
-      <br />
-      More info here: http://www.w3schools.com/js/js_obj_array.asp
-    </article>
+      <h2>Arrays and Properties</h2>
+      <p>Since <span class="keyword">Arrays</span> are also objects, there are many properties associated with the Array object.</p> 
 
+	  <p>One useful property is the <span class="keyword">Length</span> property.</p>
+	  <p>When used with a <strong>String</strong> variable, the <span class="keyword">Length</span> property returns the number of characters.  When used with an <strong>Array</strong>, the <span class="keyword">Length</span> property returns the number of elements.</p>   
+	<textarea class='coder-editor coder-editor-full'>
+<script>
+  // string variable
+  var name = "Christina";
+  document.write(name.length);
+  document.write("<br />");
+  
+  // array
+  var robots = new Array();
+  robots[0] = "Wall-e";
+  robots[1] = "Eva";
+  robots[2] = "The tin man";
+  //document.write(robots.length);
+</script>
+</textarea>
+	  <span class="marker">*</span>    
+ 	</article>
+ 
+ 	<!-- SLIDE: ARRAYS - PHOTO SLIDER EXAMPLE -->
     <article class='slide slide-list'>
-      <h2>
-        Arrays and Properties
-        <br />
-      </h2>
-      So far we've looked at variables and arrays.  Guess what? They are also OBJECTS.
-      <br />
-      We'll be discussing later on what exactly an object is but for now we are going to take a look at object PROPERTIES.
-      <br />
-      PROPERTIES are values associated with a particular object.
-      <br />
-      <br />
-      For example, an image on a web page would have properties like height, width and file name associated with it.
-      <br />
-      <br />
-      Using properties is very useful because we can access the properties and make changes to them.
-      <br />
-      <br />
-      Let's look a the Length property. When used with a STRING, the Length property returns the number of characters in the string.
-      <br />
-      When used with an Array, the Length property returns the number of elements in the array.
-      <br />
-      <br />
-      [live code]
-      <br />
-      var name = "Christina";
-      <br />
-      //document.write(name.length);
-      <br />
-      //document.write("&lt;br /&gt;");
-      <br />
-      <br />
-      var robots = new Array();
-      <br />
-      robots[0] = "Wall-e";
-      <br />
-      robots[1] = "Eva";
-      <br />
-      robots[2] = "The tin man";
-      <br />
-      //document.write(robots.length);
-      <br />
-      <br />
-      **Remember, the index starts at 0, but length will return 3 since there are 3 elements in the array.
+      <h2>Arrays &amp; Length:  Why?</h2>
+      <p>It is common to use JavaScript run through a list of values and apply some code to it. In order to do this, we need to know how many elements there are in total.</p>
+      <p>Let's look at this photo gallery from
+      <a href="http://www.theglobeandmail.com/multimedia/camera-club/your-best-photos-of-movement/article2355552/">theglobeandmail.com</a> and figure out how length can be used here.
+      </p>
+      <img src="assets/globe-mail.jpg" alt="globe-mail" />
+      <span class="marker">*</span>
     </article>
+    
+    
     <article class='slide slide-list'>
-      <h2>Arrays &amp; Length:  Why is this important?</h2>
-      Often times, we&rsquo;ll need to run through a list of values and apply some code to it.
-      <br />
-      Also, sometimes we don&rsquo;t know how many there are in total, or the totals may need to change dynamically.
-      <br />
-      <br />
-      Let&rsquo;s look at this photo gallery from
-      <a href="http://www.theglobeandmail.com/multimedia/camera-club/your-best-photos-of-movement/article2355552/">theglobeandmail.com</a>
-      <br />
-      Length could be used to determine the number of photos to display something like &ldquo;18 of 122&rdquo;.
-      <br />
-      Length can also be used for looping through the image gallery backwards and forwards.
-      <br />
-      <br />
-      [ discuss in a bit more detail how this would work ]
+      <h2>Arrays &amp; Length and the 0 Index</h2>
+      <p>How do we access a particular value?</p>
+      <p>By using the index number.</p>
+      <p>So how do we access the <strong>last</strong> value?<br />
+      Let's go back to these robots.</p>
+<pre class='prettyprint'>
+var robots = new Array();
+robots[0] = "Wall-e";
+robots[1] = "Eva";
+robots[2] = "The tin man";
+</pre>	
+	  <p>So, to access the last index value, you can use <strong>robots[2]</strong>.</p>
+      <p>BUT...</p>
+      <p>You can also use <strong>robots[robots.length-1]</strong>.</p>
+	</article>
+	
+	<article class='slide slide-list'>
+      <h1>Huh?</h1>
     </article>
+    
     <article class='slide slide-list'>
-      <h3 dir="ltr">Arrays &amp; Length and the 0 Index</h3>
-      <br />
-      How do we access a particular value?
-      <br />
-      By using the index number.
-      <br />
-      <br />
-      var robots = new Array();
-      <br />
-      robots[0] = "Wall-e";
-      <br />
-      robots[1] = "Eva";
-      <br />
-      robots[2] = "The tin man";
-      <br />
-      <br />
-      So, to access the last index value, you can use robots[2].
-      <br />
-      BUT...
-      <br />
-      You can also use robots[ robots.length-1 ].
-      <br />
-      <br />
-      Huh?
-      <br />
-      <br />
-      robots.length would return a value of 3 because there are 3 elements in the array.
-      <br />
-      But the index of the last element is actually [2] because the array starts at [0].
-      <br />
-      robots.length = 3
-      <br />
-      index of last element = 2
-      <br />
-      robots[2] = robots[robots.length-1]
-      <br />
-      <br />
-      Since the index begins at 0, the last index value is always length-1.
-      <br />
-      This can be useful if you want to always access the last index despite new additions.
-      <br />
-      <br />
-      [Live code: Add a 4th element to show how robots[2] will no longer return the last item.]
+      <h2>REWIND: Arrays &amp; Length<br />and the 0 Index</h2>
+<pre class='prettyprint'>
+var robots = new Array();
+robots[0] = "Wall-e";
+robots[1] = "Eva";
+robots[2] = "The tin man";
+</pre>	
+      <p>Let's take a closer look.</p>
+      <ul>
+	 		<li>robots.length returns 3 </li>
+			<li>index of last element is 2</li>
+			<li>robots.length-1 is the same as 3 - 1 and will return 2</li>
+			<li>robots[2] returns the last value</li>
+			<li>robots[robots.length-1] is the same as robots[2] so it too, will return the last value</li>
+	  </ul>
     </article>
+    
+    
+    <article class='slide slide-list'>
+      <h2>Why the hassle?</h2>
+      <p>Since the index begins at 0, the last index value is always length-1. </p>
+	  <p>This is useful if you want to always access the last index despite new additions.</p> 
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var robots = new Array();
+  robots[0] = "Wall-e";
+  robots[1] = "Eva";
+  robots[2] = "The tin man";
+  //robots[3] = "Optimus Prime";
+  
+  document.write(robots[2] + " is the last element in the array.");
+  //document.write(robots[robots.length-1] + " is the last element in the array.");
+</script>
+</textarea>
+    </article>
+    
     <article class='slide slide-list'>
       <h2>Loopty-Loops</h2>
       Loops are used to execute the same code continuously using conditional statements to test when the code will begin and stop.
