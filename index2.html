@@ -25,27 +25,7 @@
 </head>
 
 <body class="deck-container">
-	<script type='text/coderdeck' id='coderdeck-default'>
-	  <html>
-	    <head>
-	      <script src='src/jquery.min.js'>SCRIPTEND</head>
-	    <body>CODE</body>
-	  </html>
-	  </script>
-	
-	  <script type='text/coderdeck' id='coderdeck-style-example'>
-	  <html>
-	    <title>test</title>
-	    <style>CODE</style>
-	    <body>
-	      <h1>I'm a H1 heading</h1>
-	      <h2>I'm a H2 heading</h2>
-	      <p>Pargraph of text &lt;p&gt; here</p>
-	      <div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
-	      <div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
-	    </body>
-	  </html>
-	</script>
+
   <div id="presentation">
 
     <!-- SLIDE: ARCADE FIRE VIDEO -->
@@ -101,8 +81,14 @@
           <th colspan="2" height="50" align="left">Paying for parking:</th>
         </tr>
         <tr>
-          <th width="50%" align="left">The old way <img src="assets/thumb-down.png" alt="thumb-down" width="32" height="32" style="float:left;margin-bottom:0;" /></th>
-          <th width="50%" align="left">The improved way <img src="assets/thumb-up.png" alt="thumb-up" width="32" height="32" style="float:left;margin-bottom:0;" /></th>
+          <th width="50%" align="left">
+            The old way
+            <img src="assets/thumb-down.png" alt="thumb-down" width="32" height="32" style="float:left;margin-bottom:0;" />
+          </th>
+          <th width="50%" align="left">
+            The improved way
+            <img src="assets/thumb-up.png" alt="thumb-up" width="32" height="32" style="float:left;margin-bottom:0;" />
+          </th>
         </tr>
         <tr>
           <td>
@@ -117,7 +103,7 @@
           </td>
           <td>
             <ol>
-              <li>Pull the PayPass credit card from your wallet</li>            
+              <li>Pull the PayPass credit card from your wallet</li>
               <li>Tap</li>
               <li>Take receipt</li>
             </ol>
@@ -132,37 +118,54 @@
       <h2>Functions in JavaScript</h2>
       <br />
       <p>Functions are used to make the code "do things."</p>
-      <p><span class="keyword">prompt()</span> and <span class="keyword">alert()</span> are two functions that are pre-written into JavaScript.</p>
-      <p>Someone already did the hard work for us by writing these functions to show us popups in the browser.</p>
+      <p>
+        <span class="keyword">prompt()</span>
+        and
+        <span class="keyword">alert()</span>
+        are two functions that are pre-written into JavaScript.
+      </p>
+      <p>
+        Someone already did the hard work for us by writing these functions to show us popups in the browser.
+      </p>
       <p>But we can also write our own!</p>
     </article>
 
     <!-- SLIDE: DEFINING FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Defining a Function</h2>
-      <p>Create your own functions to group together your own repetitive tasks.</p>
-      <p>To create a function, it needs to be <strong>defined</strong> first.</p>
-      <p>There are different ways to define a function but the most common way is using the <span class="keyword">Function</span> keyword and enclosing one or more lines of code within curly braces { }.</p>
-<pre class='prettyprint'>
+      <p>
+        Create your own functions to group together your own repetitive tasks.
+      </p>
+      <p>
+        To create a function, it needs to be <strong>defined</strong>
+        first.
+      </p>
+      <p>
+        There are different ways to define a function but the most common way is using the
+        <span class="keyword">Function</span>
+        keyword and enclosing one or more lines of code within curly braces { }.
+      </p>
+      <pre class='prettyprint'>
 function nameOfFunction() {
   //code to execute
 }
 </pre>
-<textarea class='coder-editor'>
-<script>
-  alert("Christina");
-</script>
-</textarea>
+      <textarea class='coder-editor'>
+        <script>alert("Christina");</script>
+      </textarea>
       <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: CALLING FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Calling a Function</h2>
-      <p>The code within functions don't execute until it's <strong>called</strong>!</p>
+      <p>
+        The code within functions don't execute until it's <strong>called</strong>
+        !
+      </p>
       <p>Let's try that again.</p>
       <textarea class='coder-editor'>
-<script>
+        <script>
   //defining the function
   function sayMyName() {
     alert("Christina");
@@ -188,18 +191,19 @@ function nameOfFunction() {
       </p>
       <p>This is where functions also come into play.</p>
       <textarea class='coder-editor coder-editor-full'>
-<script>
+        <script>
   //define function
   function sayMyName() {
     alert("Christina");
   }    
 </script>
 
-<!-- call function from a button click -->
-<input type="button" onclick="sayMyName()" value="Say my name!">
-<br /><br />
-<!-- call function from an HTML tag -->
-<div onclick="sayMyName();">Click here to call the function!</div>
+        <!-- call function from a button click -->
+        <input type="button" onclick="sayMyName()" value="Say my name!">
+        <br />
+        <br />
+        <!-- call function from an HTML tag -->
+        <div onclick="sayMyName();">Click here to call the function!</div>
       </textarea>
       <span class="marker">*</span>
     </article>
@@ -211,8 +215,8 @@ function nameOfFunction() {
         Let's take another look at our shopping cart and figure out what the functions are doing.
       </p>
 
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   var quantity = 0; 
     
   function addItem(){ 
@@ -234,20 +238,21 @@ function nameOfFunction() {
   }
 </script>
 
-<link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-  <br />
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button>
-  <br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly />
-  <br /><br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly />
-</div>
-</textarea>
+        <link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
+        <div class="item">
+          <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
+          <br />
+          <button onclick="addItem();">Add</button>
+          <button onclick="removeItem();">Remove</button>
+          <br />
+          Quantity
+          <input type="text" id="updateQuantity" value="0" readonly />
+          <br />
+          <br />
+          Total Cost:
+          <input type="text" id="updateTotal" value="0" readonly />
+        </div>
+      </textarea>
       <span class="marker">*</span>
     </article>
 
@@ -255,20 +260,37 @@ function nameOfFunction() {
     <article class='slide slide-list'>
       <h2>Review: What do we know about Functions so far?</h2>
       <br />
-      <p>Created &amp; defined by using the <span class="keyword">function</span> keyword</p>
-      <p>Used to group together related lines of code and stores them into descriptive names</p>
+      <p>
+        Created &amp; defined by using the
+        <span class="keyword">function</span>
+        keyword
+      </p>
+      <p>
+        Used to group together related lines of code and stores them into descriptive names
+      </p>
       <p>Can be reused just by calling the function name</p>
-      <p><strong>Define</strong> the function first but it will not run until you <strong>call</strong> the function</p>
+      <p>
+        <strong>Define</strong>
+        the function first but it will not run until you
+        <strong>call</strong>
+        the function
+      </p>
       <p>Can be used inside another function</p>
     </article>
-	
-	<!-- SLIDE: FUNCTIONS PIZZA #1 -->
+
+    <!-- SLIDE: FUNCTIONS PIZZA #1 -->
     <article class='slide slide-list'>
       <h2>Functions and Pizza</h2>
-      <p>Let's order a pizza!  The <strong>orderPizza</strong> function below represents all the steps it takes to place an order (find the pizza place's phone number, call them, give them your address, etc).</p>
-      <p>Inside the function is where the pizza restaurant will hold our options (toppings, crust type and size of pizza). Now they can use this stored information to make our order.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        Let's order a pizza!  The
+        <strong>orderPizza</strong>
+        function below represents all the steps it takes to place an order (find the pizza place's phone number, call them, give them your address, etc).
+      </p>
+      <p>
+        Inside the function is where the pizza restaurant will hold our options (toppings, crust type and size of pizza). Now they can use this stored information to make our order.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   function orderPizza() {
     var topping = "cheese";
     var crust = "thin crust";
@@ -279,16 +301,19 @@ function nameOfFunction() {
 
   orderPizza();
 </script>
-</textarea>
+      </textarea>
     </article>
-    
+
     <!-- SLIDE: FUNCTIONS PIZZA #2 -->
     <article class='slide slide-list'>
       <h2>More Pizza!</h2>
-      <p>What if we want to order another pizza but with different options?<br />
-      Let's order another pizza.</p>
+      <p>
+        What if we want to order another pizza but with different options?
+        <br />
+        Let's order another pizza.
+      </p>
       <textarea class='coder-editor coder-editor-full'>
-<script>
+        <script>
   function orderAnotherPizza() {
     var topping = "pepperoni";
     var crust = "stuffed crust";
@@ -299,15 +324,19 @@ function nameOfFunction() {
 
   orderAnotherPizza();
 </script>
-</textarea>
+      </textarea>
     </article>
-	
-	<!-- SLIDE: FUNCTIONS PIZZA - GLOBAL VS LOCAL -->
+
+    <!-- SLIDE: FUNCTIONS PIZZA - GLOBAL VS LOCAL -->
     <article class='slide slide-list'>
       <h2>Global vs Local Variables</h2>
-     <p>Let's say the pizza place always want to include cheese as a basic topping in all of the pizzas. We can declare a <strong>baseTopping</strong> variable outside of the function so it can be accessible from anywhere in the program.</p>
-     <textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        Let's say the pizza place always want to include cheese as a basic topping in all of the pizzas. We can declare a
+        <strong>baseTopping</strong>
+        variable outside of the function so it can be accessible from anywhere in the program.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   var baseTopping = "cheese";
   
   function orderPizza() {
@@ -325,20 +354,26 @@ function nameOfFunction() {
     + "<br />" + topping + ", " + crust + ", " + size);
   }
   
-  orderPizza();	
+  orderPizza(); 
   orderAnotherPizza();
 </script>
-</textarea> 
-	  <span class="marker">*</span>    
+      </textarea>
+      <span class="marker">*</span>
     </article>
 
     <article class='slide slide-list'>
       <h2>Functions, Pizza and Parameters</h2>
       <br />
-      <p>This could get cumbersome if we wanted to make a lot of pizzas.  If the steps required to make a pizza are the same and only the options change, how can we re-use the makePizza function instead of creating multiple functions?  We use <span class="keyword">PARAMETERS</a>.</p>
-      <p>Functions can be used with one parameter, more than one parameter or none at all.</p>
-     <textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        This could get cumbersome if we wanted to make a lot of pizzas.  If the steps required to make a pizza are the same and only the options change, how can we re-use the makePizza function instead of creating multiple functions?  We use
+        <span class="keyword">PARAMETERS</a>
+        .
+      </p>
+      <p>
+        Functions can be used with one parameter, more than one parameter or none at all.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   var baseTopping = "cheese";
   
   function orderPizza() {
@@ -356,13 +391,12 @@ function nameOfFunction() {
     + "<br />" + topping + ", " + crust + ", " + size);
   }
   
-  orderPizza();	
+  orderPizza(); 
   orderAnotherPizza();
 </script>
-</textarea>    
+      </textarea>
 
-
-<script type='coder-solution'>
+      <script type='coder-solution'>
 SCRIPT
   var baseTopping = "cheese";
   
@@ -376,9 +410,9 @@ SCRIPT
   orderPizza("chicken", "regular crust", "small");
 
 SCRIPTEND
-</script> 
-	  <span class="marker">*</span>  
-	</article>
+</script>
+      <span class="marker">*</span>
+    </article>
 
     <article class='slide slide-subhead'>
       <h1>JavaScript Theory Applied</h1>
@@ -453,55 +487,304 @@ SCRIPTEND
       </p>
       <p>It'll get only even longer if you add 4 more fields.</p>
     </article>
-	
-	<!-- SLIDE: ARRAYS INTRO -->
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Objects</h2>
+      <p>If variables are boxes, OBJECTS can be thought of as bento boxes -- &quot;advanced variables&quot; if you will.</p>
+      <p class="centered"><img src="assets/bento_box_real.jpg" width="900" height="564" alt="A Real Bento Box" /></p>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>Objects (cont'd)</h3>
+      <table>
+      <tr>
+      <td>
+      	<img src="assets/Rice.png" width="193" height="119" alt="Rice box diagram" />
+        </td>
+      <td>
+      	<p>A basic variable only holds one value.</p>
+        <pre class="prettyprint">var takeout = "Fried Rice";</pre>
+      </td>
+      </tr>
+      <tr>
+      <td width="400" align="center" valign="middle">
+      	<img src="assets/BentoBox.png" width="339" height="207" alt="Bento Box diagram" />
+      </td>
+      <td>
+      	<p>An object holds a collection of values.</p>
+        <pre class="prettyprint">// create a new object
+var bentobox = {};
+
+// fill it with stuff
+bentobox.main = "Teriyaki";
+bentobox.side = "Tempura";
+bentobox.salad = "Seaweed Salad";
+bentobox.soup = "Miso";
+bentobox.sauce = "Soya";
+bentobox.dessert = "Fruit";</pre>
+      </td>
+      </td>
+      </tr>
+      </table>
+    </article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Creating an Object</h2>
+      <p>Creating an object is easy. Just like any other variable, use the VAR keyword and give it a descriptive name. </p>
+      <p>But instead of assigning a single value right away, use these curly braces to make an empty object.</p>
+      <p class="centered"><code>var bentobox = <span class="assignment">{}</span>;</code></p>
+      <p class="centered sidenote">Yes, it's weird but think about the {} as a sort of funky container.</p>
+</article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Object Properties</h2>
+      <p>The &quot;compartments&quot; of objects are called <span class="keyword">PROPERTIES</span>.</p>
+      <p>If you already have an existing object, there are a few ways to access and set a value to a property. Since they are both very commonly used, they will both be discussed.</p>
+
+      <table>
+      <tr>
+      	<td width="50%">
+        Dot notation:
+
+myObject.property = value;
+
+
+
+
+
+
+
+<pre class="prettyprint">
+bentobox.soup0 = "Miso";
+bentobox.soup1 = "Udon";</pre>
+</td>
+        <td width="50%"> 
+        Key-Value Lookup:
+
+myObject[key] = value;
+
+<pre class="prettyprint">
+bentobox["main"] = "Teriyaki";
+bentobox["side"] = "Tempura";
+</pre>
+This will be most useful after you understand arrays.
+</td>
+      </tr>
+      <tr>
+      	<td><pre class="prettyprint">
+bentobox.main = "Teriyaki";
+bentobox.side = "Tempura";
+</pre></td>
+        <td>Advantage:
+You can use concatenation with the key string in order to do look up something that's partially dynamic :
+<pre class="prettyprint">
+bentobox["soup"+1] = "Miso";
+bentobox["soup"+2] = "Udon";
+</pre></td>
+      </tr>
+      </table>
+      <p class="sidenote">Advanced sidenote: Alternatively, you can both declare an object and set it's values at the same time (like I said, programmers are lazy and try to keep the typing to a minimum): 
+<code>var bentobox = { soup:"Miso", main:"Teriyaki" };</code></p>
+</article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Why use Objects?</h2>
+      <p>Advanced topic: Objects are useful because you group all these properties together and you can reuse the object over again.</p>
+      <p>There's an expectation of what you'll get in a bento box that's fixed (a fruit dessert, a miso soup) but some compartments can be tweaked (a gyoza side versus tempura). </p>
+      <table>
+      <tr>
+      	<td><img src="assets/BentoBox.png" width="339" height="207" alt="Bento box variation #1" /></td>
+      	<td><img src="assets/BentoBox2.png" width="339" height="207" alt="Bento box variation #2" /></td>
+      </tr>
+      </table>
+</article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Think of Everything as an Object*</h2>
+      <p>When I said that objects were &quot;advanced variables&quot;, here's another way of looking at it:</p>
+      <p>All variables can be treated like objects too.</p>
+      <div>
+      	<p>If, curly braces ( {} ) are a container for a generic object, quotes ( "" ) are containers for characters. When we get to arrays next, you'll see that it uses square brackets ( [] ). The only "uncontainered" object we've introduced today was a number.</p>
+      </div>
+      <div class="reminders">
+      <pre>var stringObject = “ ”;
+var arrayObject = [ ];</pre>
+      </div>
+      <p>Some objects are simpler than others but almost everything in JavaScript has properties available to us.</p>
+      <p class="sidenote">*Again, I need to oversimplify.  The concept called DATA TYPE is a hairy topic. For more info: http://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/ and http://www.2ality.com/2011/03/javascript-values-not-everything-is.html</p>
+</article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Built-in JavaScript Properties</h2>
+      <p>In this workshop we won't be creating any of our own objects but JavaScript already has many objects built into the language.</p>
+      <p>Let's look at a string object and the length property which returns the number of characters in a string.  Try putting your own name in here.</p>
+      <textarea class="code">
+var firstName = "Christina";
+
+var numberOfLetters = firstName.length;
+document.write( numberOfLetters );
+      </textarea>
+</article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Object methods</h2>
+      <p>Previously, we talked about functions as blocks of re-usable code. This might sound crazy but you can store functions in variables too!</p>
+      <table>
+      <tr>
+      	<td>
+        This function...
+        <pre>function sayHello(){
+	document.write("hello");
+}
+sayHello();
+        </pre>
+        </td>
+        <td>➞</td>
+        <td>
+        is the same as:
+
+sayHello = function() {
+	document.write("hello");
+}
+sayHello();
+        </td>
+      <tr>
+      <tr>
+      	<td>
+        </td>
+        <td>
+        </td>
+        <td>ↆ</td>
+      <tr>
+      <tr>
+      	<td>
+        </td>
+      	<td>
+        </td>
+        <td>
+        But now look at this!
+
+var welcomeTeam = {};
+welcomeTeam.sayHello = function() {
+	document.write("hello");
+}
+welcomeTeam.sayHello();
+        </td>
+      <tr>
+      </table>
+</article>
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>Object methods (cont'd)</h3>
+      <p>When a function is associated with an object we call it a <span class="keyword">METHOD</span>.</p>
+      <p>Let's say you're having a robot sale! Everything is 50% off. But, after doing the math, you notice that the sale price is a bit off.. Let’s declare a sale price and manipulate it using toFixed(). When you use a method, it gives you access to all the hard work that someone else did and it only takes you one line to use it!</p>
+      <textarea>var salePrice1 = 20.00 * 0.50;
+var salePrice2 = 35.00 * 0.50;
+var salePrice3 = 25.99 * 0.50;
+
+//uh-oh, can we make sure we always see 2 decimal spaces?
+document.write( salePrice1 ); 
+document.write( salePrice2 );
+document.write( salePrice3 );
+      </textarea>
+</article>
+
+<!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Looking up properties and references</h2>
+        <p><code>length</code> and <code>toFixed()</code> are only two of many (many!) more built-in properties and methods of objects in JavaScript.</p>
+        <p>Check out this list:  <a href="http://www.scribd.com/doc/19457597/Javascript-Methods" target="_blank">http://www.scribd.com/doc/19457597/Javascript-Methods</a></p>
+      </article>
+      
+    <!-- SLIDE: ARRAYS INTRO -->
     <article class='slide slide-list'>
       <h2>Arrays</h2>
       <br />
-      <p><span class="keyword">Arrays</span> are similar to objects; they both hold a collection of values.  However, arrays hold it's values in a numerical index rather than labels.</p>
-      <p>Think of Arrays as egg cartons. All the eggs are in one carton but each egg has it's own slot.</p>         
-      <p><img src="assets/egg-carton.jpeg" alt="egg-carton" width="300" height="230" style="float:left;padding-right: 20px;" /> Just like variables and objects, declare an array with the keyword <span class="keyword">var</span>.</p>
-      <p>Unlike objects, arrays use square brackets <strong>[ ]</strong>.</p>
-<pre class='prettyprint' style="width:310px;margin-left:425px;">
+      <p>
+        <span class="keyword">Arrays</span>
+        are similar to objects; they both hold a collection of values.  However, arrays hold it's values in a numerical index rather than labels.
+      </p>
+      <p>
+        Think of Arrays as egg cartons. All the eggs are in one carton but each egg has it's own slot.
+      </p>
+      <p>
+        <img src="assets/egg-carton.jpeg" alt="egg-carton" width="300" height="230" style="float:left;padding-right: 20px;" />
+        Just like variables and objects, declare an array with the keyword
+        <span class="keyword">var</span>
+        .
+      </p>
+      <p>
+        Unlike objects, arrays use square brackets
+        <strong>[ ]</strong>
+        .
+      </p>
+      <pre class='prettyprint' style="width:310px;margin-left:425px;">
   var eggspressions = <span class="red">[]</span>;
 </pre>
-    </article>
-    
+</article>
+
     <!-- SLIDE: ARRAYS HOW-TO -->
     <article class='slide slide-list'>
       <h2>Arrays How-to</h2>
-<pre class='prettyprint'>
+      <pre class='prettyprint'>
 //declaring an empty array
 var eggspressions = [];
 </pre>
-      <p>Set values using a square bracket [ ] notation.</p>  
-<pre class='prettyprint'>
+      <p>Set values using a square bracket [ ] notation.</p>
+      <pre class='prettyprint'>
 //assigning values
 eggspressions[0] = "skeptical";
 eggspressions[1] = "frazzled";
 eggspressions[2] = "silly";
 eggspressions[3] = "giggling";
 </pre>
-	  <p>The numbers inside the square brackets [ ] are referred to as the<br />
-	  <strong>index</strong> number. Array indexes <strong>always</strong> start at <strong>zero</strong>.</p>
-	  
-	  <div class="reminders">
-	  	<p>Arrays can be declared in different ways.<br />
-	  	   The above example can also be declared like this:<br />
-		   var eggspressions = ["skeptical","frazzled","silly", "giggling"];<br />
-		   See more info here: <a href="http://www.w3schools.com/js/js_obj_array.asp">http://www.w3schools.com/js/js_obj_array.asp</a>
-		</p>
-	  </div>
+      <p>
+        The numbers inside the square brackets [ ] are referred to as the
+        <br />
+        <strong>index</strong>
+        number. Array indexes
+        <strong>always</strong>
+        start at
+        <strong>zero</strong>
+        .
+      </p>
+
+      <div class="reminders">
+        <p>
+          Arrays can be declared in different ways.
+          <br />
+          The above example can also be declared like this:
+          <br />
+          var eggspressions = ["skeptical","frazzled","silly", "giggling"];
+          <br />
+          See more info here:
+          <a href="http://www.w3schools.com/js/js_obj_array.asp">http://www.w3schools.com/js/js_obj_array.asp</a>
+        </p>
+      </div>
     </article>
-	
-	<!-- SLIDE: ARRAYS - ACCESSING VALUES -->
+
+    <!-- SLIDE: ARRAYS - ACCESSING VALUES -->
     <article class='slide slide-list'>
       <h2>Arrays and Indexes</h2>
-      <p>Index numbers are used to <strong>assign</strong> values.</p>
-      <p>Index numbers are also used to <strong>access</strong> values.</p>
-      <p>To access the value of the second egg in the <strong>eggspressions array</strong>, use index 1 since it is the second item in the list.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        Index numbers are used to
+        <strong>assign</strong>
+        values.
+      </p>
+      <p>
+        Index numbers are also used to
+        <strong>access</strong>
+        values.
+      </p>
+      <p>
+        To access the value of the second egg in the
+        <strong>eggspressions array</strong>
+        , use index 1 since it is the second item in the list.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   var eggspressions = [];
 
   eggspressions[0] = "skeptical";
@@ -511,18 +794,36 @@ eggspressions[3] = "giggling";
 
   document.write("The 2nd egg is " + eggspressions[1] + " with an index of 1.");
 </script>
-</textarea>         
+      </textarea>
     </article>
 
-	<!-- SLIDE: ARRAYS & PROPERTIES -->
+    <!-- SLIDE: ARRAYS & PROPERTIES -->
     <article class='slide slide-list'>
       <h2>Arrays and Properties</h2>
-      <p>Since <span class="keyword">Arrays</span> are also objects, there are many properties associated with the Array object.</p> 
+      <p>
+        Since
+        <span class="keyword">Arrays</span>
+        are also objects, there are many properties associated with the Array object.
+      </p>
 
-	  <p>One useful property is the <span class="keyword">Length</span> property.</p>
-	  <p>When used with a <strong>String</strong> variable, the <span class="keyword">Length</span> property returns the number of characters.  When used with an <strong>Array</strong>, the <span class="keyword">Length</span> property returns the number of elements.</p>   
-	<textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        One useful property is the
+        <span class="keyword">Length</span>
+        property.
+      </p>
+      <p>
+        When used with a
+        <strong>String</strong>
+        variable, the
+        <span class="keyword">Length</span>
+        property returns the number of characters.  When used with an
+        <strong>Array</strong>
+        , the
+        <span class="keyword">Length</span>
+        property returns the number of elements.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   // string variable
   var name = "Christina";
   document.write(name.length);
@@ -536,71 +837,99 @@ eggspressions[3] = "giggling";
   eggspressions[3] = "giggling";
   //document.write(eggspressions.length);
 </script>
-</textarea>
-	  <span class="marker">*</span>    
- 	</article>
- 
- 	<!-- SLIDE: ARRAYS - PHOTO SLIDER EXAMPLE -->
+      </textarea>
+      <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: ARRAYS - PHOTO SLIDER EXAMPLE -->
     <article class='slide slide-list'>
       <h2>Arrays &amp; Length:  Why?</h2>
-      <p>It is common to use JavaScript run through a list of values and apply some code to it. In order to do this, we need to know how many elements there are in total.</p>
-      <p>Let's look at this photo gallery from
-      <a href="http://www.theglobeandmail.com/multimedia/camera-club/your-best-photos-of-movement/article2355552/">theglobeandmail.com</a> and figure out how length can be used here.
+      <p>
+        It is common to use JavaScript run through a list of values and apply some code to it. In order to do this, we need to know how many elements there are in total.
+      </p>
+      <p>
+        Let's look at this photo gallery from
+        <a href="http://www.theglobeandmail.com/multimedia/camera-club/your-best-photos-of-movement/article2355552/">theglobeandmail.com</a>
+        and figure out how length can be used here.
       </p>
       <img src="assets/globe-mail.jpg" alt="globe-mail" />
       <span class="marker">*</span>
     </article>
-    
+
     <!-- SLIDE: LENGTH-1 -->
     <article class='slide slide-list'>
       <h2>Arrays &amp; Length and the 0 Index</h2>
       <p>How do we access a particular value?</p>
       <p>By using the index number.</p>
-      <p>So how do we access the <strong>last</strong> value?</p>
-<pre class='prettyprint'>
+      <p>
+        So how do we access the
+        <strong>last</strong>
+        value?
+      </p>
+      <pre class='prettyprint'>
 var eggspressions = [];
 eggspressions[0] = "skeptical";
 eggspressions[1] = "frazzled";
 eggspressions[2] = "silly";
 eggspressions[3] = "giggling";
-</pre>	
-	  <p>To access the last index value, you can use <strong>eggspressions[3]</strong>.</p>
+</pre>
+      <p>
+        To access the last index value, you can use
+        <strong>eggspressions[3]</strong>
+        .
+      </p>
       <p>BUT...</p>
-      <p>You can also use <strong>eggspressions[eggspressions.length-1]</strong>.</p>
-	</article>
-	
-	<!-- SLIDE: HUH -->
-	<article class='slide slide-list'>
+      <p>
+        You can also use
+        <strong>eggspressions[eggspressions.length-1]</strong>
+        .
+      </p>
+    </article>
+
+    <!-- SLIDE: HUH -->
+    <article class='slide slide-list'>
       <h1>Huh?</h1>
     </article>
-    
+
     <!-- SLIDE: LENGTH-1 EXPLANATION-->
     <article class='slide slide-list'>
-      <h2>REWIND: Arrays &amp; Length<br />and the 0 Index</h2>
-<pre class='prettyprint'>
+      <h2>
+        REWIND: Arrays &amp; Length
+        <br />
+        and the 0 Index
+      </h2>
+      <pre class='prettyprint'>
 var eggspressions = [];
 eggspressions[0] = "skeptical";
 eggspressions[1] = "frazzled";
 eggspressions[2] = "silly";
 eggspressions[3] = "giggling";
-</pre>	
+</pre>
       <p>Let's take a closer look.</p>
       <ul>
-	 		<li>eggspressions.length returns 4 </li>
-			<li>index of last element is 3</li>
-			<li>eggspressions.length-1 is the same as 4 - 1 and will return 3</li>
-			<li>eggspressions[3] returns the last value</li>
-			<li>eggspressions[eggspressions.length-1] is the same as eggspressions[3] so it too, will return the last value</li>
-	  </ul>
+        <li>eggspressions.length returns 4</li>
+        <li>index of last element is 3</li>
+        <li>
+          eggspressions.length-1 is the same as 4 - 1 and will return 3
+        </li>
+        <li>eggspressions[3] returns the last value</li>
+        <li>
+          eggspressions[eggspressions.length-1] is the same as eggspressions[3] so it too, will return the last value
+        </li>
+      </ul>
     </article>
-    
+
     <!-- SLIDE: WHEN TO USE LENGTH-1 & DEMO -->
     <article class='slide slide-list'>
       <h2>How is this useful?</h2>
-      <p>Since the index begins at 0, the last index value is always length-1. </p>
-	  <p>This is useful if you want to always access the last index despite new additions.</p> 
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        Since the index begins at 0, the last index value is always length-1.
+      </p>
+      <p>
+        This is useful if you want to always access the last index despite new additions.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   var eggspressions = [];
   eggspressions[0] = "skeptical";
   eggspressions[1] = "frazzled";
@@ -610,30 +939,56 @@ eggspressions[3] = "giggling";
   document.write(eggspressions[3] + " is the last element in the array. <br />");
   document.write(eggspressions[eggspressions.length-1] + " is the last element in the array.");
 </script>
-</textarea>
-	<span class="marker">*</span>
+      </textarea>
+      <span class="marker">*</span>
     </article>
-    
+
     <!-- LOOPS INTRO -->
     <article class='slide slide-list'>
       <h2>Loopty-Loops</h2>
       <br />
-      <p>Why use loops? Because sometimes we need to execute repetitive code for a specified number of times or through a list of values.</p>
-      <p>Loops will execute the same code continuously, using conditional statements to determine when to begin and stop.</p>
-	  <p>It's like creating a playlist on your favorite music player.</p>  
-	  <p>You create a list of songs, press play and then each song is played automatically in the set order of the playlist.  
-When it reaches the end of the playlist, it stops.</p>
-	  <p>We will be discussing <span class="keyword">while loops</span> and <span class="keyword">for loops</span>.</p>
+      <p>
+        Why use loops? Because sometimes we need to execute repetitive code for a specified number of times or through a list of values.
+      </p>
+      <p>
+        Loops will execute the same code continuously, using conditional statements to determine when to begin and stop.
+      </p>
+      <p>It's like creating a playlist on your favorite music player.</p>
+      <p>
+        You create a list of songs, press play and then each song is played automatically in the set order of the playlist.  
+When it reaches the end of the playlist, it stops.
+      </p>
+      <p>
+        We will be discussing
+        <span class="keyword">while loops</span>
+        and
+        <span class="keyword">for loops</span>
+        .
+      </p>
     </article>
 
-	<!-- WHILE LOOP -->
+    <!-- WHILE LOOP -->
     <article class='slide slide-list'>
       <h2>While Loop</h2>
-      <p>The <span class="keyword">while loop</span> executes the code contained in curly braces {} <strong>while</strong> the condition is true.</p>   
-	  <p>An index variable is required to keep track of its place in the loop.</p>  
-	  <p>The <span class="keyword">while loop</span> stops executing the code once the condition becomes false.</p>
- 	  <p>If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.</p> 	  
-<pre class='prettyprint'>
+      <p>
+        The
+        <span class="keyword">while loop</span>
+        executes the code contained in curly braces {}
+        <strong>while</strong>
+        the condition is true.
+      </p>
+      <p>
+        An index variable is required to keep track of its place in the loop.
+      </p>
+      <p>
+        The
+        <span class="keyword">while loop</span>
+        stops executing the code once the condition becomes false.
+      </p>
+      <p>
+        If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.
+      </p>
+      <pre class='prettyprint'>
 //declare index variable
 var i = 0; 
 
@@ -643,41 +998,67 @@ while ( i < playlist.length ) {
 }
 </pre>
 
-	<div class="reminders">
-		<p>If the condition is always true, the loop will run infinitely and will never exit the while loop.  
-This can cause your browser to crash!</p>
-    </div>
+      <div class="reminders">
+        <p>
+          If the condition is always true, the loop will run infinitely and will never exit the while loop.  
+This can cause your browser to crash!
+        </p>
+      </div>
     </article>
-    
+
     <!-- WHILE LOOP - TEMP CONVERSION -->
     <article class='slide slide-list'>
       <h2>While Loop in Action!</h2>
       <br />
-      <p>Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.</p>
+      <p>
+        Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.
+      </p>
       <p>(The formula is: Temperature = Temperature * 9 / 5 + 32)</p>
-	  <p>This next example uses a while loop to output the calculation into dynamically added HTML table rows containing the results of the temperature conversion.</p>
-	  <p>It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).</p>
-	  <p>See next slide for the example.</p>
+      <p>
+        This next example uses a while loop to output the calculation into dynamically added HTML table rows containing the results of the temperature conversion.
+      </p>
+      <p>
+        It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).
+      </p>
+      <p>See next slide for the example.</p>
     </article>
-    
+
     <!-- WHILE LOOP - TEMP CONVERSION CODE -->
     <article class='slide slide-list'>
-  	  <h2>While Loop Temperature Conversion</h2>
-  	  <p>Let's look at the temperature conversion table with and without JavaScript and compare the difference in the amount of repetitive code required to create a table like this manually.</p>
-	  <p>Conversion table using a <a href="exercises/temperature.html">while loop</a>.</p>
-	  <p>Conversion table <a href="exercises/temperature-nojs.html">without JavaScript</a>.</p>	
-	  <p>View source and compare the difference between the amount of code.</p>
-	  [add small screenshot here]
-	</article>
-    
+      <h2>While Loop Temperature Conversion</h2>
+      <p>
+        Let's look at the temperature conversion table with and without JavaScript and compare the difference in the amount of repetitive code required to create a table like this manually.
+      </p>
+      <p>
+        Conversion table using a
+        <a href="exercises/temperature.html">while loop</a>
+        .
+      </p>
+      <p>
+        Conversion table
+        <a href="exercises/temperature-nojs.html">without JavaScript</a>
+        .
+      </p>
+      <p>
+        View source and compare the difference between the amount of code.
+      </p>
+      [add small screenshot here]
+    </article>
+
     <!-- FOR LOOP -->
     <article class='slide slide-list'>
       <h2>For Loops</h2>
-      <p>A for loop loops through a block of code a specified number of times.</p>  
-	  <p>The index, conditional test and incrementer are all declared in one line.</p> 
-	  <p>The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value. </p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>
+        A for loop loops through a block of code a specified number of times.
+      </p>
+      <p>
+        The index, conditional test and incrementer are all declared in one line.
+      </p>
+      <p>
+        The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value.
+      </p>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   // start value, condition, increment
 for ( var i = 0; i < 3; i++ ) {
   //code to be executed
@@ -685,16 +1066,20 @@ for ( var i = 0; i < 3; i++ ) {
 }
 document.write("The for loop is now complete.");
 </script>
-</textarea> 
+      </textarea>
     </article>
-    
+
     <!-- FOR LOOP and ARRAYS -->
     <article class='slide slide-list'>
       <h2>For Loops and Arrays</h2>
-      <p>For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.</p>
-      <p>Back to our robot store.  It wouldn’t be much of a store if there was only one product!
-We can create a list of different products with various prices by creating an array.</p>
-<pre class='prettyprint'>
+      <p>
+        For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.
+      </p>
+      <p>
+        Back to our robot store.  It wouldn’t be much of a store if there was only one product!
+We can create a list of different products with various prices by creating an array.
+      </p>
+      <pre class='prettyprint'>
 var productPrices = [];
 productPrices[0] = 17.99;
 productPrices[1] = 25;
@@ -703,15 +1088,17 @@ productPrices[3] = 9.99;
 productPrices[4] = 24.99;
 productPrices[5] = 8.99;
 </pre>
-	</article>
-	
-	 <!-- FOR LOOP and ARRAYS w/robot store -->
+    </article>
+
+    <!-- FOR LOOP and ARRAYS w/robot store -->
     <article class='slide slide-list'>
       <h2>For Loops, Arrays, Robots and Sales</h2>
-      <p>Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.</p>
+      <p>
+        Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.
+      </p>
 
-<textarea class='coder-editor coder-editor-full'>
-<script>
+      <textarea class='coder-editor coder-editor-full'>
+        <script>
   var productPrices = [];
   productPrices[0] = 17.99;
   productPrices[1] = 25;
@@ -729,11 +1116,9 @@ productPrices[5] = 8.99;
     }
   }
 </script>
-</textarea>    
+      </textarea>
     </article>
-	
-	
-	
+
     <article class='slide slide-list'>
       <h2>Mini-exercise #7 (10-15 minutes)</h2>
       <p>
