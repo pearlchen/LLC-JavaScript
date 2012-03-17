@@ -33,3 +33,13 @@
 	.item input#updateTotal {
 		width: 66px;
 	}
+
+
+/* Slide: While Loop in Action */
+table#temperature {
+border: 1px solid #C12AAA;
+  }
+  table#temperature tr td {
+	border: 1px solid #C12AAA;
+	padding: 4px;
+  }

@@ -458,26 +458,29 @@ SCRIPTEND
     <article class='slide slide-list'>
       <h2>Arrays</h2>
       <br />
-      <p>An <span class="keyword">array</span> is a special variable because it can hold more than one value at a time in a single variable.</p>
-      <br />
-      <p>Arrays are similar to egg cartons. All the eggs are in one carton but each egg has it's own slot.</p>
-      <br />     
-      <p>In other words, <span class="keyword">arrays</span> store an ordered list of values in slots, in an "indexed" way.</p>
+      <p><span class="keyword">Arrays</span> are similar to objects; they both hold a collection of values.  However, arrays hold it's values in a numerical index rather than labels.</p>
+      <p>Think of Arrays as egg cartons. All the eggs are in one carton but each egg has it's own slot.</p>         
+      <p><img src="assets/egg-carton.jpeg" alt="egg-carton" width="300" height="230" style="float:left;padding-right: 20px;" /> Just like variables and objects, declare an array with the keyword <span class="keyword">var</span>.</p>
+      <p>Unlike objects, arrays use square brackets <strong>[ ]</strong>.</p>
+<pre class='prettyprint' style="width:310px;margin-left:425px;">
+  var eggspressions = <span class="red">[]</span>;
+</pre>
     </article>
     
     <!-- SLIDE: ARRAYS HOW-TO -->
     <article class='slide slide-list'>
       <h2>Arrays How-to</h2>
-      <p>Declare <span class="keyword">Arrays</span> (yes, capital A) using the <span class="keyword">new</span> keyword.</p>
 <pre class='prettyprint'>
-var robots = new Array();
+//declaring an empty array
+var eggspressions = [];
 </pre>
-      <p>You can set values using a square bracket [ ] notation.</p>  
+      <p>Set values using a square bracket [ ] notation.</p>  
 <pre class='prettyprint'>
-var robots = new Array();
-robots[0] = "Wall-e"; //value for the 1st slot in the array
-robots[1] = "Eva"; //value for the 2nd slot in the array
-robots[2] = "The tin man"; //value for the 3rd slot in the array
+//assigning values
+eggspressions[0] = "skeptical";
+eggspressions[1] = "frazzled";
+eggspressions[2] = "silly";
+eggspressions[3] = "giggling";
 </pre>
 	  <p>The numbers inside the square brackets [ ] are referred to as the<br />
 	  <strong>index</strong> number. Array indexes <strong>always</strong> start at <strong>zero</strong>.</p>
@@ -485,7 +488,7 @@ robots[2] = "The tin man"; //value for the 3rd slot in the array
 	  <div class="reminders">
 	  	<p>Arrays can be declared in different ways.<br />
 	  	   The above example can also be declared like this:<br />
-		   var robots = ["Wall-e","Eva","The tin man"];<br />
+		   var eggspressions = ["skeptical","frazzled","silly", "giggling"];<br />
 		   See more info here: <a href="http://www.w3schools.com/js/js_obj_array.asp">http://www.w3schools.com/js/js_obj_array.asp</a>
 		</p>
 	  </div>
@@ -496,14 +499,17 @@ robots[2] = "The tin man"; //value for the 3rd slot in the array
       <h2>Arrays and Indexes</h2>
       <p>Index numbers are used to <strong>assign</strong> values.</p>
       <p>Index numbers are also used to <strong>access</strong> values.</p>
-      <p>Specific index numbers are used to access the same slot in the array. For example, to access the value of the first robot in the <strong>robots</strong> array, use index 0.</p>
+      <p>To access the value of the second egg in the <strong>eggspressions array</strong>, use index 1 since it is the second item in the list.</p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
-  var robots = new Array();
-  robots[0] = "Wall-e";
-  robots[1] = "Eva";
-  robots[2] = "The tin man";
-  document.write("The 2nd robot is " + robots[1] + " even though the index is 1.");
+  var eggspressions = [];
+
+  eggspressions[0] = "skeptical";
+  eggspressions[1] = "frazzled";
+  eggspressions[2] = "silly";
+  eggspressions[3] = "giggling";
+
+  document.write("The 2nd egg is " + eggspressions[1] + " with an index of 1.");
 </script>
 </textarea>         
     </article>
@@ -523,11 +529,12 @@ robots[2] = "The tin man"; //value for the 3rd slot in the array
   document.write("<br />");
   
   // array
-  var robots = new Array();
-  robots[0] = "Wall-e";
-  robots[1] = "Eva";
-  robots[2] = "The tin man";
-  //document.write(robots.length);
+  var eggspressions = [];
+  eggspressions[0] = "skeptical";
+  eggspressions[1] = "frazzled";
+  eggspressions[2] = "silly";
+  eggspressions[3] = "giggling";
+  //document.write(eggspressions.length);
 </script>
 </textarea>
 	  <span class="marker">*</span>    
@@ -544,236 +551,189 @@ robots[2] = "The tin man"; //value for the 3rd slot in the array
       <span class="marker">*</span>
     </article>
     
-    
+    <!-- SLIDE: LENGTH-1 -->
     <article class='slide slide-list'>
       <h2>Arrays &amp; Length and the 0 Index</h2>
       <p>How do we access a particular value?</p>
       <p>By using the index number.</p>
-      <p>So how do we access the <strong>last</strong> value?<br />
-      Let's go back to these robots.</p>
+      <p>So how do we access the <strong>last</strong> value?</p>
 <pre class='prettyprint'>
-var robots = new Array();
-robots[0] = "Wall-e";
-robots[1] = "Eva";
-robots[2] = "The tin man";
+var eggspressions = [];
+eggspressions[0] = "skeptical";
+eggspressions[1] = "frazzled";
+eggspressions[2] = "silly";
+eggspressions[3] = "giggling";
 </pre>	
-	  <p>So, to access the last index value, you can use <strong>robots[2]</strong>.</p>
+	  <p>To access the last index value, you can use <strong>eggspressions[3]</strong>.</p>
       <p>BUT...</p>
-      <p>You can also use <strong>robots[robots.length-1]</strong>.</p>
+      <p>You can also use <strong>eggspressions[eggspressions.length-1]</strong>.</p>
 	</article>
 	
+	<!-- SLIDE: HUH -->
 	<article class='slide slide-list'>
       <h1>Huh?</h1>
     </article>
     
+    <!-- SLIDE: LENGTH-1 EXPLANATION-->
     <article class='slide slide-list'>
       <h2>REWIND: Arrays &amp; Length<br />and the 0 Index</h2>
 <pre class='prettyprint'>
-var robots = new Array();
-robots[0] = "Wall-e";
-robots[1] = "Eva";
-robots[2] = "The tin man";
+var eggspressions = [];
+eggspressions[0] = "skeptical";
+eggspressions[1] = "frazzled";
+eggspressions[2] = "silly";
+eggspressions[3] = "giggling";
 </pre>	
       <p>Let's take a closer look.</p>
       <ul>
-	 		<li>robots.length returns 3 </li>
-			<li>index of last element is 2</li>
-			<li>robots.length-1 is the same as 3 - 1 and will return 2</li>
-			<li>robots[2] returns the last value</li>
-			<li>robots[robots.length-1] is the same as robots[2] so it too, will return the last value</li>
+	 		<li>eggspressions.length returns 4 </li>
+			<li>index of last element is 3</li>
+			<li>eggspressions.length-1 is the same as 4 - 1 and will return 3</li>
+			<li>eggspressions[3] returns the last value</li>
+			<li>eggspressions[eggspressions.length-1] is the same as eggspressions[3] so it too, will return the last value</li>
 	  </ul>
     </article>
     
-    
+    <!-- SLIDE: WHEN TO USE LENGTH-1 & DEMO -->
     <article class='slide slide-list'>
-      <h2>Why the hassle?</h2>
+      <h2>How is this useful?</h2>
       <p>Since the index begins at 0, the last index value is always length-1. </p>
 	  <p>This is useful if you want to always access the last index despite new additions.</p> 
 <textarea class='coder-editor coder-editor-full'>
 <script>
-  var robots = new Array();
-  robots[0] = "Wall-e";
-  robots[1] = "Eva";
-  robots[2] = "The tin man";
-  //robots[3] = "Optimus Prime";
+  var eggspressions = [];
+  eggspressions[0] = "skeptical";
+  eggspressions[1] = "frazzled";
+  eggspressions[2] = "silly";
+  eggspressions[3] = "giggling";
   
-  document.write(robots[2] + " is the last element in the array.");
-  //document.write(robots[robots.length-1] + " is the last element in the array.");
+  document.write(eggspressions[3] + " is the last element in the array. <br />");
+  document.write(eggspressions[eggspressions.length-1] + " is the last element in the array.");
 </script>
 </textarea>
+	<span class="marker">*</span>
     </article>
     
+    <!-- LOOPS INTRO -->
     <article class='slide slide-list'>
       <h2>Loopty-Loops</h2>
-      Loops are used to execute the same code continuously using conditional statements to test when the code will begin and stop.
       <br />
-      <br />
-      Why use loops?  Because sometimes we need to execute repetitive code through a list of values or for a specified number of times.
-      <br />
-      <br />
-      It's like creating a playlist on your favorite music player.
-      <br />
-      You create a list of songs, press play and then each song is played automatically in the order set out in the playlist.
-      <br />
-      When it reaches the end of the playlist, it stops.
-      <br />
-      <br />
-      We will be discussing while loops and for loops.
-    </article>
-    <article class='slide slide-list'>
-      <h2>While Loop</h2>
-      <br />
-      The while loop executes the block of code contained in the loop while the condition is true.
-      <br />
-      An index variable is required to keep track of its place in the loop.
-      <br />
-      The while loop will stop executing the code once the condition becomes false.
-      <br />
-      <br />
-      If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.
-      <br />
-      <br />
-      //declare index variable
-      <br />
-      var i = 0;
-      <br />
-      while ( i &lt; playlist.length ) {
-      <br />
-      // play current song represented by var i
-      <br />
-      i++;
-      <br />
-      // i++ will add 1 to var i so it moves to the next song
-      <br />
-      }
-      <br />
-      <br />
-      <br />
-      NOTE:  If the condition is always true, the loop will run infinitely and will never exit the while loop.
-      <br />
-      This can cause your browser to crash!
-    </article>
-    <article class='slide slide-list'>
-      <h3 dir="ltr">While Loop in Action!</h3>
-      Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.  The formula is:
-      <br />
-      Temperature = Temperature * 9 / 5 + 32
-      <br />
-      This example uses a while loop to output the calculation and will stop when we reach 30 degrees Celsius.
-      <br />
-      &lt;style&gt;
-      <br />
-      table {
-      <br />
-      <p dir="ltr">border: 1px solid #C12AAA;</p>
-      }
-      <br />
-      table tr td {
-      <br />
-      border: 1px solid #C12AAA;
-      <br />
-      padding: 4px;
-      <br />
-      }
-      <br />
-      &lt;/style&gt;
-      <br />
-      &lt;table border="0" cellspacing="0"&gt;
-      <br />
-      &lt;tr&gt;
-      <br />
-      &lt;td&gt;Celsius&lt;/td&gt;
-      <br />
-      &lt;td&gt;Fahrenheit&lt;/td&gt;
-      <br />
-      &lt;/tr&gt;
-      <br />
-      &lt;script&gt;
-      <br />
-      var celsius = 0;
-      <br />
-      while (celsius &lt;= 30) {
-      <br />
-      document.write("&lt;tr&gt;&lt;td&gt;" + celsius + "&lt;/td&gt;&lt;td&gt;"
-      <br />
-      <p dir="ltr">+ ((celsius * 9 / 5) + 32) + "&lt;/td&gt;&lt;/tr&gt;");</p>
-      celsius++;
-      <br />
-      }
-      <br />
-      &lt;/script&gt;
-      <br />
-      &lt;/table&gt;
-    </article>
-    <article class='slide slide-list'>
-      <h3 dir="ltr">For Loops</h3>
-      <br />
-      A for loop loops through a block of code a specified number of times.
-      <br />
-      The index, conditional test and incrementer are all declared in one line.
-      <br />
-      The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value.
-      <br />
-      <br />
-      // start value, condition, increment
-      <br />
-      for ( var i = 0; i &lt; 3; i++ ) {
-      <br />
-      //code to be executed
-      <br />
-      document.write("The current index is: " + i + "&lt;br /&gt;");
-      <br />
-      }
-      <br />
-      document.write("The for loop is now complete.");
-    </article>
-    <article class='slide slide-list'>
-      <h3 dir="ltr">For Loops and Arrays</h3>
-      For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.
-      <br />
-      <br />
-      Back to our robot store.  It wouldn't be much of a store if there was only one product!
-      <br />
-      We can create a list of different products with various prices by creating an array.
-      <br />
-      <br />
-      var productPrices = new Array();
-      <br />
-      productPrices[0] = 17.99;
-      <br />
-      productPrices[1] = 25;
-      <br />
-      productPrices[2] = 13.99;
-      <br />
-      productPrices[3] = 9.99;
-      <br />
-      productPrices[4] = 24.99;
-      <br />
-      productPrices[5] = 8.99;
-      <br />
-      <br />
-      Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.
-      <br />
-      <br />
-      [ Live code for loop condition, var value and if condition ]
-      <br />
-      for (i=0; i &lt; productPrices.length; i++) {
-      <br />
-      var value = productPrices[i];
-      <br />
-      if (value &lt; 15){
-      <br />
-      document.write("Product " + (i+1) + " is on sale.&lt;br /&gt;");
-      <br />
-      } else {
-      <br />
-      document.write("Product " + (i+1) + " is not on sale.&lt;br /&gt;");
-      <br />
-      }
-      <br />
-      }
+      <p>Why use loops? Because sometimes we need to execute repetitive code for a specified number of times or through a list of values.</p>
+      <p>Loops will execute the same code continuously, using conditional statements to determine when to begin and stop.</p>
+	  <p>It's like creating a playlist on your favorite music player.</p>  
+	  <p>You create a list of songs, press play and then each song is played automatically in the set order of the playlist.  
+When it reaches the end of the playlist, it stops.</p>
+	  <p>We will be discussing <span class="keyword">while loops</span> and <span class="keyword">for loops</span>.</p>
     </article>
 
+	<!-- WHILE LOOP -->
+    <article class='slide slide-list'>
+      <h2>While Loop</h2>
+      <p>The <span class="keyword">while loop</span> executes the code contained in curly braces {} <strong>while</strong> the condition is true.</p>   
+	  <p>An index variable is required to keep track of its place in the loop.</p>  
+	  <p>The <span class="keyword">while loop</span> stops executing the code once the condition becomes false.</p>
+ 	  <p>If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.</p> 	  
+<pre class='prettyprint'>
+//declare index variable
+var i = 0; 
+
+while ( i < playlist.length ) {
+  playCurrentSong();
+  i = i + 1; // adds 1 to the current index so it moves to the next song  
+}
+</pre>
+
+	<div class="reminders">
+		<p>If the condition is always true, the loop will run infinitely and will never exit the while loop.  
+This can cause your browser to crash!</p>
+    </div>
+    </article>
+    
+    <!-- WHILE LOOP - TEMP CONVERSION -->
+    <article class='slide slide-list'>
+      <h2>While Loop in Action!</h2>
+      <br />
+      <p>Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.</p>
+      <p>(The formula is: Temperature = Temperature * 9 / 5 + 32)</p>
+	  <p>This next example uses a while loop to output the calculation into dynamically added HTML table rows containing the results of the temperature conversion.</p>
+	  <p>It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).</p>
+	  <p>See next slide for the example.</p>
+    </article>
+    
+    <!-- WHILE LOOP - TEMP CONVERSION CODE -->
+    <article class='slide slide-list'>
+  	  <h2>While Loop Temperature Conversion</h2>
+  	  <p>Let's look at the temperature conversion table with and without JavaScript and compare the difference in the amount of repetitive code required to create a table like this manually.</p>
+	  <p>Conversion table using a <a href="exercises/temperature.html">while loop</a>.</p>
+	  <p>Conversion table <a href="exercises/temperature-nojs.html">without JavaScript</a>.</p>	
+	  <p>View source and compare the difference between the amount of code.</p>
+	  [add small screenshot here]
+	</article>
+    
+    <!-- FOR LOOP -->
+    <article class='slide slide-list'>
+      <h2>For Loops</h2>
+      <p>A for loop loops through a block of code a specified number of times.</p>  
+	  <p>The index, conditional test and incrementer are all declared in one line.</p> 
+	  <p>The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value. </p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  // start value, condition, increment
+for ( var i = 0; i < 3; i++ ) {
+  //code to be executed
+  document.write("The current index is: " + i + "<br />");
+}
+document.write("The for loop is now complete.");
+</script>
+</textarea> 
+    </article>
+    
+    <!-- FOR LOOP and ARRAYS -->
+    <article class='slide slide-list'>
+      <h2>For Loops and Arrays</h2>
+      <p>For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.</p>
+      <p>Back to our robot store.  It wouldn’t be much of a store if there was only one product!
+We can create a list of different products with various prices by creating an array.</p>
+<pre class='prettyprint'>
+var productPrices = [];
+productPrices[0] = 17.99;
+productPrices[1] = 25;
+productPrices[2] = 13.99;
+productPrices[3] = 9.99;
+productPrices[4] = 24.99;
+productPrices[5] = 8.99;
+</pre>
+	</article>
+	
+	 <!-- FOR LOOP and ARRAYS w/robot store -->
+    <article class='slide slide-list'>
+      <h2>For Loops, Arrays, Robots and Sales</h2>
+      <p>Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.</p>
+
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var productPrices = [];
+  productPrices[0] = 17.99;
+  productPrices[1] = 25;
+  productPrices[2] = 13.99;
+  productPrices[3] = 9.99;
+  productPrices[4] = 24.99;
+  productPrices[5] = 8.99;
+
+  for (i=0; i < productPrices.length; i++) {
+    var value = productPrices[i];
+    if (value < 15){
+      document.write("Product " + (i+1) + " is on sale.<br />");
+    } else {
+      document.write("Product " + (i+1) + " is not on sale.<br />");
+    }
+  }
+</script>
+</textarea>    
+    </article>
+	
+	
+	
     <article class='slide slide-list'>
       <h2>Mini-exercise #7 (10-15 minutes)</h2>
       <p>
