@@ -55,7 +55,7 @@
       <p class="download_link">
         <a href='http://github.com/pchen/LLC-JavaScript/'>http://github.com/pchen/LLC-JavaScript/</a>
       </p>
-      <img src="assets/git-download-zip.gif" width="566" height="400" alt="Github screenshot of ZIP button">
+      <p align="center"><img src="assets/git-download-zip.gif" width="566" height="400" alt="Github screenshot of ZIP button"></p>
       <p style="padding-top: 25px; margin-bottom: 0; font-size: 0.9em; color: #999;">
         ( Interactive code slides thanks to
         <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>
@@ -110,7 +110,7 @@
       <ul>
         <li>Quick intro to jQuery.</li>
         <li>Where can you go from here?</li>
-        <li>Overview of take home assignment: a photo slider.</li>
+        <!-- <li>Overview of take home assignment: a photo slider.</li> -->
       </ul>
     </article>
 
@@ -170,7 +170,7 @@
       <br />
       <br />
       <p class="sidenote centered">
-        *Pearl likes to use Sublime Text. Christina like TextMate.
+         *Pearl likes to use <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>. Christina like <a href="http://macromates.com/">TextMate</a>.
         <br />
         Ask a group of developers what they use and arguments will ensue -- it's a very personal choice! ;)
       </p>
@@ -238,6 +238,9 @@
     <article class='slide slide-list'>
       <h3>Clearer Instructions = Better Code</h3>
       <p>
+        Think about a tourist that stops you to ask for directions on a street; the clearer the instructions, the more likely they will get to their destination.
+      </p>
+      <p>
         Suppose I want a computer to say hello to me. The steps would be:
       </p>
       <p>
@@ -245,10 +248,8 @@
         <br>
         2. Remember my name.
         <br>3. Say &quot;Hello&quot; and repeat back my name.</p>
-      <p>
-        Think about a tourist that stops you to ask for directions on a street; the clearer the instructions, the more likely they will get to their destination.
-      </p>
-    </article>
+
+</article>
 
     <!-- SLIDE:  What is a Programming Language? -->
     <article class='slide slide-list'>
@@ -416,7 +417,7 @@ document.write("Hello, " + name);</pre>
           No inline video content or lightboxed photo viewers on facebook.com (not to mention broken &quot;Like&quot; buttons and inability to comment on posts!)
         </li>
         <li>
-          On twitter.com - older tweets don't load at the bottom of the page. Warning message on top of page. Navigation doesn't work.
+          On twitter.com - older tweets don't load at the bottom of the page. Warning message on top of page. Navigation doesn't work. Popups don't work.
         </li>
         <li>
           And you can't see it but most analytics tracking won't work either.
@@ -1050,9 +1051,9 @@ SCRIPTEND
   <button onclick="addItem();">Add</button>
   <button onclick="removeItem();">Remove</button><br />
   Quantity
-  <input type="text" id="updateQuantity" value="0" readonly="readonly" /><br />
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
   Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly="readonly" />
+  <input type="text" id="updateTotal" value="0" readonly />
 </div>
 </textarea>
     </article>
@@ -1064,44 +1065,7 @@ SCRIPTEND
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Conditional Statements</h2>
-      <p>
-        Declaring variables with "static" values can be boring. Programming is about generating stuff on the fly!
-        <strong>If... else statements</strong>
-        are conditional statements that can be used to perform different actions based on different conditions. There are 3 variations:
-      </p>
-      <p>
-        <strong>If Statement</strong>
-        - executes the code only if the condition is true
-      </p>
-      <pre>
-if (condition) {
-  execute this code if condition is true
-}
-</pre>
-      <p>
-        <strong>If...Else Statement</strong>
-        - executes some code if the condition is true and different code if condition is false
-      </p>
-      <pre>
-if (condition) {
-    execute this code if condition is true
-} else {
-  execute this code if condition is not true
-}
-</pre>
-      <p>
-        <strong>If...Else If...Else Statement</strong>
-        - use this statement to execute different code for multiple conditions
-      </p>
-      <pre>
-if (condition) {
-    execute this code if the first condition is true
-} else if (condition) {
-  execute this code if the second condition is true
-} else {
-  execute this code if neither conditions are true
-}
-</pre>
+      <p></p>
     </article>
 
     <!-- SLIDE:  -->
@@ -1140,19 +1104,12 @@ if ( salePrice > regularPrice ) {
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
-      <h2>
-        Rewind: JavaScript Comparison and
-        <br/>
-        Logical Operators
-      </h2>
-      <p>
-        Let's take a step back and look at the different operators that can be used in conditional statements.
-        <br />
-        Using these two variables,
-        <strong>var two = 2</strong>
-        and
-        <strong>var ten = 10</strong>
-        , the examples below show how the statements would return true using the various operators.
+      <h3>
+        Rewind:  Comparison and Logical Operators
+      </h3>
+		<p class="reminders">
+      Here's a <strong>cheat sheet</strong> of different operators that can be used in conditional statements. </p>
+      <p class="sidenote">Using these two variables, <code>var two = 2</code> and <code>var ten = 10</code>  , the examples below show how the statements would return true using the various operators.
       </p>
       <table class="comparison-table" style="float:left; margin-right:20px;">
         <tr>
@@ -1238,14 +1195,14 @@ if ( salePrice > regularPrice ) {
           <td width="65%">!(ten == two)</td>
         </tr>
       </table>
+        <br  clear="all" />
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Variables, Operators, Concatenation and Conditionals</h2>
       <p>
-        Now that we know what variables, operators and conditionals are, let's put them all into action using dynamic content.
-      </p>
+Now that we know what <span class="keyword">variables</span>, <span class="keyword">operators</span> and <span class="keyword">conditionals</span> are, let's put them all into action using dynamic content. </p>
       <textarea class='coder-editor'>
         <script>
   prompt("How much are those shoes?");
