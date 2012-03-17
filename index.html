@@ -1065,47 +1065,265 @@ SCRIPTEND
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Conditional Statements</h2>
-      <p></p>
+      <p>Let's pretend to be your wise but nagging grandmother right now:</p>
+      <ul>
+      <li>I hear it's cold out: bring a sweater!</li>
+      <li>The weather network says it's going to rain: take your umbrella!</li>
+      <li>It's cold and snowing: wearing your warm boots!</li>
+      </ul>
+      <p>All these things make logical sense to us as grown up humans but computers are a blank slate. </p>
+      <p>As a programmer, you try to give the computer the smarts to act on its own based on possible circumstances or events by using <span class="keyword">CONDITIONALS</span>.</p>
     </article>
-
+    
+    
     <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Conditional Statements (cont.)</h2>
-      <p>
-        Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!
-      </p>
-      <textarea class='coder-editor'>
-        <script>
-var regularPrice = 200;
-var salePrice = 19.99;
+<article class='slide slide-list'>
+        <h2><code>If</code> Conditionals</h2>
+        <p>...</p>
+        <table>
+        <tr>
+        	<td width="45%">
+            <p>A basic conditional test looks like this:</p>
+            <p>IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                THEN bring an umbrella</p>
+            </td>
+            <td width="10%"></td>
+          <td width="45%">
+            <p>In JavaScript,<br>
+			it might look like this:</p>
+            <pre class="prettyprint">
+if ( weather == rain ) {
+    bringUmbrella();
+}
+            </pre>
+           
 
-if ( salePrice < regularPrice ) {
-  //console.log("You've got to buy those shoes!");
-} 
-
-
-if ( salePrice > regularPrice ) {
-  //console.log("Don't buy those shoes");
-} else {
-  //console.log("Buy two in different colours!");
+          </td>
+        </tr>
+        </table>
+        <div class="reminders">
+                    <p>The <strong>round</strong> brackets <code>()</code>
+ group together a condition to test.</p>
+			<p>The <strong>curly</strong> braces <code>{}</code>
+ group together a set of statements to execute.<p>
+        </div>
+      </article>
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h3>Important! <br>
+Assignment is not the same as equality</h3>
+        <p>Drill this into your head. Tattoo it to your arm! So many errors happen because of this key difference:</p>
+        <table>
+        <tr>
+        	<td width="50%" class="centered">
+            <strong>=<br>
+            assignment<br>
+            </strong> <br><br>
+            Store a value to a variable:
+            <br><br>
+            var kitten = "Fluffy";
+            </td>
+            <td width="50%" class="centered">
+            <strong> ==<br>
+            equality<br>
+            </strong> <br><br>
+            Compare a value to another value:
+            <br><br>
+            if ( kitten == cat )
+            </td>
+        </tr>
+        </table>
+      </article>
+      
+    <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Using Several <code>If</code> Conditionals</h2>
+        <p>Sometimes it can be rainy but warm, or rainy and cold. You react to each thing individually.</p>
+        <p>Use several if statements when you're testing mutually <em>inclusive</em> scenarios.</p>
+        <table>
+        <tr>
+        	<td width="50%"><br><br>
+            <p>IF the weather is raining     <br>
+&nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella <br>
+<br>
+IF the temperature is below 10°C     <br>
+&nbsp;&nbsp;&nbsp;&nbsp;THEN wear a sweater</p>
+            </td>
+          <td width="5%"></td>
+          <td width="45%">
+            <p>In JavaScript...</p>
+<pre class="prettyprint">
+if ( weather == rain ) {
+    bringUmbrella();
 }
 
-
-if ( salePrice > regularPrice ) {
-  //console.log("Don't buy those shoes");
-} else if ( salePrice == regularPrice) {
-  //console.log("Only buy it if you reeeaallly want it!");
-} else {
-  //console.log("Buy two in different colours!");
+if ( temperature < 10 ) {
+    wearSweater();
 }
-</script>
-      </textarea>
-    </article>
+</pre>
+          </td>
+        </tr>
+        </table>
+</article>
+
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2><code>if/else</code> Conditionals</h2>
+        <p>Sometimes there's a catch-all state that you want to happen if your previous tests don't happen.</p>
+        <table>
+        <tr>
+       	  <td width="50%"><br><br>
+            <p>
+            IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br>
+            OTHERWISE<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;dress normally</p>
+            </td>
+            <td width="5%"></td>
+          <td width="45%">
+            <p>In JavaScript...</p>
+            <pre class="prettyprint">
+if ( weather == rain ) {
+    bringUmbrella();
+}else{
+    dressNormally();
+}
+            </pre>
+            </td>
+        </tr>
+        </table>
+      </article>
+      
+           <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2><code>if/else if/else</code> Conditionals</h2>
+        <p>It shouldn't snow and rain at the same time so sometimes these conditions are mutually <em>exclusive</em>. </p>
+        <table>
+        <tr>
+        	<td width="50%"><br><br>
+            <p>
+            IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br>
+            BUT IF the weather is snowing<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN wear warm boots<br>
+            OTHERWISE<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;dress normally</p>
+            </td>
+            <td width="5%"></td>
+          <td width="45%">
+            <p>In JavaScript...</p>
+            <pre class="prettyprint">
+if ( weather == rain ) {
+    bringUmbrella();
+}else if ( weather == snow ) {
+    wearWarmBoots();
+}else{
+    dressNormally();
+}
+            </pre>
+          </td>
+        </tr>
+        </table>
+      </article>
+      
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Conditionals used for UI elements</h2>
+        <p>A basic conditional that your browser does internally is a react to mouse clicks on a HTML element.</p>
+        <p><img src="assets/thenewdesignguidelines-pull.gif" width="121" height="221" alt="" /></p>
+        
+        <p><code>&lt;button onclick=&quot;animate()&quot;&gt;Pull&lt;/button&gt;</code></p>
+        <p>IF a user has clicked on a button<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;THEN call the animate() function.</p>
+        <table>
+        <tr>
+        	<td></td>
+            <td></td>
+        </tr>
+        </table>
+      </article>
+
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>...And Interactivity</h2>
+        <p>Notice how the brush acts when you speed up / slow down, or get close to other lines. You can even change brushes.</p>
+        <p class="centered"><img src="assets/LLC_sketch.gif" width="506" height="400" alt="Procedural Drawing by Mr. Doob" /></p>
+        <p class="sidenote centered"><a href="http://mrdoob.com/projects/harmony/" target="_blank">http://mrdoob.com/projects/harmony/</a></p>
+      </article>
+
+    
+    
+    <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2>...And Games!</h2>
+        <p>(Notice how the birds fly differently based on how far you pull them back in the slingshot, and in what direction.)</p>
+        <p class="centered"><img src="assets/AngryBirds.png" width="498" height="228" alt="Angry Birds" /></p>
+        <p class="sidenote centered"><a href="http://chrome.angrybirds.com/" target="_blank">http://chrome.angrybirds.com/</a></p>
+      </article>
+      
+      
+      <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2>Conditional Statements Summary</h2>
+        <div>
+          <table>
+              <tr>
+                <th width="33%">If Statement </th>
+                <th width="33%">If...else statement </th>
+                <th width="33%">If...else if...else statement</th>
+              </tr>
+              <tr>
+                <td>
+<pre class="prettyprint">
+if (condition) {<br>
+ // do something<br>
+}
+</pre>
+                </td>
+                <td>
+<pre class="prettyprint">
+if (condition) {<br>
+  // do something<br>
+} else {<br>
+  // otherwise do this<br>
+}
+</pre>
+                </td>
+                <td>
+<pre class="prettyprint">
+if (condition) {<br>
+ 	// do something<br>
+} else if (condition2) {<br>
+// do something else<br>
+} else {<br>
+// otherwise do this<br>
+}
+</pre>
+                </td>
+              </tr>
+          </table>
+        </div>
+        <br>
+        <p>&nbsp;</p>
+      </article>
+    
+    <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Testing Conditions</h2>
+        <p>What does a condition actually look like?</p>
+        <p><code> if ( condition ) { ... } </code></p>
+        <p><code> if ( 1 < 2 ) { ... } </code></p>
+      </article>        
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h3>
-        Rewind:  Comparison and Logical Operators
+        Cheat Sheet:  Comparison and Logical Operators
       </h3>
 		<p class="reminders">
       Here's a <strong>cheat sheet</strong> of different operators that can be used in conditional statements. </p>
@@ -1198,6 +1416,41 @@ if ( salePrice > regularPrice ) {
         <br  clear="all" />
     </article>
 
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Conditional Statements (cont.)</h2>
+      <p>
+        Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!
+      </p>
+      <textarea class='coder-editor'>
+        <script>
+var regularPrice = 200;
+var salePrice = 19.99;
+
+if ( salePrice < regularPrice ) {
+  //console.log("You've got to buy those shoes!");
+} 
+
+
+if ( salePrice > regularPrice ) {
+  //console.log("Don't buy those shoes");
+} else {
+  //console.log("Buy two in different colours!");
+}
+
+
+if ( salePrice > regularPrice ) {
+  //console.log("Don't buy those shoes");
+} else if ( salePrice == regularPrice) {
+  //console.log("Only buy it if you reeeaallly want it!");
+} else {
+  //console.log("Buy two in different colours!");
+}
+</script>
+      </textarea>
+    </article>
+    
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Variables, Operators, Concatenation and Conditionals</h2>
