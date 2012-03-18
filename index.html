@@ -319,6 +319,23 @@ document.write("Hello, " + name);</pre>
       <p class="centered sidenote">(Java was really popular at the time so Netscape just hijacked the name.) </p>
     </article>
     
+    
+        <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword">programming language</span>
+        <br><br>
+		designed to <strong class="highlight">run in your web browser</strong> to
+        <br><br>
+        <strong>manipulate content on web pages</strong>.
+      </p>
+    </article>
+    
+    
+    
+    
     <!-- SLIDE:  JavaScript in the Browser -->
     <article class='slide slide-list'>
       <h2>JavaScript in the Browser</h2>
@@ -339,25 +356,42 @@ document.write("Hello, " + name);</pre>
     <!-- SLIDE:  Web Programming Languages: Server-side vs Client-side-->
     <article class='slide slide-list'>
       <h2>Web Programming Languages: Server-side vs Client-side</h2>
+      <p><img src="assets/clientversusserver.gif" width="400" height="400" alt="" align="right" style="margin-left: 30px;" /></p>
       <p>
-        Java, .NET, PHP or Ruby can be considered server-side or &quot;back-end&quot; web technology because the code is typically compiled and executed by a machine serving up web pages.
-      </p>
+      Java, .NET, PHP or Ruby can be considered <strong>server-side or &quot;back-end&quot;</strong> web technology because the code is typically compiled and executed by the <em>operating system</em> of a computer serving up web pages. </p>
       <p>
-        JavaScript is referred to as a client-side language, or lumped into the term &quot;front-end&quot; web technology along with HTML and CSS, because it's interpreted by the web browser.
-      </p>
+      JavaScript is referred to as a <strong>client-side or &quot;front-end&quot;</strong> web technology because it's interpreted by the <em>web browser</em>. </p>
+
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h3>Simple Client-Side Code Check</h3>
-      <p>
-        At any time, someone can right-click and &quot;view source&quot; on a web page to see all the JavaScript that went into it.
+      <p><br>
+        <img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="Right-click to View Source" align="left" style="margin-right: 50px;" />
       </p>
+      <p>
+        <br>
+At any time, someone can <strong>right-click and &quot;view source&quot;</strong> on a web page to see all the JavaScript that went into it.</p>
+<p class="sidenote">(I suggest that you do this yourself every time you see something you like!)</p>
+      </p>
+      <br  clear="all" />
       <p>
         Whereas for server-side code, it's sometimes a mystery what technology is running on a server.
       </p>
-      <p>
-        <img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="Right-click to View Source" />
+    </article>
+
+    
+        <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword">programming language</span>
+        <br><br>
+		designed to <strong>run in your web browser</strong> to
+        <br><br>
+        <strong class="highlight">manipulate content on web pages</strong>.
       </p>
     </article>
 
@@ -367,42 +401,39 @@ document.write("Hello, " + name);</pre>
       <p>
         JavaScript was meant to manipulate webpages written in HTML and works in tandem with CSS.
       </p>
-      <div>
-        <div>
-          HTML (Hypertext Markup Language)
-          <br>
-          is the markup language.
-          <br>
-          <img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer">
-          <br>It should define the content.</div>
-        <div>
-          CSS (Cascading Style Sheets)
-          <br>
-          is the style sheet language.
-          <br>
-          <img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" />
-          <br>It should define the presentation</div>
-        <div>
-          JavaScript
-          <br>
-          is the programming language.
-          <br>
-          <img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" />
-          <br>It should define behaviour.</div>
-      </div>
+      <table width="100%">
+      <tr>
+      <td width="33%" class="centered"><strong>HTML</strong> (Hypertext Markup Language) <br>
+          is the markup language.</td>
+      <td width="33%" class="centered"><strong>CSS</strong> (Cascading Style Sheets) <br>
+          is the style sheet language.</td>
+      <td width="33%" class="centered"><strong>JavaScript</strong><br>
+          is the programming language.</td>
+      </tr>
+            <tr>
+      <td class="centered"><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer"></td>
+      <td class="centered"><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></td>
+      <td class="centered"><img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" /></td>
+      </tr>
+            <tr>
+      <td class="centered">It should define the <strong>content</strong>.</td>
+      <td class="centered">It should define the <strong>presentation</strong></td>
+      <td class="centered">It should define <strong>behaviour</strong>.</td>
+      </tr>
+      </table>
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>JavaScript in Different Browsers</h2>
-      <p>
+      <p class="reminders">
         For the most part, JavaScript will run the same in various web browsers.
       </p>
       <p>
-        However, these are software programs written by different people/companies, so sometimes they say &quot;hi&quot; with different accents (e.g. British accent versus Texas accent).  This is especially noticeable with newer &quot;HTML5&quot; features.
-      </p>
-      <p> <em>Insert Internet Explorer joke here. ;)</em>
-      </p>
+        However, web browsers are software programs written by different people/companies (people programming things just like you!), so sometimes they say &quot;hi&quot; with different accents.</p><p> Imagine a British accent versus a Texas accent.</p>
+        <p>This is especially noticeable with newer &quot;HTML5&quot; features.<br>
+<span class="sidenote"> <em>Insert Internet Explorer joke here. ;)</em></span></p>
+      
     </article>
 
     <!-- SLIDE:  -->
@@ -438,29 +469,31 @@ document.write("Hello, " + name);</pre>
           No search auto-completion and instant page refreshes on google.com
         </li>
         <li>
-          No inline video content or lightboxed photo viewers on facebook.com (not to mention broken &quot;Like&quot; buttons and inability to comment on posts!)
+          No inline video content or lightboxed photo viewers on facebook.com -- not to mention broken &quot;Like&quot; buttons and inability to comment on posts!
         </li>
         <li>
           On twitter.com - older tweets don't load at the bottom of the page. Warning message on top of page. Navigation doesn't work. Popups don't work.
         </li>
         <li>
-          And you can't see it but most analytics tracking won't work either.
-        </li>
+        And <strong>you can't see it but most analytics tracking won't work</strong> either. </li>
       </ul>
-      <p>
+      <p class="reminders" style="font-size: 2.2em;">
         <strong>The modern web just sort of gives up without JavaScript!</strong>
       </p>
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
-      <h2>JavaScript helps make very nice websites!</h2>
+      <h3>JavaScript helps make very nice websites!</h3>
       <p>
-        Especially &quot;one-page apps&quot; where the experience is very seamless. Like
-        <a href="http://thenewdesignguidelines.derekevanharms.com/">this one</a>
-        :
+        Especially &quot;one-page apps&quot; where the experience is very seamless. 
       </p>
-      <img src="assets/thenewdesignguidelines.gif" width="800" height="479" alt="The new web design guidelines" />
+      <p class="centered">
+      <a href="http://thenewdesignguidelines.derekevanharms.com/" target="_blank"><img src="assets/thenewdesignguidelines.gif" width="800" height="479" alt="The new web design guidelines" /></a>      <br>
+
+      
+      <span class="sidenote">Like
+        <a href="http://thenewdesignguidelines.derekevanharms.com/" target="_blank">this one</a></span></p>
     </article>
 
     <!-- SLIDE: PART 1 INTRO -->
