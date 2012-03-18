@@ -1161,25 +1161,25 @@ productPrices[5] = 8.99;
       <article class='slide slide-list'>
         <h2>The Components of a Web Page</h2>
         <p>Think about your HTML web page (your &quot;browser <span class="keyword">document</span>&quot;) as being made up of many blocks.</p>
-        <p class="centered"><img src="http://placehold.it/500x350" /></p>
+        <p class="centered"><img src="assets/browser-blocks.jpg" width="590" height="365" alt="Blocks" /></p>
       </article>
       
             
       <!-- SLIDE:  -->
 <article class='slide slide-list'>
         <h2>Pre-defined Blocks</h2>
-        <p>Think about your HTML web page (your &quot;browser <span class="keyword">document</span>&quot;) as being made up of many blocks. </p>
-  <p class="centered"><img src="http://placehold.it/500x350" /></p>
-  <p class="centered">[This is your web browser window with our web page.]</p>
-      </article>
+        <p>Some blocks are defined by the browser, such as the browser <strong>window</strong>.</p>
+  <p class="centered"><img src="assets/browser-window.jpg" width="590" height="365" alt="Window" /></p>
+</article>
       
       
           <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>User-defined Blocks</h2>
-        <p>And some blocks we made ourselves (e.g. fieldset, div, and img HTML tags).</p>
-        <p class="centered"><img src="http://placehold.it/500x350" /></p>
- 		<p class="centered">A &lt;div&gt;&lt;/div&gt; block.</p>
+        <p>And some blocks we make ourselves via HTML<br>
+(e.g. fieldset, div, and img HTML tags).</p>
+        <p class="centered"><img src="assets/browser-fieldset-div.jpg" width="590" height="365" alt="Blocks" /></p>
+ 		<p class="sidenote centered">A <code>&lt;div&gt;&lt;/div&gt;</code> block.</p>
       </article>
       </article>
       
@@ -1197,11 +1197,12 @@ document.write("Hello!");
 	  <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects</h2>
-        <p>The most repetitive thing you'll ever do with JavaScript is getting references to your HTML tags (&quot;elements&quot;) using document.getElementById(). (It's important that your HTML tag has an id attribute in order to do this!)</p>
+        <p>The most repetitive thing you'll ever do with JavaScript is getting references to your HTML tags (&quot;elements&quot;) using <code>document.getElementById()</code>.<br>
+<span class="sidenote">(It's important that your HTML tag has an <code>id</code> attribute in order to do this!)</span></p>
         <p>For example, let's dynamically find out what the text is a paragraph tag by reading its innerHTML property. (You can find all the things you can do with elements <a href="http://dochub.io/#dom/element" target="_blank">here</a>.)</p>
                <textarea class='coder-editor'>
 <p id="text" style="border: 1px solid red;">
-  I am a regular paragraph.
+  Loading...
 </p>
 
 <script>
@@ -1213,15 +1214,9 @@ document.write("Hello!");
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects (cont'd)</h2>
-        <p>You used the DOM to find out how many items in the previous example: var selectedProducts = document.shoppingForm.elements[&quot;product&quot;]; And also to see if it was checked: if (selectedProducts[i].checked) {  } </p>
-</article>
-      
-      <!-- SLIDE:  -->
-      <article class='slide slide-list'>
-        <h2>HTML Element Objects (cont'd)</h2>
         <p>You can also use innerHTML to replace what's already in a element.</p>               <textarea class='coder-editor'>
 <p id="text" style="border: 1px solid red;">
-  I am a regular paragraph.
+  Loading...
 </p>
 
 <script>
@@ -1315,11 +1310,6 @@ Click me!
         </textarea>
 </article>
       
-      <!-- SLIDE:  -->
-      <article class='slide slide-list'>
-        <h2>Other uses</h2>
-        <p>Very useful if you're making a tabbed navigation! [Demo but no hands on]</p>
-</article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
@@ -1355,9 +1345,12 @@ Click me!
       <article class='slide slide-list'>
         <h2>What's a Bug?</h2>
         <p>As <a href="http://en.wikipedia.org/wiki/Grace_Hopper#Anecdotes" target="_blank">the story</a> goes, the term &quot;software bug&quot; got its name because a real moth flew into a computer system causing strange, unexpected behaviours to happen in a computer program. </p>
-        <p>Nowadays, bugs are mostly due to human error in one of two areas: <br>
-        Syntax - missing semi-colons, typos, case-sensitivity <br>
-        Logic - trying to access a variable that doesn't exist yet, writing an incorrect conditional test</p>
+        <p>Nowadays, bugs are mostly due to human error in one of two areas:</p>
+        <ol>
+        <li>
+        Syntax - missing semi-colons, typos, case-sensitivity</li>
+        <li>
+        Logic - trying to access a variable that doesn't exist yet, writing an incorrect conditional test</li></ol>
         <p>Luckily there's a few things to help us hunt them down quicker...</p>
       </article>
       
@@ -1381,14 +1374,16 @@ Click me!
       <article class='slide slide-list'>
         <h2>Inspecting the DOM</h2>
         <p>You can inspect any webpage with the debugger. </p>
-        <p>Let's open up the Ladies Learning Code Events page: http://ladieslearningcode.com/events/ </p>
+        <p>Let's open up the Ladies Learning Code Events page: <a href="http://ladieslearningcode.com/events/" target="_blank">http://ladieslearningcode.com/events/</a>.</p>
         <p>How can we use the console to find out how many events are listed on this page?</p>
 </article>
 
 <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>More info</h2>
-        <p>Watch these videos.</p>
+        <p>Lots to learn about the debugger! At your leisure, watch this video for features:
+        
+        <a href="http://www.youtube.com/watch?v=TH7sJbyXHuk" target="_blank">http://www.youtube.com/watch?v=TH7sJbyXHuk</a></p>
       </article>
    
 
