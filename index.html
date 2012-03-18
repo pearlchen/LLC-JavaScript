@@ -764,7 +764,7 @@ want to write a longer message */
       (2) To verify that your variables are working, uncomment out the document.write() lines and replace ********** with the actual name of your variables.
       </p>
       </div>
-<textarea class='coder-editor coder-editor-full'>
+<textarea class='coder-editor coder-editor-full'  data-save='exercise1'>
 
 <script>
   //The web browser will ask you for your shipping details.
@@ -953,7 +953,7 @@ SCRIPTEND
       <div class="hint single-line">
       	<p>How do we increase or decrease the value of the variable?</p>
       </div>
-<textarea class='coder-editor coder-editor-full'>
+<textarea class='coder-editor coder-editor-full'  data-save='exercise2'>
 <script>
   /* 1. set var 'quantity' to start at 0. This will be
   used to hold the value for the quantity of robots */   
@@ -1151,7 +1151,7 @@ SCRIPTEND
           <td width="45%">
             <p>In JavaScript,<br>
 			it might look like this:</p>
-            <pre class="prettyprint">
+            <pre class="prettyprint" style="font-size: 24px; border: none;">
 if ( weather == rain ) {
     bringUmbrella();
 }
@@ -1173,8 +1173,9 @@ if ( weather == rain ) {
       <article class='slide slide-list'>
         <h3>Important! <br>
 Assignment is not the same as equality</h3>
-        <p>Drill this into your head. Tattoo it to your arm! So many errors happen because of this key difference:</p>
-        <table>
+<br>
+        <p>Drill this into your head. Tattoo it to your arm! So many errors happen because of this key difference:</p><br>
+        <table width="100%" style="font-size: 26px;">
         <tr>
         	<td width="50%" class="centered">
             <strong>=<br>
@@ -1212,8 +1213,8 @@ IF the temperature is below 10°C     <br>
             </td>
           <td width="5%"></td>
           <td width="45%">
-            <p>In JavaScript...</p>
-<pre class="prettyprint">
+            <p class="sidenote">In JavaScript...</p>
+<pre class="prettyprint" style="font-size: 24px; border: none;">
 if ( weather == rain ) {
     bringUmbrella();
 }
@@ -1232,19 +1233,18 @@ if ( temperature < 10 ) {
       <article class='slide slide-list'>
         <h2><code>if/else</code> Conditionals</h2>
         <p>Sometimes there's a catch-all state that you want to happen if your previous tests don't happen.</p>
-        <table>
+        <table width="100%">
         <tr>
        	  <td width="50%"><br><br>
-            <p>
-            IF the weather is raining<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br>
+            <p>IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br><br>
             OTHERWISE<br>
             &nbsp;&nbsp;&nbsp;&nbsp;dress normally</p>
             </td>
             <td width="5%"></td>
           <td width="45%">
-            <p>In JavaScript...</p>
-            <pre class="prettyprint">
+            <p class="sidenote">In JavaScript...</p>
+            <pre class="prettyprint"  style="font-size: 24px; border: none;">
 if ( weather == rain ) {
     bringUmbrella();
 }else{
@@ -1262,19 +1262,19 @@ if ( weather == rain ) {
         <p>It shouldn't snow and rain at the same time so sometimes these conditions are mutually <em>exclusive</em>. </p>
         <table>
         <tr>
-        	<td width="50%"><br><br>
+        	<td width="45%"><br><br>
             <p>
             IF the weather is raining<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br><br>
             BUT IF the weather is snowing<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;THEN wear warm boots<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN wear warm boots<br><br>
             OTHERWISE<br>
             &nbsp;&nbsp;&nbsp;&nbsp;dress normally</p>
             </td>
             <td width="5%"></td>
-          <td width="45%">
-            <p>In JavaScript...</p>
-            <pre class="prettyprint">
+          <td width="50%">
+            <p class="sidenote">In JavaScript...</p>
+            <pre class="prettyprint" style="font-size: 24px; border: none;">
 if ( weather == rain ) {
     bringUmbrella();
 }else if ( weather == snow ) {
@@ -1293,11 +1293,13 @@ if ( weather == rain ) {
       <article class='slide slide-list'>
         <h2>Conditionals used for UI elements</h2>
         <p>A basic conditional that your browser does internally is a react to mouse clicks on a HTML element.</p>
-        <p><img src="assets/thenewdesignguidelines-pull.gif" width="121" height="221" alt="" /></p>
+        <p><img src="assets/thenewdesignguidelines-pull.gif" width="121" height="221" alt="" align="left" style="margin-right: 30px;"/></p>
         
-        <p><code>&lt;button onclick=&quot;animate()&quot;&gt;Pull&lt;/button&gt;</code></p>
+        <p><br>
+<code>&lt;button onclick=&quot;animate()&quot;&gt;Pull&lt;/button&gt;</code></p>
         <p>IF a user has clicked on a button<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;THEN call the animate() function.</p>
+        <br  clear="all" />
         <table>
         <tr>
         	<td></td>
@@ -1329,23 +1331,27 @@ if ( weather == rain ) {
       <!-- SLIDE:  -->
 <article class='slide slide-list'>
         <h2>Conditional Statements Summary</h2>
-        <div>
-          <table>
+        <div><br><br>
+          <table width="100%" style="font-size: 24px;">
               <tr>
-                <th width="33%">If Statement </th>
-                <th width="33%">If...else statement </th>
-                <th width="33%">If...else if...else statement</th>
+                <th width="33%" align="left">If Statement </th>
+                <th width="33%" align="left">If...else statement </th>
+                <th width="33%" align="left">If...else if...else statement</th>
+              </tr>
+              <tr>
+              <td colspan="3"><br>
+</td>
               </tr>
               <tr>
                 <td>
-<pre class="prettyprint">
+<pre class="prettyprint"  style="font-size: 18px; border: none;">
 if (condition) {<br>
  // do something<br>
 }
 </pre>
                 </td>
                 <td>
-<pre class="prettyprint">
+<pre class="prettyprint"  style="font-size: 18px; border: none;">
 if (condition) {<br>
   // do something<br>
 } else {<br>
@@ -1354,13 +1360,13 @@ if (condition) {<br>
 </pre>
                 </td>
                 <td>
-<pre class="prettyprint">
+<pre class="prettyprint" style="font-size: 18px; border: none;">
 if (condition) {<br>
- 	// do something<br>
+  // do something<br>
 } else if (condition2) {<br>
-// do something else<br>
+  // do something else<br>
 } else {<br>
-// otherwise do this<br>
+  // otherwise do this<br>
 }
 </pre>
                 </td>
@@ -1376,7 +1382,48 @@ if (condition) {<br>
         <h2>Testing Conditions</h2>
         <p>What does a condition actually look like?</p>
         <p><code> if ( condition ) { ... } </code></p>
-        <p><code> if ( 1 < 2 ) { ... } </code></p>
+<textarea class="coder-editor">
+<script>
+// Straight Booleans
+if ( true ) {  
+  document.write( "#1 this works. <br />" );
+} 
+if ( false ) {  
+  document.write( "#2 will not work. <br />" );
+}
+
+// Booleans via variables
+var isSunday = true;
+var isSaturday = false;
+if ( isSunday == true ) {
+  document.write( "#5 Yeah, laundry day! <br />" );
+}
+if ( isSaturday == true ) {
+  document.write( "#6 Nope, you can't go back in time! <br />" );
+}
+
+// Numbers
+if ( 1 &lt; 2 ) {
+  document.write( "#3 workks. <br />" );
+}
+if ( 2 &gt; 1 ) {
+  document.write( "#4 won't work. <br />" );
+}
+
+// Strings
+var emptyString = "";
+var filledString = "Woot! Conditionals!";
+if ( emptyString == "" ) {
+  document.write( "#7 Yep, the string was empty. <br />" );
+}
+if ( filledString == "" ) {
+  document.write( "#8 won't work. <br />" );
+}
+if ( filledString == "Woot! Conditionals!" ) {
+  document.write( "#9 Code strong. <br />" );
+}
+</script>
+</textarea>
       </article>        
 
     <!-- SLIDE:  -->
@@ -1478,33 +1525,32 @@ if (condition) {<br>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
-      <h2>Conditional Statements (cont.)</h2>
+      <h3>More Conditional Statement Examples</h3>
       <p>
         Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!
       </p>
-      <textarea class='coder-editor'>
-        <script>
+<textarea class='coder-editor'>
+<script>
 var regularPrice = 200;
 var salePrice = 19.99;
 
 if ( salePrice < regularPrice ) {
-  //console.log("You've got to buy those shoes!");
+  //document.write("#1 You've got to buy that robot! <br />");
 } 
 
 
 if ( salePrice > regularPrice ) {
-  //console.log("Don't buy those shoes");
+  //document.write("#2 Don't buy that robot <br />");
 } else {
-  //console.log("Buy two in different colours!");
+  //document.write("#2 Buy two in different colours! <br />");
 }
 
-
 if ( salePrice > regularPrice ) {
-  //console.log("Don't buy those shoes");
+  //document.write("#3 Don't buy that robot");
 } else if ( salePrice == regularPrice) {
-  //console.log("Only buy it if you reeeaallly want it!");
+  //document.write("#3 Only buy it if you reeeaallly want it! <br />");
 } else {
-  //console.log("Buy two in different colours!");
+  //document.write("# Buy two in different colours! <br />");
 }
 </script>
       </textarea>
@@ -1516,13 +1562,13 @@ if ( salePrice > regularPrice ) {
       <p>
 Now that we know what <span class="keyword">variables</span>, <span class="keyword">operators</span> and <span class="keyword">conditionals</span> are, let's put them all into action using dynamic content. </p>
       <textarea class='coder-editor'>
-        <script>
-  prompt("How much are those shoes?");
-  //var shoePrice = prompt("How much are those shoes?");
-  if ( shoePrice <= 100 ) {
-  document.write("$" + shoePrice + " isn't bad. Buy them!");
+<script>
+  prompt("How much is that robot?");
+  //var price = prompt("How much are those shoes?");
+  if ( price <= 100 ) {
+  document.write("$" + price + " isn't bad. Buy them!");
   } else {
-  document.write("$" + shoePrice + "? Good Lawd! That's a lot of money!");
+  document.write("$" + price + "? Good Lawd! That's a lot of money!");
   }
 </script></textarea>
     </article>
@@ -1536,12 +1582,17 @@ Now that we know what <span class="keyword">variables</span>, <span class="keywo
       <p>
         This is based on Exercise #3 so it should look very familiar!
       </p>
-      <p class="assignment">TODO: Check within the code for your THREE tasks.</p>
-      <p class="hint">
+            <p class="hint">
         (Hint:  How do you test if a number is greater than, less then, or equal to another number?)
       </p>
-      <textarea class='coder-editor'>
-        <script>
+      </article>
+      
+          <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #3 (10 minutes)</h2>
+      <p class="assignment">TODO: Check within the code for your THREE tasks.</p>
+<textarea class='coder-editor coder-editor-full' data-save='exercise3'>
+<script>
   var quantity = 0;   
 
   function addItem(){ 
@@ -1605,15 +1656,19 @@ Now that we know what <span class="keyword">variables</span>, <span class="keywo
       <p>
         Let's revisit the shipping form again -- here's a very simple shipping form however you don't want someone to be able to submit their order if they haven't filled out their address!
       </p>
-      <p class="assignment">TODO: Check within the code for your ONE task.</p>
       <p>
         You have been supplied with 1 variable (&quot;address&quot;) which will automagically match what is typed into the form field (minus extra whitespace) after you press the &quot;Check out now!&quot; button.
       </p>
       <p class="hint">
         (Hint: If you don't type anything into the address field, you get an &quot;empty string&quot;. How do you test for an empty string?)
       </p>
-      <textarea class='coder-editor'>
-        <script>
+      
+      </article>
+          <article class='slide slide-list'>
+      <h2>Mini-exercise #4 (5-10 minutes)</h2>
+            <p class="assignment">TODO: Check within the code for your ONE task.</p>
+<textarea class='coder-editor coder-editor-full' data-save='exercise4'>
+<script>
   function validateForm() {
 
     // automagically get the typed values from the form
@@ -1646,15 +1701,21 @@ Now that we know what <span class="keyword">variables</span>, <span class="keywo
       <p>
         Now here's a more complex shopping form that you require all fields to be filled in. You have been supplied with 3 additional variables which will automagically update: &quot;name&quot;, &quot;city&quot;, and &quot;postal&quot;.
       </p>
-      <p class="assignment">TODO: Check within the code for your FOUR tasks.</p>
+      
       <p class="hint">
         (Hint for task #3: How do you test for something AND somethingElse OR anotherThing at one time?)
       </p>
       <p>
         Bonus: There's always different ways to get to the same end goal. If you're finished early, try out different ways that you can reduce the number of variables and lines of code.
       </p>
-      <textarea class='coder-editor'>
-        <script>
+      </article>
+      
+     <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #5 (15-20 minutes)</h2>     
+      <p class="assignment">TODO: Check within the code for your FOUR tasks.</p>
+<textarea class='coder-editor coder-editor-full' data-save='exercise5'>
+<script>
   function validateForm() {
 
     // automagically get the typed values from the form
