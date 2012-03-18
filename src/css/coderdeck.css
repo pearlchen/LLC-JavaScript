@@ -223,7 +223,7 @@ table.comparison-table tr td, table.comparison-table tr th {
 
 
 .deck-container img {
- display: block;
+ display: inline;
 }
 
 .centered {
@@ -263,10 +263,14 @@ table.comparison-table tr td, table.comparison-table tr th {
 .deck-container .reminders p {
 	font-size: 1em;
 }
+	.deck-container .reminders.single-line p {
+		padding-top: 10px;
+		margin-bottom: 0;
+	}
 span.marker {
  	position: absolute;
- 	bottom: 3px;
-    left: 15px;
+ 	top: 8px;
+    right: 15px;
     font-size: 1.3em;    
 }
 .assignment {
