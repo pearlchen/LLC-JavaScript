@@ -276,11 +276,11 @@ function nameOfFunction() {
     <article class='slide slide-list'>
       <h2>Review: What do we know about Functions so far?</h2>
       <br />
-      <p>- Created &amp; defined by using the <code>function</code> keyword</p>
-      <p>- Used to group together related lines of code and store them into descriptive names</p>
-      <p>- Can be reused just by calling the function name</p>
-      <p>- <strong>Define</strong> the function first but it will not run until you <strong>call</strong> the function</p>
-      <p>- Can be used inside another function</p>
+      <p><strong>&rsaquo;</strong> Created &amp; defined by using the <code>function</code> keyword</p>
+      <p><strong>&rsaquo;</strong> Used to group together related lines of code and store them into descriptive names</p>
+      <p><strong>&rsaquo;</strong> Can be reused just by calling the function name</p>
+      <p><strong>&rsaquo;</strong> <strong>Define</strong> the function first but it will not run until you <strong>call</strong> the function</p>
+      <p><strong>&rsaquo;</strong> Can be used inside another function</p>
     </article>
 
     <!-- SLIDE: FUNCTIONS PIZZA #1 -->
@@ -361,7 +361,6 @@ function nameOfFunction() {
   orderAnotherPizza();
 </script>
       </textarea>
-      <span class="marker">*</span>
     </article>
 
     <article class='slide slide-list'>
@@ -490,7 +489,7 @@ SCRIPTEND
 
 </article>
 
-    <article class='slide slide-list'>
+    <!--<article class='slide slide-list'>
       <h2>Mini-exercise #6</h2>
       <p>
         Let's revisit the optional lunchtime shipping form of exercise #5. That was a lot of typing to verify only 4 fields right?
@@ -503,7 +502,7 @@ SCRIPTEND
         <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_shipping_final.html">shopping_cart_shipping_start.html</a>
       </p>
       <p>It'll get only even longer if you add 4 more fields.</p>
-    </article>
+    </article>-->
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
@@ -800,7 +799,7 @@ eggspressions[3] = "giggling";
         Index numbers are also used to <strong>access</strong> values.
       </p>
       <p>
-        To access the value of the second egg in the <strong>eggspressions array</strong>, use index 1 since it's the second item in the list.
+        To access the value of the second egg in the <code>eggspressions</code> array, use index 1 since it's the second item in the list.
       </p>
       <textarea class='coder-editor coder-editor-full'>
 <script>
@@ -811,7 +810,7 @@ eggspressions[3] = "giggling";
   eggspressions[2] = "silly";
   eggspressions[3] = "giggling";
 
-  document.write("The 2nd egg is " + eggspressions[1] + " with an index of 1.");
+  document.write("The 2nd egg is " + eggspressions[1] + " even though it has an index of 1.");
 </script>
       </textarea>
     </article>
@@ -843,7 +842,6 @@ eggspressions[3] = "giggling";
   //document.write(eggspressions.length);
 </script>
       </textarea>
-      <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: ARRAYS - PHOTO SLIDER EXAMPLE -->
@@ -909,18 +907,20 @@ eggspressions[2] = "silly";
 eggspressions[3] = "giggling";
 </pre>
       <p>Let's break it down.</p>
-      <p><strong>&rsaquo;</strong> <code><span class="kwd">eggspressions.length</span></code> returns 4<br />
+      <p><strong>&rsaquo;</strong> <strong><code>eggspressions.length</code></strong> returns 4<br />
       <strong>&rsaquo;</strong> index of last element is 3<br />
-      <strong>&rsaquo;</strong> <code><span class="kwd">eggspressions.length-1</span></code> is the same as 4 - 1 and will return 3<br />
-      <strong>&rsaquo;</strong> <code><span class="kwd">eggspressions[3]</span></code> returns the last value<br />
-	  <strong>&rsaquo;</strong> <code><span class="kwd">eggspressions[eggspressions.length-1]</span></code> is the same as <code><span class="kwd">eggspressions[3]</span></code></p>
+      <strong>&rsaquo;</strong> <strong><code>eggspressions.length-1</code></strong> is the same as 4 - 1 and will return 3<br />
+      <strong>&rsaquo;</strong> <strong><code>eggspressions[3]</code></strong> returns the last value<br />
+	  <strong>&rsaquo;</strong> <strong><code>eggspressions[eggspressions.length-1]</code></strong> is the same as <strong><code>eggspressions[3]</code></strong></p>
+	  
+	  <p>Clear as mud?</p>
     </article>
 
     <!-- SLIDE: WHEN TO USE LENGTH-1 & DEMO -->
     <article class='slide slide-list'>
       <h2>How is this useful?</h2>
       <p>
-        Since the index always begins at 0, the last index value is always length-1.
+        Since the index always begins at 0, the last index value is always <code>length-1</code>.
         This is useful if you want to always access the last index, despite new additions, and apply some code to it.
       </p>
       <textarea class='coder-editor coder-editor-full'>
@@ -943,7 +943,7 @@ eggspressions[3] = "giggling";
       <h2>Loopty-Loops</h2>
       <br />
       <p>
-        Why use loops? Because sometimes we need to execute repetitive code for a specified number of times or through a list of values.
+        Why use loops? Because sometimes we need to <strong>execute repetitive code</strong> for a specified number of times or through a list of values.
       </p>
       <p>
         Loops will execute the same code continuously, using conditional statements to determine when to begin and stop.
@@ -967,7 +967,7 @@ When it reaches the end of the playlist, it stops.
       <p>
         The
         <span class="keyword">while loop</span>
-        executes the code contained in curly braces {}
+        executes the code contained in curly braces <code>{ }</code>
         <strong>while</strong>
         the condition is true.
       </p>
@@ -1005,11 +1005,11 @@ This can cause your browser to crash!
       <h2>While Loop in Action!</h2>
       <br />
       <p>
-        Let's use the while loop to output the mathematical formula for converting Celsius to Fahrenheit.
+        Let's use the <span class="keyword">while loop</span> to output the mathematical formula for converting Celsius to Fahrenheit.
       </p>
       <p>(The formula is: Temperature = Temperature * 9 / 5 + 32)</p>
       <p>
-        This next example uses a while loop to output the results of the temperature formula into HTML table rows that are also added dynamically.
+        This next example uses a <span class="keyword">while loop</span> to output the results of the temperature formula into HTML table rows that are also added dynamically.
       </p>
       <p>
         It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).
@@ -1072,7 +1072,7 @@ for ( var i = 0; i < playlist.length; i++ ) {
     <article class='slide slide-list'>
       <h2>For Loops and Arrays</h2>
       <p>
-        For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.
+        <span class="keyword">For loops</span> are useful when used it conjunction with <span class="keyword">arrays</span> because it can be used to execute specific actions while going through the list of values.
       </p>
       <p>
         Back to our robot store.  It wouldn't be much of a store if there was only one product!
@@ -1092,7 +1092,7 @@ productPrices[5] = 8.99;
     <!-- FOR LOOP and ARRAYS w/robot store -->
     <article class='slide slide-list'>
       <h2>For Loops, Arrays, Robots and Sales</h2>
-      <p>Suppose we wanted to put all the items over $15 on sale?  Let's use the for loop to determine which items are eligible for the sale and output the product number.</p>
+      <p>Suppose we wanted to put all the items over $15 on sale?  Let's use the <span class="keyword">for loop</span> to determine which items are eligible for the sale and output the product number.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <script>
@@ -1117,7 +1117,7 @@ productPrices[5] = 8.99;
     </article>
 
     <article class='slide slide-list'>
-      <h2>Mini-exercise #7 (10-15 minutes)</h2>
+      <h2>Mini-exercise #6 (10-15 minutes)</h2>
       <p>
         As owner of Planet Robot, you decide to have a special members-only sale: 50% off all items with a secret password! (p.s. the password is "llc"!)
       </p>
@@ -1505,6 +1505,36 @@ $(document).ready(function(){
 </div>
 </textarea>
       </article>
+      
+      <article class='slide slide-title'>
+      <div class="workshop_title">
+        <h1>Introduction to JavaScript</h1>
+        <br /><br /><br /><br />
+        <h1>FIN</h1>      
+      </div>
+      <div class="instructor_holder" style="margin-top:50px">
+        <h2>Your instructors today</h2>
+        <div>
+          <img src="assets/pearl_avatar.png" width="72" height="72" alt="pearl chen" />
+          <h4>Pearl Chen</h4>
+          pearl [at] karma-laboratory.com
+          <br />
+          <a href="http://klab.ca/&plus;" target="_blank">klab.ca/+</a>
+          <br />
+          <a href="http://twitter.com/@androidsNsheep" target="_blank">@androidsNsheep</a>
+        </div>
+        <div>
+          <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
+          <h4>Christina Truong</h4>
+          hello [at] christinatruong.com
+          <br />
+          <a href="http://christinatruong.com" target="_blank">christinatruong.com</a>
+          <br />
+          <a href="http://twitter.com/@christinatruong" target="_blank">@christinatruong</a>
+        </div>
+        <br  clear="left" />
+      </div>
+    </article>
 
 </div>
   <!-- END div id=presentation -->
