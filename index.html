@@ -505,7 +505,9 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <!-- SLIDE: EXERCISE OVERVIEW -->
     <article class='slide slide-list'>
       <p>As the owner of the thriving store, <span style="color:#B1009A;font-weight:bold;">Planet Robots</span>, you have to make sure you have a top notch website.</p>
-      <img src="assets/planet-robots.jpg" alt="planet-robots" />
+      <div class="centered">
+      	<img src="assets/planet-robots.jpg" alt="planet-robots" />
+      </div>
 
     </article>
     
@@ -523,10 +525,10 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <article class='slide slide-list'>
       <h2>Variables</h2>
       <br />
-      <p>Variables are used to store values.</p>
-      <p><strong>Declaring</strong> a variable tells the computer that it exists<br />
-        and to remember it.</p>
-      <p>Variables are like boxes, it can be used to store different things.</p>
+      <p><span class="keyword">Variables</span> are used to store values.</p>
+      <p><strong>Declaring</strong> a variable tells the computer that it exists and to<br />
+      remember it.</p>
+      <p>Variables are like boxes; it can be used to store different things.</p>
       <img src="assets/gift-boxes.jpg" alt="gift-boxes" width="400" height="300" />
       
     </article>
@@ -535,9 +537,9 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <article class='slide slide-list'>
       <h2>Variables (cont'd)</h2>
       <br />
-      <p>Variables are also be like the computer's short-term memory. It doesn't remember anything unless you tell it to.
+      <p><img src="assets/computer-memory.jpg" alt="computer-memory" width="200" height="207" style="float:right;padding:0 40px 0 10px;" />Variables are also like the computer's short-term memory. It doesn't remember anything unless you tell it to.
       In this example, the computer can't remember any one's name!</p>
-      <br />
+      <br /><br />
 <textarea class='coder-editor coder-editor-full'>
 <script>
   prompt("What's your name?");
@@ -567,11 +569,9 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
       <p>Before we continue, here's a few helpful JavaScript built-ins that will help with testing and writing code.</p>
       <textarea class='coder-editor coder-editor-full'>
 <script>
-
   alert("This is an alert box.");
   prompt("This is a prompt box. Enter some info.");
   document.write("document.write outputs text into the page.");
-
 </script>
       </textarea>
       <span class="marker">*</span>
@@ -604,11 +604,11 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
       <br />
       <p><span class="assignment">IMPORTANT!</span></p>
       
-      <p>Using the equals (=) symbol in Javascript is NOT the same as in math.</p>
+      <p>Using the equals (=) symbol in Javascript is <span class="highlight">NOT</span> the same as in math.</p>
       
-      <p><strong>var total = 1 + 1</strong>
+      <p><code>var total = 1 + 1</code>
       is not the same as
-      <strong>1 + 1 = 2</strong>
+      <code>1 + 1 = 2</code>
       </p>
       <p>You will see later that we can change the <strong>value</strong> of a variable.</p>
       <p>Variables can also be assigned any kind of value but in math, 1 + 1 will always equal 2.</p>
@@ -634,7 +634,7 @@ var numberString = "10";
 var isSaturday = false;
 var isSunday = true;
 </pre>
-      <div class="reminders">
+      <div class="reminders single-line">
         <p>String values are always written inside single or double quotes ('string' or "string").</p>
       </div>
       <br />
@@ -851,11 +851,11 @@ SCRIPTEND
     <!-- SLIDE:  ADD SHOPPING CART ITEMS -->
     <article class='slide slide-list'>
       <h2>Shopping Cart: Totals and Discounts</h2>
-      <p>Let's try applying some arithmetic operations to our shopping cart.</p>
-      <div class="reminders">
-        addition (+), subtraction (-), multiplication (*), division (/)
+      <p style="margin-bottom:0;">Let's try applying some arithmetic operations to our shopping cart.</p>
+      <div class="reminders single-line">
+        <p>addition (+), subtraction (-), multiplication (*), division (/)</p>
       </div>
-
+      <br />
 <textarea class='coder-editor coder-editor-full'>
 <script>
   var tshirtPrice = 25;
@@ -881,6 +881,7 @@ SCRIPTEND
   //document.write(finalTotal);
 </script>
 </textarea>
+	  <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: INCREMENT AND DECREMENT -->
@@ -920,7 +921,7 @@ SCRIPTEND
 <script>
   var loves = 0;
   function moreLove(){
-     //increment operator in action!
+     //re-assigning the value of the love variable
      loves = loves + 1;
      document.getElementById('update').innerHTML = loves;
   }
@@ -941,13 +942,15 @@ SCRIPTEND
       <br />
       <p>Here's a one-product shopping page where you can update the<br />
       quantity by adding or removing it from the shopping cart.</p>
-      <p>Here's what it should <a href="exercises/mini-exercise-2.html">look like</a>.</p>
+      <p>Here's what it will look like.</p>
+      <img src="exercises/assets/android-quantity.png" alt="android-quantity" width="225" height="282" />
+      <p>Go to the next slide to work on the exercise.</p>
 	</article>
 	
 	<!-- SLIDE: MINI-EXERCISE #2 : Code page -->
     <article class='slide slide-list'>
       <h2>Mini-exercise #2: Go! (5-10 minutes)</h2>
-      <div class="hint">
+      <div class="hint single-line">
       	<p>How do we increase or decrease the value of the variable?</p>
       </div>
 <textarea class='coder-editor coder-editor-full'>
@@ -1030,11 +1033,9 @@ SCRIPTEND
     <!-- SLIDE: CONCATENATION -->
     <article class='slide slide-list'>
       <h2>Concatenation</h2>
-      <p>Now that we've calculated numerical totals, how do we format the output to add a non-numerical value like a dollar sign?
+      <p>Now that we've calculated some numerical totals, how do we format the output to add a non-numerical value like a dollar sign?
         We use <span class="keyword">concatenation</span>. </p>
-      <p><span class="keyword">Concatenation</span> is the joining of two strings, using the (+) symbol.</p>
-      <p>Does the (+) symbol look familiar? Yep! It's the same as the addition operator.</p>
-      <p>Remember this example?</p>          
+      <p><span class="keyword">Concatenation</span> is the joining of strings, using the (+) symbol. Remember this example?</p>          
 <textarea class='coder-editor coder-editor-full'>
 <script>
   //Slide: Arithmetic Operators, Numbers and Strings
@@ -1050,7 +1051,8 @@ SCRIPTEND
   	<!-- SLIDE: CONCATENATION -->
   	<article class='slide slide-list'>
       <h2>Concatenation and Strings</h2>
-      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string. Only the addition (+) operator can be used to combine strings.
+      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
+      <p>Only the addition (+) operator can be used to combine strings.
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>

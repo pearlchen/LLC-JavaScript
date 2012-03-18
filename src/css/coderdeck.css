@@ -268,7 +268,8 @@ table.comparison-table tr td, table.comparison-table tr th {
 .deck-container .reminders p {
 	font-size: 1em;
 }
-	.deck-container .reminders.single-line p {
+	.deck-container .reminders.single-line p, 
+	.deck-container .hint.single-line p {
 		padding-top: 10px;
 		margin-bottom: 0;
 	}
