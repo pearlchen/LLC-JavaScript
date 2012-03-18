@@ -719,27 +719,22 @@ document.write( salePrice3 );
       <h2>Arrays</h2>
       <br />
       <p>
-        <span class="keyword">Arrays</span>
-        are similar to objects; they both hold a collection of values.  However, arrays hold it's values in a numerical index rather than labels.
+        <span class="keyword">Arrays</span> are similar to objects; they both hold a collection of values.  However, arrays hold its values in a numerical index rather than labels.
       </p>
       <p>
-        Think of Arrays as egg cartons. All the eggs are in one carton but each egg has it's own slot.
+        Think of Arrays as egg cartons. All the eggs are in one carton but each egg has its own slot.
       </p>
       <p>
         <img src="assets/egg-carton.jpeg" alt="egg-carton" width="300" height="230" style="float:left;padding-right: 20px;" />
-        Just like variables and objects, declare an array with the keyword
-        <span class="keyword">var</span>
-        .
+        Just like variables and objects, declare an array with the keyword <span class="keyword">var</span>.
       </p>
-      <p>
-        Unlike objects, arrays use square brackets
-        <strong>[ ]</strong>
-        .
-      </p>
-      <pre class='prettyprint' style="width:310px;margin-left:425px;">
-  var eggspressions = <span class="red">[]</span>;
-</pre>
-</article>
+      
+      <p class="centered"><code>var eggspressions = <span class="assignment">[]</span>;</code></p>
+      <br /><br /><br /><br /><br />
+      <div class="reminders single-line">
+      	<p>Unlike objects, arrays are declared with square brackets <strong>[ ]</strong>.</p>
+      </div>
+	</article>
 
     <!-- SLIDE: ARRAYS HOW-TO -->
     <article class='slide slide-list'>
@@ -759,12 +754,7 @@ eggspressions[3] = "giggling";
       <p>
         The numbers inside the square brackets [ ] are referred to as the
         <br />
-        <strong>index</strong>
-        number. Array indexes
-        <strong>always</strong>
-        start at
-        <strong>zero</strong>
-        .
+        <strong>index</strong> number. Array indexes <strong>always</strong> start at <strong>zero</strong>.
       </p>
 
       <div class="reminders">
@@ -785,22 +775,16 @@ eggspressions[3] = "giggling";
     <article class='slide slide-list'>
       <h2>Arrays and Indexes</h2>
       <p>
-        Index numbers are used to
-        <strong>assign</strong>
-        values.
+        Index numbers are used to <strong>assign</strong> values.
       </p>
       <p>
-        Index numbers are also used to
-        <strong>access</strong>
-        values.
+        Index numbers are also used to <strong>access</strong> values.
       </p>
       <p>
-        To access the value of the second egg in the
-        <strong>eggspressions array</strong>
-        , use index 1 since it is the second item in the list.
+        To access the value of the second egg in the <strong>eggspressions array</strong>, use index 1 since it's the second item in the list.
       </p>
       <textarea class='coder-editor coder-editor-full'>
-        <script>
+<script>
   var eggspressions = [];
 
   eggspressions[0] = "skeptical";
@@ -817,29 +801,15 @@ eggspressions[3] = "giggling";
     <article class='slide slide-list'>
       <h2>Arrays and Properties</h2>
       <p>
-        Since
-        <span class="keyword">Arrays</span>
-        are also objects, there are many properties associated with the Array object.
+        Since <span class="keyword">Arrays</span> are also objects, there are many properties associated with the Array object.
       </p>
 
+      <p>The <span class="keyword">Length</span> property is also associated with array objects.</p>
       <p>
-        One useful property is the
-        <span class="keyword">Length</span>
-        property.
-      </p>
-      <p>
-        When used with a
-        <strong>String</strong>
-        variable, the
-        <span class="keyword">Length</span>
-        property returns the number of characters.  When used with an
-        <strong>Array</strong>
-        , the
-        <span class="keyword">Length</span>
-        property returns the number of elements.
+        As mentioned previously, the <span class="keyword">Length</span> property returns the number of characters when associated with a <span class="keyword">string</span>.  When used with an <span class="keyword">Array</span>, the <span class="keyword">Length</span> property returns the number of elements.
       </p>
       <textarea class='coder-editor coder-editor-full'>
-        <script>
+<script>
   // string variable
   var name = "Christina";
   document.write(name.length);
@@ -861,7 +831,7 @@ eggspressions[3] = "giggling";
     <article class='slide slide-list'>
       <h2>Arrays &amp; Length:  Why?</h2>
       <p>
-        It is common to use JavaScript run through a list of values and apply some code to it. In order to do this, we need to know how many elements there are in total.
+        It is common to use JavaScript to run through a list of values and apply some code to it. In order to do this, we need to know how many elements there are in total.
       </p>
       <p>
         Let's look at this photo gallery from
@@ -882,7 +852,7 @@ eggspressions[3] = "giggling";
         <strong>last</strong>
         value?
       </p>
-      <pre class='prettyprint'>
+<pre class='prettyprint'>
 var eggspressions = [];
 eggspressions[0] = "skeptical";
 eggspressions[1] = "frazzled";
@@ -891,20 +861,18 @@ eggspressions[3] = "giggling";
 </pre>
       <p>
         To access the last index value, you can use
-        <strong>eggspressions[3]</strong>
-        .
+        <strong>eggspressions[3]</strong>.
       </p>
       <p>BUT...</p>
       <p>
         You can also use
-        <strong>eggspressions[eggspressions.length-1]</strong>
-        .
+        <strong>eggspressions[eggspressions.length-1]</strong>.
       </p>
     </article>
 
     <!-- SLIDE: HUH -->
     <article class='slide slide-list'>
-      <h1>Huh?</h1>
+      <h1 style="font-size:6em;">Huh?</h1>
     </article>
 
     <!-- SLIDE: LENGTH-1 EXPLANATION-->
@@ -921,31 +889,23 @@ eggspressions[1] = "frazzled";
 eggspressions[2] = "silly";
 eggspressions[3] = "giggling";
 </pre>
-      <p>Let's take a closer look.</p>
-      <ul>
-        <li>eggspressions.length returns 4</li>
-        <li>index of last element is 3</li>
-        <li>
-          eggspressions.length-1 is the same as 4 - 1 and will return 3
-        </li>
-        <li>eggspressions[3] returns the last value</li>
-        <li>
-          eggspressions[eggspressions.length-1] is the same as eggspressions[3] so it too, will return the last value
-        </li>
-      </ul>
+      <p>Let's break it down.</p>
+      <p><strong>&rsaquo;</strong> <span class="kwd">eggspressions.length</span> returns 4<br />
+      <strong>&rsaquo;</strong> index of last element is 3<br />
+      <strong>&rsaquo;</strong> <span class="kwd">eggspressions.length-1</span> is the same as 4 - 1 and will return 3<br />
+      <strong>&rsaquo;</strong> <span class="kwd">eggspressions[3]</span> returns the last value<br />
+	  <strong>&rsaquo;</strong> <span class="kwd">eggspressions[eggspressions.length-1]</span> is the same as <span class="kwd">eggspressions[3]</span></p>
     </article>
 
     <!-- SLIDE: WHEN TO USE LENGTH-1 & DEMO -->
     <article class='slide slide-list'>
       <h2>How is this useful?</h2>
       <p>
-        Since the index begins at 0, the last index value is always length-1.
-      </p>
-      <p>
-        This is useful if you want to always access the last index despite new additions.
+        Since the index always begins at 0, the last index value is always length-1.
+        This is useful if you want to always access the last index, despite new additions, and apply some code to it.
       </p>
       <textarea class='coder-editor coder-editor-full'>
-        <script>
+<script>
   var eggspressions = [];
   eggspressions[0] = "skeptical";
   eggspressions[1] = "frazzled";
@@ -978,8 +938,7 @@ When it reaches the end of the playlist, it stops.
         We will be discussing
         <span class="keyword">while loops</span>
         and
-        <span class="keyword">for loops</span>
-        .
+        <span class="keyword">for loops</span>.
       </p>
     </article>
 
@@ -1004,7 +963,7 @@ When it reaches the end of the playlist, it stops.
       <p>
         If you had 10 songs in your playlist, the player won't stop until it reaches the end of song 10.
       </p>
-      <pre class='prettyprint'>
+<pre class='prettyprint'>
 //declare index variable
 var i = 0; 
 
@@ -1031,7 +990,7 @@ This can cause your browser to crash!
       </p>
       <p>(The formula is: Temperature = Temperature * 9 / 5 + 32)</p>
       <p>
-        This next example uses a while loop to output the calculation into dynamically added HTML table rows containing the results of the temperature conversion.
+        This next example uses a while loop to output the results of the temperature formula into HTML table rows that are also added dynamically.
       </p>
       <p>
         It will stop when we reach 30 degrees Celsius (or whatever number is declared in the condition).
@@ -1046,43 +1005,48 @@ This can cause your browser to crash!
         Let's look at the temperature conversion table with and without JavaScript and compare the difference in the amount of repetitive code required to create a table like this manually.
       </p>
       <p>
-        Conversion table using a
-        <a href="exercises/temperature.html">while loop</a>
-        .
+        Conversion table using a <a href="exercises/temperature.html">while loop</a>.
       </p>
       <p>
-        Conversion table
-        <a href="exercises/temperature-nojs.html">without JavaScript</a>
-        .
+        Conversion table <a href="exercises/temperature-nojs.html">without JavaScript</a>.
       </p>
       <p>
         View source and compare the difference between the amount of code.
       </p>
-      [add small screenshot here]
+      <div>
+      	<img src="assets/while-loop.jpg" alt="while-loop" style="float:left;padding-right:20px;" /> 
+      	<img src="assets/no-while-loop.jpg" alt="no-while-loop" />
+      </div>
     </article>
 
     <!-- FOR LOOP -->
     <article class='slide slide-list'>
       <h2>For Loops</h2>
       <p>
-        A for loop loops through a block of code a specified number of times.
+        A <span class="keyword">for loop</span> also loops through the code a specified number of times until the condition is false.
       </p>
-      <p>
-        The index, conditional test and incrementer are all declared in one line.
-      </p>
-      <p>
-        The index (usually declared as var i) is used as a counter and defines the start value, followed by the termination condition and an increment value.
-      </p>
-      <textarea class='coder-editor coder-editor-full'>
-        <script>
-  // start value, condition, increment
-for ( var i = 0; i < 3; i++ ) {
-  //code to be executed
-  document.write("The current index is: " + i + "<br />");
+      <p>The index, conditional test and incrementer are all declared in one line. Basically, it's the <span class="keyword">while loop</span> condensed.</p>    
+<pre class='prettyprint'>
+/* While Loop */
+var i = 0; //index
+while ( i < playlist.length ) { //condition
+  playCurrentSong();
+  i = i + 1; // incrementer
 }
-document.write("The for loop is now complete.");
-</script>
+</pre>
+<pre class='prettyprint'>
+/* For Loop */
+// index, condition, incrementer
+for ( var i = 0; i < playlist.length; i++ ) {
+  playCurrentSong();
+}
+</pre>
       </textarea>
+      <div class="reminders">
+      	Incrementer (i++) and decrementer (i--) operators add or subtract one.<br />
+      	i++ is the same as i = i + 1<br />
+      	i-- is the same as i = i - 1
+      </div>
     </article>
 
     <!-- FOR LOOP and ARRAYS -->
@@ -1092,10 +1056,10 @@ document.write("The for loop is now complete.");
         For loops are useful when used it conjunction with arrays because it can be used to execute specific actions while going through an array list of values.
       </p>
       <p>
-        Back to our robot store.  It wouldn’t be much of a store if there was only one product!
+        Back to our robot store.  It wouldn't be much of a store if there was only one product!
 We can create a list of different products with various prices by creating an array.
       </p>
-      <pre class='prettyprint'>
+<pre class='prettyprint'>
 var productPrices = [];
 productPrices[0] = 17.99;
 productPrices[1] = 25;
@@ -1109,12 +1073,10 @@ productPrices[5] = 8.99;
     <!-- FOR LOOP and ARRAYS w/robot store -->
     <article class='slide slide-list'>
       <h2>For Loops, Arrays, Robots and Sales</h2>
-      <p>
-        Suppose we wanted to put some items on sale?  Let's use the for loop to determine which items are more than $15 and output the the product number so we know which ones are eligible.
-      </p>
+      <p>Suppose we wanted to put all the items over $15 on sale?  Let's use the for loop to determine which items are eligible for the sale and output the product number.</p>
 
-      <textarea class='coder-editor coder-editor-full'>
-        <script>
+<textarea class='coder-editor coder-editor-full'>
+<script>
   var productPrices = [];
   productPrices[0] = 17.99;
   productPrices[1] = 25;
@@ -1125,7 +1087,7 @@ productPrices[5] = 8.99;
 
   for (i=0; i < productPrices.length; i++) {
     var value = productPrices[i];
-    if (value < 15){
+    if (value > 15){
       document.write("Product " + (i+1) + " is on sale.<br />");
     } else {
       document.write("Product " + (i+1) + " is not on sale.<br />");
