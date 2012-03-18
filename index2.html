@@ -1419,13 +1419,79 @@ Click me!
         <p>The Write Less, Do More, JavaScript Library</p>
 </article>
 
-<!-- SLIDE:  -->
+	  <!-- SLIDE: jQuery Intro -->
       <article class='slide slide-list'>
-        <h2>jQuery</h2>
-        <p>...</p>
+        <h2>jQuery: A brief introduction</h2>
+        
+		<p>jQuery is a cross-browser JavaScript library designed to simplify client-side scripting, manipulating HTML pages and handling events. The library contains many built-in functions and methods that make writing JavaScript code easier.</p>
+
+		<h3>Getting started</h3>
+		<p>Download the library and include the file in your HTML page</p>
+		<p>Download instructions can be found here: <a href="http://docs.jquery.com/Downloading_jQuery">http://docs.jquery.com/Downloading_jQuery</a></p>
+
+		<h3>Gotchas!</h3>
+		<p>When adding your own custom-written jQuery/JavaScript files, make sure to include it <strong>after</strong> the jQuery file to ensure that the library loads first.</p>
+      </article>
+      
+      <!-- SLIDE: jQuery Demo -->
+      <article class='slide slide-list'>
+        <h2>jQuery: Demo</h2>
+        
+		<p>There are many built in methods and functions included in the jQuery library, too many to remember them all.  
+Never fear, jQuery has documented their API here: <a href="http://api.jquery.com/">http://api.jquery.com</a>
+		<br />It's searchable and provides explanations and examples.</p>
+		<p>Let take a peek at some jQuery code.</p>
+		
+<textarea class='coder-editor coder-editor-full'>
+<script>
+$(document).ready(function(){
+  $('a.hide').click(function(){
+     $('#box').hide();
+  });
+  $('a.show').click(function(){
+     $('#box').show();
+  });
+  $('a.fade').click(function(){
+     $('#box').fadeOut();
+  });
+  $('a.slide-up').click(function(){
+     $('#box').slideUp();
+  });
+  $('a.slide-toggle').click(function(){
+     $('#box').slideToggle();
+  });
+});
+</script>
+<style>
+	#container {
+		width: 320px;
+		padding-top: 10px;
+	}
+	#box {
+		height: 60px;
+		width: 200px;
+		background-color: blue;
+		padding: 40px;
+		margin-top: 10px;
+	}
+	a {
+		font: 14px Georgia, serif;
+		text-decoration: none
+	}
+	a.active {
+		color: pink;
+	}		
+</style>
+<div id="container">  
+	<a class="hide" href="#">Hide</a> | 
+	<a class="show" href="#">Show</a> |
+	<a class="fade" href="#">Fade</a> |
+	<a class="slide-toggle" href="#">Slide Toggle</a>		
+	<div id="box"></div>
+</div>
+</textarea>
       </article>
 
- 
 </div>
   <!-- END div id=presentation -->
 
