@@ -55,7 +55,7 @@
       <p class="download_link">
         <a href='http://github.com/pchen/LLC-JavaScript/'>http://github.com/pchen/LLC-JavaScript/</a>
       </p>
-      <p align="center"><img src="assets/git-download-zip.gif" width="566" height="400" alt="Github screenshot of ZIP button"></p>
+      <p align="center"><a href="http://github.com/pchen/LLC-JavaScript"><img src="assets/git-download-zip.gif" width="566" height="400" alt="Github screenshot of ZIP button"></a></p>
       <p style="padding-top: 25px; margin-bottom: 0; font-size: 0.9em; color: #999;">
         ( Interactive code slides thanks to
         <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>
@@ -76,18 +76,18 @@
           <h4>Pearl Chen</h4>
           pearl [at] karma-laboratory.com
           <br />
-          <a href="http://klab.ca/&plus;">klab.ca/+</a>
+          <a href="http://klab.ca/&plus;" target="_blank">klab.ca/+</a>
           <br />
-          <a href="http://twitter.com/@androidsNsheep">@androidsNsheep</a>
+          <a href="http://twitter.com/@androidsNsheep" target="_blank">@androidsNsheep</a>
         </div>
         <div>
           <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
           <h4>Christina Truong</h4>
           hello [at] christinatruong.com
           <br />
-          <a href="http://christinatruong.com">christinatruong.com</a>
+          <a href="http://christinatruong.com" target="_blank">christinatruong.com</a>
           <br />
-          <a href="http://twitter.com/@christinatruong">@christinatruong</a>
+          <a href="http://twitter.com/@christinatruong" target="_blank">@christinatruong</a>
         </div>
         <br  clear="left" />
       </div>
@@ -96,18 +96,19 @@
     <!-- SLIDE: Course Outline -->
     <article class='slide slide-list'>
       <h2>Course Outline</h2>
-      <h3>The morning (break @ ~11:30am)</h3>
+      <h3 style="margin-top: 1em;">The morning (break @ ~11:30am)</h3>
       <ul>
         <li>What is JavaScript?</li>
         <li>JavaScript Theory: variables, operators, and conditionals.</li>
       </ul>
-      <h3>After lunch (break @ ~3:30pm)</h3>
+      <h3 style="margin-top: 1em;">After lunch (break @ ~3:30pm)</h3>
       <ul>
-        <li>JavaScript Theory: functions, arrays, and loops.</li>
-        <li>JavaScript objects, the DOM, and debugging in Chrome.</li>
+        <li>JavaScript Theory: functions, objects, arrays, and loops.</li>
+        <li>JavaScript objects and the DOM.</li>
       </ul>
-      <h3>Homestretch</h3>
+      <h3 style="margin-top: 1em;">Homestretch</h3>
       <ul>
+        <li>Debugging in Chrome.</li>
         <li>Quick intro to jQuery.</li>
         <li>Where can you go from here?</li>
         <!-- <li>Overview of take home assignment: a photo slider.</li> -->
@@ -127,7 +128,7 @@
         Choose a modern web browser that has good, built-in development tools to help make building web pages easier.
       </p>
       <div class="centered contains_sidebyside_icons">
-        <img src="assets/new-chrome-logo.png" width="125" height="125" alt="Chrome" />
+        <a href="https://www.google.com/chrome" target="_blank"><img src="assets/new-chrome-logo.png" width="125" height="125" alt="Chrome" /></a>
         <br/>
         <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>
       </div>
@@ -153,13 +154,13 @@
       </p>
       <div class="centered contains_sidebyside_icons">
         <div class="sidebyside_download_icon">
-          <img src="assets/Notepad.png" width="169" height="125" alt="Notepad++" />
+          <a href="http://notepad-plus-plus.org/" target="_blank"><img src="assets/Notepad.png" width="169" height="125" alt="Notepad++" /></a>
           <br />
           <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>
           (Windows)
         </div>
         <div class="sidebyside_download_icon">
-          <img src="assets/textWranglerIcon.png" width="125" height="125" alt="Text Wrangler" />
+          <a href="http://www.barebones.com/products/textwrangler/" target="_blank"><img src="assets/textWranglerIcon.png" width="125" height="125" alt="Text Wrangler" /></a>
           <br />
           <a href="http://www.barebones.com/products/textwrangler/" target="_blank">TextWrangler</a>
           (Mac)
@@ -183,7 +184,7 @@
         Do you already have your own hosted website? FTP software will let you copy the files you work on today to somewhere where the rest of the world can see them!
       </p>
       <div class="centered contains_sidebyside_icons">
-        <img src="assets/Cyberduck_icon.png" width="125" height="125" alt="CyberDuck" />
+        <a href="http://cyberduck.ch/" target="_blank"><img src="assets/Cyberduck_icon.png" width="125" height="125" alt="CyberDuck" /></a>
         <br />
         <a href="http://cyberduck.ch/" target="_blank">CyberDuck</a>
       </div>
@@ -208,19 +209,29 @@
     <!-- SLIDE: What is JavaScript? -->
     <article class='slide slide-list'>
       <h2>What is JavaScript?</h2>
-      <p>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
         It's a
         <span class="keyword">programming language</span>
-        <br>
-        designed to
-        <span class="keyword">run in your web browser</span>
-        to
-        <br>
-        <span class="keyword">manipulate content on web pages</span>
-        .
+        <br><br>
+		designed to <strong>run in your web browser</strong> to
+        <br><br>
+        <strong>manipulate content on web pages</strong>.
       </p>
     </article>
 
+    <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword highlight">programming language</span>
+        <br><br>
+		designed to <strong>run in your web browser</strong> to
+        <br><br>
+        <strong>manipulate content on web pages</strong>.
+      </p>
+    </article>
+    
     <!-- SLIDE: What is Programming? -->
     <article class='slide slide-list'>
       <h2>What is Programming?</h2>
@@ -231,7 +242,7 @@
         meant for a computer to execute.
       </p>
       <p>Computers are fast but blind.</p>
-      <p><img src="http://placehold.it/650x250&text=blindfolded"></p>
+      <p class="centered"><img src="assets/blindfold.gif" width="377" height="270" alt="As the first step to our new system integration, please take a blind fold."></p>
     </article>
 
     <!-- SLIDE: Instructions -->
