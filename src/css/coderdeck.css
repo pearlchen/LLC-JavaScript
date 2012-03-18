@@ -226,6 +226,10 @@ table.comparison-table tr td, table.comparison-table tr th {
  display: inline;
 }
 
+.deck-container ol {
+  font-size: 1.8em;	
+}
+
 .centered {
   text-align: center;
 }

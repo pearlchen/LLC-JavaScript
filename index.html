@@ -247,65 +247,78 @@
 
     <!-- SLIDE: Instructions -->
     <article class='slide slide-list'>
-      <h3>Clearer Instructions = Better Code</h3>
+      <h2>Better Code = Clearer Instructions</h2>
       <p>
-        Think about a tourist that stops you to ask for directions on a street; the clearer the instructions, the more likely they will get to their destination.
+      Think about a tourist that stops you to ask for directions:</p>
+      <p>
+      <strong>The clearer the instructions, the more likely they will get to their destination. </strong></p>
+<p class="centered"><img src="assets/Map.png" width="252" height="222" alt="Give clear directions" /></p>
+</article>
+
+
+    <!-- SLIDE: Instructions -->
+    <article class='slide slide-list'>
+      <h2>Break it down</h2>
+<p>Suppose I want a computer to say hello to using my name. </p>
+<p><strong>Break down the steps</strong> as much as possible: </p>
+<ol>
+    <li>Allow me to type in my name.</li>
+          <li>Remember my name.</li>
+          <li>Say &quot;Hello&quot; and repeat back my name.</li>
+          </ol>
       </p>
-      <p>
-        Suppose I want a computer to say hello to me. The steps would be:
-      </p>
-      <p>
-        1. Allow me to type in my name.
-        <br>
-        2. Remember my name.
-        <br>3. Say &quot;Hello&quot; and repeat back my name.</p>
 
 </article>
+
 
     <!-- SLIDE:  What is a Programming Language? -->
     <article class='slide slide-list'>
       <h2>What is a Programming Language?</h2>
       <p>
-        Programming is about having a conversation with your computer.
-      </p>
+      Programming is about having a <strong>conversation</strong> with your computer. </p>
       <p>
-        Computers only understand things when you speak to them in a certain way. Programming is about sticking to grammar rules -- this is called
+        Computers only understand things when you speak to them in a certain way. Much like English or any other natural language, programming is about sticking to grammar rules -- this is called
         <span class="keyword">syntax</span>
         .
-      </p>
+      </p>         
+        <p><img src="assets/beepbeep.jpg" height="300" alt="Beep beep" align="left" style="margin-right: 40px;" /> Computers have come a long way since their binary days (<code>0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 0 0 1 1 1 1</code>) so meet them half-way.</p>
+        <br  clear="all" />
+    </article>
+
+    <!-- SLIDE:  What is a Programming Language? -->
+    <article class='slide slide-list'>
+      <h2>Example Programming Syntaxes</h2>
       <p>Different programming languages have different syntax.</p>
       <p>Here are two ways a computer could say hi to me:</p>
       <p>
-        Java
-        <br />
-        <pre>Scanner userInput = new Scanner(System.in);
+        <strong>Java</strong></p>
+      <pre class="prettyprint">Scanner userInput = new Scanner(System.in);
 String name;
 System.out.print("What's your name? ");
 name = userInput.next();
 System.out.println("Hello, " + name);</pre>
-      </p>
+      
       <p>
-        JavaScript (
-        <a href="exercises/hello-javascript.html">Try it out now!</a>
-        )
-        <br />
-        <pre>var name;
+        <strong>JavaScript</strong> ( <a href="exercises/hello-javascript.html">Try it out now!</a>
+        )</p>
+        
+      <pre class="prettyprint">var name;
 name = window.prompt("What's your name?",'');
 document.write("Hello, " + name);</pre>
-      </p>
+      
     </article>
-
+    
     <!-- SLIDE: JavaScript versus Java -->
     <article class='slide slide-list'>
       <h2>JavaScript versus Java</h2>
       <p>
-        They might vaguely look the same (as a lot of programming languages do) but they are not related at all. (Java was really popular at the time so Netscape just hijacked the name.)
-      </p>
-      <p>
+      They might vaguely look the same (as a lot of programming languages do) but <strong>they are not related at all</strong>. </p>
+      <p class="centered">
         <img src="assets/llcodedotcom_hamster.gif" width="544" height="220" alt="Java is to JavaScript as ham is to hamster." />
       </p>
+      <p class="centered sidenote">(Java was really popular at the time so Netscape just hijacked the name.) </p>
     </article>
-
+    
     <!-- SLIDE:  JavaScript in the Browser -->
     <article class='slide slide-list'>
       <h2>JavaScript in the Browser</h2>
@@ -318,7 +331,7 @@ document.write("Hello, " + name);</pre>
         <strong>web browser</strong>
         (e.g. Safari, Firefox, Chrome, Internet Explorer).
       </p>
-      <p>
+      <p class="centered">
         <img src="assets/scripting.gif" width="586" height="224" alt="Different programmig languages and the environments they run in" />
       </p>
     </article>
