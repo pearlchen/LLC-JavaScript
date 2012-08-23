@@ -30,13 +30,22 @@ html, body {
 .deck-container .slide {
   background: #fff;
   width: 940px;
-  height: 100%;
+  height: auto;
+  /*height: 100%;*/ /* allow vertical scrolling -- espeically when there's lots of code */
   min-height: 600px;
   border: 3px solid #b1009a;
   border-radius: 10px;
   -moz-border-radius: 10px;
   margin: 0 auto;
   padding: 30px 50px 40px 50px;
+}
+
+/* Added so code editor areas won't resize in height */
+.CodeMirror-scroll {
+  height: auto !important;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100%
 }
 
 .deck-container .slide-title {
@@ -255,10 +264,11 @@ table.comparison-table tr td, table.comparison-table tr th {
 }
 
 .keyword {
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #2E2E2E;
+  color: #B1009A;
+  font-weight: bold !important;
+  font-style: italic !important;
 }
+
 .deck-container .reminders {
 	background: url("../../assets/icon-reminder.jpg") no-repeat;
 	font-size: 1.2em;
@@ -304,4 +314,14 @@ span.marker {
 
 .highlight {
 	background-color: #FF9;
+}
+
+.smaller {
+  font-size: 0.5em !important;
+}
+
+.solution-link {
+  text-align: center;
+  padding-top: 20px !important;
+  font-size: 17px !important;
 }

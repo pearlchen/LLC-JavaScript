@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Ladies Learning Code - JavaScript March 18, 2012</title>
+  <title>Ladies Learning Code - JavaScript Oct 13, 2012</title>
   <meta name="viewport" content="width=1280">
 
   <!-- CoderDeck core and extension CSS files -->
@@ -47,49 +47,40 @@
 	</script>
 	
   <div id="presentation">
-    <!-- SLIDE: Download zip from Github -->
-    <article class='slide slide-title'>
-      <div class="workshop_title">
-        <h1>Introduction to JavaScript</h1>
-      </div>
-      <p class="download_link">
-        <a href='http://github.com/pchen/LLC-JavaScript/'>http://github.com/pchen/LLC-JavaScript/</a>
-      </p>
-      <p align="center"><a href="http://github.com/pchen/LLC-JavaScript"><img src="assets/git-download-zip.gif" width="566" height="400" alt="Github screenshot of ZIP button"></a></p>
-      <p style="padding-top: 25px; margin-bottom: 0; font-size: 0.9em; color: #999;">
-        ( Interactive code slides thanks to
-        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>
-        ! )
-      </p>
-    </article>
+  <!-- **************************************** -->  
 
     <!-- SLIDE: Workshop intro -->
     <article class='slide slide-title'>
       <div class="workshop_title">
         <h1>Introduction to JavaScript</h1>
-        <p style="font-size: 1em; color: #999;">March 28, 2012</p>
+        <p style="font-size: 1em; color: #999;">Oct 13, 2012</p>
       </div>
       <div class="instructor_holder">
         <h2>Your instructors today</h2>
         <div>
           <img src="assets/pearl_avatar.png" width="72" height="72" alt="pearl chen" />
           <h4>Pearl Chen</h4>
-          pearl [at] karma-laboratory.com
+          pearl [at] <a href="http://karma-laboratory.com" target="_blank">karma-laboratory.com</a>
           <br />
           <a href="http://klab.ca/&plus;" target="_blank">klab.ca/+</a>
           <br />
-          <a href="http://twitter.com/@androidsNsheep" target="_blank">@androidsNsheep</a>
+          <a href="http://twitter.com/pearlchen" target="_blank">@pearlchen</a>
         </div>
         <div>
           <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
           <h4>Christina Truong</h4>
-          hello [at] christinatruong.com
+          hello [at] <a href="http://christinatruong.com" target="_blank">christinatruong.com</a>
           <br />
           <a href="http://christinatruong.com" target="_blank">christinatruong.com</a>
           <br />
-          <a href="http://twitter.com/@christinatruong" target="_blank">@christinatruong</a>
+          <a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a>
         </div>
         <br  clear="left" />
+        <p style="padding-top: 45px; margin-bottom: 0; font-size: 0.9em; color: #999;">
+        ( Interactive code slides thanks to
+        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>
+        ! )
+      </p>
       </div>
     </article>
 
@@ -333,9 +324,6 @@ document.write("Hello, " + name);</pre>
       </p>
     </article>
     
-    
-    
-    
     <!-- SLIDE:  JavaScript in the Browser -->
     <article class='slide slide-list'>
       <h2>JavaScript in the Browser</h2>
@@ -427,10 +415,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <article class='slide slide-list'>
       <h2>JavaScript in Different Browsers</h2>
       <p class="reminders">
-        For the most part, JavaScript will run the same in various web browsers.
-      </p>
-      <p>
-        However, web browsers are software programs written by different people/companies (people programming things just like you!), so sometimes they say &quot;hi&quot; with different accents.</p><p> Imagine a British accent versus a Texas accent.</p>
+        For the most part, JavaScript will run the same in various web browsers but sometimes they say &quot;hi&quot; with different accents.</p><p> Imagine a British accent versus a Texas accent -- it's still English underneath but there's some variations and unique slang.</p>
         <p>This is especially noticeable with newer &quot;HTML5&quot; features.<br>
 <span class="sidenote"> <em>Insert Internet Explorer joke here. ;)</em></span></p>
       
@@ -443,7 +428,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
         JavaScript is essential for &quot;AJAX&quot;, &quot;Web 2.0&quot;, and &quot;HTML5&quot; websites.
       </p>
       <p>
-        Try this experiment: Turn off JavaScript in your web browser. Go to the JavaScript settings for Chrome (
+        <strong>Try this experiment:</strong> Turn off JavaScript in your web browser. Go to the JavaScript settings for Chrome (
         <a href="chrome://settings/content">chrome://settings/content</a>
         ) and select &quot;Do not allow any site to run JavaScript&quot;
       </p>
@@ -475,7 +460,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
           On twitter.com - older tweets don't load at the bottom of the page. Warning message on top of page. Navigation doesn't work. Popups don't work.
         </li>
         <li>
-        And <strong>you can't see it but most analytics tracking won't work</strong> either. </li>
+        And you can't <strong>see</strong> it but most analytics tracking won't work either. </li>
       </ul>
       <p class="reminders" style="font-size: 2.2em;">
         <strong>The modern web just sort of gives up without JavaScript!</strong>
@@ -525,11 +510,9 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <article class='slide slide-list'>
       <h2>Variables</h2>
       <br />
-      <p><span class="keyword">Variables</span> are used to store values.</p>
-      <p><strong>Declaring</strong> a variable tells the computer that it exists and to<br />
-      remember it.</p>
+      <p><span class="keyword">Variables</span> are used to <strong>store values so you can use them later</strong>.</p>
       <p>Variables are like boxes; it can be used to store different things.</p>
-      <img src="assets/gift-boxes.jpg" alt="gift-boxes" width="400" height="300" />
+      <p class="centered"><img src="assets/gift-boxes.jpg" alt="gift-boxes" width="400" height="300" /></p>
       
     </article>
 
@@ -539,13 +522,41 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
       <br />
       <p><img src="assets/computer-memory.jpg" alt="computer-memory" width="200" height="207" style="float:right;padding:0 40px 0 10px;" />Variables are also like the computer's short-term memory. It doesn't remember anything unless you tell it to.
       In this example, the computer can't remember any one's name!</p>
+      <p><strong>But it can remember if we use a variable.</strong></p>
       <br /><br />
-<textarea class='coder-editor coder-editor-full'>
-<script>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // prompt() is a special JavaScript command --
+  // it will show a browser popup
+  // and display the text between the parenthese and quotes
+  // with an input text field that you can type into
   prompt("What's your name?");
-  document.write("Hello....?"); 
-</script>
-</textarea>
+
+  // alert() is exactly like prompt()
+  // but doesn't have an input field
+  alert("Hello....?");
+
+  // document.write() also uses the text between the parenthese and quotes
+  // but outputs it directly on the webpage (instead of a popup)
+  document.write("Hello....?");
+
+SCRIPTEND</textarea>
+<script type='coder-solution'>SCRIPT
+
+  // create a VARIABLE called "name"
+  var name;
+
+  // take the text you wrote in the popup input field
+  // and save it to the "name" variable 
+  name = prompt("What's your name?");
+
+  // use the value of "name" and show it in the alert
+  alert("Hello, " + name + "!");
+
+  // also output it directly on the webpage
+  document.write("Hello, " + name + "!");
+
+SCRIPTEND</script>
 	<span class="marker">*</span>
     </article>
 
@@ -557,7 +568,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
       	In a web checkout form that asks for your name and address, variables can be used to store this information.
       	Then it can be used to create things like shipping labels.</p>
       <br />
-      <p>
+      <p class="centered">
         <img src="assets/var-shipping-example.jpg" width="594" height="193" />
       </p>
     </article>
@@ -567,27 +578,53 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
       <h2>An Aside...</h2>
       <br />
       <p>Before we continue, here's a few helpful JavaScript built-ins that will help with testing and writing code.</p>
-      <textarea class='coder-editor coder-editor-full'>
-<script>
+      <p>All of them take the text between the parenthese and quotes, then either shows a browser popup or outputs it directly onto the webpage.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
   alert("This is an alert box.");
   prompt("This is a prompt box. Enter some info.");
   document.write("document.write outputs text into the page.");
-</script>
-      </textarea>
+
+SCRIPTEND</textarea>
       <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: COMMENTS -->
+    <article class='slide slide-list'>
+      <h2>Also: Comments</h2>
+      <p>
+        Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations. Use comments! <strong>JavaScript will ignore comments and not execute them.</strong>
+      </p>
+<pre class='prettyprint'>
+// This is how you leave a single line comment.
+
+// You can write many single line comments.
+// Just make sure to add the double backslash
+// for every new line.
+</pre>
+      <p>Here's another way to comment larger blocks of text.</p>
+<pre class='prettyprint'>
+/* This is how you leave
+multi-line comments for when you
+want to write a longer message */
+</pre>
+      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>    
     </article>
 
     <!-- SLIDE: VARIABLES HOW-TO -->
     <article class='slide slide-list'>
       <h2>Variables How-to</h2>
-      <p>Declare variables with the keyword <strong>var</strong>.</p>
+      <p><span class="keyword">Declare</span> variables with the keyword <strong><code>var</code></strong>.</p>
       <pre class='prettyprint'>var email;</pre>
-      <p>Assign a value to the variable using the equals (=) sign.
-        <br />End the <strong>statement</strong> with a semicolon (;).
-      </p>
-      <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
+      <p><span class="keyword">Assign</span> a value to the variable using the equals (<code>=</code>) sign.</p>
+      <pre class='prettyprint'>email = "hello@christinatruong.com";</pre>
       <p>Now the computer will remember my email address!</p>
-      <br />
+    </article>
+    
+    <!-- SLIDE: VARIABLES HOW-TO -->
+    <article class='slide slide-list'>
+      <h2>Aside: Statements</h2>
+      <p>End a <span class="keyword">statement</span> with a semicolon (<code>;</code>).</p>
       <div class="reminders">
         <p><strong>Statements</strong> are commands that tell the computer what to do.
           <br />
@@ -597,21 +634,25 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
         </p>
       </div>
     </article>
-    
+
      <!-- SLIDE: VARIABLES - assignment operator -->
     <article class='slide slide-list'>
       <h2>Assigning Variables</h2>
       <br />
       <p><span class="assignment">IMPORTANT!</span></p>
       
-      <p>Using the equals (=) symbol in Javascript is <span class="highlight">NOT</span> the same as in math.</p>
-      
-      <p><code>var total = 1 + 1</code>
+      <p>Using the equals (<code>=</code>) symbol in Javascript is <span class="highlight">NOT</span> the same as in math.</p>
+
+      <p><code>var total = 1 + 1</code> means:<br />
+        <span class="keyword">evaluate</span> everything to the <em>right</em> of the equals sign (e.g. <code>1 + 1</code>), 
+        <br />then <span class="keyword">assign</span> this value (e.g. the number <code>2</code>) to the variable on the <em>left</em> side.
+
+      <p>You will see later that we can re-assign new values to an existing variable.</p>
+
+      <p><code>total = 1 + 1</code>
       is not the same as
       <code>1 + 1 = 2</code>
       </p>
-      <p>You will see later that we can change the <strong>value</strong> of a variable.</p>
-      <p>Variables can also be assigned any kind of value but in math, 1 + 1 will always equal 2.</p>
     </article>
 
     <!-- SLIDE: VARIOUS VARIABLES  -->
@@ -644,47 +685,64 @@ var isSunday = true;
     <article class='slide slide-list'>
       <h2>Variables: Tips &amp; Best Practices</h2>
       <p>
-        Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).
+        Variables <strong>cannot start with a number or any special characters</strong> <em>except</em> for underscores (<code>_</code>) and dollar signs (<code>$</code>).
       </p>
       <div class="reminders">
-        <p>Although it's valid to use underscore or a dollar sign, it is not used often
-          <br />and usually in special circumstances.
+        <p>Although it's valid to use underscore or a dollar sign, they should only be used in special circumstances.
         </p>
       </div>
       <br />
-<textarea class='coder-editor'>
-<script>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+  
+  // A variable starting with a number is not valid.
+  // A "silent" error will occur -- nothing happens when we press Run.
   var 3hundred = 300;
-  console.log(3hundred);
+  document.write(3hundred);
 
-  //var $1000 = 1000;
-  //document.write($1000);
-</script>
-      </textarea>
+  // However, when we open up the Chrome console (Alt+Cmd/Ctrl+J),
+  // we can see the browser complain of a 
+  // "Uncaught SyntaxError: Unexpected token ILLEGAL"
+
+  // A variable can start with a $ or _
+  var $dalmations = 1001;
+  document.write($dalmations);
+
+SCRIPT</textarea>
+<script type='coder-solution'>SCRIPT
+
+  //var 3hundred = 300;
+  //cdocument.write(3hundred);
+
+  // A variable can start with a $ or _
+  var $dalmations = 1001;
+  document.write($dalmations);
+
+SCRIPTEND</script>
       <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: VARIABLE NAMES - NO SPACES -->
     <article class='slide slide-list'>
       <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>Variables can't contain spaces. Use a convention called <span class="keyword">camel case</span>.
+      <p>Variables <strong>can't contain spaces</strong>. Use a convention called <span class="keyword">camel case</span>.
         <br />Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
       </p>
-      <p>JavaScript is case sensitive so variable names are also case sensitive.</p>
+      <p>JavaScript is <strong>case sensitive</strong> (uppercase and lowercase letters are treated differently) so variable names are also case sensitive.</p>
       <p>Another convention is to use underscores <strong>to_separate_words</strong>. This is common in other programming languages (like PHP).</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  var greetMe = prompt("Hello, what's your name?");
-  var greetme = prompt("Bonjour, quel est ton nom?");
-  var greet_me = prompt("Hola, ¿cómo te llamas?");
+<textarea class='coder-editor coder-editor-full'>SCRIPT
 
-  document.write(greetMe);
-  document.write("<br />");
-  document.write(greetme);
-  document.write("<br />");
-  document.write(greet_me);
-</script>
-</textarea>
+  // We might read this as "greet me" but
+  // small differences make a big difference to JavaScript
+  var greetme = "Hello, what's your name?";
+  var greetMe = "Bonjour, quel est ton nom?";
+  var greet_me = "Hola, ¿cómo te llamas?";
+
+  // test our different variables by outputting them to the page
+  document.write("greetme: " + greetme + "<br />");
+  document.write("greetMe: " + greetme + "<br />");
+  document.write("greet_me: " + greetme + "<br />");
+
+SCRIPTEND</textarea>
 	<span class="marker">*</span>
     </article>
 
@@ -693,20 +751,20 @@ var isSunday = true;
     <br />
       <h2>Variables: Tips &amp; Best Practices</h2>
       <p>
-        When naming a variable, it's best to give it a descriptive name.
+        When naming a variable, it's best to <strong>give it a descriptive name</strong>.
       </p>
       <p>
-        It makes it easier to see at a glance, what kind of value that variable is going to hold.
+        It makes it easier to see, at a glance, what kind of value that variable is going to hold.
       </p>
       <p>
         This is especially useful when sharing code with others who may not use the same kinds of abbreviations.
       </p>
       <p>
-        <strong><span class="var">var</span> firstName;</strong> &larr; Clear that first name will go here.
+        <code>var <strong>firstName</strong>;</code> &larr; Clear that first name will go here.
         <br />
-        <strong><span class="var">var</span> fn;</strong> &larr; Not as obvious as firstName.
+        <code>var <strong>fn</strong>; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> &larr; Not as obvious as firstName.
         <br />
-        <strong><span class="var">var</span> x;</strong> &larr; Not clear at all.
+        <code>var <strong>x</strong>; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> &larr; Not clear at all.
       </p>
     </article>
 
@@ -714,90 +772,61 @@ var isSunday = true;
     <article class='slide slide-list'>
       <h2>Whitespace in JavaScript</h2>
       <p>
-        Whitespace refers to blank characters and includes space characters, tabs and line breaks.
+        <span class="keyword">Whitespace</span> refers to blank characters and includes <strong>spaces</strong>, <strong>tabs</strong> and <strong>line breaks</strong>.
       </p>
       <p>JavaScript ignores whitespace except when used in a string.</p>
 <pre class="prettyprint">
+// both statements are the same to JavaScript
 var name=&quot;Christina&quot;;
-//same as 
 var name = &quot;Christina&quot;;
 </pre>
-<textarea class='coder-editor coder-editor-full'>
-<script>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // A test to show whitespace in use 
+  alert("Whitespace in a string.");
   alert("Whitespace     in    a    string.");
+
+  // Remember that browsers ignore extra whitespace in HTML!
+  // Use "Inspect Element" to verify that there is indeed whitespace
+  document.write("Whitespace in a string.");
   document.write("Whitespace     in    a    string.");
-</script>
-</textarea>
+
+SCRIPTEND</textarea>
 	  <span class="marker">*</span>
     </article>
 
-    <!-- SLIDE: COMMENTS -->
-    <article class='slide slide-list'>
-      <h2>Comments</h2>
-      <p>
-        Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations but you want the browser to ignore it. Use comments!
-      </p>
-<pre class='prettyprint'>
-// This is how you leave a single line comment.
-
-// You can write many single line comments.
-// Just make sure to add the double backslash
-// for every new line.</span>
-</pre>
-      <p>Here's another way to comment larger blocks of text.</p>
-<pre class='prettyprint'>
-/* This is how you leave
-multi-line comments for when you
-want to write a longer message */
-</pre>
-      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>    
-    </article>
 
     <!-- SLIDE: MINI-EXERCISE #1 -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #1 (5-10 minutes)</h2>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Simple Shipping Label</h2>
       <p>
-        Here's a test shipping form. Right now, after you press Run, the shipping label is blank. How do we fix this?
+        Here's a simple shipping information request form via popup prompts. Right now, after you press Run, the confirmation shipping label is blank. How do we fix this?
       </p>
       <div class="hint">
-      <p>(1) Use variables to store your name and address!<br />
-      (2) To verify that your variables are working, uncomment out the document.write() lines and replace ********** with the actual name of your variables.
+      <p>1. Use variables to store your name and address.<br />
+      2a. &amp; 2b. To verify that your variables are working, uncomment out the document.write() lines and replace ********** with the actual name of your variables.
       </p>
       </div>
-<textarea class='coder-editor coder-editor-full'  data-save='exercise1'>
+<textarea class='coder-editor coder-editor-full' data-save='exercise-simple-shipping-label'>SCRIPT
 
-<script>
-  //The web browser will ask you for your shipping details.
-  //Declare a "name" and an "address" variable to remember the values.
+  /* 1. Declare a "name" and an "address" variable 
+        to remember the values entered into the prompt popup: */
   prompt("What's your name?");
   prompt("Your mailing address?");
 
-  //Confirm that your package will be shipped to the right place!
   document.write("<b>Confirm Shipping Label:</b><br />");
-  /*
-  document.write(**********); //output the name
-  document.write("<br />"); //just a line break
-  document.write(**********); //output the address
-  */
-</script>
-      </textarea>      
-<script type='coder-solution'>
-SCRIPT
-  /** SOLUTION **/	
-  //The web browser will ask you for your shipping details.
-  //Declare a "name" and an "address" variable to remember the values.
-  var name = prompt("What's your name?");
-  var address = prompt("Your mailing address?");
+  
+  /* 2a. Output the name: */
+  //document.write(**********); 
 
-  //Confirm that your package will be shipped to the right place!
-  /*
-  document.write("<b>Confirm Shipping Label:</b><br />");
-  document.write(name); //output the name
   document.write("<br />"); //just a line break
-  document.write(address); //output the address
-  */
-SCRIPTEND
-</script>
+
+  /* 2b. Output the address: */
+  //document.write(**********); 
+  
+SCRIPTEND</textarea>
+  <p class="solution-link">If you get stuck, <a href="exercises/solutions/simple-shipping-label.txt">click here</a> for the full solution.</p>
 	<span class="marker">*</span>
     </article>
 
@@ -806,12 +835,22 @@ SCRIPTEND
     <article class='slide slide-list'>
       <h2>JavaScript Arithmetic Operators</h2>
       <p>We can use JavaScript to do math using arithmetic <span class="keyword">operators</span>.</p>
-      <p>The arithmetic operators in JavaScript are (+) for addition, (-) for subtraction, (*) for multiplication and (\) for division.</p>
-<textarea class='coder-editor'>
-<script>
+      <p>Some of the arithmetic operators in JavaScript are (+) for addition, (-) for subtraction, (*) for multiplication and (\) for division.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  document.write("Addition: ");
   document.write(20 + 20);
-</script>
-</textarea>
+
+  document.write("<br />Subtraction: ");
+  document.write(20 - 20);
+
+  document.write("<br />Multiplication: ");
+  document.write(20 * 20);
+
+  document.write("<br />Division: ");
+  document.write(20 / 20);
+
+SCRIPTEND</textarea>
 	  <span class="marker">*</span>
     </article>
 
@@ -821,111 +860,117 @@ SCRIPTEND
       <p>Getting JavaScript to do math can be very useful.<br />
       For example, we can use it to calculate totals in a shopping cart form.</p>
       <p>Instead of using just numbers, JavaScript can do math using variables with numerical values.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  var tshirtPrice = 25;
+  var androidPrice = 10;
+
+  //var totalPrice;
+  //document.write(totalPrice);
+
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
   var tshirtPrice = 25;
   var androidPrice = 10; 
-</script>
-</textarea>
-	  <span class="marker">*</span>
-    </article>
 
-    <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
-    <article class='slide slide-list'>
-      <h2>Arithmetic Operators,<br />
-       Numbers & Strings</h2>
-      <br />
-      <p>Remember there were different variable types?  Arithmetic operators can only be performed on numerical values.</p>
-      <p>But numbers can be declared as strings too so be careful!</p>
-      <p>If you put double quotes (" ") or single quotes (' ') around the value, the computer will thinks it's a string.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  var firstNumber = "20";
-  var secondNumber = 10;
-  document.write(firstNumber + secondNumber);
-</script>
-</textarea>
+  var totalPrice = tshirtPrice + androidPrice;
+  document.write(totalPrice);
+
+SCRIPTEND</script>
 	  <span class="marker">*</span>
     </article>
 
     <!-- SLIDE:  ADD SHOPPING CART ITEMS -->
     <article class='slide slide-list'>
-      <h2>Shopping Cart: Totals and Discounts</h2>
-      <p style="margin-bottom:0;">Let's try applying some arithmetic operations to our shopping cart.</p>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Totals and Discounts</h2>
+      <p style="margin-bottom:0;">Let's pretend that someone has checked out of our outline store intending to buy 1 t-shirt and 1 Android plushie. Apply some arithmetic operations to get the final total after applying a discount.</p>
+      <div class="hint">
+        <p>1. Calculate the sub-total given <code>tshirtPrice</code> and <code>androidPrice</code>.
+          <br />
+          2. Calcuate the discount amount given the sub-total and <code>discountPercentage</code>.
+          <br />
+          3. Calcuate the final total given the sub-total and discount amount.
+        </p>
+      </div>
       <div class="reminders single-line">
         <p>addition (+), subtraction (-), multiplication (*), division (/)</p>
       </div>
       <br />
-<textarea class='coder-editor coder-editor-full'>
-<script>
+<textarea class='coder-editor coder-editor-full' data-save='exercise-totals-and-discounts'>SCRIPT
+
   var tshirtPrice = 25;
   var androidPrice = 10;
   var discountPercentage = 15;
 
-  // What is the cost of one t-shirt and one android?
-  var total;
-  //total = **********
-  document.write(total);
+  /* 1. What is the cost of one t-shirt and one android? */
+  var subTotal;
+  //subTotal = **********
+  document.write("Sub-Total: " + subTotal);
   document.write("<br />");
 
-  // Guess what?  Ladies Learning Code gets 15% off!  
-  // Figure out how much the discount will be.
+  /* Guess what? Ladies Learning Code students get a percentage discount!
+     2. Figure out how much the discount will be. */
   var discountAmount;
   //discountAmount = **********
-  //document.write(discountAmount);
+  document.write("Discount Amount: " + discountAmount);
   document.write("<br />");
   
-  // Apply the discount to get the final price.
-  var finalTotal
+  /* 3. Apply the discount to get the final price. */
+  var finalTotal;
   //finalTotal = **********
-  //document.write(finalTotal);
-</script>
-</textarea>
+  document.write("Final Total: " + finalTotal);
+
+SCRIPTEND</textarea>
+    <p class="solution-link">If you get stuck, <a href="exercises/solutions/totals-and-discounts.txt">click here</a> for the full solution.</p>
 	  <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: INCREMENT AND DECREMENT -->
     <article class='slide slide-list'>
       <h2>Re-assigning Variables</h2>
-      <p>Even after a variable has been declared with a value, we can still<br />
-      <strong>re-assign</strong> the value.  For example, we may want to increase or decrease values up or down by 1.  This will come in handy when we discuss <strong class="keyword">Loops</strong> later on.
+      <p>Even after a value has been set for the first time, we can still overwrite it and
+      <strong>re-assign</strong> a new value.</p>
+      <p>For example, we may want to increase or decrease values. (This will come in handy when we discuss <strong class="keyword">loops</strong> later on.)
       </p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  //declaring variable
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // Declare and initialize the variable with a default value
   var numberOfCookies = 0;
+  document.write("I started off with " + numberOfCookies + " cookies.<br />");
   
-  //re-assigning the value by adding 1
+  // Add 1 to the current value of the variable, 
+  // then re-assign the new value to the same variable
   numberOfCookies = numberOfCookies + 1;
-  alert("I will only have " + numberOfCookies + ".");
+  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookies.<br />");
   
-  //declaring another variable  
-  var remainingCookies = 4;
-  
-  //re-assigning the value by subtracting 1
-  remainingCookies = remainingCookies - 1;
-  alert("I just ate a cookie. Now I have " + remainingCookies + " left."); 
-</script>
-</textarea>
+  // Subtract 1 from the current value of the variable, 
+  // then (once again) re-assign the new value to the same variable
+  numberOfCookies = numberOfCookies - 1;
+  document.write("I just ate a cookie. Now I have " + numberOfCookies + " left."); 
+
+SCRIPTEND</textarea>
+
     </article>
 
     <!-- SLIDE: "LIKE" BUTTON  -->
     <article class='slide slide-list'>
-      <h2>Who loves LadiesLearningCode?</h2>
+      <h2>Who loves Ladies Learning Code?</h2>
       <p>Don't worry about the function or DOM stuff right now.<br />
       We'll get a little more into that later.</p>
       <p>Run it and see what happens!</p>
 <textarea class='coder-editor coder-editor-full'>
 <link rel="stylesheet" type="text/css" href="exercises/slides.css">
 
-<script>
+SCRIPT
   var loves = 0;
   function moreLove(){
      //re-assigning the value of the love variable
      loves = loves + 1;
      document.getElementById('update').innerHTML = loves;
   }
-</script>
+SCRIPTEND
 
 <div id="loveLLC">
   <button onclick="moreLove();">
@@ -938,44 +983,60 @@ SCRIPTEND
 
     <!-- SLIDE: MINI-EXERCISE #2 - ADD/REMOVE ITEMS - ONE PRODUCT  -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #2</h2>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Quantities</h2>
       <br />
       <p>Here's a one-product shopping page where you can update the<br />
       quantity by adding or removing it from the shopping cart.</p>
-      <p>Here's what it will look like.</p>
-      <img src="exercises/assets/android-quantity.png" alt="android-quantity" width="225" height="282" />
-      <p>Go to the next slide to get the exercise code.</p>
+      <p class="centered">Here's what it should look like:<br />
+        <img src="exercises/assets/android-quantity.png" alt="android-quantity" width="225" height="282" /></p>
+      <p>This exercise requires the help of <span class="keyword">functions</span> which we haven't covered yet but have a look over everything for a preview. Go to the next slide to get the exercise code.</p>
 	</article>
 	
 	<!-- SLIDE: MINI-EXERCISE #2 : Code page -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #2: Go! (5-10 minutes)</h2>
-      <div class="hint single-line">
-      	<p>How do we increase or decrease the value of the variable?</p>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Quantities</h2>
+      <p>Use the <code>quantity</code> variable to keep track of additions and subtractions to the running total.</p>
+      <div class="hint">
+        <p>1. The "Add" and "Remove" buttons haven't been clicked yet so <code>quantity</code> needs to be initialized to a default value first.<br/>
+          2. Use your knowledge of arithemetic operators and variable assignment to re-calculate the value of <code>quantitity</code>.<br />
+          3. Same as step 2 above.</p>
       </div>
-<textarea class='coder-editor coder-editor-full'  data-save='exercise2'>
-<script>
-  /* 1. set var 'quantity' to start at 0. This will be
-  used to hold the value for the quantity of robots */   
-  var quantity =    
+<textarea class='coder-editor coder-editor-full' data-save='exercise-quantities'>SCRIPT
+
+  /* 1. Set 'quantity' to start at 0. This will be used
+        to hold the value for the quantity of ordered robots */   
+  var quantity;
+  //quantity = ********   
     
-  function addItem(){
-    // CODE HERE EXECUTES WHEN YOU PRESS THE 'ADD' BUTTON 
-    //2. set the variable 'quantity' to increase by 1 HERE
+  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
+  // EACH TIME YOU PRESS THE 'ADD' BUTTON 
+  function addItem() {
+
+    /* 2. Set the variable 'quantity' to INCREASE by 1: */
+    //quantity = ******** 
          
     refreshTotal();
   }
-  function removeItem(){
-    // CODE HERE EXECUTES WHEN YOU PRESS THE 'REMOVE' BUTTON  
-    //3. set the variable 'quantity' to decrease HERE
+
+  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
+  // EACH TIME YOU PRESS THE 'REMOVE' BUTTON 
+  function removeItem() {
+
+    /* 3. Set the variable 'quantity' to DECREASE by 1: */
+    //quantity = ********  
        
     refreshTotal();
   }   
-  function refreshTotal() {         
-    var totalCost = quantity * 20; //quantity * fixed price
-    document.getElementById('updateQuantity').value = quantity; //updates
+
+  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
+  // ON DEMAND, IN ORDER TO UPDATE THE HTML TEXT FIELD
+  function refreshTotal() {
+    document.getElementById('updateQuantity').value = quantity;
   }
-</script>
+
+SCRIPTEND
 
 <link rel="stylesheet" href="exercises/slides.css" type="text/css" />
 <div class="item">
@@ -990,45 +1051,34 @@ SCRIPTEND
 </div>
 </textarea>
 
-<script type='coder-solution'>
-<!-- SOLUTION -->
-SCRIPT
-  /* 1. set var 'quantity' below to start at 0. This is the variable will be used to hold 
-the value for the quantity of robots */		
-  var quantity = 0;		
-		
-  function addItem(){	
-    //2. set the variable 'quantity' to increase by 1 HERE
-    quantity = quantity + 1;
-			 
-    refreshTotal();
-  }
-  function removeItem(){	
-    //3. set the variable 'quantity' to decrease by 1 HERE
-    quantity = quantity - 1; 
-			
-    refreshTotal();
-  }		
-  function refreshTotal() {					
-    var totalCost = quantity * 20; //quantity * fixed price
-    document.getElementById('updateQuantity').value = quantity; //updates
-  }
-SCRIPTEND
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/quantities.txt">click here</a> for  the full solution.</p>
 
-<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-  <br />
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button>
-  <br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly />
-  <br />
-</div>
-</script>
     </article>
 
+    <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
+    <article class='slide slide-list'>
+      <h2><span style="font-size: 0.8em;">Arithmetic Operators: </span>Numbers vs. Strings</h2>
+      <p>Remember how there are different variable types?  Arithmetic operators can only be performed on numerical values.</p>
+      <p>But numbers can come disguised as strings so be careful!</p>
+      <p>When the addition (<code>+</code>) operator is used on strings, it doesn't "add" values, it <span class="keyword">concatenates</span> them.</p>
+<textarea class='coder-editor'>SCRIPT
+
+  var num1 = 20;
+  var num2 = 10;
+
+  document.write(num1 + num2);
+
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
+  var num1 = "20";
+  var num2 = 10;
+
+  document.write(num1 + num2);
+
+SCRIPTEND</script>
+    <span class="marker">*</span>
+    </article>
     
     <!-- SLIDE: CONCATENATION -->
     <article class='slide slide-list'>
@@ -1078,35 +1128,40 @@ SCRIPTEND
     <!-- SLIDE: Concatenation - update exercise #2 -->
     <article class='slide slide-list'>
       <h2>Concatenation in action (results)</h2>
-      <p>Let's re-visit mini-exercise #2 and add a total cost field.</p>
+      <p>Let's re-visit the last mini-exercise and add a total cost field.</p>
 
-<textarea class='coder-editor coder-editor-full'>
-<script>	
-  var quantity = 0;		
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+  var quantity = 0;
 		
   function addItem(){	
     quantity = quantity + 1;			 
     refreshTotal();
   }
+
   function removeItem(){	
     quantity = quantity - 1; 
     refreshTotal();
   }		
-  function refreshTotal() {					
-    //this will update the HTML textfield
+
+  function refreshTotal() {	
+
+    // This line will update the quanity HTML textfield
     document.getElementById('updateQuantity').value = quantity; 
 
-    //EXAMPLE: Use concatenation to add a human readable $ sign to the price
-    var totalCost = quantity * 20; //quantity * fixed price OF $20
-    //var totalCostToShow = 
-
-    //this will update the HTML textfield
+    /* CURRENT: The total cost HTML textfield displays only a number right now */
+    var totalCost = quantity * 20; //fixed price of $20
     document.getElementById('updateTotal').value = totalCost;
+
+    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
+    //var totalCostToShow = 
+    //document.getElementById('updateTotal').value = totalCostToShow;
   }
-</script>
+SCRIPTEND
+
 <link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
 <div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />   
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
+  <div id="price">$20 each</div>
   <button onclick="addItem();">Add</button>
   <button onclick="removeItem();">Remove</button><br />
   Quantity
@@ -1115,11 +1170,47 @@ SCRIPTEND
   <input type="text" id="updateTotal" value="0" readonly />
 </div>
 </textarea>
+<script type='coder-solution'>SCRIPT
+  var quantity = 0;
+    
+  function addItem(){ 
+    quantity = quantity + 1;       
+    refreshTotal();
+  }
+
+  function removeItem(){  
+    quantity = quantity - 1; 
+    refreshTotal();
+  }   
+
+  function refreshTotal() { 
+
+    // This line will update the quanity HTML textfield
+    document.getElementById('updateQuantity').value = quantity; 
+
+    /* CURRENT: The total cost HTML textfield displays only a number right now */
+    var totalCost = quantity * 20; //fixed price of $20
+    //document.getElementById('updateTotal').value = totalCost;
+
+    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
+    var totalCostToShow = "$" + totalCost;
+    document.getElementById('updateTotal').value = totalCostToShow;
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
+  <div id="price">$20 each</div>
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</script>
     </article>
-
-
-
-
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
@@ -1382,48 +1473,68 @@ if (condition) {<br>
         <h2>Testing Conditions</h2>
         <p>What does a condition actually look like?</p>
         <p><code> if ( condition ) { ... } </code></p>
-<textarea class="coder-editor">
-<script>
-// Straight Booleans
+        <p>Let's try also comparing Booleans using variables, Numbers, and Strings.</p>
+<textarea class="coder-editor coder-editor-full">SCRIPT
+
+// PURE BOOLEANS
 if ( true ) {  
   document.write( "#1 this works. <br />" );
 } 
+
 if ( false ) {  
   document.write( "#2 will not work. <br />" );
 }
 
-// Booleans via variables
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
+// PURE BOOLEANS
+if ( true ) {  
+  document.write( "#1 this works. <br />" );
+}
+
+if ( false ) {  
+  document.write( "#2 will not work. <br />" );
+}
+
+// COMPARING VARIABLES AS BOOLEANS
 var isSunday = true;
 var isSaturday = false;
+
 if ( isSunday == true ) {
   document.write( "#5 Yeah, laundry day! <br />" );
 }
+
 if ( isSaturday == true ) {
   document.write( "#6 Nope, you can't go back in time! <br />" );
 }
 
-// Numbers
+// COMPARING NUMBERS
 if ( 1 &lt; 2 ) {
   document.write( "#3 workks. <br />" );
 }
+
 if ( 2 &gt; 1 ) {
   document.write( "#4 won't work. <br />" );
 }
 
-// Strings
+// COMPARING STRINGS
 var emptyString = "";
 var filledString = "Woot! Conditionals!";
+
 if ( emptyString == "" ) {
   document.write( "#7 Yep, the string was empty. <br />" );
 }
+
 if ( filledString == "" ) {
   document.write( "#8 won't work. <br />" );
 }
+
 if ( filledString == "Woot! Conditionals!" ) {
   document.write( "#9 Code strong. <br />" );
 }
-</script>
-</textarea>
+
+SCRIPTEND</script>
       </article>        
 
     <!-- SLIDE:  -->
@@ -1559,211 +1670,243 @@ if ( salePrice > regularPrice ) {
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Variables, Operators, Concatenation and Conditionals</h2>
-      <p>
-Now that we know what <span class="keyword">variables</span>, <span class="keyword">operators</span> and <span class="keyword">conditionals</span> are, let's put them all into action using dynamic content. </p>
-      <textarea class='coder-editor coder-editor-full'>
+      <p>Now that we know what <span class="keyword">variables</span>, <span class="keyword">operators</span> and <span class="keyword">conditionals</span> are, let's put them all into action using dynamic content. </p>
+<textarea class='coder-editor coder-editor-full'>
 <script>
-  prompt("How much is that robot?");
-  //var price = prompt("How much are those shoes?");
-  if ( price <= 100 ) {
-  document.write("$" + price + " isn't bad. Buy them!");
+
+  var yourBudget = 100; // all you've got is $100
+  var robotPrice = 20;  // a default price of $20 for now
+
+  /* Instead of a fixed value, get a dynamic price via a prompt popup: */
+  //var robotPrice = prompt("How much is that robot?");
+
+  if ( robotPrice <= yourBudget ) {
+    document.write("$" + robotPrice + " fits into my budget. Buy it!");
   } else {
-  document.write("$" + price + "? Good Lawd! That's a lot of money!");
+    document.write("$" + robotPrice + "? Good Lawd! I can't afford that!");
   }
+
 </script></textarea>
+<script type="coder-solution">SCRIPT
+
+  var yourBudget = 100; // all you've got is $100
+  //var robotPrice = 20;  // a default price of $20 for now
+
+  /* Instead of a fixed value, get a dynamic price via a prompt popup: */
+  var robotPrice = prompt("How much is that robot?");
+
+  if ( robotPrice <= yourBudget ) {
+    document.write("$" + robotPrice + " fits into my budget. Buy it!");
+  } else {
+    document.write("$" + robotPrice + "? Good Lawd! I can't afford that!");
+  }
+
+SCRIPTEND</script>
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #3 (10 minutes)</h2>
-      <p>
-        Uh-oh! Someone can attempt to put a negative number of products in their shopping cart! Complete task #1 below to avoid this scenario. Similarly, for task #2, warn the user that they are attempting to check out with an empty basket.
+      <h2><div class="smaller">Mini-exercise (10 minutes)</div>
+        Quantity Check</h2>
+      <p>Uh-oh! Someone can attempt to put a negative number of products in their shopping cart! (This is based on the previous Quantity mini-exercise so it should look very familiar!)
       </p>
-      <p>
-        This is based on Exercise #3 so it should look very familiar!
-      </p>
-            <p class="hint">
-        (Hint:  How do you test if a number is greater than, less then, or equal to another number?)
-      </p>
-      </article>
-      
-          <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Mini-exercise #3 (10 minutes)</h2>
-      <p class="assignment">TODO: Check within the code for your THREE tasks.</p>
-<textarea class='coder-editor coder-editor-full' data-save='exercise3'>
+      <div class="hint">
+        <p>1. Use a conditional test to avoid a negative quantity. Typically this involves comparing against the number 0 and you can go about it in a few ways with the same result.<br />
+        2. Similarly, warn the user that they are attempting to check out with an empty basket.<br />
+        3. Bonus: Practice your concatention and display the price using a dollar sign.
+      </div>
+
+<textarea class='coder-editor coder-editor-full' data-save='exercise-quantity-check'>
 <script>
+
   var quantity = 0;   
 
   function addItem(){ 
-    quantity++;
+    quantity = quantity + 1;
     refreshTotal();
   }
   
   function removeItem(){
-    /* *** YOUR CODE _BELOW_ HERE **** */
-    /* 1. Use a conditional if/else statement on the "quantity" variable 
+    /* 1. Use a conditional if or if/else statement on the "quantity" variable 
           to avoid having negative products. */
+    /* *** YOUR CODE _BELOW_ HERE **** */
 
-    quantity--; 
+    quantity = quantity - 1; 
 
     /* *** YOUR CODE ^ABOVE^ HERE **** */
     refreshTotal();
   }  
 
   function checkout() {
+    /* 2. Use a conditional if/else statement on the "quantity" variable 
+          to determine if the shopping cart is (or is not) empty, then
+          show the correct popup message. */
     /* *** YOUR CODE _BELOW_ HERE **** */
-    /* 2. Use a conditional if statement on the "quantity" variable 
-          to determine if the shopping cart is (or is not) empty. */
 
-    // below are some alert messages you can use
     alert( "Sorry, you don't have anything in your cart!" );
     alert( "Thank you for your order!" );
     
     /* *** YOUR CODE ^ABOVE^ HERE **** */
   } 
   
-  function refreshTotal() {         
-    var totalCost = quantity * 20; //quantity * fixed price
-    document.getElementById('updateQuantity').value = quantity; //updates
-    // 3. A nice to have: Put a dollar sign in front of the totalCost
-    document.getElementById('updateTotal').value = (totalCost);
+  function refreshTotal() {       
+
+    // calculate the totalCost with a fixed price of $20.  
+    var totalCost = quantity * 20;
+
+    // then update the quantity text field
+    document.getElementById('updateQuantity').value = quantity;
+
+    // update the total cost text field
+    // 3. A nice to have: Put a dollar sign in front of the total cost
+    /* *** YOUR CODE _BELOW_ HERE **** */
+
+    document.getElementById('updateTotal').value = totalCost;
+
+    /* *** YOUR CODE ^ABOVE^ HERE **** */
   }
 </script>
 
-        <div id="exercise2" style="text-align: center;">
-          <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-          <br />
-          <button onclick="addItem();">Add</button>
-          <button onclick="removeItem();">Remove</button>
-          <br />
-          Quantity
-          <input type="text" id="updateQuantity" value="0" readonly style="text-align:center; width: 20px; border: 1px solid #ccc;"/>
-          <br />
-          <br />
-          Total Cost:
-          <input type="text" id="updateTotal" value="" readonly style="border: 1px solid #ccc;"/>
-          <br />
-          <br />
-          <button onclick="checkout();">Check out now!</button>
-        </div>
-      </textarea>
+<div id="exercise2" style="text-align: center;">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
+  <br />
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button>
+  <br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly style="text-align:center; width: 20px; border: 1px solid #ccc;"/>
+  <br />
+  <br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="" readonly style="border: 1px solid #ccc;"/>
+  <br />
+  <br />
+  <button onclick="checkout();">Check out now!</button>
+</div>
+</textarea>
+
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/quantity-check.txt">click here</a> for  the full solution.</p>
+
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #4 (5-10 minutes)</h2>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes)</div>
+        Form validation
+      </h2>
       <p>
-        Let's revisit the shipping form again -- here's a very simple shipping form however you don't want someone to be able to submit their order if they haven't filled out their address!
+        Let's revisit the shipping information form again -- however you don't want someone to be able to submit their order if they haven't filled out their address!
       </p>
       <p>
-        You have been supplied with 1 variable (&quot;address&quot;) which will automagically match what is typed into the form field (minus extra whitespace) after you press the &quot;Check out now!&quot; button.
+        You have been supplied with 1 variable (<code>address</code>). After you press the &quot;Check out now!&quot; button, <code>address</code> which will <em>automagically</em> update to what is typed into the text field.
       </p>
-      <p class="hint">
-        (Hint: If you don't type anything into the address field, you get an &quot;empty string&quot;. How do you test for an empty string?)
+      <div class="hint">
+        <p>1. Use a conditional test so someone cannot supply a blank address. Hint: If you don't type anything into the address field, you get an &quot;empty string&quot;. How do you test for an empty string? (Try looking at the solution on <a href="index.html#slide-63" target="_blank">Slide #63</a>.)
       </p>
+    </div>
       
-      </article>
-          <article class='slide slide-list'>
-      <h2>Mini-exercise #4 (5-10 minutes)</h2>
-            <p class="assignment">TODO: Check within the code for your ONE task.</p>
-<textarea class='coder-editor coder-editor-full' data-save='exercise4'>
+<textarea class='coder-editor coder-editor-full' data-save='exercise-form-validation'>
 <script>
   function validateForm() {
 
     // automagically get the typed values from the form
     var address = document.getElementById("address").value;
 
-    /* *** YOUR CODE _BELOW_ HERE **** */
-
-    /* TODO: Use a conditional if/else statement on the "address" variable 
+    /* 1. Use a conditional if/else statement on the "address" variable 
        to determine if the address field is (or is not) blank, 
        then show the proper error or confirmation alert message. */
 
-    // below are some alert messages you can use
+    /* *** YOUR CODE _BELOW_ HERE **** */
+
     alert( "Sorry there are errors. Form fields cannot be blank!" );
     alert( "Thank you for your order!" );
 
     /* *** YOUR CODE ^ABOVE^ HERE **** */
   }
 </script>
-        Address:
-        <input type="text" id="address" />
-        <br />
-        <br />
-        <button onclick="validateForm()">Check out now!</button>
-      </textarea>
+
+Address:
+<input type="text" id="address" />
+<br />
+<br />
+<button onclick="validateForm()">Check out now!</button>
+</textarea>
+
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/form-validation.txt">click here</a> for  the full solution.</p>
+
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
-      <h2>Mini-exercise #5 (15-20 minutes)</h2>
+      <h2><div class="smaller">Mini-exercise (15-20 minutes)</div>
+        Complex form validation</h2>
       <p>
-        Now here's a more complex shopping form that you require all fields to be filled in. You have been supplied with 3 additional variables which will automagically update: &quot;name&quot;, &quot;city&quot;, and &quot;postal&quot;.
+        Now here's a more complex shopping form that you require all fields to be filled in. You have been supplied with 3 additional variables which will automagically update: <code>name</code>, <code>city</code>, and <code>postal</code>.
       </p>
       
-      <p class="hint">
-        (Hint for task #3: How do you test for something AND somethingElse OR anotherThing at one time?)
-      </p>
+      <div class="hint">
+        <p>1. Since there are multiple fields, we'll need to keep track of them. Simplest way would be to use a descriptively named variable that can hold a true or false value.<br />
+        2. Similiar to the previous exercise, use a conditional test so someone cannot supply any blank fields.<br />
+        3. Alert the right message to the user. (Hint: How do you test for something AND something else OR another thing at one time? Try looking at the cheatsheet on <a href="index.html#slide-64" target="_blank">Slide #64</a>.)
+      </div>
+
+<textarea class='coder-editor coder-editor-full' data-save='exercise-complex-form-validation'>
+<script>
+function validateForm() {
+
+  // automagically get the typed values from the form
+  var name = document.getElementById("name").value;
+  var address = document.getElementById("address").value;
+  var city = document.getElementById("city").value;
+  var postal = document.getElementById("postal").value;
+
+  /* *** YOUR CODE _BELOW_ HERE **** */
+
+  /* 1. Declare 4 variables named 
+        "nameIsBlank", "addressIsBlank", "cityIsBlank", and "postalIsBlank" 
+        that will each hold Boolean values. */
+
+
+  /* 2a. Use conditional if/else statements on the variables 
+         "name", "address", "city", and "postal" to determine 
+         if each individual field is not blank.
+
+         Update their respective Boolean variables (e.g. "nameIsBlank") 
+         based on their individual if/else statements. */
+
+
+  /* 3. In a final conditional, test ALL FOUR Boolean variables 
+        and alert the proper message. Below are some alerts you can use. */
+
+  alert( "Sorry there are errors. Form fields cannot be blank!" );
+  alert( "Thank you for your order!" );
+
+  /* *** YOUR CODE ^ABOVE^ HERE **** */
+}
+</script>
+
+Name:
+<input type="text" id="name" />
+<br />
+Address:
+<input type="text" id="address" />
+<br />
+City:
+<input type="text" id="city" />
+<br />
+Postal Code:
+<input type="text" id="postal" />
+<br />
+<br />
+<button onclick="validateForm()">Check out now!</button>
+</textarea>
+
+    <p class="solution-link">If you get stuck, <a href="exercises/solutions/complex-form-validation.txt">click here</a> for  the full solution.</p>
+
       <p>
         Bonus: There's always different ways to get to the same end goal. If you're finished early, try out different ways that you can reduce the number of variables and lines of code.
       </p>
-      </article>
-      
-     <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Mini-exercise #5 (15-20 minutes)</h2>     
-      <p class="assignment">TODO: Check within the code for your FOUR tasks.</p>
-<textarea class='coder-editor coder-editor-full' data-save='exercise5'>
-<script>
-  function validateForm() {
 
-    // automagically get the typed values from the form
-    var name = document.getElementById("name").value;
-    var address = document.getElementById("address").value;
-    var city = document.getElementById("city").value;
-    var postal = document.getElementById("postal").value;
-
-    /* *** YOUR CODE _BELOW_ HERE **** */
-
-    /* 1. Declare 4 variables named 
-          "nameIsBlank", "addressIsBlank", "cityIsBlank", and "postalIsBlank" 
-          that will each hold Boolean values. */
-
-
-    /* 2a. Use conditional if/else statements on the variables 
-           "name", "address", "city", and "postal" to determine 
-           if each individual field is not blank.
-
-       2b. Update their respective Boolean variables based on their 
-           individual if/else statements. */
-
-
-    /* 3. In a final conditional, test ALL FOUR fields 
-          and alert the proper message  */
-
-    // below are some alert messages you can use
-    alert( "Sorry there are errors. Form fields cannot be blank!" );
-    alert( "Thank you for your order!" );
-
-    /* *** YOUR CODE ^ABOVE^ HERE **** */
-  }
-</script>
-        Name:
-        <input type="text" id="name" />
-        <br />
-        Address:
-        <input type="text" id="address" />
-        <br />
-        City:
-        <input type="text" id="city" />
-        <br />
-        Postal Code:
-        <input type="text" id="postal" />
-        <br />
-        <br />
-        <button onclick="validateForm()">Check out now!</button>
-      </textarea>
     </article>
 
     <!-- SLIDE:  -->
@@ -1782,9 +1925,12 @@ Now that we know what <span class="keyword">variables</span>, <span class="keywo
       <h1>Lunch time!</h1>
       <p>Come back for 2:00pm</p>
     </article>
-    
+  
+  <!-- **************************************** -->  
   </div>
   <!-- END div id=presentation -->
+
+  <div class="centered" style="font-size: 12px; padding-top: 10px;">(Use the left and right arrow keys on your keyboard to navigate.)</div>
 
   <script src='src/jquery.min.js'></script>
   <script src="src/modernizr.js"></script>
