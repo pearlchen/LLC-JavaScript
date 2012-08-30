@@ -599,7 +599,7 @@ SCRIPTEND</textarea>
 // This is how you leave a single line comment.
 
 // You can write many single line comments.
-// Just make sure to add the double backslash
+// Just make sure to add the double slash
 // for every new line.
 </pre>
       <p>Here's another way to comment larger blocks of text.</p>
@@ -619,20 +619,42 @@ want to write a longer message */
       <p><span class="keyword">Assign</span> a value to the variable using the equals (<code>=</code>) sign.</p>
       <pre class='prettyprint'>email = "hello@christinatruong.com";</pre>
       <p>Now the computer will remember my email address!</p>
+      <div class="reminders">
+        <p>Take note that the value of the variable is written between quotes.<br />
+        More on this soon.
+        </p>
+      </div>
     </article>
     
-    <!-- SLIDE: VARIABLES HOW-TO -->
+    <!-- SLIDE: STATEMENTS -->
     <article class='slide slide-list'>
       <h2>Aside: Statements</h2>
       <p>End a <span class="keyword">statement</span> with a semicolon (<code>;</code>).</p>
-      <div class="reminders">
-        <p><strong>Statements</strong> are commands that tell the computer what to do.
-          <br />
-          Ending the statement with a semicolon is like ending a sentence
-          <br />
-          with a period. It tells the computer that the statement is done.
-        </p>
-      </div>
+      <p><strong>Statements</strong> are commands that tell the computer what to do.
+        <br />
+        Ending the statement with a semicolon is like ending a sentence
+        <br />
+        with a period. It tells the computer that the statement is done.
+      </p>
+      <p>You can also declare a variable and its value in one statement.</p>
+<pre class='prettyprint'>var email;
+email = "hello@christinatruong.com";
+</pre>
+<pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
+    </article>
+
+    <!-- SLIDE: AN ASIDE -->
+    <article class='slide slide-list'>
+      <h2>Variables: Say My Name</h2>
+      <br />
+      <p>Let's try creating some variables and outputting the values to make sure we've declared it using the proper syntax.</p>
+      <p>Try creating a variable for your first name and another variable for your last name.  Output the values using document.write().</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  var firstName = "Christina";
+  document.write(firstName);
+
+SCRIPTEND</textarea>
     </article>
 
      <!-- SLIDE: VARIABLES - assignment operator -->
@@ -658,25 +680,24 @@ want to write a longer message */
     <!-- SLIDE: VARIOUS VARIABLES  -->
     <article class='slide slide-list'>
       <h2>Various Variables</h2>
-      <p>Variables can hold different kinds of values.</p>
+      <p>Variables can hold different kinds of values. We've been using <span class="keyword">strings</span> so far but variables can also hold other kinds of values.</p>
       <p>1. Numeric variable (integers &amp; decimals)</p>
       <pre class='prettyprint'>
 var someIntegerNumber = 10;
 var someDecimalNumber = 10.5;</pre>
-      <p>2. String variable (letters, words &amp; sentences)</p>
-      <pre class='prettyprint'>
-var singleWordString = "hello";
-var sentenceString = "Hello, good day to you!";
-var numberString = "10";
-</pre>
-      <br />
-      <p>3. Boolean variable (true/false)</p>
+      <p>2. Boolean variable (true/false)</p>
       <pre class='prettyprint'>
 var isSaturday = false;
 var isSunday = true;
 </pre>
+      <p>3. String variable (letters, words &amp; sentences)</p>
+      <pre class='prettyprint'>
+var singleWordString = "hello";
+var sentenceString = "Hello, good day to you!";
+var numberString = "10";
+</pre>      
       <div class="reminders single-line">
-        <p>String values are always written inside single or double quotes ('string' or "string").</p>
+        <p>Only string values are written inside single or double quotes ('string' or "string").</p>
       </div>
       <br />
     </article>
@@ -795,6 +816,23 @@ SCRIPTEND</textarea>
 	  <span class="marker">*</span>
     </article>
 
+    <!-- SLIDE: GETTING USER INPUT -->
+    <article class='slide slide-list'>
+      <h2>Getting user input</h2>
+      <p>
+        So far we've been assigning the values to our variables. But what if we don't know what that value is going to be?
+      </p>
+      <p>
+        Remember <code>prompt()</code>? This triggers an popup box that allows user input.  We can assign the prompt to a variable, thus saving the value of the user input.
+      </p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+prompt("What day is it today?");
+
+//var todaysDate = prompt("What day is it today?");
+//document.write(todaysDate);
+  
+SCRIPTEND</textarea>
+    </article>
 
     <!-- SLIDE: MINI-EXERCISE #1 -->
     <article class='slide slide-list'>
@@ -932,8 +970,7 @@ SCRIPTEND</textarea>
       <h2>Re-assigning Variables</h2>
       <p>Even after a value has been set for the first time, we can still overwrite it and
       <strong>re-assign</strong> a new value.</p>
-      <p>For example, we may want to increase or decrease values. (This will come in handy when we discuss <strong class="keyword">loops</strong> later on.)
-      </p>
+      <p>For example, we may want to increase or decrease values.</p>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
   // Declare and initialize the variable with a default value
@@ -943,7 +980,7 @@ SCRIPTEND</textarea>
   // Add 1 to the current value of the variable, 
   // then re-assign the new value to the same variable
   numberOfCookies = numberOfCookies + 1;
-  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookies.<br />");
+  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookie.<br />");
   
   // Subtract 1 from the current value of the variable, 
   // then (once again) re-assign the new value to the same variable
