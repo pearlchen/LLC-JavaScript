@@ -179,8 +179,16 @@ function nameOfFunction() {
         The code within functions don't execute until it's <strong class="keyword">called</strong>!
       </p>
       <p>Let's try that again.</p>
-      <textarea class='coder-editor'>
-<script>
+<textarea class='coder-editor'><script>
+  //defining the function
+  function sayMyName() {
+    alert("Christina");
+  
+  }
+  //Calling the function
+  //sayMyName();
+</script></textarea>
+<script type="coder-solution">SCRIPT
   //defining the function
   function sayMyName() {
     alert("Christina");
@@ -188,8 +196,7 @@ function nameOfFunction() {
   
   //Calling the function
   sayMyName();
-</script>
-      </textarea>
+SCRIPTEND</script>
     </article>
 
     <!-- SLIDE: CALLING FUNCTIONS FROM EVENTS -->
@@ -214,14 +221,27 @@ function nameOfFunction() {
 </script>
 
 <!-- call function from a button click -->
-<input type="button" onclick="sayMyName()" value="Say my name!">
-<br />
-<br />
-<!-- call function from an HTML tag -->
-<div onclick="sayMyName();">
-  Click here to call the function!
-</div>
+<input type="button" value="Say my name!" >
 </textarea>
+<script type="coder-solution">SCRIPT
+  //define function
+  function sayMyName() {
+    alert("Christina");
+  } 
+SCRIPTEND
+
+<!-- call function from a button click -->
+<input type="button" value="Say my name!" onclick="sayMyName();" >
+</script>
+<br />
+<p class="sidenote">Note: You can even use <code>onclick()</code> on any HTML element</p>
+<pre class="prettyprint sidenote">
+  <!-- call a function from any HTML tag, not just buttons -->
+  &lt;div onclick="sayMyName();"&gt;
+    Click here to call the function!
+  &lt;/div&gt;
+</pre>
+  </p>
     </article>
 
     <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
@@ -230,7 +250,7 @@ function nameOfFunction() {
       <p>
         Let's take another look at our shopping cart and figure out what the functions are doing.
       </p>
-
+<!--
 <textarea class='coder-editor coder-editor-full'>
 <script>
   var quantity = 0; 
@@ -269,6 +289,45 @@ function nameOfFunction() {
   <input type="text" id="updateTotal" value="0" readonly />
 </div>
 </textarea>
+-->
+<pre class="prettyprint">
+&lt;script&gt;
+  var quantity = 0; 
+    
+  function <strong>addItem()</strong> { 
+    quantity = quantity + 1;      
+    <strong>refreshTotal()</strong>; 
+  }
+  function <strong>removeItem()</strong>{  
+    if (quantity &gt; 0) {
+      quantity = quantity - 1; 
+    }
+    <strong>refreshTotal()</strong>;  
+  }
+
+  function <strong>refreshTotal()</strong> {         
+    var totalCost = quantity * 20; //quantity * fixed price
+    var totalCostToShow = "$" + totalCost;
+    document.getElementById('updateQuantity').value = quantity; //updates
+    document.getElementById('updateTotal').value = totalCostToShow; //updates
+  }
+&lt;/script&gt;
+
+&lt;link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" /&gt;
+&lt;div class="item"&gt;
+  &lt;img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /&gt;
+  &lt;br /&gt;
+  &lt;button onclick="<strong>addItem()</strong>;"&gt;Add&lt;/button&gt;
+  &lt;button onclick="<strong>removeItem()</strong>;"&gt;Remove&lt;/button&gt;
+  &lt;br /&gt;
+  Quantity
+  &lt;input type="text" id="updateQuantity" value="0" readonly /&gt;
+  &lt;br /&gt;
+  &lt;br /&gt;
+  Total Cost:
+  &lt;input type="text" id="updateTotal" value="0" readonly /&gt;
+&lt;/div&gt;
+</pre>
       <span class="marker">*</span>
     </article>
 
@@ -294,17 +353,18 @@ function nameOfFunction() {
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
-  function orderPizza() {
-    var topping = "cheese";
-    var crust = "thin crust";
-    var size = "medium";
 
-    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
-  }
+function orderPizza() {
+  var topping = "cheese";
+  var crust = "thin crust";
+  var size = "medium";
 
-  orderPizza();
-</script>
-      </textarea>
+  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+}
+
+orderPizza();
+
+</script></textarea>
     </article>
 
     <!-- SLIDE: FUNCTIONS PIZZA #2 -->
@@ -317,17 +377,51 @@ function nameOfFunction() {
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
-  function orderAnotherPizza() {
-    var topping = "pepperoni";
-    var crust = "stuffed crust";
-    var size = "small";
 
-    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
-  }
+// original orderPizza:
 
-  orderAnotherPizza();
-</script>
-      </textarea>
+function orderPizza() {
+  var topping = "cheese";
+  var crust = "thin crust";
+  var size = "medium";
+
+  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+}
+
+orderPizza();
+
+// an edited copy of orderPizza...
+
+
+</script></textarea>
+<script type="coder-solution">SCRIPT
+
+// original orderPizza:
+
+function orderPizza() {
+  var topping = "cheese";
+  var crust = "thin crust";
+  var size = "medium";
+
+  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+}
+
+orderPizza();
+
+// an edited copy of orderPizza...
+
+function orderAnotherPizza() {
+  var topping = "pepperoni";
+  var crust = "stuffed crust";
+  var size = "small";
+
+  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+}
+
+orderAnotherPizza();
+
+SCRIPTEND</script>
+
     </article>
 
     <!-- SLIDE: FUNCTIONS PIZZA - GLOBAL VS LOCAL -->
@@ -338,35 +432,58 @@ function nameOfFunction() {
         <strong><code>baseTopping</code></strong>
         variable outside of the function so it can be accessible from anywhere in the program.
       </p>
-      <textarea class='coder-editor coder-editor-full'>
+<textarea class='coder-editor coder-editor-full'>
 <script>
-  var baseTopping = "cheese";
+
+function orderPizza() {
+  var topping = "bacon";
+  var crust = "thin crust";
+  var size = "medium";
+  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size + "<br /><br />");
+} 
+
+function orderAnotherPizza() {
+  var topping = "pepperoni";
+  var crust = "stuffed crust";
+  var size = "small";
+  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+}
   
-  function orderPizza() {
-    var topping = "bacon";
-    var crust = "thin crust";
-    var size = "medium";
-    document.write("Pizza order:<br />" + baseTopping 
-    + "<br />" + topping + ", " + crust + ", " + size + "<br /><br />");
-  } 
-  function orderAnotherPizza() {
-    var topping = "pepperoni";
-    var crust = "stuffed crust";
-    var size = "small";
-    document.write("Pizza order:<br />" + baseTopping 
-    + "<br />" + topping + ", " + crust + ", " + size);
-  }
+orderPizza(); 
+orderAnotherPizza();
+
+</script></textarea>
+<script type="coder-solution">SCRIPT
+
+var baseTopping = "cheese";
+
+function orderPizza() {
+  var topping = "bacon";
+  var crust = "thin crust";
+  var size = "medium";
+  document.write("Pizza order:<br />" + baseTopping 
+  + "<br />" + topping + ", " + crust + ", " + size + "<br /><br />");
+} 
+
+function orderAnotherPizza() {
+  var topping = "pepperoni";
+  var crust = "stuffed crust";
+  var size = "small";
+  document.write("Pizza order:<br />" + baseTopping 
+  + "<br />" + topping + ", " + crust + ", " + size);
+}
   
-  orderPizza(); 
-  orderAnotherPizza();
-</script>
-      </textarea>
+orderPizza(); 
+orderAnotherPizza();
+
+SCRIPTEND</script>
+
     </article>
 
     <article class='slide slide-list'>
       <h2>Functions, Pizza and Parameters</h2>
       <p>
-        This could get cumbersome if we wanted to make a lot of pizzas.  How can we re-use the <code>makePizza()</code> function instead of creating multiple functions? We use <span class="keyword">PARAMETERS</a>.
+        This could get cumbersome if we wanted to make a lot of pizzas.  How can we re-use the <code>makePizza()</code> function instead of creating multiple functions? We use <span class="keyword">parameters</span>.
       </p>
       <p>
         Functions can be used with one parameter, more than one parameter or none at all.
@@ -443,16 +560,20 @@ SCRIPTEND
       <pre class="prettyprint">
  &lt;html&gt;
  &lt;head&gt;
-   &lt;title&gt;JavaScript example!&lt;/title&gt;    
-   &lt;script type="text/javascript"&gt;
+   &lt;title&gt;JavaScript example!&lt;/title&gt; 
+   
+   <strong>&lt;script type="text/javascript"&gt;
      alert("I'm in the head tag!");
-   &lt;/script&gt;
+   &lt;/script&gt;</strong>
+
  &lt;/head&gt;
  &lt;body&gt;
    &lt;div id="example"&gt;This is an example.&lt;/div&gt;
-   &lt;script type="text/javascript"&gt;    
+
+   <strong>&lt;script type="text/javascript"&gt;    
      alert("I'm in the body tag!");
-   &lt;/script&gt;
+   &lt;/script&gt;</strong>
+
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -543,7 +664,6 @@ bentobox.soup = "Miso";
 bentobox.sauce = "Soya";
 bentobox.dessert = "Fruit";</pre>
       </td>
-      </td>
       </tr>
       </table>
     </article>
@@ -619,7 +739,8 @@ Some items are <strong>fixed</strong> (a fruit dessert, a miso soup) but some co
       	<td class="centered"><img src="assets/BentoBox2.png" width="339" height="207" alt="Bento box variation #2" /></td>
       </tr>
       </table>
-</article>
+    </article>
+
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Think of Everything as an Object*</h2>
@@ -634,21 +755,24 @@ var arrayObject = [ ];</pre>
       </div>
       <p>Some objects are simpler than others but almost everything in JavaScript has properties available to us.</p>
       <p class="sidenote">*Again, I need to oversimplify.  The concept called DATA TYPE is a hairy topic. For more info: http://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/ and http://www.2ality.com/2011/03/javascript-values-not-everything-is.html</p>
-</article>
+    </article>
+
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Built-in JavaScript Properties</h2>
       <p>In this workshop we won't be creating any of our own objects but JavaScript already has many objects built into the language.</p>
       <p>Let's look at a string object and the <code>length</code> property which returns the number of characters in a string.  Try putting your own name in here.</p>
-      <textarea class='coder-editor'>
-<script>
+<textarea class='coder-editor'>SCRIPT
+
 var firstName = "Pearl";
 
-var numberOfLetters = firstName.length;
-document.write( numberOfLetters );
-</script>
-      </textarea>
-</article>
+var numLetters = firstName.length;
+document.write( "numLetters: " + 
+                     numLetters );
+
+SCRIPTEND</textarea>
+    </article>
+
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h2>Functions in Objects</h2>
@@ -679,14 +803,14 @@ sayHello = function() {
 sayHello();
 </pre>
         </td>
-      <tr>
+      </tr>
       <tr>
       	<td>
         </td>
         <td>
         </td>
         <td align="center">ↆ</td>
-      <tr>
+      </tr>
       <tr>
       	<td>
         </td>
@@ -702,31 +826,50 @@ welcomeTeam.sayHello = function() {
 welcomeTeam.sayHello();
 </pre>
         </td>
-      <tr>
+      </tr>
       </table>
-</article>
+    </article>
+
     <!-- SLIDE:  -->
     <article class='slide slide-list'>
       <h3>Object Methods</h3>
       <p>When a function is associated with an object we call it a <span class="keyword">METHOD</span>.</p>
       <p>Let's say you're having a robot sale! Everything is 50% off. But, after doing the math, you notice that the sale price is a bit off.. Let's declare a sale price and manipulate it using <code>toFixed()</code>. When you use a method, it gives you access to all the hard work that someone else did and it only takes you one line to use it!</p>
-      <textarea class='coder-editor'>
+<textarea class='coder-editor'>
 <script>
+
 var salePrice1 = 20.00 * 0.50;
 var salePrice2 = 35.00 * 0.50;
 var salePrice3 = 25.99 * 0.50;
 
-//uh-oh, can we make sure we always see 2 decimal spaces?
+// uh-oh, can we make sure we
+// always see 2 decimal spaces?
 document.write( salePrice1 ); 
 document.write( "<br />" ); 
 document.write( salePrice2 );
 document.write( "<br />" ); 
 document.write( salePrice3 );
-</script>
-      </textarea>
-</article>
 
-<!-- SLIDE:  -->
+</script></textarea>
+<script type="coder-solution">SCRIPT
+
+var salePrice1 = 20.00 * 0.50;
+var salePrice2 = 35.00 * 0.50;
+var salePrice3 = 25.99 * 0.50;
+
+// uh-oh, can we make sure we
+// always see 2 decimal spaces?
+document.write( salePrice1.toFixed(2) ); 
+document.write( "<br />" ); 
+document.write( salePrice2.toFixed(2) );
+document.write( "<br />" ); 
+document.write( salePrice3.toFixed(2) );
+
+SCRIPTEND</script>
+
+      </article>
+
+      <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Looking up properties and references</h2>
         <p><code>length</code> and <code>toFixed()</code> are only two of many (many!) more built-in properties and methods of objects in JavaScript.</p>
@@ -803,18 +946,20 @@ eggspressions[3] = "giggling";
       <p>
         To access the value of the second egg in the <code>eggspressions</code> array, use index 1 since it's the second item in the list.
       </p>
-      <textarea class='coder-editor coder-editor-full'>
+<textarea class='coder-editor coder-editor-full'>
 <script>
-  var eggspressions = [];
 
-  eggspressions[0] = "skeptical";
-  eggspressions[1] = "frazzled";
-  eggspressions[2] = "silly";
-  eggspressions[3] = "giggling";
+var eggspressions = [];
 
-  document.write("The 2nd egg is " + eggspressions[1] + " even though it has an index of 1.");
-</script>
-      </textarea>
+eggspressions[0] = "skeptical";
+eggspressions[1] = "frazzled";
+eggspressions[2] = "silly";
+eggspressions[3] = "giggling";
+
+// even though it has an index of 1...
+document.write("The 2nd egg is '" + eggspressions[1] + "'." );
+
+</script></textarea>
     </article>
 
     <!-- SLIDE: ARRAYS & PROPERTIES -->
@@ -828,8 +973,9 @@ eggspressions[3] = "giggling";
       <p>
         As mentioned previously, the <code>length</code> property returns the number of characters when associated with a <span class="keyword">string</span>.  When used with an <span class="keyword">Array</span>, the <code>length</code> property returns the number of elements.
       </p>
-      <textarea class='coder-editor coder-editor-full'>
+<textarea class='coder-editor coder-editor-full'>
 <script>
+
   // string variable
   var name = "Christina";
   document.write(name.length);
@@ -842,8 +988,8 @@ eggspressions[3] = "giggling";
   eggspressions[2] = "silly";
   eggspressions[3] = "giggling";
   //document.write(eggspressions.length);
-</script>
-      </textarea>
+
+</script></textarea>
     </article>
 
     <!-- SLIDE: ARRAYS - PHOTO SLIDER EXAMPLE -->
@@ -925,18 +1071,19 @@ eggspressions[3] = "giggling";
         Since the index always begins at 0, the last index value is always <code>length-1</code>.
         This is useful if you want to always access the last index, despite new additions, and apply some code to it.
       </p>
-      <textarea class='coder-editor coder-editor-full'>
+<textarea class='coder-editor coder-editor-full'>
 <script>
-  var eggspressions = [];
-  eggspressions[0] = "skeptical";
-  eggspressions[1] = "frazzled";
-  eggspressions[2] = "silly";
-  eggspressions[3] = "giggling";
-  
-  document.write(eggspressions[3] + " is the last element in the array. <br />");
-  document.write(eggspressions[eggspressions.length-1] + " is the last element in the array.");
-</script>
-      </textarea>
+
+var eggspressions = [];
+eggspressions[0] = "skeptical";
+eggspressions[1] = "frazzled";
+eggspressions[2] = "silly";
+eggspressions[3] = "giggling";
+
+document.write(eggspressions[3] + " is the last element in the array. <br />");
+document.write(eggspressions[eggspressions.length-1] + " is the last element in the array.");
+
+</script></textarea>
       <span class="marker">*</span>
     </article>
 
@@ -1062,7 +1209,6 @@ for ( var i = 0; i < playlist.length; i++ ) {
   playCurrentSong();
 }
 </pre>
-      </textarea>
       <div class="reminders">
       	Incrementer (i++) and decrementer (i--) operators add or subtract one.<br />
       	i++ is the same as i = i + 1<br />
@@ -1098,24 +1244,25 @@ productPrices[5] = 8.99;
 
 <textarea class='coder-editor coder-editor-full'>
 <script>
-  var productPrices = [];
-  productPrices[0] = 17.99;
-  productPrices[1] = 25;
-  productPrices[2] = 13.99;
-  productPrices[3] = 9.99;
-  productPrices[4] = 24.99;
-  productPrices[5] = 8.99;
 
-  for (i=0; i < productPrices.length; i++) {
-    var value = productPrices[i];
-    if (value > 15){
-      document.write("Product " + (i+1) + " is on sale.<br />");
-    } else {
-      document.write("Product " + (i+1) + " is not on sale.<br />");
-    }
+var productPrices = [];
+productPrices[0] = 17.99;
+productPrices[1] = 25;
+productPrices[2] = 13.99;
+productPrices[3] = 9.99;
+productPrices[4] = 24.99;
+productPrices[5] = 8.99;
+
+for (i=0; i < productPrices.length; i++) {
+  var value = productPrices[i];
+  if (value > 15){
+    document.write("Product " + (i+1) + " is on sale.<br />");
+  } else {
+    document.write("Product " + (i+1) + " is not on sale.<br />");
   }
-</script>
-      </textarea>
+}
+
+</script></textarea>
     </article>
 
     <article class='slide slide-list'>
@@ -1183,72 +1330,131 @@ productPrices[5] = 8.99;
         <p class="centered"><img src="assets/browser-fieldset-div.jpg" width="590" height="365" alt="Blocks" /></p>
  		<p class="sidenote centered">A <code>&lt;div&gt;&lt;/div&gt;</code> block.</p>
       </article>
-      </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Document Objects</h2>
         <p>All of these blocks are <span class="keyword">objects</span> -- just like the ones we covered earlier! And all these objects have pre-written functions/methods you can use.</p>
         <p>Does the line of code below make more sense now? <code>document</code> is one of the main objects of a web page and it has a method named <code>write</code> that accepts a string as a parameter. <code>document</code> has lots of other properties and methods too: <a href="http://dochub.io/#dom/document" target="_blank">check out this list</a>.</p>
-       <textarea class='coder-editor'><script>
-document.write("Hello!");
-</script>
-       </textarea>
-</article>
+<textarea class='coder-editor'><script>
 
-	  <!-- SLIDE:  -->
+document.write("Hello!");
+
+</script></textarea>
+      </article>
+
+	   <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects</h2>
         <p>The most repetitive thing you'll ever do with JavaScript is getting references to your HTML tags (&quot;elements&quot;) using <code>document.getElementById()</code>.<br>
 <span class="sidenote">(It's important that your HTML tag has an <code>id</code> attribute in order to do this!)</span></p>
-        <p>For example, let's dynamically find out what the text is a paragraph tag by reading its innerHTML property. (You can find all the things you can do with elements <a href="http://dochub.io/#dom/element" target="_blank">here</a>.)</p>
-               <textarea class='coder-editor'>
-<p id="text" style="border: 1px solid red;">
+        <p>For example, let's dynamically find out what the text is a paragraph tag by reading its <code>innerHTML</code> property. (You can find all the things you can do with elements <a href="http://dochub.io/#dom/element" target="_blank">here</a>.)</p>
+<textarea class='coder-editor coder-editor-full'>
+<p id="text" 
+   style="border: 1px solid red;">
   Loading...
 </p>
 
 <script>
 
-</script>
-       </textarea>
+  // 1. Use document.getElementById()
+
+  // 2. Use innerHTML
+
+</script></textarea>
+<script type="coder-solution"><p id="text" 
+   style="border: 1px solid red;">
+  Loading...
+</p>
+
+SCRIPT
+
+  // 1. Use document.getElementById()
+  var paragraph = document.getElementById("text");
+  
+  // 2. Use innerHTML
+  var paragraphText = paragraph.innerHTML;
+
+  document.write( "The text inside the paragraph was: <br>");
+  document.write( paragraphText );
+
+SCRIPTEND</script>
       </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects (cont'd)</h2>
-        <p>You can also use innerHTML to replace what's already in a element.</p>               <textarea class='coder-editor'>
-<p id="text" style="border: 1px solid red;">
+        <p>You can also use <code>innerHTML</code> to replace what's already in a element.</p>
+<textarea class='coder-editor coder-editor-full'>
+<p id="text" 
+   style="border: 1px solid red;">
   Loading...
 </p>
 
 <script>
-  var existingElement = document.getElementById("text");
 
+  // 1. Use document.getElementById()
+  var paragraph = document.getElementById("text");
+
+  // 2. Use innerHTML
+
+</script></textarea>
+<script type="coder-solution"><p id="text" 
+   style="border: 1px solid red;">
+  Loading...
+</p>
+
+SCRIPT
+
+  // 1. Use document.getElementById()
+  var paragraph = document.getElementById("text");
+  
+  // 2. Use innerHTML
+  paragraph.innerHTML = "Page fully loaded!"
+
+SCRIPTEND</script>
 </script>
-       </textarea>
-</article>
+
+      </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects (cont'd)</h2>
-        <p>Or let's dynamically swap out one image for another by updating the src attribute of an image tag.</p>
-        <textarea class='coder-editor'>
-<img id="cupcake"
-src="http://pchen.github.com/LLC-JavaScript/exercises/assets/cupcake.jpg" />
+        <p>Or let's dynamically swap out one image for another by updating the <code>src</code> attribute of an image tag.</p>
+<textarea class='coder-editor coder-editor-full'>
+<img id="robot"
+     src="exercises/assets/nesting-dolls.jpg" />
 
 <script>
 
-</script>
-       </textarea>
+  // 1. Use document.getElementById()
+  
+  // 2. Set src to be "exercises/assets/salt-pepper-shakers.jpg"
+
+</script></textarea>
+<script type="coder-solution"><img id="robot"
+     src="exercises/assets/nesting-dolls.jpg" />
+
+SCRIPT
+
+  // 1. Use document.getElementById()
+  var imageElement = document.getElementById("robot");
+  
+  // 2. Set src to be "exercises/assets/salt-pepper-shakers.jpg"
+  imageElement.src = "exercises/assets/salt-pepper-shakers.jpg";
+
+SCRIPTEND</script>
 </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Updating CSS Styles</h2>
-        <p>You can even update a HTML element's CSS styles dynamically using it's style property.</p>
-        <p>Consider how you might program a button toggle effect to show the difference between &quot;selected&quot; or &quot;deselected&quot; states. (Note the differences between how properties are written in CSS to how they appear in JavaScript -- background-color versus backgroundColor.</p>
-                <textarea class='coder-editor'>
+        <p>You can even update a HTML element's CSS styles dynamically using it's <code>style</code> attribute.</p>
+        <p>Consider how you might program a button toggle effect to show the difference between &quot;selected&quot; or &quot;deselected&quot; states.</p>
+        <p class="sidenote">(Note the differences between how properties are written in CSS to how they appear in JavaScript: <code>background-color</code> versus <code>backgroundColor</code>.</p>
+<textarea class='coder-editor coder-editor-full'>
 <style>
+
   #clickme {
     text-align: center;
     width: 100px;
@@ -1258,78 +1464,180 @@ src="http://pchen.github.com/LLC-JavaScript/exercises/assets/cupcake.jpg" />
     background-color: white;
     color: black;
   }
+  
 </style>
 
 <div id="clickme" onclick="restyle();">
-Click me!
+  Click me!
 </div>
 
 <script>
   var button = document.getElementById("clickme");
   function restyle() {
-    if ( button ) {
-    
+    if ( button.style.backgroundColor == "white" ) {
+      // use style.backgroundColor
+      // and style.color
     }else{
-    
+      // inverse
     }
   }
-</script>
-       </textarea>
+</script></textarea>
+<script type="coder-solution"><style>
+
+  #clickme {
+    text-align: center;
+    width: 100px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+
+</style>
+
+<div id="clickme" onclick="restyle();">
+  Click me!
+</div>
+
+SCRIPT
+  var button = document.getElementById("clickme");
+  function restyle() {
+    if ( button.style.backgroundColor == "black" ) {
+      // use style.backgroundColor
+      button.style.backgroundColor = "white";
+      // and style.color
+      button.style.color = "black";
+
+      //button.style.fontSize = "16px";
+      //button.innerHTML = "Click me!";
+    }else{
+      //inverse
+      button.style.backgroundColor = "black";
+      button.style.color = "white";
+
+      //button.style.fontSize = "14px";
+      //button.innerHTML = "clicked.";
+    }
+  }
+SCRIPTEND</script>
        
-</article>
+      </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Updating CSS Styles (cont'd)</h2>
-        <p>You could even update several style properties at once if you use CSS classes and update a element's class attribute.</p>
-   <textarea class='coder-editor'>
+        <p>You could even update several style properties at once if you use CSS classes and update a element's <code>class</code> attribute.</p>
+<textarea class='coder-editor coder-editor-full'>
 <style>
+
   #clickme {
     text-align: center;
     width: 100px;
     padding: 5px 10px;
     border: 1px solid #999;
     cursor: pointer;
+  }
+
+  .deselected {
     background-color: white;
     color: black;
   }
+
+  .selected {
+    background-color: black;
+    color: white;
+  }
+  
 </style>
 
-<div id="clickme" onclick="restyle();">
-Click me!
+<div id="clickme" class="deselected" onclick="restyle();">
+  Click me!
 </div>
 
 <script>
   var button = document.getElementById("clickme");
   function restyle() {
-    if ( button.style.color == "white" ) {
-    
+    if ( button.getAttribute("class") == "selected" ) {
+      // use setAttribute("class", "deselected");
     }else{
-    
+      // use setAttribute("class", "selected");
     }
   }
-</script>
-        </textarea>
+</script></textarea>
+<script type="coder-solution"><style>
+
+  #clickme {
+    text-align: center;
+    width: 100px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+
+  .deselected {
+    background-color: white;
+    color: black;
+  }
+
+  .selected {
+    background-color: black;
+    color: white;
+  }
+
+</style>
+
+<div id="clickme" class="deselected" onclick="restyle();">
+  Click me!
+</div>
+
+SCRIPT
+  var button = document.getElementById("clickme");
+  function restyle() {
+    if ( button.getAttribute("class") == "selected" ) {
+      button.setAttribute("class", "deselected");
+    }else{
+      button.setAttribute("class", "selected");
+    }
+  }
+
+SCRIPTEND</script>
 </article>
       
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Make DOM Elements Magically Appear!</h2>
-        <p>You can even create completely new elements out of thin air! Use document.createElement() and   <textarea class='coder-editor'>
-        
-        <div id="emptyDiv" style="border: 1px solid red; padding: 10px;">
-</div>
+        <p>You can even create completely new elements out of thin air! Use <code>document.createElement()</code> and <code>appendChild()</code> </p>
+<textarea class='coder-editor coder-editor-full'>
+
+&lt;div id="emptyDiv" 
+     style="border: 1px solid red; padding: 10px;"&gt;
+&lt;/div&gt;
 
 <script>
   // create a new paragraph out of thin air
 
-  //insert it into the currently empty div
+  // insert it into the currently empty div
 
-</script>
-        </textarea>
+</script></textarea>
+<script type="coder-solution">
+&lt;div id="emptyDiv" 
+     style="border: 1px solid red; padding: 10px;"&gt;
+&lt;/div&gt;
+
+SCRIPT
+  // create a new paragraph out of thin air
+  var paragraph = document.createElement('p');
+  paragraph.innerHTML = "ta daaa!";
+
+  // insert it into the currently empty div
+  var emptyDiv = document.getElementById("emptyDiv")
+  emptyDiv.appendChild(paragraph);
+
+SCRIPTEND</script>
         
-</article>
+      </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-subhead'>
