@@ -243,6 +243,12 @@ table.comparison-table tr td, table.comparison-table tr th {
   text-align: center;
 }
 
+.vertically_centered {
+  position: absolute;
+  top:30%;
+  left: 40%;
+}
+
 .sidenote {
   font-size: 17px !important; 
     line-height: 18px;

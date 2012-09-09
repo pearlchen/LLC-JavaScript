@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ladies Learning Code - JavaScript March 18, 2012</title>
+  <meta name="viewport" content="width=1280">
+
+  <!-- CoderDeck core and extension CSS files -->
+  <link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
+  <link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="src/css/prettify.css">
+  <link rel="stylesheet" href="src/css/deck.coder.css">
+  <link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="src/codemirror/theme/default.css">
+
+  <!-- Custom for LLC -->
+  <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
+  <style type="text/css"></style>
+
+</head>
+
+<body class="deck-container">
+
+	<script type='text/coderdeck' id='coderdeck-default'>
+      <html>
+        <head>
+          <script src='src/jquery.min.js'>SCRIPTEND</head>
+        <body>CODE</body>
+      </html>
+      </script>
+    
+      <script type='text/coderdeck' id='coderdeck-style-example'>
+      <html>
+        <title>test</title>
+        <style>CODE</style>
+        <body>
+        </body>
+      </html>
+    </script>
+    
+  <div id="presentation">
+  <!-- **************************************** -->  
+ 
+     <!-- SLIDE:  -->
+    <article class='slide slide-subhead'>
+      <h1>jQuery Hands-on</h1>
+      <p>External JavaScript files and jQuery</p>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-subhead'>
+      <h1>External JavaScript</h1>
+      <p>Keeping it organized and working with others</p>
+    </article>
+   
+   <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>&lt;script src=""&gt;</h2>
+        <p>As you write bigger pieces of JavaScript, you will want to start putting your code into their own files so they are easier to manage. Or you might want to enlist the help of others to write JavaScript for your website so you can work on different sections separately. A big site could have thousands of lines of code written by many different people!</p>
+        <p>To link to an external JavaScript file:</p>
+        <pre class="prettyprint">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript example!&lt;/title&gt;
+    &lt;script type="text/javascript" src="scripts.js"&gt;&lt;/script&gt;    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="example"&gt;This is an example.&lt;/div&gt;    
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+      </article>   
+      
+      <!-- SLIDE:  -->
+<article class='slide slide-list'>
+  <h2>In the external file</h2>
+  <p>In the <a href="http://pchen.github.com/LLC-JavaScript/exercises/scripts.js" target="_blank">external JavaScript file (scripts.js)</a> you don't include script tags; just JavaScript code. </p>
+        <p>View this example: <a href="http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html" target="_blank">http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html</a></p>
+  </article>
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>script tag gotchas</h2>
+        <p>Even though you're not writing JavaScript between the script tags, you must use a closing <code>&lt;/script&gt;</code> tag. A self-closing tag such as <code>&lt;script src="scripts.js" /&gt;</code> will not work. The correct way is highlighted below:</p>
+        <p><code>&lt;script type=&quot;text/javascript&quot; src="scripts.js"&gt;&lt;/script&gt;</code></p>
+      </article>
+            
+      <!-- SLIDE:  -->
+      <article class='slide slide-subhead'>
+        <h1>JQuery</h1>
+        <p>The Write Less, Do More, JavaScript Library</p>
+</article>
+
+	  <!-- SLIDE: jQuery Intro -->
+      <article class='slide slide-list'>
+        <h2>jQuery: A brief introduction</h2>
+        
+		<p>jQuery is a cross-browser JavaScript library designed to simplify client-side scripting, manipulating HTML pages and handling events. The library contains many built-in functions and methods that make writing JavaScript code easier.</p>
+
+		<h3>Getting started</h3>
+		<p>Download the library and include the file in your HTML page</p>
+		<p>Download instructions can be found here: <a href="http://docs.jquery.com/Downloading_jQuery">http://docs.jquery.com/Downloading_jQuery</a></p>
+
+		<h3>Gotchas!</h3>
+		<p>When adding your own custom-written jQuery/JavaScript files, make sure to include it <strong>after</strong> the jQuery file to ensure that the library loads first.</p>
+      </article>
+      
+      <!-- SLIDE: jQuery Demo -->
+      <article class='slide slide-list'>
+        <h2>jQuery: Demo</h2>
+        
+		<p>There are many built in methods and functions included in the jQuery library, too many to remember them all.  
+Never fear, jQuery has documented their API here: <a href="http://api.jquery.com/">http://api.jquery.com</a>
+		<br />It's searchable and provides explanations and examples.</p>
+		<p>Let take a peek at some jQuery code.</p>
+		
+<textarea class='coder-editor coder-editor-full'>
+<script>
+$(document).ready(function(){
+  $('a.hide').click(function(){
+     $('#box').hide();
+  });
+  $('a.show').click(function(){
+     $('#box').show();
+  });
+  $('a.fade').click(function(){
+     $('#box').fadeOut();
+  });
+  $('a.slide-up').click(function(){
+     $('#box').slideUp();
+  });
+  $('a.slide-toggle').click(function(){
+     $('#box').slideToggle();
+  });
+});
+</script>
+<style>
+	#container {
+		width: 320px;
+		padding-top: 10px;
+	}
+	#box {
+		height: 60px;
+		width: 200px;
+		background-color: blue;
+		padding: 40px;
+		margin-top: 10px;
+	}
+	a {
+		font: 14px Georgia, serif;
+		text-decoration: none
+	}
+	a.active {
+		color: pink;
+	}		
+</style>
+<div id="container">  
+	<a class="hide" href="#">Hide</a> | 
+	<a class="show" href="#">Show</a> |
+	<a class="fade" href="#">Fade</a> |
+	<a class="slide-toggle" href="#">Slide Toggle</a>		
+	<div id="box"></div>
+</div>
+</textarea>
+      </article>
+      
+     <!-- SLIDE: Next section -->
+    <article class='slide slide-list'>
+      <p class="centered vertically_centered"><a href="resources.html" target="_self"><img src="assets/next_section_icon.gif" width="230" height="70" alt="Click to go to next section" /></a></p>
+    </article>
+
+  <!-- **************************************** -->  
+  </div>
+  <!-- END div id=presentation -->
+
+  <script src='src/jquery.min.js'></script>
+  <script src="src/modernizr.js"></script>
+
+  <!-- Update these paths to point to the correct files. -->
+  <script src="src/jquery.tmpl.min.js"></script>
+  <script src="src/deck.js/core/deck.core.js"></script>
+
+  <!-- Code Mirror -->
+  <script src="src/codemirror/lib/codemirror.js"></script>
+  <script src="src/codemirror/mode/xml/xml.js"></script>
+  <script src="src/codemirror/mode/css/css.js"></script>
+  <script src="src/codemirror/mode/javascript/javascript.js"></script>
+  <script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+  <!-- Prettify -->
+  <script src="src/prettify.js"></script>
+
+  <!-- Deck Core and extensions -->
+  <script src="src/deck.js/extensions/status/deck.status.js"></script>
+  <script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
+  <script src='src/deck.coder.js'></script>
+  <script src="src/deck.js/extensions/hash/deck.hash.js"></script>
+  <script src="src/deck.js/extensions/menu/deck.menu.js"></script>
+
+  <script>
+      $(function() {
+        $.deck('.slide');
+      });
+  </script>
+</body>
+</html>
