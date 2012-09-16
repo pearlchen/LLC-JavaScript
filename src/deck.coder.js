@@ -312,3 +312,12 @@ This module adds a code editor that shows up in individual slides
   });
 
 })(jQuery,'deck',this);
+
+/* *********** Added by Pearl ********** 
+* Incorporate this into final framework
+*/
+
+function showHint(answerContainerId) {
+  var preTags = document.getElementById(answerContainerId).style.display = "block";
+}
+

@@ -19,7 +19,7 @@ html, body {
 }
 .deck-container h1, .deck-container h2, .deck-container h3 {
 	color: #B1009A;
-  	font-family: 'Podkova', Arial, sans-serif;
+  font-family: 'Podkova', Arial, sans-serif;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .deck-container strong {
@@ -30,7 +30,6 @@ html, body {
 .deck-container .slide {
   background: #fff;
   width: 940px;
-  height: auto;
   /*height: 100%;*/ /* allow vertical scrolling -- espeically when there's lots of code */
   min-height: 600px;
   border: 3px solid #b1009a;
@@ -45,7 +44,13 @@ html, body {
   height: auto !important;
   overflow-y: hidden;
   overflow-x: auto;
-  width: 100%
+  width: 100%;
+  min-height: 200px;
+}
+
+.coder-destination {
+  bottom: auto !important;
+  top: 0 !important;
 }
 
 .deck-container .slide-title {
@@ -330,4 +335,18 @@ span.marker {
   text-align: center;
   padding-top: 20px !important;
   font-size: 17px !important;
+}
+
+.show-hint {
+  color: #B1009A;
+  font-size: 16px !important;
+  font-style: italic !important;
+  cursor: pointer;
+}
+
+.hint-solution {
+  display: none;
+  color: #888;
+  font-size: 16px !important;
+  font-style: italic !important;
 }

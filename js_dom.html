@@ -50,80 +50,6 @@
       <h1>JavaScript Part 5</h1>
       <p>The DOM and manipulating objects on a HTML page</p>
     </article>
-
-    <article class='slide slide-list'>
-      <h2>Inline JavaScript</h2>
-      <p>
-        JavaScript can appear
-        <strong>inline</strong>
-        in a webpage in several spots. Either in the
-        <code>&lt;head&gt;</code>
-        section or anywhere in the
-        <code>&lt;body&gt;</code>
-        section.
-      </p>
-      <pre class="prettyprint">
- &lt;html&gt;
- &lt;head&gt;
-   &lt;title&gt;JavaScript example!&lt;/title&gt; 
-   
-   <strong>&lt;script type="text/javascript"&gt;
-     alert("I'm in the head tag!");
-   &lt;/script&gt;</strong>
-
- &lt;/head&gt;
- &lt;body&gt;
-   &lt;div id="example"&gt;This is an example.&lt;/div&gt;
-
-   <strong>&lt;script type="text/javascript"&gt;    
-     alert("I'm in the body tag!");
-   &lt;/script&gt;</strong>
-
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-      <p class="reminders">
-        Need to manipulate an html tag or have a quick loading page? Put the JavaScript just before the
-        <strong>closing</strong>
-        <code>&lt;body&gt;</code>
-        tag.
-      </p>
-    </article>
-
-    <!-- SLIDE: Code Editor -->
-    <article class='slide slide-list'>
-      <h2>Using a Code Editor</h2>
-      <p>Go to the <code>exercises</code> folder and open up <code><a href="http://pchen.github.com/LLC-JavaScript/exercises/pizzaMaking.html" target="_blank">pizzaMaking.html</a></code><br>
-<span class="sidenote">(Psst: It's also in the ZIP folder that you downloaded earlier today.)</span>      </p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="http://www.sublimetext.com" target="_blank"><img src="assets/SublimeTextIcon.jpg" width="125" height="125" alt="Sublime Text 2" /></a>
-        <br />
-        <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>
-      </div>
-      <br clear="all" /><br>
-      <p>This is almost the same code as previous. Why isn't it making pizza? :(</p>
-      <p class="reminders">
-        Take note of how your code is being coloured. It's the first sign of a possible syntax error and will save you headaches later.
-<br>
-      <span class="sidenote">Some editors do a better job than others -- that's what you pay for sometimes.</span>
-      </p>
-
-</article>
-
-    <!--<article class='slide slide-list'>
-      <h2>Mini-exercise #6</h2>
-      <p>
-        Let's revisit the optional lunchtime shipping form of exercise #5. That was a lot of typing to verify only 4 fields right?
-        <br />
-        <br />
-        Now imagine that shoppers have been requesting the ability to buy robots as gifts for their friends. What lucky friends!
-      </p>
-      <p>
-        However this means you need to have separate billing and shipping address forms. Look at how the code has doubled:
-        <a href="http://pchen.github.com/LLC-JavaScript/exercises/shopping_cart_shipping_final.html">shopping_cart_shipping_start.html</a>
-      </p>
-      <p>It'll get only even longer if you add 4 more fields.</p>
-    </article>-->
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
@@ -136,7 +62,7 @@
       <!-- SLIDE:  -->
 <article class='slide slide-list'>
         <h2>Pre-defined Blocks</h2>
-        <p>Some blocks are defined by the browser, such as the browser <strong>window</strong>.</p>
+        <p>Some blocks are defined by the browser, such as the browser <span class="keyword">window</span>.</p>
   <p class="centered"><img src="assets/browser-window.jpg" width="590" height="365" alt="Window" /></p>
 </article>
       
@@ -145,34 +71,53 @@
       <article class='slide slide-list'>
         <h2>User-defined Blocks</h2>
         <p>And some blocks we make ourselves via HTML<br>
-(e.g. fieldset, div, and img HTML tags).</p>
+        (e.g. <code>&lt;fieldset&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;img&gt;</code> HTML tags).</p>
         <p class="centered"><img src="assets/browser-fieldset-div.jpg" width="590" height="365" alt="Blocks" /></p>
- 		<p class="sidenote centered">A <code>&lt;div&gt;&lt;/div&gt;</code> block.</p>
       </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Document Objects</h2>
         <p>All of these blocks are <span class="keyword">objects</span> -- just like the ones we covered earlier! And all these objects have pre-written functions/methods you can use.</p>
-        <p>Does the line of code below make more sense now? <code>document</code> is one of the main objects of a web page and it has a method named <code>write</code> that accepts a string as a parameter. <code>document</code> has lots of other properties and methods too: <a href="http://dochub.io/#dom/document" target="_blank">check out this list</a>.</p>
+        <p>Does the line of code below make more sense now? <code>document</code> is one of the main objects of a web page and it has a method named <code>write</code> that accepts a string as a parameter. <code>document</code> has lots of other properties and methods too: <a href="https://developer.mozilla.org/en-US/docs/DOM/document" target="_blank">check out this list</a>.</p>
 <textarea class='coder-editor'><script>
 
 document.write("Hello!");
 
 </script></textarea>
+<script type="coder-solution">SCRIPT
+
+//document.write("Hello!");
+
+var browserLocation = document.location;
+document.write("URL is: <br>" + browserLocation);
+
+SCRIPTEND</script>
+      </article>
+
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>HTML Element Objects</h2>
+        <p>The most common thing you'll do with JavaScript is get <span class="keyword">references</span> to your HTML tags (&quot;<span class="keyword">elements</span>&quot;) via <code>document.getElementById()</code>.</p>
+        <p><strong>Important!</strong> Your HTML tag must have an <code>id</code> attribute in order to do this!</p>
+<pre style="prettyprint">
+&lt;div <strong>id="status"</strong>&gt;
+  &lt;p&gt;Loading...&gt;/p&gt;
+  &lt;p&gt;&lt;img src="assets/loading.gif"&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
       </article>
 
 	   <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects</h2>
-        <p>The most repetitive thing you'll ever do with JavaScript is getting references to your HTML tags (&quot;elements&quot;) using <code>document.getElementById()</code>.<br>
-<span class="sidenote">(It's important that your HTML tag has an <code>id</code> attribute in order to do this!)</span></p>
-        <p>For example, let's dynamically find out what the text is a paragraph tag by reading its <code>innerHTML</code> property. (You can find all the things you can do with elements <a href="http://dochub.io/#dom/element" target="_blank">here</a>.)</p>
+        <p>For example, let's get a reference to the "status" <code>div</code> element by using <code>document.getElementById()</code>. Then confirm this by dynamically reading all the HTML in it using the <code>innerHTML</code> property.</p>
+        <p class="sidenote">(You can find all the things you can do with elements <a href="https://developer.mozilla.org/en-US/docs/DOM/element" target="_blank">here</a>.)</p>
 <textarea class='coder-editor coder-editor-full'>
-<p id="text" 
-   style="border: 1px solid red;">
-  Loading...
-</p>
+<div id="status">
+  <p>Loading...</p>
+  <p><img src="assets/loading.gif"></p>
+</div>
 
 <script>
 
@@ -180,59 +125,114 @@ document.write("Hello!");
 
   // 2. Use innerHTML
 
-</script></textarea>
-<script type="coder-solution"><p id="text" 
-   style="border: 1px solid red;">
-  Loading...
-</p>
+</script>
+
+<style>
+#status {
+  border: 1px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</style></textarea>
+<script type="coder-solution"><div id="status">
+  <p>Loading...</p>
+  <p><img src="assets/loading.gif"></p>
+</div>
 
 SCRIPT
 
   // 1. Use document.getElementById()
-  var paragraph = document.getElementById("text");
+  var statusDiv = document.getElementById("status");
   
   // 2. Use innerHTML
-  var paragraphText = paragraph.innerHTML;
+  var statusHTML = statusDiv.innerHTML;
 
-  document.write( "The text inside the paragraph was: <br>");
-  document.write( paragraphText );
+  document.write( "<hr>The HTML inside the div was: <br>");
+  document.write( "<textarea>" + statusHTML + "</textarea>");
 
-SCRIPTEND</script>
+SCRIPTEND
+
+<style>
+#status {
+  border: 1px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</style></script>
       </article>
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>HTML Element Objects (cont'd)</h2>
-        <p>You can also use <code>innerHTML</code> to replace what's already in a element.</p>
+        <p>You can also use <code>innerHTML</code> to replace what's already in an element.</p>
 <textarea class='coder-editor coder-editor-full'>
-<p id="text" 
-   style="border: 1px solid red;">
-  Loading...
-</p>
+<div id="status">
+  <p>Loading...</p>
+  <p><img src="assets/loading.gif"></p>
+</div>
 
 <script>
 
   // 1. Use document.getElementById()
-  var paragraph = document.getElementById("text");
+  var statusDiv = document.getElementById("status");
 
   // 2. Use innerHTML
 
-</script></textarea>
-<script type="coder-solution"><p id="text" 
-   style="border: 1px solid red;">
-  Loading...
-</p>
+</script>
+
+<style>
+#status {
+  border: 1px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</style></textarea>
+<script type="coder-solution"><div id="status">
+  <p>Loading...</p>
+  <p><img src="assets/loading.gif"></p>
+</div>
 
 SCRIPT
 
   // 1. Use document.getElementById()
-  var paragraph = document.getElementById("text");
+  var statusDiv = document.getElementById("status");
   
   // 2. Use innerHTML
-  paragraph.innerHTML = "Page fully loaded!"
+  statusDiv.innerHTML = "Page fully loaded!"
 
-SCRIPTEND</script>
-</script>
+SCRIPTEND
+
+<style>
+#status {
+  border: 1px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</style></script>
 
       </article>
       
@@ -265,7 +265,7 @@ SCRIPT
 SCRIPTEND</script>
 </article>
       
-      <!-- SLIDE:  -->
+      <!--
       <article class='slide slide-list'>
         <h2>Updating CSS Styles</h2>
         <p>You can even update a HTML element's CSS styles dynamically using it's <code>style</code> attribute.</p>
@@ -343,7 +343,6 @@ SCRIPTEND</script>
        
       </article>
       
-      <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Updating CSS Styles (cont'd)</h2>
         <p>You could even update several style properties at once if you use CSS classes and update a element's <code>class</code> attribute.</p>
@@ -424,7 +423,6 @@ SCRIPTEND</script>
 </article>
       
       
-      <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Make DOM Elements Magically Appear!</h2>
         <p>You can even create completely new elements out of thin air! Use <code>document.createElement()</code> and <code>appendChild()</code> </p>
@@ -457,29 +455,28 @@ SCRIPT
 SCRIPTEND</script>
         
       </article>
+
+-->
       
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
-        <h2>Chrome Developer Console</h2>
-        <p>Use the built in developer tools in Chrome to inspect the DOM. (Firefox+Firebug is similar but not exactly the same.)</p>
-        <p>[Wrench/Hotdog Icon] &gt; Tools &gt; Developer Tools ( Alt+Cmd+L for Mac, Ctrl+L for Windows) Click on the Console tab.</p>
-        <p><img src="assets/ChromeConsole.gif" width="632" height="84" alt="Chrome debugger tabs" /></p>
-    </article>
+        <h2>However there is an easier way!</h2>
+        <p>Typing <code>document.getElementById()</code> gets tedious after a while so many people will use a JavaScript <span class="keyword">library</span> to make repetive tasks easier.</p>
+        <p>With the jQuery library:</p>
+<pre style="width: 45%;float:left;">
+  document.getElementById("status")
 
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Right click &gt; Inspect Element</h2>
-      <p>Easiest way to remember is to right-click on any web page and select "Inspect Element". In the new panel, select the "Console" tab to see JavaScript errors or to play in the console sandbox.</p>
-      <p><img src="assets/ChromeInspector.gif" width="243" height="248" alt="Right click to see Inspect Element in the popup" /></p>
-    </article>
-      
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Inspecting the DOM</h2>
-      <p>You can inspect any webpage with the debugger. </p>
-      <p>Let's open up the Ladies Learning Code Events page: <a href="http://ladieslearningcode.com/events/" target="_blank">http://ladieslearningcode.com/events/</a>.</p>
-      <p>How can we use the console to find out how many events are listed on this page?</p>
-    </article>
+  document.getElementById("robot")
+</pre>
+<div style="width: 5%;float:left;text-align:center;"><br><br>➞</div>
+<pre style="width: 45%;float:left;">
+$("#status")
+
+$("#robot")
+</pre>
+        <br clear="all" />
+        <p>Just remember that it is still JavaScript under the hood!</p>
+      </article>
 
     <!-- SLIDE: Next section -->
     <article class='slide slide-list'>

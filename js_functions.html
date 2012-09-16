@@ -505,6 +505,88 @@ SCRIPTEND
       <p>In the <code>makePizza()</code> function, the variables from inside the function were removed and added as parameters. Now when we call the function we can pass the values right into the function.</p>
       <img src="assets/function-parameters.jpg" alt="function-parameters" width="800" height="469" />
     </article>
+
+        <article class='slide slide-list'>
+      <h2>Inline JavaScript</h2>
+      <p>
+        JavaScript can appear
+        <strong>inline</strong>
+        in a webpage in several spots. Either in the
+        <code>&lt;head&gt;</code>
+        section or anywhere in the
+        <code>&lt;body&gt;</code>
+        section.
+      </p>
+      <pre class="prettyprint">
+ &lt;html&gt;
+ &lt;head&gt;
+   &lt;title&gt;JavaScript example!&lt;/title&gt; 
+   
+   <strong>&lt;script type="text/javascript"&gt;
+     alert("I'm in the head tag!");
+   &lt;/script&gt;</strong>
+
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;div id="example"&gt;This is an example.&lt;/div&gt;
+
+   <strong>&lt;script type="text/javascript"&gt;    
+     alert("I'm in the body tag!");
+   &lt;/script&gt;</strong>
+
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <p class="reminders">
+        Need to manipulate an html tag or have a quick loading page? Put the JavaScript just before the
+        <strong>closing</strong>
+        <code>&lt;body&gt;</code>
+        tag.
+      </p>
+    </article>
+
+    <!-- SLIDE: Code Editor -->
+    <article class='slide slide-list'>
+      <h2>Using a Code Editor</h2>
+      <p>Go to the <code>exercises</code> folder and open up <code><a href="http://pchen.github.com/LLC-JavaScript/exercises/pizzaMaking.html" target="_blank">pizzaMaking.html</a></code><br>
+<span class="sidenote">(Psst: It's also in the ZIP folder that you downloaded earlier today.)</span>      </p>
+      <div class="centered contains_sidebyside_icons">
+        <a href="http://www.sublimetext.com" target="_blank"><img src="assets/SublimeTextIcon.jpg" width="125" height="125" alt="Sublime Text 2" /></a>
+        <br />
+        <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>
+      </div>
+      <br clear="all" /><br>
+      <div class="reminders"><p>Most computers are set to open <code>.html</code> files in the default web browser so <strong>right-click</strong> (Command+click or 2-finger click on Mac) and select the "<strong>open with...</strong>" option.</p></div>
+    </article>
+
+     <!-- SLIDE: Code Editor -->
+    <article class='slide slide-list'>
+      <h2>Using a Code Editor</h2>
+      <p>Uh oh!</p>
+      <p>This is almost the same code as previous. Why isn't it making pizza? :(
+      <div class="show-hint" onclick="javascript:showHint('title-tag'); this.style.display = 'none';">Spoiler! Click here to show answer if you really can't find it...</div>
+      <div id="title-tag" class="hint-solution">On line 14, there is a double quote misisng before <em>thin crust</em>.</div>
+      </p>
+      <br /><br />
+      <p class="reminders">
+        Take note of how your code is being coloured. It's the first sign of a possible syntax error and will save you headaches later.
+<br>
+      <span class="sidenote">Some editors do a better job than others -- that's what you pay for sometimes.</span>
+      </p>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2><div class="smaller">Mini-exercise (now until lunch)</div>
+        Wing machine</h2>
+      <p>1. Using <code>pizzaMaking.html</code> as an example, create a new .html file named <code>wingMaking.html</code>.
+      <p>2. Use inline JavaScript and write a new function that makes wings with these 3 variations:</p>
+      <ul>
+        <li>Style <span class="sidenote">e.g. crispy or regular</span></li>
+        <li>Hotness <span class="sidenote">e.g. mild, medium, hot</span></li>
+        <li>Sauce <span class="sidenote">e.g. BBQ, honey mustard, buffalo, Thai</span></li>
+      </ul>
+      <p>3. Use function parameters and a single function to make the job of creating multiple types and flavours of wings easier -- versus writing multiple wing making functions.</p>
+    </article>
     
     <!-- SLIDE: Next section -->
     <article class='slide slide-list'>
