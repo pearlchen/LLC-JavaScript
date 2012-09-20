@@ -68,11 +68,49 @@
     <article class='slide slide-list'>
       <h2>JavaScript Exercise Overview</h2>
       <br />
-     <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with member's only sales!</p>
-     <p>You'll also want to make sure that everything works properly as well.</p>
-     <p>That means customers can't submit empty forms and product totals are calculated properly in their shopping carts.</p>
-     <p>In order to create a website that can handle these requirements, we will need to learn how to use <span class="keyword">variables</span>, <span class="keyword">functions</span>, <span class="keyword">objects</span>, <span class="keyword">arrays</span> and <span class="keyword">loops</span>.</p>
-   </article>
+      <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with member's only sales!</p>
+      <p>You'll also want to make sure that everything works properly as well.</p>
+      <p>That means customers can't submit empty forms and product totals are calculated properly in their shopping carts.</p>
+      <p>In order to create a website that can handle these requirements, we will need to learn how to use <span class="keyword">functions</span>, <span class="keyword">variables</span>, <span class="keyword">objects</span>, <span class="keyword">arrays</span> and <span class="keyword">loops</span>.</p>
+    </article>
+
+    <!-- SLIDE: INTRO TO FUNCTIONS -->
+    <article class='slide slide-list'>
+      <h2>Intro to Functions</h2>
+      <br />
+      <p>Before we continue, here's a few helpful JavaScript built-ins that will help with testing and writing code.</p>
+      <p>All of them take the text between the parenthese and quotes, then either shows a browser popup or outputs it directly onto the webpage.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  alert("This is an alert box.");
+  prompt("This is a prompt box. Enter some info.");
+  document.write("document.write outputs text into the page.");
+
+SCRIPTEND</textarea>
+      <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: COMMENTS -->
+    <article class='slide slide-list'>
+      <h2>Also: Comments</h2>
+      <p>
+        Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations. Use comments! <strong>JavaScript will ignore comments and not execute them.</strong>
+      </p>
+<pre class='prettyprint'>
+// This is how you leave a single line comment.
+
+// You can write many single line comments.
+// Just make sure to add the double slash
+// for every new line.
+</pre>
+      <p>Here's another way to comment larger blocks of text.</p>
+<pre class='prettyprint'>
+/* This is how you leave
+multi-line comments for when you
+want to write a longer message */
+</pre>
+      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>    
+    </article>
    
     <!-- SLIDE: VARIABLES -->
     <article class='slide slide-list'>
@@ -139,44 +177,6 @@ SCRIPTEND</script>
       <p class="centered">
         <img src="assets/var-shipping-example.jpg" width="594" height="193" />
       </p>
-    </article>
-
-    <!-- SLIDE: AN ASIDE -->
-    <article class='slide slide-list'>
-      <h2>An Aside...</h2>
-      <br />
-      <p>Before we continue, here's a few helpful JavaScript built-ins that will help with testing and writing code.</p>
-      <p>All of them take the text between the parenthese and quotes, then either shows a browser popup or outputs it directly onto the webpage.</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  alert("This is an alert box.");
-  prompt("This is a prompt box. Enter some info.");
-  document.write("document.write outputs text into the page.");
-
-SCRIPTEND</textarea>
-      <span class="marker">*</span>
-    </article>
-
-    <!-- SLIDE: COMMENTS -->
-    <article class='slide slide-list'>
-      <h2>Also: Comments</h2>
-      <p>
-        Sometimes you want to write notes to yourself (and others!!) to organize blocks of code or leave explanations. Use comments! <strong>JavaScript will ignore comments and not execute them.</strong>
-      </p>
-<pre class='prettyprint'>
-// This is how you leave a single line comment.
-
-// You can write many single line comments.
-// Just make sure to add the double slash
-// for every new line.
-</pre>
-      <p>Here's another way to comment larger blocks of text.</p>
-<pre class='prettyprint'>
-/* This is how you leave
-multi-line comments for when you
-want to write a longer message */
-</pre>
-      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>    
     </article>
 
     <!-- SLIDE: VARIABLES HOW-TO -->
@@ -533,6 +533,139 @@ SCRIPTEND</textarea>
 	  <span class="marker">*</span>
     </article>
 
+
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation</h2>
+      <p>Now that we've calculated some numerical totals, how do we format the output to add a non-numerical value like a dollar sign?
+        We use <span class="keyword">concatenation</span>. </p>
+      <p><span class="keyword">Concatenation</span> is the joining of strings, using the (+) symbol. Remember this example?</p>          
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Slide: Arithmetic Operators, Numbers and Strings
+  var firstNumber = "20";
+  var secondNumber = 10;
+  document.write(firstNumber + secondNumber);
+</script>
+</textarea>
+    </article>
+
+
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation and Strings</h2>
+      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
+      <p>Only the addition (+) operator can be used to combine strings.
+      </p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Addition with the + operator
+  var tshirtPrice = 25;
+  var androidPrice = 10;
+  var shoppingTotal = tshirtPrice + androidPrice;
+  document.write(shoppingTotal);
+  document.write("<br />");
+
+  //Concatenation with the + operator
+  //document.write("Your total is: " + "$" + shoppingTotal);
+  //document.write("<br />");
+
+  //no nos
+  //document.write("Your total is:" * shoppingTotal);
+  //document.write("<br />");
+  //document.write("$" + 20 + 1);
+</script>
+      </textarea>
+    </article>
+
+    <!-- SLIDE: Concatenation - update exercise #2 -->
+    <article class='slide slide-list'>
+      <h2>Concatenation in action (results)</h2>
+      <p>Let's re-visit the last mini-exercise and add a total cost field.</p>
+
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+  var quantity = 0;
+    
+  function addItem(){ 
+    quantity = quantity + 1;       
+    refreshTotal();
+  }
+
+  function removeItem(){  
+    quantity = quantity - 1; 
+    refreshTotal();
+  }   
+
+  function refreshTotal() { 
+
+    // This line will update the quanity HTML textfield
+    document.getElementById('updateQuantity').value = quantity; 
+
+    /* CURRENT: The total cost HTML textfield displays only a number right now */
+    var totalCost = quantity * 20; //fixed price of $20
+    document.getElementById('updateTotal').value = totalCost;
+
+    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
+    //var totalCostToShow = 
+    //document.getElementById('updateTotal').value = totalCostToShow;
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
+  <div id="price">$20 each</div>
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</textarea>
+<script type='coder-solution'>SCRIPT
+  var quantity = 0;
+    
+  function addItem(){ 
+    quantity = quantity + 1;       
+    refreshTotal();
+  }
+
+  function removeItem(){  
+    quantity = quantity - 1; 
+    refreshTotal();
+  }   
+
+  function refreshTotal() { 
+
+    // This line will update the quanity HTML textfield
+    document.getElementById('updateQuantity').value = quantity; 
+
+    /* CURRENT: The total cost HTML textfield displays only a number right now */
+    var totalCost = quantity * 20; //fixed price of $20
+    //document.getElementById('updateTotal').value = totalCost;
+
+    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
+    var totalCostToShow = "$" + totalCost;
+    document.getElementById('updateTotal').value = totalCostToShow;
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
+  <div id="price">$20 each</div>
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</script>
+    </article>
+
+
     <!-- SLIDE: INCREMENT AND DECREMENT -->
     <article class='slide slide-list'>
       <h2>Re-assigning Variables</h2>
@@ -683,138 +816,6 @@ SCRIPTEND</textarea>
 
 SCRIPTEND</script>
     <span class="marker">*</span>
-    </article>
-    
-    <!-- SLIDE: CONCATENATION -->
-    <article class='slide slide-list'>
-      <h2>Concatenation</h2>
-      <p>Now that we've calculated some numerical totals, how do we format the output to add a non-numerical value like a dollar sign?
-        We use <span class="keyword">concatenation</span>. </p>
-      <p><span class="keyword">Concatenation</span> is the joining of strings, using the (+) symbol. Remember this example?</p>          
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  //Slide: Arithmetic Operators, Numbers and Strings
-  var firstNumber = "20";
-  var secondNumber = 10;
-  document.write(firstNumber + secondNumber);
-</script>
-</textarea>
-	  <span class="marker">*</span>
-	</article>
-
-
-  	<!-- SLIDE: CONCATENATION -->
-  	<article class='slide slide-list'>
-      <h2>Concatenation and Strings</h2>
-      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
-      <p>Only the addition (+) operator can be used to combine strings.
-      </p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  //Addition with the + operator
-  var tshirtPrice = 25;
-  var androidPrice = 10;
-  var shoppingTotal = tshirtPrice + androidPrice;
-  document.write(shoppingTotal);
-  document.write("<br />");
-
-  //Concatenation with the + operator
-  //document.write("Your total is: " + "$" + shoppingTotal);
-  //document.write("<br />");
-
-  //no nos
-  //document.write("Your total is:" * shoppingTotal);
-  //document.write("<br />");
-  //document.write("$" + 20 + 1);
-</script>
-      </textarea>
-    </article>
-
-    <!-- SLIDE: Concatenation - update exercise #2 -->
-    <article class='slide slide-list'>
-      <h2>Concatenation in action (results)</h2>
-      <p>Let's re-visit the last mini-exercise and add a total cost field.</p>
-
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-  var quantity = 0;
-		
-  function addItem(){	
-    quantity = quantity + 1;			 
-    refreshTotal();
-  }
-
-  function removeItem(){	
-    quantity = quantity - 1; 
-    refreshTotal();
-  }		
-
-  function refreshTotal() {	
-
-    // This line will update the quanity HTML textfield
-    document.getElementById('updateQuantity').value = quantity; 
-
-    /* CURRENT: The total cost HTML textfield displays only a number right now */
-    var totalCost = quantity * 20; //fixed price of $20
-    document.getElementById('updateTotal').value = totalCost;
-
-    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
-    //var totalCostToShow = 
-    //document.getElementById('updateTotal').value = totalCostToShow;
-  }
-SCRIPTEND
-
-<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
-  <div id="price">$20 each</div>
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button><br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly /><br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly />
-</div>
-</textarea>
-<script type='coder-solution'>SCRIPT
-  var quantity = 0;
-    
-  function addItem(){ 
-    quantity = quantity + 1;       
-    refreshTotal();
-  }
-
-  function removeItem(){  
-    quantity = quantity - 1; 
-    refreshTotal();
-  }   
-
-  function refreshTotal() { 
-
-    // This line will update the quanity HTML textfield
-    document.getElementById('updateQuantity').value = quantity; 
-
-    /* CURRENT: The total cost HTML textfield displays only a number right now */
-    var totalCost = quantity * 20; //fixed price of $20
-    //document.getElementById('updateTotal').value = totalCost;
-
-    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
-    var totalCostToShow = "$" + totalCost;
-    document.getElementById('updateTotal').value = totalCostToShow;
-  }
-SCRIPTEND
-
-<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
-  <div id="price">$20 each</div>
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button><br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly /><br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly />
-</div>
-</script>
     </article>
 
     <!-- SLIDE: Next section -->
