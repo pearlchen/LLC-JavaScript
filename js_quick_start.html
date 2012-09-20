@@ -77,9 +77,87 @@
     <!-- SLIDE: INTRO TO FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Intro to Functions</h2>
+      <p>
+        What is something that you do that's very repetitive or a hassle? Wouldn't it be great if it was automated? Or at least hidden away?
+      </p>
+      <table width="100%">
+        <tr>
+          <th colspan="2" height="50" align="left" style="font-size:28px;">Paying for parking:</th>
+        </tr>
+        <tr>
+          <th width="50%" align="left" style="font-size:24px;">
+            The old way
+            <img src="assets/thumb-down.png" alt="thumb-down" width="32" height="32" style="float:left;margin-bottom:0;padding-right:5px;" />
+          </th>
+          <th width="50%" align="left" style="font-size:24px;">
+            The improved way
+            <img src="assets/thumb-up.png" alt="thumb-up" width="32" height="32" style="float:left;margin-bottom:0;padding-right:5px;" />
+          </th>
+        </tr>
+        <tr>
+          <td style="padding-top: 20px;">
+            <ol>
+              <li>Find bank machine</li>
+              <li>Pull out bank card</li>
+              <li>Get money out from ATM</li>
+              <li>Buy chips so you can make change</li>
+              <li>Put change into machine</li>
+              <li>Take receipt</li>
+            </ol>
+          </td>
+          <td style="padding-top: 20px;">
+            <ol>
+              <li>Pull the PayPass credit card from your wallet</li>
+              <li>Tap</li>
+              <li>Take receipt</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </article>
+
+    <!-- SLIDE: INTRO TO FUNCTIONS cont -->
+    <article class='slide slide-list'>
+      <h2>Intro to Functions</h2>
+      <p>
+        In the improved way, we can think of step 2 as a function.  We can't see all the steps that happen but we know that if we perform the action of tapping the card, it will execute some instructions that will allow us to pay with the card.
+      </p>
+      <table width="100%">
+        <tr>
+          <th width="50%" align="left" style="font-size:24px;">
+            The improved way
+            <img src="assets/thumb-up.png" alt="thumb-up" width="32" height="32" style="float:left;margin-bottom:0;padding-right:5px;" />
+          </th>
+        </tr>
+        <tr>
+          <td style="padding-top: 20px;">
+            <ol>
+              <li>Pull the PayPass credit card from your wallet</li>
+              <li class="highlight">Tap</li>
+              <li>Take receipt</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </article>
+
+    <!-- SLIDE: FUNCTIONS IN JAVASCRIPT-->
+    <article class='slide slide-list'>
+      <h2>Functions in JavaScript</h2>
       <br />
-      <p>Before we continue, here's a few helpful JavaScript built-ins that will help with testing and writing code.</p>
-      <p>All of them take the text between the parenthese and quotes, then either shows a browser popup or outputs it directly onto the webpage.</p>
+      <p><span class="keyword">Functions</span> are used to make the code "do things." Much like the parking example, a function is used to execute a number of commands in a specific order.</p>
+      <p>The syntax of a function is the function name follow by round brackets.</p>
+      <p>If the credit card tap was a function in JavaScript, it could look something like this:</p>
+      <p><code>tapCard()</code></p>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Intro to Functions</h2>
+      <p>We can create our own functions but there are already some handy ones built into JavaScript. There are three functions that are useful for testing and writing code.</p>
+      <p>
+        <code>prompt()</code> and <code>alert()</code> show popups in the browser.
+        <code>document.write()</code> outputs text onto the page, aka the "document."
+      </p>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
   alert("This is an alert box.");
@@ -87,7 +165,6 @@
   document.write("document.write outputs text into the page.");
 
 SCRIPTEND</textarea>
-      <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: COMMENTS -->
