@@ -62,7 +62,6 @@
       <div class="centered">
       	<img src="assets/planet-robots.jpg" alt="planet-robots" />
       </div>
-
     </article>
     
     <!-- SLIDE: EXERCISE OVERVIEW -->
@@ -142,9 +141,9 @@
       </table>
     </article>
 
-    <!-- SLIDE: FUNCTIONS IN JAVASCRIPT-->
+    <!-- SLIDE: INTRO TO FUNCTIONS cont -->
     <article class='slide slide-list'>
-      <h2>Functions in JavaScript</h2>
+      <h2>Intro to Functions</h2>
       <br />
       <p><span class="keyword">Functions</span> are used to make the code "do things."</p>
       <p>To get the function to execute, you have to <strong>call the function</strong>  by using the function name followed by round brackets.</p>
@@ -196,22 +195,31 @@ want to write a longer message */
       <br />
       <p><span class="keyword">Variables</span> are like containers or a box. They are used to <strong>store values</strong> so you can use them later on, when you need them.</p>
       <p class="centered"><img src="assets/storage_boxes.png" /></p>
-      
+    </article>
+
+    <!-- SLIDE: VARIABLES HOW-TO -->
+    <article class='slide slide-list'>
+      <h2>Variables How-to</h2>
+      <p><span class="keyword">Declare</span> variables with the keyword <strong><code>var</code></strong>.</p>
+      <pre class='prettyprint'>var email;</pre>
+      <p><span class="keyword">Assign</span> a value to the variable using the equals (<code>=</code>) sign.</p>
+      <pre class='prettyprint'>email = "hello@christinatruong.com";</pre>
+      <p>Now the computer will remember my email address!</p>
+      <div class="reminders">
+        <p>Take note that the value of the variable is written between quotes.<br />
+        More on this soon.</p>
+      </div>
     </article>
 
     <!-- SLIDE: VARIABLES (cont'd) -->
     <article class='slide slide-list'>
       <h2>Variables (cont'd)</h2>
       <br />
-      <p><img src="assets/computer-memory.jpg" alt="computer-memory" width="200" height="207" style="float:right;padding:0 40px 0 10px;" />Variables are also like the computer's short-term memory. It doesn't remember anything unless you tell it to.
-      In this example, the computer can't remember any one's name!</p>
+      <p><img src="assets/computer-memory.jpg" alt="computer-memory" width="200" height="207" style="float:right;padding:0 40px 0 10px;" />Variables are also like the computer's short-term memory. It doesn't remember anything unless you tell it to.  In this example, the computer can't remember any one's name!</p>
       <p><strong>But it can remember if we use a variable.</strong></p>
-      <br /><br />
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
-  // prompt() is a special JavaScript command --
-  // it will show a browser popup
-  // and display the text between the parenthese and quotes
+  // prompt() is a function for showing a popup
   // with an input text field that you can type into
   prompt("What's your name?");
 
@@ -234,10 +242,10 @@ SCRIPTEND</textarea>
   name = prompt("What's your name?");
 
   // use the value of "name" and show it in the alert
-  alert("Hello, " + name + "!");
+  alert(name);
 
   // also output it directly on the webpage
-  document.write("Hello, " + name + "!");
+  document.write(name);
 
 SCRIPTEND</script>
     </article>
@@ -255,20 +263,6 @@ SCRIPTEND</script>
       </p>
     </article>
 
-    <!-- SLIDE: VARIABLES HOW-TO -->
-    <article class='slide slide-list'>
-      <h2>Variables How-to</h2>
-      <p><span class="keyword">Declare</span> variables with the keyword <strong><code>var</code></strong>.</p>
-      <pre class='prettyprint'>var email;</pre>
-      <p><span class="keyword">Assign</span> a value to the variable using the equals (<code>=</code>) sign.</p>
-      <pre class='prettyprint'>email = "hello@christinatruong.com";</pre>
-      <p>Now the computer will remember my email address!</p>
-      <div class="reminders">
-        <p>Take note that the value of the variable is written between quotes.<br />
-        More on this soon.
-        </p>
-      </div>
-    </article>
     
     <!-- SLIDE: STATEMENTS -->
     <article class='slide slide-list'>
@@ -287,18 +281,34 @@ email = "hello@christinatruong.com";
 <pre class='prettyprint'>var email = "hello@christinatruong.com";</pre>
     </article>
 
+
     <!-- SLIDE: AN ASIDE -->
     <article class='slide slide-list'>
       <h2>Variables: Say My Name</h2>
       <br />
-      <p>Let's try creating some variables and outputting the values to make sure we've declared it using the proper syntax.</p>
-      <p>Below is an example of a variable for your name. Create one for your email address.  Output the values using <code>document.write()</code>.</p>
+      <p>Let's try creating some variables.</p>
+      <p>Below is an example of a variable for your name. Try creating another variable for your email address.  Output the values using <code>document.write()</code>.</p>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
   var name = "Christina";
   document.write(name);
 
+  document.write("<br />"); //just a line break
+
+  // create email variable here
+
 SCRIPTEND</textarea>
+<script type='coder-solution'>SCRIPT
+  
+  var name = "Christina";
+  document.write(name);
+
+  document.write("<br />"); //just a line break
+
+  var email = "hello@christinatruong.com";
+  document.write(email);
+
+SCRIPTEND</script>
     </article>
 
      <!-- SLIDE: VARIABLES - assignment operator -->
@@ -312,12 +322,14 @@ SCRIPTEND</textarea>
       <p><code>var total = 1 + 1</code> means:<br />
         <span class="keyword">evaluate</span> everything to the <em>right</em> of the equals sign (e.g. <code>1 + 1</code>), 
         <br />then <span class="keyword">assign</span> this value (e.g. the number <code>2</code>) to the variable on the <em>left</em> side.
+      </p>
 
       <p>You will see later that we can re-assign new values to an existing variable.</p>
 
-      <p><code>total = 1 + 1</code>
-      is not the same as
-      <code>1 + 1 = 2</code>
+      <p>
+        <code>total = 1 + 1</code>
+        is not the same as
+        <code>1 + 1 = 2</code>
       </p>
     </article>
 
@@ -326,16 +338,17 @@ SCRIPTEND</textarea>
       <h2>Various Variables</h2>
       <p>Variables can hold different kinds of values. We've been using <span class="keyword">strings</span> so far but variables can also hold other kinds of values.</p>
       <p>1. Numeric variable (integers &amp; decimals)</p>
-      <pre class='prettyprint'>
+<pre class='prettyprint'>
 var someIntegerNumber = 10;
-var someDecimalNumber = 10.5;</pre>
+var someDecimalNumber = 10.5;
+</pre>
       <p>2. Boolean variable (true/false)</p>
-      <pre class='prettyprint'>
+<pre class='prettyprint'>
 var isSaturday = false;
 var isSunday = true;
 </pre>
       <p>3. String variable (letters, words &amp; sentences)</p>
-      <pre class='prettyprint'>
+<pre class='prettyprint'>
 var singleWordString = "hello";
 var sentenceString = "Hello, good day to you!";
 var numberString = "10";
@@ -418,7 +431,7 @@ SCRIPTEND</textarea>
   var $dalmations = 1001;
   document.write($dalmations);
 
-SCRIPT</textarea>
+SCRIPTEND</textarea>
 <script type='coder-solution'>SCRIPT
 
   //var 3hundred = 300;
@@ -475,6 +488,7 @@ prompt("What day is it today?");
 SCRIPTEND</textarea>
     </article>
 
+
     <!-- SLIDE: MINI-EXERCISE #1 -->
     <article class='slide slide-list'>
       <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
@@ -505,7 +519,7 @@ SCRIPTEND</textarea>
   //document.write(**********); 
   
 SCRIPTEND</textarea>
-  <p class="solution-link">If you get stuck, <a href="exercises/solutions/simple-shipping-label.txt">click here</a> for the full solution.</p>
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/simple-shipping-label.txt">click here</a> for the full solution.</p>
     </article>
 
 
@@ -599,270 +613,9 @@ SCRIPTEND</script>
   document.write("Final Total: " + finalTotal);
 
 SCRIPTEND</textarea>
-    <p class="solution-link">If you get stuck, <a href="exercises/solutions/totals-and-discounts.txt">click here</a> for the full solution.</p>
-	  
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/totals-and-discounts.txt">click here</a> for the full solution.</p> 
     </article>
 
-
-    <!-- SLIDE: CONCATENATION -->
-    <article class='slide slide-list'>
-      <h2>Concatenation</h2>
-      <p>Unlike the other arithmetic operators, the (+) symbol has another purpose other than adding numbers. It is used to join strings together, also known as <span class="keyword">concatenation</span>.</p>         
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  var greeting = "Hello";
-  var name = " Pearl";
-  document.write(greeting + name);
-
-  var tshirtPrice = 25;
-  var androidPrice = 10;
-  var total = tshirtPrice + androidPrice;
-  //document.write(total);
-  //document.write("$" + total);
-</script>
-</textarea>
-    </article>
-
-
-    <!-- SLIDE: CONCATENATION -->
-    <article class='slide slide-list'>
-      <h2>Concatenation and Strings</h2>
-      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  //Addition with the + operator
-  var tshirtPrice = 25;
-  var androidPrice = 10;
-  var shoppingTotal = tshirtPrice + androidPrice;
-  document.write(shoppingTotal);
-  document.write("<br />");
-
-  //Concatenation with the + operator
-  //document.write("Your total is: " + "$" + shoppingTotal);
-  //document.write("<br />");
-
-  //no nos
-  //document.write("Your total is:" * shoppingTotal);
-  //document.write("<br />");
-  //document.write("$" + 20 + 1);
-</script>
-      </textarea>
-    </article>
-
-    <!-- SLIDE: Concatenation - update exercise #2 -->
-    <article class='slide slide-list'>
-      <h2>Concatenation in action (results)</h2>
-      <p>Let's re-visit the last mini-exercise and add a total cost field.</p>
-
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-  var quantity = 0;
-    
-  function addItem(){ 
-    quantity = quantity + 1;       
-    refreshTotal();
-  }
-
-  function removeItem(){  
-    quantity = quantity - 1; 
-    refreshTotal();
-  }   
-
-  function refreshTotal() { 
-
-    // This line will update the quanity HTML textfield
-    document.getElementById('updateQuantity').value = quantity; 
-
-    /* CURRENT: The total cost HTML textfield displays only a number right now */
-    var totalCost = quantity * 20; //fixed price of $20
-    document.getElementById('updateTotal').value = totalCost;
-
-    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
-    //var totalCostToShow = 
-    //document.getElementById('updateTotal').value = totalCostToShow;
-  }
-SCRIPTEND
-
-<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
-  <div id="price">$20 each</div>
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button><br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly /><br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly />
-</div>
-</textarea>
-<script type='coder-solution'>SCRIPT
-  var quantity = 0;
-    
-  function addItem(){ 
-    quantity = quantity + 1;       
-    refreshTotal();
-  }
-
-  function removeItem(){  
-    quantity = quantity - 1; 
-    refreshTotal();
-  }   
-
-  function refreshTotal() { 
-
-    // This line will update the quanity HTML textfield
-    document.getElementById('updateQuantity').value = quantity; 
-
-    /* CURRENT: The total cost HTML textfield displays only a number right now */
-    var totalCost = quantity * 20; //fixed price of $20
-    //document.getElementById('updateTotal').value = totalCost;
-
-    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
-    var totalCostToShow = "$" + totalCost;
-    document.getElementById('updateTotal').value = totalCostToShow;
-  }
-SCRIPTEND
-
-<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
-  <div id="price">$20 each</div>
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button><br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly /><br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly />
-</div>
-</script>
-    </article>
-
-
-    <!-- SLIDE: INCREMENT AND DECREMENT -->
-    <article class='slide slide-list'>
-      <h2>Re-assigning Variables</h2>
-      <p>Even after a value has been set for the first time, we can still overwrite it and
-      <strong>re-assign</strong> a new value.</p>
-      <p>For example, we may want to increase or decrease values.</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  // Declare and initialize the variable with a default value
-  var numberOfCookies = 0;
-  document.write("I started off with " + numberOfCookies + " cookies.<br />");
-  
-  // Add 1 to the current value of the variable, 
-  // then re-assign the new value to the same variable
-  numberOfCookies = numberOfCookies + 1;
-  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookie.<br />");
-  
-  // Subtract 1 from the current value of the variable, 
-  // then (once again) re-assign the new value to the same variable
-  numberOfCookies = numberOfCookies - 1;
-  document.write("I just ate a cookie. Now I have " + numberOfCookies + " left."); 
-
-SCRIPTEND</textarea>
-
-    </article>
-
-    <!-- SLIDE: "LIKE" BUTTON  -->
-    <article class='slide slide-list'>
-      <h2>Who loves Ladies Learning Code?</h2>
-      <p>Don't worry about the function or DOM stuff right now.<br />
-      We'll get a little more into that later.</p>
-      <p>Run it and see what happens!</p>
-<textarea class='coder-editor coder-editor-full'>
-<link rel="stylesheet" type="text/css" href="exercises/slides.css">
-
-SCRIPT
-  var loves = 0;
-  function moreLove(){
-     //re-assigning the value of the love variable
-     loves = loves + 1;
-     document.getElementById('update').innerHTML = loves;
-  }
-SCRIPTEND
-
-<div id="loveLLC">
-  <button onclick="moreLove();">
-    <img src="exercises/assets/llc-logo.png" /> Love!
-  </button>
-  <p id="update">0</p>
-</div>
-</textarea>
-    </article>
-
-    <!-- SLIDE: MINI-EXERCISE #2 - ADD/REMOVE ITEMS - ONE PRODUCT  -->
-    <article class='slide slide-list'>
-      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
-        Quantities</h2>
-      <br />
-      <p>Here's a one-product shopping page where you can update the<br />
-      quantity by adding or removing it from the shopping cart.</p>
-      <p class="centered">Here's what it should look like:<br />
-        <img src="exercises/assets/android-quantity.png" alt="android-quantity" width="225" height="282" /></p>
-      <p>This exercise requires the help of <span class="keyword">functions</span> which we haven't covered yet but have a look over everything for a preview. Go to the next slide to get the exercise code.</p>
-	</article>
-	
-	<!-- SLIDE: MINI-EXERCISE #2 : Code page -->
-    <article class='slide slide-list'>
-      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
-        Quantities</h2>
-      <p>Use the <code>quantity</code> variable to keep track of additions and subtractions to the running total.</p>
-      <div class="hint">
-        <p>1. The "Add" and "Remove" buttons haven't been clicked yet so <code>quantity</code> needs to be initialized to a default value first.<br/>
-          2. Use your knowledge of arithemetic operators and variable assignment to re-calculate the value of <code>quantitity</code>.<br />
-          3. Same as step 2 above.</p>
-      </div>
-<textarea class='coder-editor coder-editor-full' data-save='exercise-quantities'>SCRIPT
-
-  /* 1. Set 'quantity' to start at 0. This will be used
-        to hold the value for the quantity of ordered robots */   
-  var quantity;
-  //quantity = ********   
-    
-  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
-  // EACH TIME YOU PRESS THE 'ADD' BUTTON 
-  function addItem() {
-
-    /* 2. Set the variable 'quantity' to INCREASE by 1: */
-    //quantity = ******** 
-         
-    refreshTotal();
-  }
-
-  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
-  // EACH TIME YOU PRESS THE 'REMOVE' BUTTON 
-  function removeItem() {
-
-    /* 3. Set the variable 'quantity' to DECREASE by 1: */
-    //quantity = ********  
-       
-    refreshTotal();
-  }   
-
-  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
-  // ON DEMAND, IN ORDER TO UPDATE THE HTML TEXT FIELD
-  function refreshTotal() {
-    document.getElementById('updateQuantity').value = quantity;
-  }
-
-SCRIPTEND
-
-<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
-<div class="item">
-  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-  <br />
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button>
-  <br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly />
-  <br />
-</div>
-</textarea>
-
-      <p class="solution-link">If you get stuck, <a href="exercises/solutions/quantities.txt">click here</a> for  the full solution.</p>
-
-    </article>
 
     <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
     <article class='slide slide-list'>
@@ -887,6 +640,105 @@ SCRIPTEND</textarea>
 
 SCRIPTEND</script>
     </article>
+
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation</h2>
+      <p>Unlike the other arithmetic operators, the (+) symbol has another purpose other than adding numbers. It is used to join strings together, also known as <span class="keyword">concatenation</span>. You can concatenate variables, strings or a combination of both.</p>  
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  document.write("Hello " + "Christina." + "<br />");
+
+  var greeting = "Hello";
+  var name = " Pearl.";
+  document.write(greeting + name);
+
+  document.write("<br />" + greeting + " ladies learning Javascript.");
+
+</script>
+</textarea>
+    </article>
+
+
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation and Strings</h2>
+      <p>If you use the (+) operator with only numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Addition with the + operator
+  var tshirtPrice = 25;
+  var androidPrice = 10;
+  var shoppingTotal = tshirtPrice + androidPrice;
+  document.write(shoppingTotal);
+  document.write("<br />");
+
+  //Concatenation with the + operator
+  //document.write("Your total is: " + "$" + shoppingTotal);
+  //document.write("<br />");
+
+  //no nos
+  //document.write("Your total is:" * shoppingTotal);
+  //document.write("<br />");
+  //document.write("$" + 20 + 1);
+</script>
+</textarea>
+    </article>
+
+
+    <!-- SLIDE: CONCATENATION PRACTICE -->
+    <article class='slide slide-list'>
+      <h2>Concatenation Practice</h2>
+      <p>Let's practice concatenating using variables and strings.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var faveFood = prompt("What is your favorite food?");
+  
+  // using the variable "faveFood", update the "sentence"
+  // variable to say "My favorite food is -----."
+
+  // var sentence = 
+  document.write(sentence);
+</script>
+</textarea>
+<script type="coder-solution">SCRIPT
+
+  var faveFood = prompt("What is your favorite food?");
+  
+  // using the variable, "faveFood", update the "sentence"
+  // variable to say "My favorite food is -----."
+
+  var sentence = ("My favorite food is" + faveFood + ".");
+  document.write(sentence);
+
+SCRIPTEND</script>
+    </article>
+
+    <!-- SLIDE: INCREMENT AND DECREMENT -->
+    <article class='slide slide-list'>
+      <h2>Re-assigning Variables</h2>
+      <p>Even after a value has been set for the first time, we can still overwrite it and
+      <strong>re-assign</strong> a new value.</p>
+      <p>For example, we may want to increase or decrease values.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // Declare and initialize the variable with a default value
+  var numberOfCookies = 0;
+  document.write("I started off with " + numberOfCookies + " cookies.<br />");
+  
+  // Add 1 to the current value of the variable, 
+  // then re-assign the new value to the same variable
+  numberOfCookies = numberOfCookies + 1;
+  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookie.<br />");
+  
+  // Subtract 1 from the current value of the variable, 
+  // then (once again) re-assign the new value to the same variable
+  numberOfCookies = numberOfCookies - 1;
+  document.write("I just ate a cookie. Now I have " + numberOfCookies + " left."); 
+
+SCRIPTEND</textarea>
+    </article>
+
 
     <!-- SLIDE: Next section -->
     <article class='slide slide-list'>
