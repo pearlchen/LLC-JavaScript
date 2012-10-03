@@ -52,117 +52,70 @@
       <p>Functions</p>
     </article>
 
-    <!-- SLIDE: FUNCTIONS AND METHODS -->
-    <article class='slide slide-list'>
-      <h2>Functions &amp; Methods</h2>
-      <p>
-        What is something that you do that's very repetitive or a hassle? Wouldn't it be great if it was automated? Or at least hidden away?
-      </p>
-      <table width="100%">
-        <tr>
-          <th colspan="2" height="50" align="left" style="font-size:28px;">Paying for parking:</th>
-        </tr>
-        <tr>
-          <th width="50%" align="left" style="font-size:24px;">
-            The old way
-            <img src="assets/thumb-down.png" alt="thumb-down" width="32" height="32" style="float:left;margin-bottom:0;padding-right:5px;" />
-          </th>
-          <th width="50%" align="left" style="font-size:24px;">
-            The improved way
-            <img src="assets/thumb-up.png" alt="thumb-up" width="32" height="32" style="float:left;margin-bottom:0;padding-right:5px;" />
-          </th>
-        </tr>
-        <tr>
-          <td style="padding-top: 20px;">
-            <ol>
-              <li>Find bank machine</li>
-              <li>Pull out bank card</li>
-              <li>Get money out from ATM</li>
-              <li>Buy chips so you can make change</li>
-              <li>Put change into machine</li>
-              <li>Take receipt</li>
-            </ol>
-          </td>
-          <td style="padding-top: 20px;">
-            <ol>
-              <li>Pull the PayPass credit card from your wallet</li>
-              <li>Tap</li>
-              <li>Take receipt</li>
-            </ol>
-          </td>
-        </tr>
-      </table>
-      <span class="marker">*</span>
-    </article>
-
     <!-- SLIDE: FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Functions in JavaScript</h2>
       <br />
-      <p><span class="keyword">Functions</span> are used to make the code "do things."</p>
+      <p>Remember, <span class="keyword">functions</span> are used to make the code "do things." It is especially useful for repetitive tasks.</p>
       <p>
         <code>prompt()</code>
         and
         <code>alert()</code>
         are two functions that are pre-written into JavaScript.
       </p>
-      <p>
-        Someone already did the hard work for us by writing these functions to show us popups in the browser.
-      </p>
-      <p>But we can also write our own!</p>
+      <p>But sometimes you need to group tasks that aren't covered by one of the pre-written functions.</p>
+      <p>That's when we create our own!</p>
     </article>
 
     <!-- SLIDE: DEFINING FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Defining a Function</h2>
       <p>
-        Create your own functions to group together your own repetitive tasks.
-      </p>
-      <p>
         To create a function, it needs to be <strong class="keyword">defined</strong>
         first.
       </p>
       <p>
-        There are different ways to define a function but the most common way is using the
-        <code>function</code>
-        keyword and enclosing one or more lines of code within curly braces <code>{ }</code>.
+        There are different ways to define a function, but the most common way is using the
+        <code>function</code> <strong class="keyword">keyword</strong>.
+      </p>
+      <p>
+        The keyword is followed by the function <strong class="keyword">name</strong>, of your choosing, and round brackets <code>()</code>. And finally, the code to be executed are enclosed within curly braces <code>{ }</code>.
       </p>
 <pre class='prettyprint'>
 function nameOfFunction() {
   //code to execute
 }
 </pre>
-<textarea class='coder-editor'>
-<script>
-  alert("Christina");
-</script>
-</textarea>
-      <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: CALLING FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Calling a Function</h2>
+      <p>Let's define a function called <code>sayMyName</code> and use <code>alert()</code> to get the computer to "say" our names (functions can be used inside other functions too).</p>
       <p>
-        The code within functions don't execute until it's <strong class="keyword">called</strong>!
+        Note that the code within a function don't execute until it's <strong class="keyword">called</strong>!
       </p>
-      <p>Let's try that again.</p>
-<textarea class='coder-editor'><script>
-  //defining the function
-  function sayMyName() {
-    alert("Christina");
-  
+      <div class="hint single-line">
+        <p>We've seen functions being called already!</p>
+      </div>
+      <br />
+<textarea class='coder-editor coder-editor-full'><script>
+  //Here's the syntax again
+  function nameOfFunction() {
+    code to execute
   }
-  //Calling the function
-  //sayMyName();
+
+  //Define the function
+
+  //Call the function
 </script></textarea>
 <script type="coder-solution">SCRIPT
-  //defining the function
+  //Define the function
   function sayMyName() {
     alert("Christina");
   }
   
-  //Calling the function
+  //Call the function
   sayMyName();
 SCRIPTEND</script>
     </article>
@@ -174,12 +127,10 @@ SCRIPTEND</script>
         The browser executes the JavaScript as soon as the page loads.
       </p>
       <p>
-        But sometimes you need to control when it executes. For example,
-        <br />
-        if someone rolls over a nav menu or presses a Submit button.
+        But sometimes you need to control when it executes, like when someone rolls over a navigation item or presses a Submit button, otherwise known as an event.
         <br />
       </p>
-      <p>This is where functions also come into play.</p>
+      <p>This is where functions can also be used.</p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
   //define function
@@ -212,37 +163,91 @@ SCRIPTEND
   </p>
     </article>
 
-    <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
+    <!-- SLIDE: "LIKE" BUTTON  -->
     <article class='slide slide-list'>
-      <h2>Functions in Functions</h2>
-      <p>
-        Let's take another look at our shopping cart and figure out what the functions are doing.
-      </p>
-<!--
+      <h2>Who loves Ladies Learning Code?</h2>
+      <p>Run it and see what happens!</p>
 <textarea class='coder-editor coder-editor-full'>
-<script>
-  var quantity = 0; 
+<link rel="stylesheet" type="text/css" href="exercises/slides.css">
+
+SCRIPT
+  //declaring the variable
+  var loves = 0;
+
+  //defining the function
+  function moreLove(){
+     //re-assigning the value of the love variable
+     loves = loves + 1;
+     //this updates the number count
+     document.getElementById('update').innerHTML = loves;
+  }
+SCRIPTEND
+
+<div id="loveLLC">
+  <button onclick="moreLove();"><!-- calling the function -->
+    <img src="exercises/assets/llc-logo.png" /> Love!
+  </button>
+  <p id="update">0</p>
+</div>
+</textarea>
+    </article>
+
+    <!-- SLIDE: MINI-EXERCISE #2 - ADD/REMOVE ITEMS - ONE PRODUCT  -->
+    <article class='slide slide-list'>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Quantities</h2>
+      <p>Let's create a one-product shopping page where you can update the<br />
+      quantity by adding or removing it from the shopping cart.</p>
+      <p class="centered">Here's what it should look like:<br />
+        <img src="exercises/assets/android-quantity.png" alt="android-quantity" width="225" height="282" /></p>
+    </article>
+
+    <!-- SLIDE: MINI-EXERCISE #2 : Code page -->
+    <article class='slide slide-list'>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Quantities</h2>
+      <p>Use the <code>quantity</code> variable to keep track of additions and subtractions to the running total.</p>
+      <div class="hint">
+        <p>1. The "Add" and "Remove" buttons haven't been clicked yet so <code>quantity</code> needs to be initialized to a default value first.<br/>
+          2. Use your knowledge of arithemetic operators and variable assignment to re-calculate the value of <code>quantitity</code>.<br />
+          3. Same as step 2 above.</p>
+      </div>
+<textarea class='coder-editor coder-editor-full' data-save='exercise-quantities'>SCRIPT
+
+  /* 1. Set 'quantity' to start at 0. This will be used
+        to hold the value for the quantity of ordered robots */   
+  var quantity;
+  //quantity = ********   
     
-  function addItem(){ 
-    quantity = quantity + 1;      
-    refreshTotal(); 
-  }
-  function removeItem(){  
-    if (quantity > 0) {
-      quantity = quantity - 1; 
-    }
-    refreshTotal();  
+  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
+  // EACH TIME YOU PRESS THE 'ADD' BUTTON 
+  function addItem() {
+
+    /* 2. Set the variable 'quantity' to INCREASE by 1: */
+    //quantity = ******** 
+         
+    refreshTotal();
   }
 
-  function refreshTotal() {         
-    var totalCost = quantity * 20; //quantity * fixed price
-    var totalCostToShow = "$" + totalCost;
-    document.getElementById('updateQuantity').value = quantity; //updates
-    document.getElementById('updateTotal').value = totalCostToShow; //updates
-  }
-</script>
+  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
+  // EACH TIME YOU PRESS THE 'REMOVE' BUTTON 
+  function removeItem() {
 
-<link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" />
+    /* 3. Set the variable 'quantity' to DECREASE by 1: */
+    //quantity = ********  
+       
+    refreshTotal();
+  }   
+
+  // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
+  // ON DEMAND, IN ORDER TO UPDATE THE HTML TEXT FIELD
+  function refreshTotal() {
+    document.getElementById('updateQuantity').value = quantity;
+  }
+
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
 <div class="item">
   <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
   <br />
@@ -252,12 +257,19 @@ SCRIPTEND
   Quantity
   <input type="text" id="updateQuantity" value="0" readonly />
   <br />
-  <br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="0" readonly />
 </div>
 </textarea>
--->
+
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/quantities.txt">click here</a> for  the full solution.</p>
+
+    </article>
+
+    <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
+    <article class='slide slide-list'>
+      <h2>Functions in Functions</h2>
+      <p>
+        Let's take another look at our shopping cart and figure out what the functions are doing.
+      </p>
 <pre class="prettyprint">
 &lt;script&gt;
   var quantity = 0; 
@@ -281,6 +293,7 @@ SCRIPTEND
   }
 &lt;/script&gt;
 
+&lt;!-- HTML and CSS --&gt;
 &lt;link rel="stylesheet" href="http://pchen.github.com/LLC-JavaScript/exercises/slides.css" type="text/css" media="screen" /&gt;
 &lt;div class="item"&gt;
   &lt;img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /&gt;
@@ -296,7 +309,6 @@ SCRIPTEND
   &lt;input type="text" id="updateTotal" value="0" readonly /&gt;
 &lt;/div&gt;
 </pre>
-      <span class="marker">*</span>
     </article>
 
     <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
@@ -495,7 +507,6 @@ SCRIPT
 
 SCRIPTEND
 </script>
-      <span class="marker">*</span>
     </article>
     
     <!-- SLIDE: Functions & Parameters Review -->
