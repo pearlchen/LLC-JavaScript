@@ -93,21 +93,18 @@ function nameOfFunction() {
       <h2>Calling a Function</h2>
       <p>Let's define a function called <code>sayMyName</code> and use <code>alert()</code> to get the computer to "say" our names (functions can be used inside other functions too).</p>
       <p>
-        Note that the code within a function don't execute until it's <strong class="keyword">called</strong>!
+        Note that the code within a function doesn't execute until it's <strong class="keyword">called</strong>.
       </p>
       <div class="hint single-line">
         <p>We've seen functions being called already!</p>
       </div>
       <br />
 <textarea class='coder-editor coder-editor-full'><script>
-  //Here's the syntax again
-  function nameOfFunction() {
-    code to execute
-  }
-
   //Define the function
 
+
   //Call the function
+
 </script></textarea>
 <script type="coder-solution">SCRIPT
   //Define the function
@@ -118,6 +115,13 @@ function nameOfFunction() {
   //Call the function
   sayMyName();
 SCRIPTEND</script>
+<br />
+<pre class="prettyprint sidenote">
+  //Here's the syntax again
+  function nameOfFunction() {
+    code to execute
+  }
+</pre>
     </article>
 
     <!-- SLIDE: CALLING FUNCTIONS FROM EVENTS -->
@@ -130,7 +134,7 @@ SCRIPTEND</script>
         But sometimes you need to control when it executes, like when someone rolls over a navigation item or presses a Submit button, otherwise known as an event.
         <br />
       </p>
-      <p>This is where functions can also be used.</p>
+      <p>This is another way functions are used.</p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
   //define function
@@ -155,7 +159,6 @@ SCRIPTEND
 <br />
 <p class="sidenote">Note: You can even use <code>onclick()</code> on any HTML element</p>
 <pre class="prettyprint sidenote">
-  <!-- call a function from any HTML tag, not just buttons -->
   &lt;div onclick="sayMyName();"&gt;
     Click here to call the function!
   &lt;/div&gt;
@@ -208,11 +211,11 @@ SCRIPTEND
         Quantities</h2>
       <p>Use the <code>quantity</code> variable to keep track of additions and subtractions to the running total.</p>
       <div class="hint">
-        <p>1. The "Add" and "Remove" buttons haven't been clicked yet so <code>quantity</code> needs to be initialized to a default value first.<br/>
-          2. Use your knowledge of arithemetic operators and variable assignment to re-calculate the value of <code>quantitity</code>.<br />
+        <p>1. The "Add" and "Remove" buttons haven't been clicked yet so <code>quantity</code> needs to be initialized to a default value first. Replace the asterix with your answer.<br/>
+          2. Use your knowledge of arithemetic operators and variable assignment to re-calculate the value of <code>quantity</code>.<br />
           3. Same as step 2 above.</p>
       </div>
-<textarea class='coder-editor coder-editor-full' data-save='exercise-quantities'>SCRIPT
+<textarea class='coder-editor coder-editor-full'>SCRIPT
 
   /* 1. Set 'quantity' to start at 0. This will be used
         to hold the value for the quantity of ordered robots */   
@@ -226,7 +229,7 @@ SCRIPTEND
     /* 2. Set the variable 'quantity' to INCREASE by 1: */
     //quantity = ******** 
          
-    refreshTotal();
+    refreshTotal(); //Updates the total, no need to edit.
   }
 
   // CODE BETWEEN THE CURLY BRACES BELOW WILL EXECUTE
@@ -268,7 +271,7 @@ SCRIPTEND
     <article class='slide slide-list'>
       <h2>Functions in Functions</h2>
       <p>
-        Let's take another look at our shopping cart and figure out what the functions are doing.
+        Let's take another look at our code and see what the functions are doing.
       </p>
 <pre class="prettyprint">
 &lt;script&gt;
@@ -286,10 +289,7 @@ SCRIPTEND
   }
 
   function <strong>refreshTotal()</strong> {         
-    var totalCost = quantity * 20; //quantity * fixed price
-    var totalCostToShow = "$" + totalCost;
-    document.getElementById('updateQuantity').value = quantity; //updates
-    document.getElementById('updateTotal').value = totalCostToShow; //updates
+    document.getElementById('updateQuantity').value = quantity;
   }
 &lt;/script&gt;
 
@@ -311,7 +311,97 @@ SCRIPTEND
 </pre>
     </article>
 
-    <!-- SLIDE: FUNCTIONS IN SHOPPING CART EXAMPLE -->
+    <!-- SLIDE: Mini-exercise -->
+    <article class='slide slide-list'>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Quantities and Total Cost</h2>
+      <p>Let's re-visit the Quantities exercise and add a text field to show the total cost. If the Android plushie cost $20 <strong>each</strong>, how do we calculate the total cost? </p>
+
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+  var quantity = 0;
+    
+  function addItem(){ 
+    quantity = quantity + 1;       
+    refreshTotal();
+  }
+
+  function removeItem(){  
+    quantity = quantity - 1; 
+    refreshTotal();
+  }   
+
+  function refreshTotal() { 
+
+    // This line will update the quantity HTML text field
+    document.getElementById('updateQuantity').value = quantity; 
+
+    /* TODO: upate the totalCost variable to calculate 
+    the price based on quantity */
+    //var totalCost = ********
+    document.getElementById('updateTotal').value = totalCost;
+
+    /* BONUS: Use concatenation to add a human readable 
+    $ sign to the totalCost: */
+    //var totalCostToShow = ********
+    document.getElementById('updateTotal').value = totalCostToShow;
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
+  <div id="price">$20 each</div>
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</textarea>
+<script type='coder-solution'>SCRIPT
+  var quantity = 0;
+    
+  function addItem(){ 
+    quantity = quantity + 1;       
+    refreshTotal();
+  }
+
+  function removeItem(){  
+    quantity = quantity - 1; 
+    refreshTotal();
+  }   
+
+  function refreshTotal() { 
+
+    // This line will update the quanity HTML textfield
+    document.getElementById('updateQuantity').value = quantity; 
+
+    /* CURRENT: The total cost HTML textfield displays only a number right now */
+    var totalCost = quantity * 20; //fixed price of $20
+    //document.getElementById('updateTotal').value = totalCost;
+
+    /* TODO: Use concatenation to add a human readable $ sign to the totalCost: */
+    var totalCostToShow = "$" + totalCost;
+    document.getElementById('updateTotal').value = totalCostToShow;
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="http://pchen.github.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" /><br />  
+  <div id="price">$20 each</div>
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</script>
+    </article>
+
+    <!-- SLIDE: REVIEW: FUNCTIONS -->
     <article class='slide slide-list'>
       <h2>Review: What do we know about Functions so far?</h2>
       <br />
@@ -333,17 +423,15 @@ SCRIPTEND
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
+  function orderPizza() {
+    var topping = "cheese";
+    var crust = "thin crust";
+    var size = "medium";
 
-function orderPizza() {
-  var topping = "cheese";
-  var crust = "thin crust";
-  var size = "medium";
+    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+  }
 
-  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
-}
-
-orderPizza();
-
+  orderPizza();
 </script></textarea>
     </article>
 
@@ -353,52 +441,46 @@ orderPizza();
       <p>
         What if we want to order another pizza but with different options?
         <br />
-        Let's order another pizza.
+        Let's order another pizza by creating another function.
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
+  // original orderPizza:
+  function orderPizza() {
+    var topping = "cheese";
+    var crust = "thin crust";
+    var size = "medium";
 
-// original orderPizza:
+    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+  }
 
-function orderPizza() {
-  var topping = "cheese";
-  var crust = "thin crust";
-  var size = "medium";
+  orderPizza();
 
-  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
-}
-
-orderPizza();
-
-// an edited copy of orderPizza...
-
+  // an edited copy of orderPizza...
 
 </script></textarea>
 <script type="coder-solution">SCRIPT
+  // original orderPizza:
+  function orderPizza() {
+    var topping = "cheese";
+    var crust = "thin crust";
+    var size = "medium";
 
-// original orderPizza:
+    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+  }
 
-function orderPizza() {
-  var topping = "cheese";
-  var crust = "thin crust";
-  var size = "medium";
+  orderPizza();
 
-  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
-}
+  // an edited copy of orderPizza...
+  function orderAnotherPizza() {
+    var topping = "pepperoni";
+    var crust = "stuffed crust";
+    var size = "small";
 
-orderPizza();
+    document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
+  }
 
-// an edited copy of orderPizza...
-
-function orderAnotherPizza() {
-  var topping = "pepperoni";
-  var crust = "stuffed crust";
-  var size = "small";
-
-  document.write("Pizza order:<br />" + topping + ", " + crust + ", " + size);
-}
-
-orderAnotherPizza();
+  orderAnotherPizza();
 
 SCRIPTEND</script>
 
@@ -512,7 +594,7 @@ SCRIPTEND
     <!-- SLIDE: Functions & Parameters Review -->
     <article class='slide slide-list'>
       <h2>Review: Functions and Parameters</h2>
-      <p>Functions are more flexible when used with parameters because variables can be passed into the function.</p>
+      <p>Functions are more flexible when used with parameters because variables can be <strong>passed</strong> into the function.</p>
       <p>In the <code>makePizza()</code> function, the variables from inside the function were removed and added as parameters. Now when we call the function we can pass the values right into the function.</p>
       <img src="assets/function-parameters.jpg" alt="function-parameters" width="800" height="469" />
     </article>
@@ -548,12 +630,12 @@ SCRIPTEND
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-      <p class="reminders">
-        Need to manipulate an html tag or have a quick loading page? Put the JavaScript just before the
+      <div class="reminders">
+        <p>Need to manipulate an html tag or have a quick loading page? Put the JavaScript just before the
         <strong>closing</strong>
         <code>&lt;body&gt;</code>
-        tag.
-      </p>
+        tag.</p>
+      </div>
     </article>
 
     <!-- SLIDE: Code Editor -->
@@ -576,7 +658,7 @@ SCRIPTEND
       <p>Uh oh!</p>
       <p>This is almost the same code as previous. Why isn't it making pizza? :(
       <div class="show-hint" onclick="javascript:showHint('title-tag'); this.style.display = 'none';">Spoiler! Click here to show answer if you really can't find it...</div>
-      <div id="title-tag" class="hint-solution">On line 14, there is a double quote misisng before <em>thin crust</em>.</div>
+      <div id="title-tag" class="hint-solution">On line 16, there is a double quote missing before <em>thin crust</em>.</div>
       </p>
       <br /><br />
       <p class="reminders">
@@ -597,6 +679,7 @@ SCRIPTEND
         <li>Sauce <span class="sidenote">e.g. BBQ, honey mustard, buffalo, Thai</span></li>
       </ul>
       <p>3. Use function parameters and a single function to make the job of creating multiple types and flavours of wings easier -- versus writing multiple wing making functions.</p>
+      <p class="sidenote">If you're really stuck, go to the <code>solutions</code> folder and open up <code><a href="http://pchen.github.com/LLC-JavaScript/solutions/wingsMaking.html" target="_blank">wingsMaking.html</a></code>
     </article>
     
     <!-- SLIDE: Next section -->
