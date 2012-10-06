@@ -22,6 +22,8 @@
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css"></style>
 
+  <script src='src/jquery.min.js'></script>
+
 </head>
 
 <body class="deck-container">
@@ -49,21 +51,127 @@
      <!-- SLIDE:  -->
     <article class='slide slide-subhead'>
       <h1>jQuery Hands-on</h1>
-      <p>External JavaScript files and jQuery</p>
+      <p>Intro to jQuery and External JavaScript Files</p>
+    </article>
+        
+    <!-- SLIDE: jQuery -->
+    <article class='slide slide-subhead'>
+      
+     
+      <p style="background:#0f1923;width:250px;padding-top:25px;margin:150px auto 40px;"><img src="assets/logo_jquery.gif" /></p>
+      <p>The Write Less, Do More, JavaScript Library</p>
+    </article>
+
+	  <!-- SLIDE: jQuery Intro -->
+    <article class='slide slide-list'>
+      <h2>jQuery: A brief introduction</h2>
+        
+		  <p>jQuery is a cross-browser JavaScript library designed to simplify client-side scripting, manipulating HTML pages, animating and handling events.</p>
+
+      <p>jQuery is still JavaScript. It is a library of functions built on top of JavaScript to simplify your program. It does, however, have it's own syntax as well.</p>
+
+      <p>The library contains many, many built-in functions and methods. It's not an easy task to remember them all.  Never fear, jQuery has documented their API here: <a href="http://api.jquery.com/">http://api.jquery.com</a>.</p>
+
+      <p>Let dive in and see how jQuery methods compare to using just JavaScript alone.</p>
+    </article>
+
+
+    <!-- SLIDE: jQuery vs JavaScript : How to run the code-->
+    <article class='slide slide-list'>
+      <h2>jQuery vs JavaScript</h2>
+      <p>Including inline JavaScript into your web page only requires the code to be written between the <code>&lt;script&gt&lt;/script&gt</code> tags.</p>
+      <p>In jQuery, the document needs to be "ready". This bit of code needs to wrap all of your jQuery: <code>$(document).ready(function(){});</code>. Your code goes between the curly braces <code>{}</code>, and will only run once the DOM is ready.</p>
+      
+<pre class="prettyprint">
+&lt;script type="text/javascript"&gt;
+  // JavaScript code here
+&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;    
+  $(document).ready(function(){
+     //jQuery code here
+  });
+&lt;/script&gt;
+</pre>
+
+    </article>
+
+    <!-- SLIDE: jQuery vs JavaScript - DOM reference-->
+    <article class='slide slide-list'>
+      <h2>jQuery vs JavaScript</h2>
+        
+      <p>Remember <code>document.getElementById</code>?<br />
+      <strong>jQuery</strong> makes it easier to reference objects in the DOM.</p>
+
+<pre class="prettyprint">
+&lt;div <strong>id="status"</strong>&gt;
+  &lt;p&gt;Loading...&lt;/p&gt;
+  &lt;p&gt;&lt;img src="assets/loading.gif"&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint">
+// JavaScript
+document.getElementById("status")
+
+// jQuery 
+$('#status')
+</pre>
+      <div class="reminders single-line">
+        <p>Your HTML tag must have an <code>id</code> attribute in order to do this!</p>
+      </div>
+    </article>
+      
+
+    <!-- SLIDE: jQuery vs JavaScript (cont) -->
+    <article class='slide slide-list'>
+      <h2>jQuery vs JavaScript (cont)</h2>
+      <p>Let's see how the JavaScript <code>innerHTML</code> example can be done with jQuery
+        to replace what's already in an element.</p>
+<textarea class='coder-editor coder-editor-full'>
+<div>
+  <p id="javascript">Replace this with JavaScript</p>
+  <p id="jquery">Replace this with jQuery</p>
+</div>
+
+<script>
+  // The JavaScript way
+  var statusDiv = document.getElementById("javascript");
+  statusDiv.innerHTML = "Text replaced by JavaScript."
+
+  // The jQuery way
+  $(document).ready(function(){
+    $("#jquery").html("Text replaced by jQuery.")
+  });
+</script>
+
+<style>
+div {
+  border: 1px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</style></textarea>
     </article>
 
     <!-- SLIDE:  -->
     <article class='slide slide-subhead'>
       <h1>External JavaScript</h1>
-      <p>Keeping it organized and working with others</p>
+      <p>Keeping it organized, working with others and adding libraries</p>
     </article>
    
-   <!-- SLIDE:  -->
-      <article class='slide slide-list'>
-        <h2>&lt;script src=""&gt;</h2>
-        <p>As you write bigger pieces of JavaScript, you will want to start putting your code into their own files so they are easier to manage. Or you might want to enlist the help of others to write JavaScript for your website so you can work on different sections separately. A big site could have thousands of lines of code written by many different people!</p>
-        <p>To link to an external JavaScript file:</p>
-        <pre class="prettyprint">
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>&lt;script src=""&gt;</h2>
+      <p>As you write bigger pieces of JavaScript, you will want to start putting your code into their own files so they are easier to manage. Or you might want to enlist the help of others to write JavaScript for your website so you can work on different sections separately. A big site could have thousands of lines of code written by many different people!</p>
+      <p>To link to an external JavaScript file:</p>
+      <pre class="prettyprint">
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;JavaScript example!&lt;/title&gt;
@@ -73,46 +181,62 @@
     &lt;div id="example"&gt;This is an example.&lt;/div&gt;    
   &lt;/body&gt;
 &lt;/html&gt;
+      </pre>
+    </article>   
+      
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>In the external file</h2>
+      <p>In the <a href="http://pchen.github.com/LLC-JavaScript/exercises/scripts.js" target="_blank">external JavaScript file (scripts.js)</a> you don't include script tags; just JavaScript code. </p>
+      <p>View this example: <a href="http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html" target="_blank">http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html</a></p>
+    </article>
+      
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>script tag gotchas</h2>
+      <p>Even though you're not writing JavaScript between the script tags, you must use a closing <code>&lt;/script&gt;</code> tag. A self-closing tag such as <code>&lt;script src="scripts.js" /&gt;</code> will <strong>not</strong> work. The correct way is highlighted below:</p>
 
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot; src="scripts.js"&gt;&lt;/script&gt;
 </pre>
-      </article>   
-      
-      <!-- SLIDE:  -->
-<article class='slide slide-list'>
-  <h2>In the external file</h2>
-  <p>In the <a href="http://pchen.github.com/LLC-JavaScript/exercises/scripts.js" target="_blank">external JavaScript file (scripts.js)</a> you don't include script tags; just JavaScript code. </p>
-        <p>View this example: <a href="http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html" target="_blank">http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html</a></p>
-  </article>
-      
-      <!-- SLIDE:  -->
-      <article class='slide slide-list'>
-        <h2>script tag gotchas</h2>
-        <p>Even though you're not writing JavaScript between the script tags, you must use a closing <code>&lt;/script&gt;</code> tag. A self-closing tag such as <code>&lt;script src="scripts.js" /&gt;</code> will not work. The correct way is highlighted below:</p>
-        <p><code>&lt;script type=&quot;text/javascript&quot; src="scripts.js"&gt;&lt;/script&gt;</code></p>
-      </article>
-            
-      <!-- SLIDE:  -->
-      <article class='slide slide-subhead'>
-        <h1>JQuery</h1>
-        <p>The Write Less, Do More, JavaScript Library</p>
-</article>
+    </article>
 
-	  <!-- SLIDE: jQuery Intro -->
-      <article class='slide slide-list'>
-        <h2>jQuery: A brief introduction</h2>
-        
-		<p>jQuery is a cross-browser JavaScript library designed to simplify client-side scripting, manipulating HTML pages and handling events. The library contains many built-in functions and methods that make writing JavaScript code easier.</p>
 
-		<h3>Getting started</h3>
-		<p>Download the library and include the file in your HTML page</p>
-		<p>Download instructions can be found here: <a href="http://docs.jquery.com/Downloading_jQuery">http://docs.jquery.com/Downloading_jQuery</a></p>
+    <!-- SLIDE: Included jQuery -->
+    <article class='slide slide-list'>
+      <h2>jQuery: Getting started</h2>
+      <p>To make use of the jQuery library, it needs to be included on your web page using an external file. There are two ways to include the file.</p>
 
-		<h3>Gotchas!</h3>
-		<p>When adding your own custom-written jQuery/JavaScript files, make sure to include it <strong>after</strong> the jQuery file to ensure that the library loads first.</p>
-      </article>
-      
-      <!-- SLIDE: jQuery Demo -->
-      <article class='slide slide-list'>
+      <p>1. <a href="http://docs.jquery.com/Downloading_jQuery" target="_blank">Download</a> the file and include it with the rest of your files.</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot; src="jquery.js"&gt;&lt;/script&gt;
+</pre>
+      <p>2. Link directly to the CDN (Content Delivery Network) hosted copies.</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot; src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+      <div class="hint single-line">
+        <p>Download instructions: <a href="http://docs.jquery.com/Downloading_jQuery">http://docs.jquery.com/Downloading_jQuery</a></p>
+      </div>
+    </article>
+
+    <!-- SLIDE: Included jQuery Gotchas -->
+    <article class='slide slide-list'>
+      <h2>Gotchas!</h2>
+      <p>When adding your own custom-written jQuery/JavaScript files, make sure to include it <strong>after</strong> the jQuery file to ensure that the library loads first.</p>
+
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot; src="jquery.js"&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src="custom.js"&gt;&lt;/script&gt;
+</pre>
+
+    </article>
+
+
+    
+
+      <!-- OLD SLIDE: jQuery Demo -->
+      <!-- <article class='slide slide-list'>
         <h2>jQuery: Demo</h2>
         
 		<p>There are many built in methods and functions included in the jQuery library, too many to remember them all.  
@@ -168,7 +292,7 @@ $(document).ready(function(){
 	<div id="box"></div>
 </div>
 </textarea>
-      </article>
+      </article> -->
       
      <!-- SLIDE: Next section -->
     <article class='slide slide-list'>
