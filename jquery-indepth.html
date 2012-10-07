@@ -98,7 +98,7 @@
 
     <!-- SLIDE: jQuery vs JavaScript - DOM reference-->
     <article class='slide slide-list'>
-      <h2>jQuery vs JavaScript</h2>
+      <h2>jQuery vs JavaScript (cont)</h2>
         
       <p>Remember <code>document.getElementById</code>?<br />
       <strong>jQuery</strong> makes it easier to reference objects in the DOM.</p>
@@ -115,15 +115,16 @@
 document.getElementById("status")
 
 // jQuery 
-$('#status')
+$("#status")
 </pre>
-      <div class="reminders single-line">
-        <p>Your HTML tag must have an <code>id</code> attribute in order to do this!</p>
+      <div class="reminders">
+        <p>Your HTML tag must have an <code>id</code> attribute in order to do this!<br />
+          Use <code>#name</code> to reference and <code>ID</code> and <code>.name</code> to reference a <code>class</code></p>
       </div>
     </article>
       
 
-    <!-- SLIDE: jQuery vs JavaScript (cont) -->
+    <!-- SLIDE: jQuery vs JavaScript - Replacing text -->
     <article class='slide slide-list'>
       <h2>jQuery vs JavaScript (cont)</h2>
       <p>Let's see how the JavaScript <code>innerHTML</code> example can be done with jQuery
@@ -137,11 +138,14 @@ $('#status')
 <script>
   // The JavaScript way
   var statusDiv = document.getElementById("javascript");
-  statusDiv.innerHTML = "Text replaced by JavaScript."
+  //statusDiv.innerHTML = "Text replaced by JavaScript."
 
   // The jQuery way
   $(document).ready(function(){
-    $("#jquery").html("Text replaced by jQuery.")
+    var statusDiv = $("#jquery");
+    // NOTE: when using a variable as the selector,
+    // it does not have to be contained in quotes
+    //$(statusDiv).html("Text replaced by jQuery.");
   });
 </script>
 
@@ -160,10 +164,46 @@ div {
 </style></textarea>
     </article>
 
+    <!-- SLIDE: jQuery vs JavaScript (cont) - dot notation -->
+    <article class='slide slide-list'>
+      <h2>jQuery vs JavaScript (cont)</h2>
+      <p>You can also use "dot notation" to write the statement in one line instead of declaring a variable.</p>
+<textarea class='coder-editor coder-editor-full'>
+<div>
+  <p id="javascript">Replace this with JavaScript</p>
+  <p id="jquery">Replace this with jQuery</p>
+</div>
+
+<script>
+  // The JavaScript way
+  document.getElementById("javascript").innerHTML = "Text replaced by JavaScript."
+
+  // The jQuery way
+  $(document).ready(function(){
+    $("#jquery").html("Text replaced by jQuery.");
+  });
+</script>
+
+<style>
+div {
+  border: 1px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</style></textarea>
+    </article>
+
+
     <!-- SLIDE:  -->
     <article class='slide slide-subhead'>
       <h1>External JavaScript</h1>
-      <p>Keeping it organized, working with others and adding libraries</p>
+      <p>Keeping it organized, working with others<br> and adding libraries</p>
     </article>
    
     <!-- SLIDE:  -->
@@ -175,7 +215,7 @@ div {
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;JavaScript example!&lt;/title&gt;
-    &lt;script type="text/javascript" src="scripts.js"&gt;&lt;/script&gt;    
+    <strong>&lt;script type="text/javascript" src="scripts.js"&gt;&lt;/script&gt;</strong>  
   &lt;/head&gt;
   &lt;body&gt;
     &lt;div id="example"&gt;This is an example.&lt;/div&gt;    
@@ -207,7 +247,7 @@ div {
       <h2>jQuery: Getting started</h2>
       <p>To make use of the jQuery library, it needs to be included on your web page using an external file. There are two ways to include the file.</p>
 
-      <p>1. <a href="http://docs.jquery.com/Downloading_jQuery" target="_blank">Download</a> the file and include it with the rest of your files.</p>
+      <p>1. <a href="http://docs.jquery.com/Downloading_jQuery" target="_blank">Download</a> the jQuery library and include it with the rest of your files.</p>
 <pre class="prettyprint">
 &lt;script type=&quot;text/javascript&quot; src="jquery.js"&gt;&lt;/script&gt;
 </pre>
@@ -229,70 +269,134 @@ div {
 &lt;script type=&quot;text/javascript&quot; src="jquery.js"&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src="custom.js"&gt;&lt;/script&gt;
 </pre>
+      <p>Selectors are always surrounded by single or double quotes, except when referring to a variable.</p>
+<pre class="prettyprint">
+  &lt;div class="name"&gtClass selector&lt;div&gt
+  &lt;div id="name"&gtID selector&lt;div&gt
 
+  $(".name") - referencing a class
+  $("#name") - referencing an ID
+  $("div") - referencing an HTML element
+
+  var selector = $("name");
+  $(selector) - referencing a variable
+</p>
     </article>
 
+    <!-- SLIDE: jQuery Events - Click-->
+    <article class='slide slide-list'>
+      <h2>jQuery Events</h2>
+      <p>Just like <a href="js_functions.html#slide-4" target="_blank">Javascript functions</a>, we can execute the code on an event. A very common event is the <code>click</code> event.</p>
 
-    
+<pre class="prettyprint">
+$(selector).click(function(){ 
+  //code to execute
+});
+</pre>
+      <p><code>click()</code> triggers a click event, the <code>selector</code> is the element to be clicked and <code>function</code> goes between the parenthesis to run a function, containing one more commands.</p>
+<textarea class='coder-editor coder-editor-full'>
+<a href="#">click me!</a>
+<p>click me again!</p>
 
-      <!-- OLD SLIDE: jQuery Demo -->
-      <!-- <article class='slide slide-list'>
-        <h2>jQuery: Demo</h2>
+<script>
+  $(document).ready(function(){
+
+    // replace 'selector' with the element to add the click event to
+    $(selector).click(function(){
+      alert("clicked!");
+    });
+
+  });
+</script>
+</textarea>
+<script type='coder-solution'>
+<a class="target" href="#">click me!</a>
+<p class="target">click me again!</p>
+
+SCRIPT
+  $(document).ready(function(){
+
+    $("p").click(function(){
+      alert("Click event on a paragraph.");
+    });
+    $("a").click(function(){
+      alert("Click event on a link.");
+    });
+    $(".target").click(function(){
+      alert("Click event on a class.");
+    });
+
+  });
+SCRIPTEND
+</script>
+    </article>
+
+    <!-- SLIDE: jQuery Effects -->
+    <article class='slide slide-list'>
+      <h2>jQuery Effects</h2>
         
-		<p>There are many built in methods and functions included in the jQuery library, too many to remember them all.  
-Never fear, jQuery has documented their API here: <a href="http://api.jquery.com/">http://api.jquery.com</a>
-		<br />It's searchable and provides explanations and examples.</p>
-		<p>Let take a peek at some jQuery code.</p>
+		  <p>There are many handy built in methods that make it simpler to add effects.  The full list is available <a href="http://api.jquery.com/category/effects/">here</a>. It's searchable and provides explanations and examples.</p>
+      <p>Here's an example of how to use the <code>.hide()</code> and <code>.show()</code> methods.</p>
 		
 <textarea class='coder-editor coder-editor-full'>
+<a class="hide" href="#">Hide</a> | <a class="show" href="#">Show</a> 
+<div id="box">
+  <p>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript.</p>
+</div>
+
 <script>
 $(document).ready(function(){
-  $('a.hide').click(function(){
-     $('#box').hide();
+  // Click event on the anchor link with a class of 'hide'
+  $('.hide').click(function(){
+    // code to be executed - hide the "box" div
+    $('#box').hide();
   });
-  $('a.show').click(function(){
+
+  $('.show').click(function(){
      $('#box').show();
-  });
-  $('a.fade').click(function(){
-     $('#box').fadeOut();
-  });
-  $('a.slide-up').click(function(){
-     $('#box').slideUp();
-  });
-  $('a.slide-toggle').click(function(){
-     $('#box').slideToggle();
   });
 });
 </script>
 <style>
-	#container {
-		width: 320px;
-		padding-top: 10px;
-	}
-	#box {
-		height: 60px;
-		width: 200px;
-		background-color: blue;
-		padding: 40px;
-		margin-top: 10px;
-	}
-	a {
-		font: 14px Georgia, serif;
-		text-decoration: none
-	}
-	a.active {
-		color: pink;
-	}		
+  #box {
+    background-color: #B1009A;
+    padding: 20px;
+    margin-top: 10px;
+    font: 18px verdana, arial, sans-serif;
+  }
+  a {
+    font: 14px verdana, arial, sans-serif;
+    text-decoration: none;
+  }	
 </style>
-<div id="container">  
-	<a class="hide" href="#">Hide</a> | 
-	<a class="show" href="#">Show</a> |
-	<a class="fade" href="#">Fade</a> |
-	<a class="slide-toggle" href="#">Slide Toggle</a>		
-	<div id="box"></div>
-</div>
 </textarea>
-      </article> -->
+    </article>
+
+      <!-- SLIDE: jQuery Effects -->
+      <article class='slide slide-list'>
+        <h2>jQuery Effects: Mini Exercise</h2>
+        <p>Let's practice adding some more jQuery effects using an external javascript file.</p>
+        <ol>
+          <li>In the exercises folder, open the <a href="jquery-effects.html">jquery-effects.html</a> into your text editor. HTML and CSS is already provided.</li>
+          <li>Include the jQuery library using one of the CDN hosted links listed <a href="http://jquery.com/download/" target="_blank">here</a>.</li>
+          <li>Create your own external file called 'custom.js' to write your own jQuery and included it in the HTML page.</li>
+          <li>Reference the previous example and add click events, using the classes supplied in the <code>&lt;a&gt</code> links, to add the following effects:
+            <ul>
+              <li><code>show()</code></li>
+              <li><code>hide()</code></li>
+              <li><code>slideDown()</code></li>
+              <li><code>slideToggle()</code></li>
+              <li><code>fadeOut()</code></li>
+              <li><code>fadeIn()</code></li>
+            </ul>
+          </li>
+        </ol>
+        <div class="hint">
+          <p>jQuery effects documentation: <a href="http://docs.jquery.com/Effects" target="_blank">http://docs.jquery.com/Effects</a><br>
+          Solutions posted in the solutions folder.</p>
+        </div>
+
+      </article>
       
      <!-- SLIDE: Next section -->
     <article class='slide slide-list'>
