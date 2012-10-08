@@ -295,6 +295,33 @@ SCRIPTEND</script>
 
       </article>
 
+
+          <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>Object Methods</h3>
+      <p>Here's another <span class="keyword">METHOD</span> associated with strings.</p>
+      <p>Have you ever created an email newsletter? You usually have a template but you want to replace <code>[First Name]</code> with someone's actual name. Use <code>.replace()</code> for that!</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+
+var emailTemplate = "Dear [First Name], thank you for subscribing.";
+
+// uh-oh, let's make this more personal
+document.write( emailTemplate ); 
+
+</script></textarea>
+<script type="coder-solution">SCRIPT
+
+var emailTemplate = "Dear [First Name], thank you for subscribing.";
+
+// uh-oh, let's make this more personal
+var emailFinal = emailTemplate.replace("[First Name]", "Pearl") 
+document.write( emailFinal ); 
+
+SCRIPTEND</script>
+
+      </article>
+
       <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Looking up properties and references</h2>
