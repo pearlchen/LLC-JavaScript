@@ -295,7 +295,7 @@ This module adds a code editor that shows up in individual slides
     }
 
 
-    $("a").attr('target','_blank');
+    //$("a").attr('target','_blank'); //removed by Pearl Chen - Oct 8
     $.each($[deck]('getSlides'), prepareSlide);
 
     prettyPrint();
