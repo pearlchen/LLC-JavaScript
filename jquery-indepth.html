@@ -21,9 +21,6 @@
   <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css"></style>
-
-  <script src='src/jquery.min.js'></script>
-
 </head>
 
 <body class="deck-container">
@@ -130,22 +127,20 @@ $("#status")
       <p>Let's see how the JavaScript <code>innerHTML</code> example can be done with jQuery
         to replace what's already in an element.</p>
 <textarea class='coder-editor coder-editor-full'>
-<div>
-  <p id="javascript">Replace this with JavaScript</p>
-  <p id="jquery">Replace this with jQuery</p>
-</div>
+<div id="javascript">Replace this text with JavaScript</div>
+<div id="jquery">Replace this text with jQuery</div>
 
 <script>
   // The JavaScript way
   var statusDiv = document.getElementById("javascript");
-  //statusDiv.innerHTML = "Text replaced by JavaScript."
+  //statusDiv.innerHTML = "NEW TEXT! Done with JavaScript."
 
   // The jQuery way
   $(document).ready(function(){
     var statusDiv = $("#jquery");
     // NOTE: when using a variable as the selector,
     // it does not have to be contained in quotes
-    //$(statusDiv).html("Text replaced by jQuery.");
+    //$(statusDiv).html("NEW TEXT! Done with jQuery.");
   });
 </script>
 
@@ -169,18 +164,16 @@ div {
       <h2>jQuery vs JavaScript (cont)</h2>
       <p>You can also use "dot notation" to write the statement in one line instead of declaring a variable.</p>
 <textarea class='coder-editor coder-editor-full'>
-<div>
-  <p id="javascript">Replace this with JavaScript</p>
-  <p id="jquery">Replace this with jQuery</p>
-</div>
+<div id="javascript">Replace this text with JavaScript</div>
+<div id="jquery">Replace this text with jQuery</div>
 
 <script>
   // The JavaScript way
-  document.getElementById("javascript").innerHTML = "Text replaced by JavaScript."
+  document.getElementById("javascript").innerHTML = "NEW TEXT! Done with JavaScript."
 
   // The jQuery way
   $(document).ready(function(){
-    $("#jquery").html("Text replaced by jQuery.");
+    $("#jquery").html("NEW TEXT! Done with jQuery.");
   });
 </script>
 
@@ -260,7 +253,7 @@ div {
       </div>
     </article>
 
-    <!-- SLIDE: Included jQuery Gotchas -->
+    <!-- SLIDE: Including jQuery Gotchas -->
     <article class='slide slide-list'>
       <h2>Gotchas!</h2>
       <p>When adding your own custom-written jQuery/JavaScript files, make sure to include it <strong>after</strong> the jQuery file to ensure that the library loads first.</p>
@@ -269,7 +262,12 @@ div {
 &lt;script type=&quot;text/javascript&quot; src="jquery.js"&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src="custom.js"&gt;&lt;/script&gt;
 </pre>
-      <p>Selectors are always surrounded by single or double quotes, except when referring to a variable.</p>
+    </article>
+
+    <!-- SLIDE: jQuery Selectors: Syntax Review -->
+    <article class='slide slide-list'>
+      <h2>jQuery Selectors: Syntax Review</h2>
+      <p>Selectors are always surrounded by single or double quotes, except when referencing a variable.</p>
 <pre class="prettyprint">
   &lt;div class="name"&gtClass selector&lt;div&gt
   &lt;div id="name"&gtID selector&lt;div&gt
@@ -282,6 +280,114 @@ div {
   $(selector) - referencing a variable
 </p>
     </article>
+
+    <!-- SLIDE: jQuery and JavaScript-->
+    <article class='slide slide-list'>
+      <h2>jQuery AND JavaScript</h2>
+      <p>jQuery may have its own syntax and methods but it's still JavaScript at<br /> its core. Let's look at a previous example and see how jQuery and JavaScript work together. Which parts can be re-written in jQuery?</p>
+
+      <div class="hint single-line">
+        <p>In jQuery, <code>.val()</code> does the same thing as <code>.value</code> in JavaScript.</p>
+      </div>
+<textarea class='coder-editor coder-editor-full'>
+  Name: <input type="text" id="name" /><br />
+  Address: <input type="text" id="address" /><br />
+  City: <input type="text" id="city" /><br />
+  Postal Code: <input type="text" id="postal" />
+  <br /><br />
+  <button onclick="validateForm()">Check out now!</button>
+
+<script>
+function validateForm() {
+  // automagically get the typed values from the form
+  var name = document.getElementById("name").value;
+  var address = document.getElementById("address").value;
+  var city = document.getElementById("city").value;
+  var postal = document.getElementById("postal").value;
+
+  // I will assume that fields are blank by default
+  var nameIsBlank = true;
+  var addressIsBlank = true;
+  var cityIsBlank = true;
+  var postalIsBlank = true;
+
+  // If the field is NOT an empty string, set the Boolean to be false
+  if ( name != "" ) {
+    nameIsBlank = false;
+  }
+
+  if ( address != "" ) {
+    addressIsBlank = false;
+  }
+
+  if ( city != "" ) {
+    cityIsBlank = false;
+  }
+
+  if ( postal != "" ) {
+    postalIsBlank = false;
+  }
+
+  // Only takes 1 blank field to cause an error. Use the OR logical operator
+  if ( nameIsBlank || addressIsBlank || cityIsBlank || postalIsBlank ) {
+    alert( "Sorry there are errors. Form fields cannot be blank!" );
+  } else {
+    alert( "Thank you for your order!" );
+  }
+}
+</script>
+</textarea>
+<script type="coder-solution">
+  Name: <input type="text" id="name" /><br />
+  Address: <input type="text" id="address" /><br />
+  City: <input type="text" id="city" /><br />
+  Postal Code: <input type="text" id="postal" />
+  <br /><br />
+  <button onclick="validateForm()">Check out now!</button>
+
+SCRIPT
+  $(document).ready(function(){
+    // automagically get the typed values from the form
+    var name = $("#name").val();
+    var address = $("#address").val();
+    var city = $("#city").val();
+    var postal = $("#postal").val();
+
+    function validateForm() {
+      // I will assume that fields are blank by default
+      var nameIsBlank = true;
+      var addressIsBlank = true;
+      var cityIsBlank = true;
+      var postalIsBlank = true;
+
+      // If the field is NOT an empty string, set the Boolean to be false
+      if ( name != "" ) {
+        nameIsBlank = false;
+      }
+      if ( address != "" ) {
+        addressIsBlank = false;
+      }
+      if ( city != "" ) {
+        cityIsBlank = false;
+      }
+      if ( postal != "" ) {
+        postalIsBlank = false;
+      }
+
+      // Only takes 1 blank field to cause an error. Use the OR logical operator
+      if ( nameIsBlank || addressIsBlank || cityIsBlank || postalIsBlank ) {
+        alert( "Sorry there are errors. Form fields cannot be blank!" );
+      } else {
+        alert( "Thank you for your order!" );
+      }
+    }
+  });
+
+
+SCRIPTEND
+</script>
+    </article>
+
 
     <!-- SLIDE: jQuery Events - Click-->
     <article class='slide slide-list'>
@@ -309,7 +415,7 @@ $(selector).click(function(){
   });
 </script>
 </textarea>
-<script type='coder-solution'>
+<script type="coder-solution">
 <a class="target" href="#">click me!</a>
 <p class="target">click me again!</p>
 
