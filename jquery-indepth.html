@@ -90,7 +90,34 @@
   });
 &lt;/script&gt;
 </pre>
+    </article>
 
+    <!-- SLIDE: More on document.ready -->
+    <article class='slide slide-list'>
+      <h2>More on $(document).ready</h2>
+      <p>Remember <code>document.write()</code>? The functionality is similar. <code>document</code> is the object, <code>write()</code> is the method we use to pass in parameters. (<a href="js_dom.html#slide-4" target="_blank">see slide</a>)</p>
+
+      <p>In jQuery syntax, the <code>$</code> is simply a shorcut for a function called <code>jQuery</code>. It is how you access all of the functionality in the library. To select the <code>document</code> jQuery style, it looks like this:</p>
+<pre class="prettyprint">
+$(document)
+</pre>
+      <p><code>.ready()</code> specifies a function to execute when the DOM is loaded.</p>
+<pre class="prettyprint">
+$(document).ready();
+</pre>
+      <p>An "anonymous function" needs to be passed into the above code to execute the jQuery code.</p>
+<pre class="prettyprint">
+//syntax for anonymous function
+function(){
+   code goes here
+}
+
+// pass the anonymous function in the ready() method    
+$(document).ready(function(){
+   jQuery code here
+});
+
+</pre>
     </article>
 
     <!-- SLIDE: jQuery vs JavaScript - DOM reference-->
@@ -284,108 +311,16 @@ div {
     <!-- SLIDE: jQuery and JavaScript-->
     <article class='slide slide-list'>
       <h2>jQuery AND JavaScript</h2>
-      <p>jQuery may have its own syntax and methods but it's still JavaScript at<br /> its core. Let's look at a previous example and see how jQuery and JavaScript work together. Which parts can be re-written in jQuery?</p>
+      <p>jQuery may have its own syntax and methods but it's still JavaScript at<br /> its core. Let's look at a previous example and see how jQuery and JavaScript work together.</p>
 
-      <div class="hint single-line">
-        <p>In jQuery, <code>.val()</code> does the same thing as <code>.value</code> in JavaScript.</p>
+      <p>In the exercises folder, open <a href="exercises/jquery-javascript.html" target="_blank">jquery-javascript.html</a>.</p>
+      <p>Which parts can be re-written in jQuery?</p>
+
+      <div class="hint">
+        <p>In jQuery, <code>.val()</code> does the same thing as <code>.value</code> in JavaScript.<br>
+          Solution located <a href="exercises/solutions/jquery-javascript.html" target="_blank">here</a>.
+        </p>
       </div>
-<textarea class='coder-editor coder-editor-full'>
-  Name: <input type="text" id="name" /><br />
-  Address: <input type="text" id="address" /><br />
-  City: <input type="text" id="city" /><br />
-  Postal Code: <input type="text" id="postal" />
-  <br /><br />
-  <button onclick="validateForm()">Check out now!</button>
-
-<script>
-function validateForm() {
-  // automagically get the typed values from the form
-  var name = document.getElementById("name").value;
-  var address = document.getElementById("address").value;
-  var city = document.getElementById("city").value;
-  var postal = document.getElementById("postal").value;
-
-  // I will assume that fields are blank by default
-  var nameIsBlank = true;
-  var addressIsBlank = true;
-  var cityIsBlank = true;
-  var postalIsBlank = true;
-
-  // If the field is NOT an empty string, set the Boolean to be false
-  if ( name != "" ) {
-    nameIsBlank = false;
-  }
-
-  if ( address != "" ) {
-    addressIsBlank = false;
-  }
-
-  if ( city != "" ) {
-    cityIsBlank = false;
-  }
-
-  if ( postal != "" ) {
-    postalIsBlank = false;
-  }
-
-  // Only takes 1 blank field to cause an error. Use the OR logical operator
-  if ( nameIsBlank || addressIsBlank || cityIsBlank || postalIsBlank ) {
-    alert( "Sorry there are errors. Form fields cannot be blank!" );
-  } else {
-    alert( "Thank you for your order!" );
-  }
-}
-</script>
-</textarea>
-<script type="coder-solution">
-  Name: <input type="text" id="name" /><br />
-  Address: <input type="text" id="address" /><br />
-  City: <input type="text" id="city" /><br />
-  Postal Code: <input type="text" id="postal" />
-  <br /><br />
-  <button onclick="validateForm()">Check out now!</button>
-
-SCRIPT
-  $(document).ready(function(){
-    // automagically get the typed values from the form
-    var name = $("#name").val();
-    var address = $("#address").val();
-    var city = $("#city").val();
-    var postal = $("#postal").val();
-
-    function validateForm() {
-      // I will assume that fields are blank by default
-      var nameIsBlank = true;
-      var addressIsBlank = true;
-      var cityIsBlank = true;
-      var postalIsBlank = true;
-
-      // If the field is NOT an empty string, set the Boolean to be false
-      if ( name != "" ) {
-        nameIsBlank = false;
-      }
-      if ( address != "" ) {
-        addressIsBlank = false;
-      }
-      if ( city != "" ) {
-        cityIsBlank = false;
-      }
-      if ( postal != "" ) {
-        postalIsBlank = false;
-      }
-
-      // Only takes 1 blank field to cause an error. Use the OR logical operator
-      if ( nameIsBlank || addressIsBlank || cityIsBlank || postalIsBlank ) {
-        alert( "Sorry there are errors. Form fields cannot be blank!" );
-      } else {
-        alert( "Thank you for your order!" );
-      }
-    }
-  });
-
-
-SCRIPTEND
-</script>
     </article>
 
 
@@ -480,13 +415,13 @@ $(document).ready(function(){
 
       <!-- SLIDE: jQuery Effects -->
       <article class='slide slide-list'>
-        <h2>jQuery Effects: Mini Exercise</h2>
-        <p>Let's practice adding some more jQuery effects using an external javascript file.</p>
+        <h2><span class="smaller">Mini-exercise (20 mins)</span><br>jQuery Effects</h2>
+        <p>Let's practice adding some more jQuery effects and using external javascript files.</p>
         <ol>
           <li>In the exercises folder, open the <a href="jquery-effects.html">jquery-effects.html</a> into your text editor. HTML and CSS is already provided.</li>
           <li>Include the jQuery library using one of the CDN hosted links listed <a href="http://jquery.com/download/" target="_blank">here</a>.</li>
-          <li>Create your own external file called 'custom.js' to write your own jQuery and included it in the HTML page.</li>
-          <li>Reference the previous example and add click events, using the classes supplied in the <code>&lt;a&gt</code> links, to add the following effects:
+          <li>Create your own external file called 'jquery-effects.js' to write your own jQuery and included it in the HTML page.</li>
+          <li>Reference the previous example and add click events using the classes supplied in the <code>&lt;a&gt</code> links, to add the following effects:
             <ul>
               <li><code>show()</code></li>
               <li><code>hide()</code></li>
@@ -498,7 +433,8 @@ $(document).ready(function(){
           </li>
         </ol>
         <div class="hint">
-          <p>jQuery effects documentation: <a href="http://docs.jquery.com/Effects" target="_blank">http://docs.jquery.com/Effects</a><br>
+          <p>jQuery effects documentation: <a href="http://docs.jquery.com/Effects" target="_blank">http://docs.jquery.com/Effects</a><br> 
+            jQuery click event documentation: <a href="http://api.jquery.com/click/" target="_blank">http://api.jquery.com/click/</a><br>
           Solutions posted in the solutions folder.</p>
         </div>
 

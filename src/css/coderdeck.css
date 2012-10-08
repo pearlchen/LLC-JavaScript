@@ -114,7 +114,7 @@ html, body {
 }
 .deck-container .slide-list li {
   padding-left: .5em;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 .deck-container .slide-list li ul {
 	margin-bottom: 0;
