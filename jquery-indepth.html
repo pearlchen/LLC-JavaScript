@@ -220,13 +220,13 @@ div {
     </article>
 
 
-    <!-- SLIDE:  -->
+    <!-- SLIDE: EXTERNAL JS FILES -->
     <article class='slide slide-subhead'>
       <h1>External JavaScript</h1>
       <p>Keeping it organized, working with others<br> and adding libraries</p>
     </article>
    
-    <!-- SLIDE:  -->
+    <!-- SLIDE: SCRIPT TAG-->
     <article class='slide slide-list'>
       <h2>&lt;script src=""&gt;</h2>
       <p>As you write bigger pieces of JavaScript, you will want to start putting your code into their own files so they are easier to manage. Or you might want to enlist the help of others to write JavaScript for your website so you can work on different sections separately. A big site could have thousands of lines of code written by many different people!</p>
@@ -244,14 +244,14 @@ div {
       </pre>
     </article>   
       
-    <!-- SLIDE:  -->
+    <!-- SLIDE: EXTERNAL FILES -->
     <article class='slide slide-list'>
       <h2>In the external file</h2>
       <p>In the <a href="http://pchen.github.com/LLC-JavaScript/exercises/scripts.js" target="_blank">external JavaScript file (scripts.js)</a> you don't include script tags; just JavaScript code. </p>
       <p>View this example: <a href="http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html" target="_blank">http://pchen.github.com/LLC-JavaScript/exercises/external-javascript.html</a></p>
     </article>
       
-    <!-- SLIDE:  -->
+    <!-- SLIDE: SCRIPT TAG GOTCHAS -->
     <article class='slide slide-list'>
       <h2>script tag gotchas</h2>
       <p>Even though you're not writing JavaScript between the script tags, you must use a closing <code>&lt;/script&gt;</code> tag. A self-closing tag such as <code>&lt;script src="scripts.js" /&gt;</code> will <strong>not</strong> work. The correct way is highlighted below:</p>
@@ -308,21 +308,6 @@ div {
 </p>
     </article>
 
-    <!-- SLIDE: jQuery and JavaScript-->
-    <article class='slide slide-list'>
-      <h2>jQuery AND JavaScript</h2>
-      <p>jQuery may have its own syntax and methods but it's still JavaScript at<br /> its core. Let's look at a previous example and see how jQuery and JavaScript work together.</p>
-
-      <p>In the exercises folder, open <a href="exercises/jquery-javascript.html" target="_blank">jquery-javascript.html</a>.</p>
-      <p>Which parts can be re-written in jQuery?</p>
-
-      <div class="hint">
-        <p>In jQuery, <code>.val()</code> does the same thing as <code>.value</code> in JavaScript.<br>
-          Solution located <a href="exercises/solutions/jquery-javascript.html" target="_blank">here</a>.
-        </p>
-      </div>
-    </article>
-
 
     <!-- SLIDE: jQuery Events - Click-->
     <article class='slide slide-list'>
@@ -372,6 +357,18 @@ SCRIPTEND
 </script>
     </article>
 
+    <!-- SLIDE: jQuery and JavaScript-->
+    <article class='slide slide-list'>
+      <h2>jQuery AND JavaScript</h2>
+      <p>jQuery may have its own syntax and methods but it's still JavaScript at<br /> its core. Let's look at a previous example and see how jQuery and JavaScript work together.</p>
+
+      <p>In the exercises folder, open <a href="exercises/jquery-javascript.html" target="_blank">jquery-javascript.html</a> and <a href="exercises/jquery-javascript.js" target="_blank">jquery-javascript.js</a>.</p>
+      <p>While it works using pure JavaScript, the functions are currently being called "inline" by adding an <code>onclick</code> directly in the element. It's best practice to avoid inline event handlers.</p>
+
+      <p>Let's use the jQuery <code>click()</code> method instead and use it to select the element and pass the related function.</p>
+    </article>
+
+
     <!-- SLIDE: jQuery Effects -->
     <article class='slide slide-list'>
       <h2>jQuery Effects</h2>
@@ -418,7 +415,7 @@ $(document).ready(function(){
         <h2><span class="smaller">Mini-exercise (20 mins)</span><br>jQuery Effects</h2>
         <p>Let's practice adding some more jQuery effects and using external javascript files.</p>
         <ol>
-          <li>In the exercises folder, open the <a href="jquery-effects.html" target="_blank">jquery-effects.html</a> into your text editor. HTML and CSS is already provided.</li>
+          <li>In the exercises folder, open the <a href="exercises/jquery-effects.html" target="_blank">jquery-effects.html</a> into your text editor. HTML and CSS is already provided.</li>
           <li>Include the jQuery library using one of the CDN hosted links listed <a href="http://jquery.com/download/" target="_blank">here</a>.</li>
           <li>Create your own external file called 'jquery-effects.js' to write your own jQuery and included it in the HTML page.</li>
           <li>Reference the previous example and add click events using the classes supplied in the <code>&lt;a&gt</code> links, to add the following effects:
