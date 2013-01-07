@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html> 
+<!--
+  Copyright 2011 Ladies Learning Code.
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ 
+  Original slides: Marcin Wichary (mwichary@google.com) and http://html5rocks.com
+  Modifications: Pearl Chen (pearl[at]karma-laboratory.com) for http://ladieslearningcode.com
+--> 
+<html manifest="cache.appcache"> 
+  <head> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" /> 
+    <title>JavaScript - Ladies Learning Code - March 18, 2012</title> 
+   	<link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'> 
+    <link id="prettify-link" href="src/prettify/prettify.css" rel="stylesheet" disabled /> 
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet" media="screen"  /> 
+    <link href="css/common.css" rel="stylesheet" media="screen" /> 
+  </head> 
+  <body> 
+    <nav id="helpers"> 
+      <button title="Previous slide" id="nav-prev" class="nav-prev">⇽</button> 
+      <button title="Jump to a random slide" id="slide-no">5</button> 
+      <button title="Next slide" id="nav-next" class="nav-next">⇾</button> 
+      <menu> 
+        <button type="checkbox" data-command="toc" title="Table of Contents" class="toc">TOC</button> 
+        <button type="checkbox" data-command="notes" title="View Slide Notes">✏</button> 
+        <button type="checkbox" data-command="source" title="View slide source">↻</button> 
+        <button type="checkbox" data-command="help" title="View Help">?</button> 
+      </menu> 
+    </nav> 
+    <div class="presentation"> 
+      <div id="presentation-counter">Loading...</div> 
+      <div class="slides"> 
+      
+        <div class="slide" id="landing-slide"> 
+          <style> 
+		   	#landing-slide h1 {
+			  font-family: 'Podkova', Arial;
+              font-size: 35px;
+            }
+            #landing-slide p {
+              font-size: 25px;
+            }
+          </style> 
+          <section class="middle"> 
+            <h1>Photo Slider Assignment</h1>
+            <p>Press <span id="left-init-key" class="key">&rarr;</span> key to advance.</p> 
+          </section> 
+        </div> 
+        
+        <div class="slide" id="assignment-1"> 
+          <style>
+		  	#assignment-2 #hint { display: none; }
+          </style> 
+          <header><h1>Overview</h1></header> 
+          <section>
+            <p>In this final part, we'll be creating a photo slider with images of 5 things you like.</p>
+            <p>See the <a href="examples/photos_final.html" target="_blank">finished product</a>.</p>
+            <p>An HTML web page (photos.html) with 5 images (1.jpg to 5.jpg) and CSS (photos.css) has been supplied to you already to get you started.</p>
+            <<p>Notice that there's already stub JavaScript code for you at the bottom of the page.</p>
+          </section> 
+        </div>
+        
+        <div class="slide" id="assignment-4"> 
+          <style>
+		  	#assignment-4 #hint { display: none; }
+          </style> 
+          <header><h1>Create an array of image divs</h1></header> 
+          <section>
+           	<ol start="8">
+                <li>Within the script tag, create an array named "<code>imageDivs</code>" and populate the array with the id names of all your div tags from step 6.</li>
+            </ol>
+<pre id="hint">var imageDivs = [ "image1", ********** ];</pre>
+			<p class="showHint" onclick="javascript:showHint('assignment-4'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+          </section> 
+        </div>
+        
+        <div class="slide" id="assignment-5"> 
+          <style>
+		  	#assignment-5 #hint { display: none; }
+          </style> 
+          <header><h1>Loop through your array</h1></header> 
+          <section>
+           	<ol start="9">
+           		<li>Use either a <code>while</code> loop or a <code>for</code> loop to iterate over each item in your <code>imageDivs</code> array.</li>
+                <li>Within this loop, use <code>getElementById()</code> to keep a temporary reference to the <code>div</code> at the current index.</li>
+            </ol>
+<pre id="hint">var numImages = **********.length; //get total number of items in the array
+
+for ( var i=0; i&lt;numImages; i++ ) {
+    
+    //use the loop index to access the array item for that index
+    var divIdName = imageDivs[ ********** ]; 
+    
+    var divNode = document.getElementById(divIdName);
+    
+    //testing only -- to confirm your work
+    alert( "Loop index is: " + i + ". " + 
+      " My divNode id is: " + divNode.getAttribute("id") );   
+}</pre>
+			<p class="showHint" onclick="javascript:showHint('assignment-5'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+            <p>If you're getting errors, consider this trouble-shooting idea: The JavaScript code is attempting to reference html tags that exist on the web page. Knowing this, should your <code>script</code> tag be at the <strong>top</strong> of the page or <strong>bottom</strong>?
+          </section> 
+        </div>
+        
+        <div class="slide" id="assignment-6"> 
+          <style>
+		  	#assignment-6 #hint { display: none; }
+          </style> 
+          <header><h1>Style your image-containing <code>div</code>s</h1></header> 
+          <section>
+           	<ol start="11">
+           		<li>There is a CSS file already created for you at:<br />
+                 <a href="http://workshop.ladieslearningcode.com/assets/photos.css" target="_blank">http://workshop.ladieslearningcode.com/assets/photos.css</a>.<br /><br />
+                 Use the <code>&lt;link rel="stylesheet" /&gt;</code> tag to link to this stylesheet from your photos.html web page.</li>
+                <li>Within your loop in scripts.js, dynamically update the "class" attribute of each div node to be "image-holder" to add a thick, solid white border around all your images.</li>
+            </ol>
+<pre id="hint">divNode.setAttribute( "**********", "image-holder" );</pre>
+			<p class="showHint" onclick="javascript:showHint('assignment-6'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+            <p>It should look like <a href="examples/pearl.c/photos-draft2.html" target="_blank" class="try">this</a> when you're done.</p>
+          </section> 
+        </div>
+                 
+        <div class="slide" id="assignment-7"> 
+          <style>
+		  	#assignment-7 #hint { display: none; }
+          </style> 
+          <header><h1>Start coding the image navigator</h1></header> 
+          <section>
+           	<ol start="13">
+                <li>In your JavaScript code, create a number counter variable called <strong><code>currentDivIndex</code></strong> and default it to be the <em>first index number</em> of the imageDiv array.<br />
+                <span class="small">(Hint: Should it be <strong>0</strong> or should it be <strong>1</strong>?)</span></li>
+                <li>Within your loop, instead of giving a white border around all the imges, use a conditional <code>if/else</code> test. Add the "image-holder" class only to the <code>div</code> node that's in the same array index position as <code>currentDivIndex</code>. For everything else, use <code>removeAttribute()</code> to remove the "class" attribute</li>
+            </ol>
+<pre id="hint">var currentDivIndex = **********;
+var numImages = imageDivs.length;
+for ( var i=0; i&lt;numImages; i++ ) {
+  // stuff you already wrote.....
+  // but instead of this: divNode.setAttribute( "class", "image-holder" );
+  //use an if/else test
+  if ( i == ********** ) {
+    divNode.setAttribute( "class", "image-holder" );
+  }else{
+    divNode.removeAttribute( "class" );
+  }   
+}
+</pre>
+			<p class="showHint" onclick="javascript:showHint('assignment-7'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+            <p>It should look like <a href="examples/pearl.c/photos-draft3.html" target="_blank" class="try">this</a> when you're done.</p>
+          </section> 
+        </div>
+ 
+         <div class="slide" id="assignment-8"> 
+          <style>
+		  	#assignment-8 #hint { display: none; }
+          </style> 
+          <header><h1>Add in image navigator buttons</h1></header> 
+          <section>
+           	<ol start="15">
+                <li>In your HTML code, create <em>previous</em> and <em>next</em> buttons using <code>img</code> tags with an <strong><code>onclick</code></strong> attribute that will point to <code>showPrevious</code> and <code>showNext</code> JavaScript functions that you will write very shortly. For each arrow <code>img</code> tag, give it an appropriate id value of either "<strong>previous</strong>" and "<strong>next</strong>" so CSS styles can be applied to them.<br /><br />
+                Images urls:                 <a href="http://workshop.ladieslearningcode.com/assets/left.png" target="_blank">http://workshop.ladieslearningcode.com/assets/left.png</a> &amp; <a href="http://workshop.ladieslearningcode.com/assets/right.png" target="_blank">right.png</a></li>
+                <li>In your JavaScript code, create <code>showPrevious</code> and <code>showNext</code> functions. Each function should either decrease the value of <code>currentDivIndex</code> by one, or increase it. For testing, add in an <code>alert()</code> to show that you've created your functions correctly.</li> 
+            </ol>
+<pre id="hint">********** **********() {
+	currentDivIndex = **********; //what kind of mathematical operation here?
+	alert( "showPrevious called! currentDivIndex is: " + currentDivIndex );
+}
+
+********** **********() {
+	currentDivIndex = **********; //what kind of mathematical operation here?
+	alert( "showNext called! currentDivIndex is: " + currentDivIndex );
+}
+</pre>    
+			<p class="showHint" onclick="javascript:showHint('assignment-8'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+        	<p>It should look like <a href="examples/pearl.c/photos-draft4.html" target="_blank" class="try">this</a> when you're done. <span class="small">(Click on the arrows.)</span></p>
+          </section> 
+        </div>
+  
+         <div class="slide" id="assignment-9"> 
+          <style>
+		  	#assignment-9 #hint { display: none; }
+          </style> 
+          <header><h1>Refine your math</h1></header> 
+          <section>
+          <p>Did you notice that you can get <code>currentDivIndex</code> to be equal to -1 or even 10?</p>
+          <p>If your code attempts to get a value of an array using an index number that doesn't exist (e.g. <strong>imageDivs[-10]</strong>), you get what is called an "out of bounds" error. Don't let it happen!</p> 
+           	<ol start="17">
+                <li>In your <code>showPrevious</code> and <code>showNext</code> functions, use an <code>if</code> test to make sure that <code>currentDivIndex</code> doesn't ever get set to an "out of bounds" number. For testing, add in an <code>alert()</code> to show that you've handled your arrow clicks correctly.</li> 
+            </ol>
+<pre id="hint">function showPrevious() {
+  if ( ***** &gt; ***** ) {
+	currentDivIndex = currentDivIndex - 1;
+	alert( "showPrevious called! currentDivIndex is: " + currentDivIndex );
+  }
+}
+
+function showNext() {
+  //remember: the last index of an array is always it's length subtract 1...
+  if ( ***** &lt; ***** ) {
+	currentDivIndex = currentDivIndex + 1;
+	alert( "showNext called! currentDivIndex is: " + currentDivIndex );
+  }
+}
+</pre>    
+			<p class="showHint" onclick="javascript:showHint('assignment-9'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+        	<p>It should look like <a href="examples/pearl.c/photos-draft5.html" target="_blank" class="try">this</a> when you're done. <span class="small">(Click on the arrows.)</span></p>
+          </section> 
+        </div>
+                      
+        <div class="slide" id="assignment-10"> 
+          <style>
+		  	#assignment-10 #hint { display: none; }
+          </style> 
+          <header><h1>Almost there! (Part 1 of 2)</h1></header> 
+          <section>
+          <p>The next step is to be able to use <code>currentDivIndex</code> to update the CSS class style based on the arrow button clicks! Consider that you have <code>for</code> loop that does this already.</p>
+<pre>for ( var i=0; i&lt;numImages; i++ ) {
+  var divIdName = imageDivs[i];
+  var imageDiv = document.getElementById(divIdName);
+
+  if ( i == currentDivIndex ) {
+    divNode.setAttribute( "class", "image-holder" );
+  }else
+    divNode.removeAttribute( "class" );
+}</pre>
+           	<ol start="18">
+                <li>Make the <code>for</code> loop more re-usable by putting it in an function named <strong>updateAllNodes()</strong></li>
+            </ol>
+            
+<pre id="hint">function ********** () {
+  for ( var i=0; i&lt;numImages; i++ ) {
+    //your loop stuff
+  }
+}</pre>
+			<p class="showHint" onclick="javascript:showHint('assignment-10'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+          </section> 
+        </div>
+
+        <div class="slide" id="assignment-11"> 
+          <style>
+		  	#assignment-11 #hint { display: none; }
+			#assignment-11 p.ul-label { padding-bottom; margin-bottom: 0;}
+			#assignment-11 ul{ padding-top; margin-top: 0;}
+		  	#assignment-11 ul li { padding-bottom: 0; padding-top: 0; }
+          </style> 
+          <header><h1>Almost there! (Part 2 of 2)</h1></header> 
+          <section>
+          <p class="ul-label">Remember that you need to call the function before that code block gets executed so where are the <strong>three</strong> spots you should call <code>updateAllNodes</code> so that:</p>
+          <ul>
+          	<li>there's a default state</li>
+            <li>nodes get updated when you click the <em>previous</em> button arrow</li>
+            <li>nodes get updated when you click the <em>next</em> button arrow</li>
+          </ul>
+
+           	<ol start="19">
+                <li>Call the function <strong>updateAllNodes()</strong> in your code in the 3 spots it should be.</li>
+            </ol>
+            
+            <p>It should look like <a href="examples/pearl.c/photos-draft6.html" target="_blank" class="try">this</a> when you're done. <span class="small">(Click on the arrows.)</span></p>
+          </section> 
+        </div>
+  
+         <div class="slide" id="assignment-12"> 
+          <style>
+		  	#assignment-12 #hint { display: none; }
+          </style> 
+          <header><h1>Finally!</h1></header> 
+          <section>
+          <p><strong>By now you've mastered arrays, loops, functions, and conditionals! Congratulations!</strong></p>
+          <p>Your photo slider should be able to make the white border appear around the appropriate image when you click the arrow buttons so let's just tidy it up.</p>
+           	<ol start="20">
+                <li>Update the conditional <code>if/else</code> test in <strong>updateAllNodes()</strong> function to set the nodes's display mode (visibility) to either "none" or "block" -- only the current node should be visible.</li>
+            </ol>
+            
+<pre id="hint">if ( i == currentDivIndex ) {
+    divNode.setAttribute( "class", "image-holder" );
+    divNode.style.display = **********;
+}else{
+    divNode.removeAttribute( "class" );
+    divNode.style.display = **********;
+}</pre>
+			<p class="showHint" onclick="javascript:showHint('assignment-12'); this.style.display = 'none';">If you're stuck, click here to show a hint...</p>
+            <p>The <strong>final</strong> result should look like <a href="examples/pearl.c/photos.html" target="_blank" class="try">this</a> when you're done!!</p>
+          </section> 
+        </div>
+
+        
+        <div class="slide" id="assignment-photos"> 
+          <style>
+          </style> 
+          <header><h1>Back to the assignment! Gather images.</h1></header> 
+          <section>
+            <ol start="1">
+              <li>Download 5 images of things you like from <a href="http://flickr.com" target="_blank">Flickr.com</a> <span class="small">(Note: Download landscape-only images that are 500px wide by 375px tall. Easiest way to do this is to view a photo on Flickr and right-click for options. A "Medium 500" option will appear. If you have your own image editing software, feel free to use your own photos cropped to this size.)</span><br />
+                <img src="assets/flickr-500.jpg" width="408" height="350" alt="Flickr Medium 500 option" /></li>
+                <li>Name them: 1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg <span class="small">(Optional but it may help while debugging.)</span></li>
+            </ol>
+          </section> 
+        </div>
+
+         <div class="slide" id="assignment-bonus"> 
+          <style>
+
+          </style> 
+          <header><h1>Extra points</h1></header> 
+          <section>
+          	<p>If you're eager to flex your JavaScript skillz, try some of these bonus challenges:</p>
+			<ul>
+            	<li>Loop the images.<br />e.g. When the slideshow is at the end, clicking next should show the first photo.</li>
+                <li>Use the <code>alt</code> attribute of the <code>img</code> tag to create photo captions using the node's <code>innerHTML</code> property.</li>
+                <li>Add an alpha fade animation as a photo transition.</li>
+            </ul>
+
+          </section> 
+        </div>                      
+                                                             
+      </div> <!-- slides --> 
+      
+      <script type="text/javascript">
+		function showHint(slide) {
+			var preTags = document.getElementById(slide).getElementsByTagName("pre");
+			for ( var i=0; i<preTags.length; i++ ) {
+				var preTag = preTags[i];
+				if ( preTag.getAttribute( "id" ) == "hint" ) {
+					preTag.style.display = "block";
+					break;
+				}
+			}
+		}
+	  </script>
+      <style>
+	  	p.showHint { cursor: pointer; font-size: 14px; color: #C6F; display: inline; }
+	  </style>
+      
+      <div id="speaker-note" class="invisible" style="display: none;"> 
+      </div> <!-- speaker note --> 
+      <aside id="help" class="sidebar invisible" style="display: hidden;"> 
+        <table> 
+          <caption>Help</caption> 
+          <tbody> 
+            <tr> 
+              <th>Move Around</th> 
+              <td>&larr;&nbsp;&rarr;</td> 
+            </tr> 
+            <tr> 
+              <th>Source File</th> 
+              <td>s</td> 
+            </tr> 
+            <tr> 
+              <th>Change Theme</th> 
+              <td>t</td> 
+            </tr> 
+            <tr> 
+              <th>Speaker Notes</th> 
+              <td>n</td> 
+            </tr> 
+            <tr> 
+              <th>Toggle Code Highlighting</th> 
+              <td>c</td> 
+            </tr> 
+            <tr> 
+              <th>Help</th> 
+              <td>h</td> 
+            </tr> 
+          </tbody> 
+        </table> 
+      </aside> 
+    
+    </div> <!-- presentation --> 
+ 
+    <!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    <script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]--> 
+ 
+    <script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script> 
+    <script src="js/utils.js"></script> 
+    <script> 
+      // Check if new appcache is available, load it, and reload page.
+      if (window.applicationCache) {
+        window.applicationCache.addEventListener('updateready', function(e) {
+          if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+            window.applicationCache.swapCache();
+            if (confirm('A new version of this site is available. Load it?')) {
+              window.location.reload();
+            }
+          }
+        }, false);
+      }
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25036648-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+    </script> 
+  </body> 
+</html>
