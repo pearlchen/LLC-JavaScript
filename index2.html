@@ -86,7 +86,7 @@
 
     <!-- SLIDE: FUNCTIONS AND METHODS -->
     <article class='slide slide-list'>
-      <h2>Functions</h2>
+      <h2>Functions &amp; Methods</h2>
       <p>
         What is something that you do that's very repetitive or a hassle? Wouldn't it be great if it was automated? Or at least hidden away?
       </p>
@@ -131,7 +131,7 @@
     <article class='slide slide-list'>
       <h2>Functions in JavaScript</h2>
       <br />
-      <p><span class="keyword">Functions</span> are used to make the code "do things." Sometimes they are also called <span class="keyword">methods</span> in other languages - the concept is the same (in case you took intro-to-ruby with us :) )</p>
+      <p><span class="keyword">Functions</span> are used to make the code "do things." Sometimes they are also called <span class="keyword">methods</span> when found on an object - more on that in a bit!</p>
       <p>
         <code>prompt()</code>
         and
@@ -340,6 +340,9 @@ function nameOfFunction() {
       </p>
       <textarea class='coder-editor coder-editor-full'>
 <script>
+  /* With great power (globals) comes great responsibility. 
+  You might think, 'why not make ALL the variables global?'. 
+  Ask your mentor! */
   var baseTopping = "cheese";
   
   function orderPizza() {
@@ -642,7 +645,7 @@ var arrayObject = [ ];</pre>
       <p>Let's look at a string object and the <code>length</code> property which returns the number of characters in a string.  Try putting your own name in here.</p>
       <textarea class='coder-editor'>
 <script>
-var firstName = "Pearl";
+var firstName = "Angelina";
 
 var numberOfLetters = firstName.length;
 document.write( numberOfLetters );
@@ -730,8 +733,8 @@ document.write( salePrice3 );
       <article class='slide slide-list'>
         <h2>Looking up properties and references</h2>
         <p><code>length</code> and <code>toFixed()</code> are only two of many (many!) more built-in properties and methods of objects in JavaScript.</p>
-        <p>Check out this list:  <a href="http://www.scribd.com/doc/19457597/Javascript-Methods" target="_blank">http://www.scribd.com/doc/19457597/Javascript-Methods</a>. </p>
-        <p>Or these tutorials: <a href="http://www.w3schools.com/jsref/default.asp" target="_blank">http://www.w3schools.com/jsref/default.asp</a></p>
+        <p>Check out this list:  <a href="https://developer.mozilla.org/en-US/docs/JavaScript_Methods_Index" target="_blank">https://developer.mozilla.org/en-US/docs/JavaScript_Methods_Index</a>. </p>
+        <p>An overwhelming look at objects: <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Predefined_Core_Objects" target="_blank">https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Predefined_Core_Objects</a></p>
       </article>
       
     <!-- SLIDE: ARRAYS INTRO -->
