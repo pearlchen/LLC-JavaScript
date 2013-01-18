@@ -249,7 +249,7 @@
     <!-- SLIDE: Instructions -->
     <article class='slide slide-list'>
       <h2>Break your goal down into steps</h2>
-<p>Suppose I want a computer to say hello to using my name. </p>
+<p>Suppose I want a computer to say hello using my name. </p>
 <p><strong>Break down the steps</strong> as much as possible: </p>
 <ol>
     <li>Allow me to type in my name.</li>
@@ -348,7 +348,7 @@ document.write("Hello, " + name);</pre>
       <p>
       Java, .NET, PHP or Ruby can be considered <strong>server-side or &quot;back-end&quot;</strong> web technology because the code is typically compiled and executed by the <em>operating system</em> of a computer serving up web pages. </p>
       <p>
-      JavaScript is often referred to as a <strong>client-side or &quot;front-end&quot;</strong> web technology because it interpreted by the <em>web browser</em>. It can be used for server-side programs too, but today we'll be focusing on the browser.</p>
+      JavaScript is often referred to as a <strong>client-side or &quot;front-end&quot;</strong> web technology because it is interpreted by the <em>web browser</em>. It can be used for server-side programs too, but today we'll be focusing on the browser.</p>
 
     </article>
 
@@ -429,7 +429,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <article class='slide slide-list'>
       <h2>A JavaScript Experiment</h2>
       <p>
-        JavaScript is essential for &quot;AJAX&quot;, &quot;Web 2.0&quot;, and &quot;HTML5&quot; websites. All these terms refer various methods of making interactive web pages using Javascript.
+        JavaScript is essential for &quot;AJAX&quot;, &quot;Web 2.0&quot;, and &quot;HTML5&quot; websites. All these terms refer to various methods of making interactive web pages using Javascript.
       </p>
       <p>
         Try this experiment: Turn off JavaScript in your web browser. Go to the JavaScript settings for Chrome (
@@ -504,7 +504,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
     <article class='slide slide-list'>
       <h2>JavaScript Exercise Overview</h2>
       <br />
-     <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with member's only sales!</p>
+     <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with members only sales!</p>
      <p>You'll also want to make sure that everything works properly as well.</p>
      <p>That means customers shouldn't be able to submit empty forms and product totals must be calculated properly in their shopping carts.</p>
      <p>In order to create a website that can handle these requirements, we will need to learn how to use <span class="keyword">variables</span>, <span class="keyword">functions</span>, <span class="keyword">objects</span>, <span class="keyword">arrays</span> and <span class="keyword">loops</span>.</p>
@@ -544,7 +544,7 @@ At any time, someone can <strong>right-click and &quot;view source&quot;</strong
       <br />
       <p>
       	In a web checkout form that asks for your name and address, variables can be used to store this information.
-      	Then it can be used to create things like shipping labels.</p>
+      	Then they can be used to create things like shipping labels.</p>
       <br />
       <p>
         <img src="assets/var-shipping-example.jpg" width="594" height="193" />
@@ -637,7 +637,7 @@ var isSunday = true;
       </p>
       <div class="reminders">
         <p>Although it's valid to use underscore or a dollar sign, it is not used often
-          <br />and usually in special circumstances.
+          <br />and usually only in special circumstances.
         </p>
       </div>
       <br />
@@ -724,7 +724,7 @@ var name = &quot;Christina&quot;;
     <article class='slide slide-list'>
       <h2>Comments</h2>
       <p>
-        Sometimes you want to write notes to yourself (and others!) to organize blocks of code or leave explanations but you want the browser to ignore it. Use comments!
+        Sometimes you want to write notes to yourself (and others!) to organize blocks of code or leave explanations, but you want the browser to ignore it. Use comments!
       </p>
 <pre class='prettyprint'>
 // This is how you leave a single line comment.
@@ -739,7 +739,7 @@ var name = &quot;Christina&quot;;
 multi-line comments for when you
 want to write a longer message */
 </pre>
-      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code. Don't forget to remove it later if you decide that you don't need it though!</p>    
+      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code. Don't forget to remove the old code later if you decide that you don't need it though!</p>    
     </article>
 
     <!-- SLIDE: MINI-EXERCISE #1 -->
@@ -795,7 +795,7 @@ SCRIPTEND
     <article class='slide slide-list'>
       <h2>JavaScript Arithmetic Operators</h2>
       <p>We can use JavaScript to do math using arithmetic <span class="keyword">operators</span>.</p>
-      <p>The arithmetic operators in JavaScript are (+) for addition, (-) for subtraction, (*) for multiplication and (\) for division.</p>
+      <p>The arithmetic operators in JavaScript are (+) for addition, (-) for subtraction, (*) for multiplication and (/) for division.</p>
 <textarea class='coder-editor'>
 <script>
   document.write(20 + 20);
@@ -825,7 +825,7 @@ SCRIPTEND
        Numbers & Strings</h2>
       <br />
       <p>Remember there were different variable types?  Arithmetic operators can only be performed on numerical values.</p>
-      <p>But numbers can be declared as strings too so be careful!</p>
+      <p>But numbers can be declared as strings too, so be careful!</p>
       <p>If you put double quotes (" ") or single quotes (' ') around the value, the computer will thinks it's a string.</p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
@@ -877,7 +877,7 @@ SCRIPTEND
     <article class='slide slide-list'>
       <h2>Re-assigning Variables</h2>
       <p>Even after a variable has been declared with a value, we can still<br />
-      <strong>re-assign</strong> the value.  For example, we may want to increase or decrease values up or down by 1.  This will come in handy when we discuss <strong class="keyword">Loops</strong> later on.
+      <strong>re-assign</strong> the value.  For example, we may want to increase or decrease values by 1.  This will come in handy when we discuss <strong class="keyword">Loops</strong> later on.
       </p>
 <textarea class='coder-editor coder-editor-full'>
 <script>
@@ -1281,7 +1281,7 @@ if ( weather == rain ) {
           <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Conditionals used for UI elements</h2>
-        <p>A basic conditional that your browser does internally is a react to mouse clicks on a HTML element. The browser does it's own conditional check behind the scenes.</p>
+        <p>A basic conditional that your browser does internally is to react to mouse clicks on a HTML element. The browser does its own conditional check behind the scenes.</p>
         <p><img src="assets/thenewdesignguidelines-pull.gif" width="121" height="221" alt="" align="left" style="margin-right: 30px;"/></p>
         
         <p><br>
@@ -1643,7 +1643,7 @@ Now that we know what <span class="keyword">variables</span>, <span class="keywo
     <article class='slide slide-list'>
       <h2>Mini-exercise #4 (5-10 minutes)</h2>
       <p>
-        Let's revisit the shipping form again -- here's a very simple shipping form however you don't want someone to be able to submit their order if they haven't filled out their address!
+        Let's revisit the shipping form again -- it's a very simple shipping form, but you don't want someone to be able to submit their order if they haven't filled out their address!
       </p>
       <p>
         You have been supplied with 1 variable (&quot;address&quot;) which will automagically match what is typed into the form field (minus extra whitespace) after you press the &quot;Check out now!&quot; button.
