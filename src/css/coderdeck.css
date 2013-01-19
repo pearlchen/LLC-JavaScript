@@ -8,7 +8,7 @@ html, body {
 }
 
 .deck-container #presentation {
-	
+	padding-top: 20px !important;
 }
 .deck-container {
   font-family: 'Istok Web', Arial, sans-serif;
@@ -91,7 +91,7 @@ html, body {
   margin-bottom: .1em; 
 }
 .deck-container .slide-list ul, .deck-container .slide-list p {
-  font-size: 1.8em;	
+  font-size: 1.6em;	
 }
 .deck-container .slide-list ul {
     margin-left: 1em;
@@ -227,7 +227,7 @@ table.comparison-table tr td, table.comparison-table tr th {
 }
 
 .deck-container ol {
-  font-size: 1.8em;	
+  font-size: 1.6em;	
 }
 
 .centered {
