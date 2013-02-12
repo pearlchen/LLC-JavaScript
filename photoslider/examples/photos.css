@@ -1,0 +1,49 @@
+html,body { 
+	background: #333; 
+	color: #FFF;
+	font-size: 14px; 
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+}
+
+#wrapper {
+	width: 560px;
+	margin: 40px auto;
+	text-align: middle;
+}
+
+.image-holder img {
+	width: 500px;
+	height: 375px;
+}
+
+#main {
+
+	color: black;
+}
+
+#main div {
+	width: 560px; /*add padding to 500px*/
+	height: 465px; /*add padding to 375px*/
+	padding-top: 30px;
+	text-align: center;
+	background-color: white;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+nav {
+	width: 135px;
+	margin: 10px auto;
+}
+
+#next, #previous {
+	cursor: pointer;
+}

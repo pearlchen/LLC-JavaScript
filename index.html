@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Ladies Learning Code - JavaScript Oct 13, 2012</title>
+  <title>Ladies Learning Code - JavaScript March 18, 2012</title>
   <meta name="viewport" content="width=1280">
 
   <!-- CoderDeck core and extension CSS files -->
@@ -47,26 +47,1731 @@
 	</script>
 	
   <div id="presentation">
-  <!-- **************************************** -->  
+    <!-- SLIDE: Download zip from Github -->
+    <article class='slide slide-title'>
+      <div class="workshop_title">
+        <h1>Introduction to JavaScript</h1>
+      </div>
+      <p class="download_link">
+        <a href='http://github.com/afabbro/LLC-JavaScript-Vancouver'>http://github.com/afabbro/LLC-JavaScript-Vancouver</a>
+      </p>
+      <p align="center"><a href="http://github.com/afabbro/LLC-JavaScript-Vancouver"><img src="assets/git-download-zip.jpg" width="566" height="400" alt="Github screenshot of ZIP button"></a></p>
+      <p style="padding-top: 25px; margin-bottom: 0; font-size: 0.9em; color: #999;">
+        ( Interactive code slides thanks to
+        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>
+        ! )
+      </p>
+    </article>
 
-    <!-- SLIDE: Next section -->
+    <!-- SLIDE: Workshop intro -->
+    <article class='slide slide-title'>
+      <div class="workshop_title">
+        <h1>Introduction to JavaScript</h1>
+        <p style="font-size: 1em; color: #999;">January 19th, 2013</p>
+      </div>
+        <h2>Your instructor today</h2>
+        <div>
+          <img src="assets/angelina-tiny.jpg" width="72" height="72" alt="Angelinapants" />
+          <h4>Angelina Fabbro</h4>
+          angelinafabbro [at] gmail.com<br />
+          angelina [at] steamclock.com
+          <br />
+          <a href="http://twitter.com/angelinamagnum" target="_blank">@angelinamagnum</a>
+        </div>
+    </article>
+
+    <!-- SLIDE: Course Outline -->
     <article class='slide slide-list'>
-      <br /><br /><br /><br />
+      <h2>Course Outline</h2>
+      <h3 style="margin-top: 1em;">The morning (lunch @ ~12:00pm)</h3>
+      <ul>
+        <li>What is JavaScript?</li>
+        <li>JavaScript Theory: variables, operators, and conditionals</li>
+      </ul>
+      <h3 style="margin-top: 1em;">After lunch (small break @ ~3:30pm)</h3>
+      <ul>
+        <li>JavaScript Theory: functions, objects, arrays, and loops</li>
+        <li>JavaScript objects and the DOM</li>
+      </ul>
+      <h3 style="margin-top: 1em;">Homestretch</h3>
+      <ul>
+        <li>Debugging in Chrome</li>
+        <li>Quick intro to jQuery</li>
+        <li>SPOILER: Javascript on servers and robots?!</li>
+        <li>Where can you go from here?</li>
+        <!-- <li>Overview of take home assignment: a photo slider.</li> -->
+      </ul>
+    </article>
+
+    <!-- SLIDE: Development Environment -->
+    <article class='slide slide-subhead'>
+      <h1>Development Environment</h1>
+      <p>3 tools you need to get started</p>
+    </article>
+
+    <!-- SLIDE: Web Browser -->
+    <article class='slide slide-list'>
+      <h2>1. Web Browser</h2>
+      <p>
+        Choose a modern web browser that has good, built-in development tools to help make building web pages easier.
+      </p>
+      <div class="centered contains_sidebyside_icons">
+        <a href="https://www.google.com/chrome" target="_blank"><img src="assets/new-chrome-logo.png" width="125" height="125" alt="Chrome" /></a>
+        <br/>
+        <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>
+      </div>
+      <br clear="all" />
+      <br />
+      <br />
+      <br />
+      <p class="sidenote centered">
+        (If you are unable to install Chrome:
+        <br />
+        install
+        <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> <b>and</b>
+        <a href="http://getfirebug.com/" target="_blank">Firebug</a>
+        .)
+      </p>
+    </article>
+
+    <!-- SLIDE: Code Editor -->
+    <article class='slide slide-list'>
+      <h2>2. Code Editor</h2>
+      <p>
+        There are many, many free and paid options* but let's keep it simple for our mentors today and use just one of these two to edit our code.
+      </p>
+      <div class="centered contains_sidebyside_icons">
+        <div class="sidebyside_download_icon">
+          <a href="http://notepad-plus-plus.org/" target="_blank"><img src="assets/Notepad.png" width="169" height="125" alt="Notepad++" /></a>
+          <br />
+          <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>
+          (Windows)
+        </div>
+        <div class="sidebyside_download_icon">
+          <a href="http://www.barebones.com/products/textwrangler/" target="_blank"><img src="assets/textWranglerIcon.png" width="125" height="125" alt="Text Wrangler" /></a>
+          <br />
+          <a href="http://www.barebones.com/products/textwrangler/" target="_blank">TextWrangler</a>
+          (Mac)
+        </div>
+      </div>
+      <br clear="all" />
+      <br />
+      <br />
+      <br />
+      <p class="sidenote centered">
+         *I like to use <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>. There are a lot of editors out there, some are used only with terminal output and no GUI!</a>.
+        <br />
+        Ask a group of developers what they use and arguments will ensue -- it's a very personal choice! ;)
+      </p>
+    </article>
+
+    <!-- SLIDE: FTP -->
+    <article class='slide slide-list'>
+      <h2>3. File Transfer Program (FTP)</h2>
+      <p>
+        FTP software will let you copy the files you work on today to another computer that is specially set up to send people your webpage when it is requested. <br />If you're already set up, ask your mentor about what a web server is or help someone else get started.
+      </p>
+      <div class="centered contains_sidebyside_icons">
+        <a href="http://cyberduck.ch/" target="_blank"><img src="assets/Cyberduck_icon.png" width="125" height="125" alt="CyberDuck" /></a>
+        <br />
+        <a href="http://cyberduck.ch/" target="_blank">CyberDuck</a>
+      </div>
+      <br clear="all" />
+      <br />
+      <br />
+      <br />
+      <p class="sidenote centered">
+        Again, there are many, many free and paid options.
+        <br />
+        <a href="http://filezilla-project.org/" target="_blank">FileZilla</a>
+        is good when you're more advanced.
+      </p>
+    </article>
+
+    <!-- new slide -->
+    <article class='slide slide-subhead'>
+      <h1>Technology Overview</h1>
+      <p>Programming and JavaScript</p>
+    </article>
+
+    <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword">programming language</span>
+        <br><br>
+		that was designed to <strong>run in your web browser</strong> to
+        <br><br>
+        <strong>manipulate content on web pages</strong>.
+      </p>
+    </article>
+
+    <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword highlight">programming language</span>
+        <br><br>
+		that was designed to <strong>run in your web browser</strong> to
+        <br><br>
+        <strong>manipulate content on web pages</strong>.
+      </p>
+    </article>
+    
+    <!-- SLIDE: What is Programming? -->
+    <article class='slide slide-list'>
+      <h2>What is Programming?</h2>
+      <p>
+        A
+        <span class="keyword">program</span>
+        is a <strong>set of instructions</strong>
+        meant for a computer to execute.
+      </p>
+      <p>Computers are fast but blind.</p>
+      <p class="centered"><img src="assets/blindfold.gif" width="377" height="270" alt="As the first step to our new system integration, please take a blind fold."></p>
+    </article>
+
+    <!-- SLIDE: Instructions -->
+    <article class='slide slide-list'>
+      <h2>Programming is giving instructions to your computer</h2>
+      <p>
+      Think about a tourist that stops you to ask for directions:</p>
+      <p>
+      <strong>The clearer the instructions, the more likely they will get to their destination. </strong></p>
+<p class="centered"><img src="assets/Map.png" width="252" height="222" alt="Give clear directions" /></p>
+</article>
+
+
+    <!-- SLIDE: Instructions -->
+    <article class='slide slide-list'>
+      <h2>Break your goal down into steps</h2>
+<p>Suppose I want a computer to say hello using my name. </p>
+<p><strong>Break down the steps</strong> as much as possible: </p>
+<ol>
+    <li>Allow me to type in my name.</li>
+          <li>Remember my name.</li>
+          <li>Say &quot;Hello&quot; and repeat back my name.</li>
+          </ol>
+      </p>
+
+</article>
+
+
+    <!-- SLIDE:  What is a Programming Language? -->
+    <article class='slide slide-list'>
+      <h2>Speak the computer's language</h2>
+      <p>Programming is like having a <strong>conversation</strong> with your computer. You write to it using a <strong>programming language</strong> and give it instructions this way.</p>
+      <p>
+        Computers only understand instructions when you speak to them in a language they can understand. Much like Japanese, English or any other natural language, programming is about sticking to grammar rules called <span class="keyword">syntax</span>.
+      </p>         
+        <p><img src="assets/beepbeep.jpg" height="300" alt="Beep beep" align="left" style="margin-right: 40px;" /> Computers have come a long way since their binary days (<code>0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 0 0 1 1 1 1</code>) so meet them half-way.</p>
+        <br  clear="all" />
+    </article>
+
+    <!-- SLIDE:  What is a Programming Language? -->
+    <article class='slide slide-list'>
+      <h2>Example Programming Syntaxes</h2>
+      <p>Different programming languages have different syntax.</p>
+      <p>Here are two ways a computer could say hi to me:</p>
+      <p>
+        <strong>Java</strong></p>
+      <pre class="prettyprint">Scanner userInput = new Scanner(System.in);
+String name;
+System.out.print("What's your name? ");
+name = userInput.next();
+System.out.println("Hello, " + name);</pre>
+      
+      <p>
+        <strong>JavaScript</strong> ( <a href="exercises/hello-javascript.html">Try it out now!</a>
+        )</p>
+        
+      <pre class="prettyprint">var name;
+name = window.prompt("What's your name?",'');
+document.write("Hello, " + name);</pre>
+      
+    </article>
+    
+    <!-- SLIDE: JavaScript versus Java -->
+    <article class='slide slide-list'>
+      <h2>JavaScript versus Java</h2>
+      <p>
+      They might vaguely look the same (as a lot of programming languages do) but <strong>they are not related at all</strong>. </p>
+      <p class="centered">
+        <img src="assets/llcodedotcom_hamster.gif" width="544" height="220" alt="Java is to JavaScript as ham is to hamster." />
+      </p>
+      <p class="centered sidenote">(Java was really popular at the time so Netscape just hijacked the name.) </p>
+    </article>
+    
+    
+        <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword">programming language</span>
+        <br><br>
+		that was designed to <strong class="highlight">run in your web browser</strong> to
+        <br><br>
+        <strong>manipulate content on web pages</strong>.
+      </p>
+    </article>
+    
+    
+    
+    
+    <!-- SLIDE:  JavaScript in the Browser -->
+    <article class='slide slide-list'>
+      <h2>JavaScript in the Browser</h2>
+      <p>
+        C++, Java, and .NET are also programming languages but they can be run directly by the <strong>operating system</strong>
+        (e.g. Windows, Mac, Linux).
+      </p>
+      <p>
+        JavaScript is typically meant to be run in a
+        <strong>web browser</strong>
+        (e.g. Safari, Firefox, Chrome, Internet Explorer).*
+      </p>
+      <p class="centered">
+        <img src="assets/scripting.gif" width="586" height="224" alt="Different programmig languages and the environments they run in" />
+      </p>
+      <small>* Angelina will tell you about how Javascript outgrew it's origins towards the end of today's course!</small>
+    </article>
+
+    <!-- SLIDE:  Web Programming Languages: Server-side vs Client-side-->
+    <article class='slide slide-list'>
+      <h2>Web Programming Languages: Server-side vs Client-side</h2>
+      <p><img src="assets/clientversusserver.gif" width="400" height="400" alt="" align="right" style="margin-left: 30px;" /></p>
+      <p>
+      Java, .NET, PHP or Ruby can be considered <strong>server-side or &quot;back-end&quot;</strong> web technology because the code is typically compiled and executed by the <em>operating system</em> of a computer serving up web pages. </p>
+      <p>
+      JavaScript is often referred to as a <strong>client-side or &quot;front-end&quot;</strong> web technology because it is interpreted by the <em>web browser</em>. It can be used for server-side programs too, but today we'll be focusing on the browser.</p>
+
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>Simple Client-Side Code Check</h3>
+      <p><br>
+        <img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="Right-click to View Source" align="left" style="margin-right: 50px;" />
+      </p>
+      <p>
+        <br>
+At any time, someone can <strong>right-click and &quot;view source&quot;</strong> on a web page to see all the JavaScript that went into it.</p>
+<p class="sidenote">(I suggest that you do this yourself every time you see something you like!)</p>
+      </p>
+      <br  clear="all" />
+      <p>
+        Whereas for server-side code, it's sometimes a mystery what technology is running on a server.
+      </p>
+    </article>
+
+    
+        <!-- SLIDE: What is JavaScript? -->
+    <article class='slide slide-list'>
+      <h2>What is JavaScript?</h2>
+      <p class="centered" style="font-size: 2.5em; margin-top: 2em;">
+        It's a
+        <span class="keyword">programming language</span>
+        <br><br>
+		that was designed to <strong>run in your web browser</strong> to
+        <br><br>
+        <strong class="highlight">manipulate content on web pages</strong>.
+      </p>
+    </article>
+
+    <!-- SLIDE: The Web Triad -->
+    <article class='slide slide-list'>
+      <h2>The Web Triad</h2>
+      <p>
+        JavaScript was meant to manipulate webpages written in HTML and works in tandem with CSS.
+      </p>
+      <table width="100%">
+      <tr>
+      <td width="33%" class="centered"><strong>HTML</strong> (Hypertext Markup Language) <br>
+          is the markup language.</td>
+      <td width="33%" class="centered"><strong>CSS</strong> (Cascading Style Sheets) <br>
+          is the style sheet language.</td>
+      <td width="33%" class="centered"><strong>JavaScript</strong><br>
+          is the programming language.</td>
+      </tr>
+            <tr>
+      <td class="centered"><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer"></td>
+      <td class="centered"><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></td>
+      <td class="centered"><img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" /></td>
+      </tr>
+            <tr>
+      <td class="centered">It should define the <strong>content</strong>.</td>
+      <td class="centered">It should define the <strong>presentation</strong></td>
+      <td class="centered">It should define <strong>behaviour</strong>.</td>
+      </tr>
+      </table>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>JavaScript in Different Browsers</h2>
+      <p class="reminders">
+        Usually JavaScript will run the same way in various browsers.
+      </p>
+      <p>
+        But, browsers are software programs written by many different people/companies (people programming things just like you!), so sometimes they say &quot;hi&quot; with different accents.</p>
+        <p> Imagine a British accent versus a Texas accent.</p>
+        <p>This is especially noticeable with newer &quot;HTML5&quot; features.</p>
+        <p class="centered"><img src="assets/browser-war-illustration.jpg"  height="300" /></p>
+
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>A JavaScript Experiment</h2>
+      <p>
+        JavaScript is essential for &quot;AJAX&quot;, &quot;Web 2.0&quot;, and &quot;HTML5&quot; websites. All these terms refer to various methods of making interactive web pages using Javascript.
+      </p>
+      <p>
+        Try this experiment: Turn off JavaScript in your web browser. Go to the JavaScript settings for Chrome (
+        <a href="chrome://settings/content">chrome://settings/content</a>
+        ) and select &quot;Do not allow any site to run JavaScript&quot;
+      </p>
+      <p>Then  visit your daily sites.</p>
+      <p>
+        e.g.
+        <a href="http://google.com">Google</a>
+        ,
+        <a href="http://facebook.com">Facebook</a>
+        ,
+        <a href="http://twitter.com">Twitter</a>
+      </p>
+      <p> <em>(Remember to turn JavaScript back on to see this presentation!)</em> 
+      </p>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>A JavaScript Experiment: Results</h2>
+      <p>Note the sometimes subtle and sometimes major differences:</p>
+      <ul>
+        <li>
+          No search auto-completion and instant page refreshes on google.com
+        </li>
+        <li>
+          No inline video content or lightboxed photo viewers on facebook.com -- not to mention broken &quot;Like&quot; buttons and inability to comment on posts!
+        </li>
+        <li>
+          On twitter.com - older tweets don't load at the bottom of the page. Warning message on top of page. Navigation doesn't work. Popups don't work.
+        </li>
+        <li>
+        And <strong>you can't see it but most analytics tracking won't work</strong> either. </li>
+      </ul>
+      <p class="reminders" style="font-size: 2.2em;">
+        <strong>The modern web just sort of gives up without JavaScript!</strong>
+      </p>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>JavaScript helps us make nice websites</h3>
+      <p>
+        Especially &quot;one-page apps&quot; where the experience is very seamless. 
+      </p>
+      <p class="centered">
+      <a href="http://thenewdesignguidelines.derekevanharms.com/" target="_blank"><img src="assets/thenewdesignguidelines.gif" width="800" height="479" alt="The new web design guidelines" /></a>      <br>
+
+      
+      <span class="sidenote">Like
+        <a href="http://thenewdesignguidelines.derekevanharms.com/" target="_blank">this one</a></span></p>
+    </article>
+
+    <!-- SLIDE: PART 1 INTRO -->
+    <article class='slide slide-subhead'>
+      <h1>JavaScript Theory<br />Hands-on</h1>
+      <p>Part 1</p>
+    </article>
+
+    <!-- SLIDE: EXERCISE OVERVIEW -->
+    <article class='slide slide-list'>
+      <p>As the owner of the thriving store, <span style="color:#B1009A;font-weight:bold;">Planet Robots</span>, you have to make sure you have a top notch website.</p>
       <div class="centered">
-        <p>Download <strong>zip</strong> file of slides<br />
-          and hands-on exercise code from:<br />
-         <a href="https://github.com/pchen/LLC-JavaScript">github.com/pchen/LLC-JavaScript</a></p>
-         <br />
-        <h2 >Let's get started!</h2>
-        <p><a href="intro.html"><img src="assets/next_section_icon.gif" width="230" height="70" alt="Click to go to next section" /></a></p>
+      	<img src="assets/planet-robots.jpg" alt="planet-robots" />
+      </div>
+
+    </article>
+    
+    <!-- SLIDE: EXERCISE OVERVIEW -->
+    <article class='slide slide-list'>
+      <h2>JavaScript Exercise Overview</h2>
+      <br />
+     <p>You'll want to do things like offer online shopping, print shipping labels and tempt loyal customers with members only sales!</p>
+     <p>You'll also want to make sure that everything works properly as well.</p>
+     <p>That means customers shouldn't be able to submit empty forms and product totals must be calculated properly in their shopping carts.</p>
+     <p>In order to create a website that can handle these requirements, we will need to learn how to use <span class="keyword">variables</span>, <span class="keyword">functions</span>, <span class="keyword">objects</span>, <span class="keyword">arrays</span> and <span class="keyword">loops</span>.</p>
+   </article>
+   
+    <!-- SLIDE: VARIABLES -->
+    <article class='slide slide-list'>
+      <h2>Variables</h2>
+      <br />
+      <p><span class="keyword">Variables</span> are used to store values.</p>
+      <p><strong>Declaring</strong> a variable tells the computer that it exists and to<br />
+      remember it.</p>
+      <p>Variables are like boxes; it can be used to store different things.</p>
+      <img src="assets/gift-boxes.jpg" alt="gift-boxes" width="400" height="300" />
+      
+    </article>
+
+    <!-- SLIDE: VARIABLES (cont'd) -->
+    <article class='slide slide-list'>
+      <h2>Variables (cont'd)</h2>
+      <br />
+      <p><img src="assets/computer-memory.jpg" alt="computer-memory" width="200" height="207" style="float:right;padding:0 40px 0 10px;" />Variables are also like the computer's short-term memory. It doesn't remember anything unless you tell it to.
+      In this example, the computer can't remember anyone's name!</p>
+      <br /><br />
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  prompt("What's your name?");
+  document.write("Hello....?"); 
+</script>
+</textarea>
+	<span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: VARIABLES (cont'd) shipping example -->
+    <article class='slide slide-list'>
+      <h2>Variables (cont'd)</h2>
+      <br />
+      <p>
+      	In a web checkout form that asks for your name and address, variables can be used to store this information.
+      	Then they can be used to create things like shipping labels.</p>
+      <br />
+      <p>
+        <img src="assets/var-shipping-example.jpg" width="594" height="193" />
+      </p>
+    </article>
+
+    <!-- SLIDE: AN ASIDE -->
+    <article class='slide slide-list'>
+      <h2>An Aside...</h2>
+      <br />
+      <p>Before we continue, here's a few helpful JavaScript built-ins that will help with testing and writing code.</p>
+      <textarea class='coder-editor coder-editor-full'>
+<script>
+  alert("This is an alert box.");
+  prompt("This is a prompt box. Enter some info.");
+  document.write("document.write outputs text into the page.");
+</script>
+      </textarea>
+      <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: VARIABLES HOW-TO -->
+    <article class='slide slide-list'>
+      <h2>Variables How-to</h2>
+      <p>Declare variables with the keyword <strong>var</strong>.</p>
+      <pre class='prettyprint'>var email;</pre>
+      <p>Assign a value to the variable using the equals (=) sign.
+        <br />End the <strong>statement</strong> with a semicolon (;).
+      </p>
+      <pre class='prettyprint'>var email = "hello@isanybodyoutthere.com";</pre>
+      <p>Now the computer will remember my email address!</p>
+      <br />
+      <div class="reminders">
+        <p><strong>Statements</strong> are commands that tell the computer what to do.
+          <br />
+          Ending the statement with a semicolon is like ending a sentence
+          <br />
+          with a period. It tells the computer that the statement is done.
+        </p>
       </div>
     </article>
+    
+     <!-- SLIDE: VARIABLES - assignment operator -->
+    <article class='slide slide-list'>
+      <h2>Assigning Variables</h2>
+      <br />
+      <p><span class="assignment">IMPORTANT!</span></p>
+      
+      <p>Using the equals (=) symbol in Javascript is <span class="highlight">NOT</span> the same as in math.</p>
+      
+      <p><code>var total = 1 + 1</code>
+      is not the same as
+      <code>1 + 1 = 2</code>
+      </p>
+      <p>You will see later that we can change the <strong>value</strong> of a variable.</p>
+      <p>Variables are assigned a value with whatever you place to the right of '='.</p>
+    </article>
+
+    <!-- SLIDE: VARIOUS VARIABLES  -->
+    <article class='slide slide-list'>
+      <h2>Various Variables</h2>
+      <p>Variables can hold different kinds of values.</p>
+      <p>1. Numeric variable (integers &amp; decimals)</p>
+      <pre class='prettyprint'>
+var someIntegerNumber = 10;
+var someDecimalNumber = 10.5;</pre>
+      <p>2. String variable (letters, words &amp; sentences)</p>
+      <pre class='prettyprint'>
+var singleWordString = "hello";
+var sentenceString = "Hello, good day to you!";
+var numberString = "10";
+</pre>
+      <br />
+      <p>3. Boolean variable (true/false)</p>
+      <pre class='prettyprint'>
+var isSaturday = false;
+var isSunday = true;
+</pre>
+      <div class="reminders single-line">
+        <p>String values are always written inside single or double quotes ('string' or "string").</p>
+      </div>
+      <br />
+    </article>
+
+    <!-- SLIDE:  VARIABLES - UNDERSCORES AND $ SIGNS -->
+    <article class='slide slide-list'>
+      <h2>Variables: Tips &amp; Best Practices</h2>
+      <p>
+        Variables cannot start with a number or any special characters except for underscores (_) and dollar signs ($).
+      </p>
+      <div class="reminders">
+        <p>Although it's valid to use underscore or a dollar sign, it is not used often
+          <br />and usually only in special circumstances.
+        </p>
+      </div>
+      <br />
+<textarea class='coder-editor'>
+<script>
+  var 3hundred = 300;
+  console.log(3hundred);
+
+  //var $1000 = 1000;
+  //document.write($1000);
+</script>
+      </textarea>
+      <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: VARIABLE NAMES - NO SPACES -->
+    <article class='slide slide-list'>
+      <h2>Variables: Tips &amp; Best Practices</h2>
+      <p>Variables can't contain spaces. Use a convention called <span class="keyword">camel case</span>.
+        <br />Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
+      </p>
+      <p>JavaScript is case sensitive so variable names are also case sensitive.</p>
+      <p>Another convention is to use underscores <strong>to_separate_words</strong>. This is common in other programming languages (like PHP).</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var greetMe = prompt("Hello, what's your name?");
+  var greetme = prompt("Bonjour, quel est ton nom?");
+  var greet_me = prompt("Hola, ¿cómo te llamas?");
+
+  document.write(greetMe);
+  document.write("<br />");
+  document.write(greetme);
+  document.write("<br />");
+  document.write(greet_me);
+</script>
+</textarea>
+	<span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: VARIABLES - DESCRIPTIVE NAMES -->
+    <article class='slide slide-list'>
+    <br />
+      <h2>Variables: Tips &amp; Best Practices</h2>
+      <p>
+        When naming a variable, it's best to give it a descriptive name.
+      </p>
+      <p>
+        It makes it easier to see at a glance, what kind of value that variable is going to hold.
+      </p>
+      <p>
+        This is especially useful when sharing code with others who may not use the same kinds of abbreviations.
+      </p>
+      <p>
+        <strong><span class="var">var</span> firstName;</strong> &larr; Clear that first name will go here.
+        <br />
+        <strong><span class="var">var</span> fn;</strong> &larr; Not as obvious as firstName.
+        <br />
+        <strong><span class="var">var</span> x;</strong> &larr; Not clear at all.
+      </p>
+    </article>
+
+    <!-- SLIDE:  WHITESPACE -->
+    <article class='slide slide-list'>
+      <h2>Whitespace in JavaScript</h2>
+      <p>
+        Whitespace refers to blank characters and includes space characters, tabs and line breaks.
+      </p>
+      <p>JavaScript ignores whitespace except when used in a string.</p>
+<pre class="prettyprint">
+var name=&quot;Angelina&quot;;
+//same as 
+var name = &quot;Angelina&quot;;
+</pre>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  alert("Whitespace     in    a    string.");
+  document.write("Whitespace     in    a    string.");
+</script>
+</textarea>
+	  <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: COMMENTS -->
+    <article class='slide slide-list'>
+      <h2>Comments</h2>
+      <p>
+        Sometimes you want to write notes to yourself (and others!) to organize blocks of code or leave explanations, but you want the browser to ignore it. Use comments!
+      </p>
+<pre class='prettyprint'>
+// This is how you leave a single line comment.
+
+// You can write many single line comments.
+// Just make sure to add the double backslash
+// for every new line.</span>
+</pre>
+      <p>Here's another way to comment larger blocks of text.</p>
+<pre class='prettyprint'>
+/* This is how you leave
+multi-line comments for when you
+want to write a longer message */
+</pre>
+      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code. Don't forget to remove the old code later if you decide that you don't need it though!</p>    
+    </article>
+
+    <!-- SLIDE: MINI-EXERCISE #1 -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #1 (5-10 minutes)</h2>
+      <p>
+        Here's a test shipping form. Right now, after you press Run, the shipping label is blank. How do we fix this?
+      </p>
+      <div class="hint">
+      <p>(1) Use variables to store your name and address!<br />
+      (2) To verify that your variables are working, uncomment out the document.write() lines and replace ********** with the actual name of your variables.
+      </p>
+      </div>
+<textarea class='coder-editor coder-editor-full'  data-save='exercise1'>
+
+<script>
+  //The web browser will ask you for your shipping details.
+  //Declare a "name" and an "address" variable to remember the values.
+  prompt("What's your name?");
+  prompt("Your mailing address?");
+
+  //Confirm that your package will be shipped to the right place!
+  document.write("<b>Confirm Shipping Label:</b><br />");
+  /*
+  document.write(**********); //output the name
+  document.write("<br />"); //just a line break
+  document.write(**********); //output the address
+  */
+</script>
+      </textarea>      
+<script type='coder-solution'>
+SCRIPT
+  /** SOLUTION **/	
+  //The web browser will ask you for your shipping details.
+  //Declare a "name" and an "address" variable to remember the values.
+  var name = prompt("What's your name?");
+  var address = prompt("Your mailing address?");
+
+  //Confirm that your package will be shipped to the right place!
+  /*
+  document.write("<b>Confirm Shipping Label:</b><br />");
+  document.write(name); //output the name
+  document.write("<br />"); //just a line break
+  document.write(address); //output the address
+  */
+SCRIPTEND
+</script>
+	<span class="marker">*</span>
+    </article>
+
+
+    <!-- SLIDE: OPERATORS -->
+    <article class='slide slide-list'>
+      <h2>JavaScript Arithmetic Operators</h2>
+      <p>We can use JavaScript to do math using arithmetic <span class="keyword">operators</span>.</p>
+      <p>The arithmetic operators in JavaScript are (+) for addition, (-) for subtraction, (*) for multiplication and (/) for division.</p>
+<textarea class='coder-editor'>
+<script>
+  document.write(20 + 20);
+</script>
+</textarea>
+	  <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: OPERATORS & VARIABLES -->
+    <article class='slide slide-list'>
+      <h2>Arithmetic Operators and Variables</h2>
+      <p>Getting JavaScript to do math can be very useful.<br />
+      For example, we can use it to calculate totals in a shopping cart form.</p>
+      <p>Instead of using just numbers, JavaScript can do math using variables with numerical values.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var tshirtPrice = 25;
+  var androidPrice = 10; 
+</script>
+</textarea>
+	  <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
+    <article class='slide slide-list'>
+      <h2>Arithmetic Operators,<br />
+       Numbers & Strings</h2>
+      <br />
+      <p>Remember there were different variable types?  Arithmetic operators can only be performed on numerical values.</p>
+      <p>But numbers can be declared as strings too, so be careful!</p>
+      <p>If you put double quotes (" ") or single quotes (' ') around the value, the computer will thinks it's a string.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var firstNumber = "20";
+  var secondNumber = 10;
+  document.write(firstNumber + secondNumber);
+</script>
+</textarea>
+	  <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE:  ADD SHOPPING CART ITEMS -->
+    <article class='slide slide-list'>
+      <h2>Shopping Cart: Totals and Discounts</h2>
+      <p style="margin-bottom:0;">Let's try applying some arithmetic operations to our shopping cart.</p>
+      <div class="reminders single-line">
+        <p>addition (+), subtraction (-), multiplication (*), division (/)</p>
+      </div>
+      <br />
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var tshirtPrice = 25;
+  var androidPrice = 10;
+  var discountPercentage = 15;
+
+  // What is the cost of one t-shirt and one android?
+  var total;
+  //total = **********
+  document.write(total);
+  document.write("<br />");
+
+  // Guess what?  Ladies Learning Code gets 15% off!  
+  // Figure out how much the discount will be.
+  var discountAmount;
+  //discountAmount = **********
+  //document.write(discountAmount);
+  document.write("<br />");
   
-  <!-- **************************************** -->  
+  // Apply the discount to get the final price.
+  var finalTotal
+  //finalTotal = **********
+  //document.write(finalTotal);
+</script>
+</textarea>
+	  <span class="marker">*</span>
+    </article>
+
+    <!-- SLIDE: INCREMENT AND DECREMENT -->
+    <article class='slide slide-list'>
+      <h2>Re-assigning Variables</h2>
+      <p>Even after a variable has been declared with a value, we can still<br />
+      <strong>re-assign</strong> the value.  For example, we may want to increase or decrease values by 1.  This will come in handy when we discuss <strong class="keyword">Loops</strong> later on.
+      </p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //declaring variable
+  var numberOfCookies = 0;
+  
+  //re-assigning the value by adding 1
+  numberOfCookies = numberOfCookies + 1;
+  alert("I will only have " + numberOfCookies + ".");
+  
+  //declaring another variable  
+  var remainingCookies = 4;
+  
+  //re-assigning the value by subtracting 1
+  remainingCookies = remainingCookies - 1;
+  alert("I just ate a cookie. Now I have " + remainingCookies + " left."); 
+</script>
+</textarea>
+    </article>
+
+    <!-- SLIDE: "LIKE" BUTTON  -->
+    <article class='slide slide-list'>
+      <h2>Who loves LadiesLearningCode?</h2>
+      <p>Don't worry about the function or unfamiliar parts right now. You will be familiar with them soon enough.</p>
+      <p>Run it and see what happens!</p>
+<textarea class='coder-editor coder-editor-full'>
+<link rel="stylesheet" type="text/css" href="exercises/slides.css">
+
+<script>
+  var loves = 0;
+  function moreLove(){
+     //re-assigning the value of the love variable
+     loves = loves + 1;
+     document.getElementById('update').innerHTML = loves;
+  }
+</script>
+
+<div id="loveLLC">
+  <button onclick="moreLove();">
+    <img src="exercises/assets/llc-logo.png" /> Love!
+  </button>
+  <p id="update">0</p>
+</div>
+</textarea>
+    </article>
+
+    <!-- SLIDE: MINI-EXERCISE #2 - ADD/REMOVE ITEMS - ONE PRODUCT  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #2</h2>
+      <br />
+      <p>Here's a one-product shopping page where you can update the<br />
+      quantity by adding or removing it from the shopping cart.</p>
+      <p>Here's what it will look like.</p>
+      <img src="exercises/assets/android-quantity.png" alt="android-quantity" width="225" height="282" />
+      <p>Go to the next slide to get the exercise code.</p>
+	</article>
+	
+	<!-- SLIDE: MINI-EXERCISE #2 : Code page -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #2: Go! (5-10 minutes)</h2>
+      <div class="hint single-line">
+      	<p>How do we increase or decrease the value of the variable?</p>
+      </div>
+<textarea class='coder-editor coder-editor-full'  data-save='exercise2'>
+<script>
+  /* 1. set var 'quantity' to start at 0. This will be
+  used to hold the value for the quantity of robots */   
+  var quantity =    
+    
+  function addItem(){
+    // CODE HERE EXECUTES WHEN YOU PRESS THE 'ADD' BUTTON 
+    //2. set the variable 'quantity' to increase by 1 HERE
+         
+    refreshTotal();
+  }
+  function removeItem(){
+    // CODE HERE EXECUTES WHEN YOU PRESS THE 'REMOVE' BUTTON  
+    //3. set the variable 'quantity' to decrease HERE
+       
+    refreshTotal();
+  }   
+  function refreshTotal() {         
+    var totalCost = quantity * 20; //quantity * fixed price
+    document.getElementById('updateQuantity').value = quantity; //updates
+  }
+</script>
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
+<div class="item">
+  <img src="exercises/assets/plush-android.jpg" width="195" height="195" />
+  <br />
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button>
+  <br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly />
+  <br />
+</div>
+</textarea>
+
+<script type='coder-solution'>
+<!-- SOLUTION -->
+SCRIPT
+  /* 1. set var 'quantity' below to start at 0. This is the variable will be used to hold 
+the value for the quantity of robots */		
+  var quantity = 0;		
+		
+  function addItem(){	
+    //2. set the variable 'quantity' to increase by 1 HERE
+    quantity = quantity + 1;
+			 
+    refreshTotal();
+  }
+  function removeItem(){	
+    //3. set the variable 'quantity' to decrease by 1 HERE
+    quantity = quantity - 1; 
+			
+    refreshTotal();
+  }		
+  function refreshTotal() {					
+    var totalCost = quantity * 20; //quantity * fixed price
+    document.getElementById('updateQuantity').value = quantity; //updates
+  }
+SCRIPTEND
+
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" />
+<div class="item">
+  <img src="exercises/assets/plush-android.jpg" width="195" height="195" />
+  <br />
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button>
+  <br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly />
+  <br />
+</div>
+</script>
+    </article>
+
+    
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation</h2>
+      <p>Now that we've calculated some numerical totals, how do we format the output to add a non-numerical value like a dollar sign?
+        We use <span class="keyword">concatenation</span>. </p>
+      <p><span class="keyword">Concatenation</span> is the joining of strings, using the (+) symbol. Remember this example?</p>          
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Slide: Arithmetic Operators, Numbers and Strings
+  var firstNumber = "20";
+  var secondNumber = 10;
+  document.write(firstNumber + secondNumber);
+</script>
+</textarea>
+	  <span class="marker">*</span>
+	</article>
+
+
+  	<!-- SLIDE: CONCATENATION -->
+  	<article class='slide slide-list'>
+      <h2>Concatenation and Strings</h2>
+      <p>If you use the (+) operator with numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
+      <p>Only the addition (+) operator can be used to combine strings.
+      </p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Addition with the + operator
+  var tshirtPrice = 25;
+  var androidPrice = 10;
+  var shoppingTotal = tshirtPrice + androidPrice;
+  document.write(shoppingTotal);
+  document.write("<br />");
+
+  //Concatenation with the + operator
+  //document.write("Your total is: " + "$" + shoppingTotal);
+  //document.write("<br />");
+
+  //no nos
+  //document.write("Your total is:" * shoppingTotal);
+  //document.write("<br />");
+  //document.write("$" + 20 + 1);
+</script>
+      </textarea>
+    </article>
+
+    <!-- SLIDE: Concatenation - update exercise #2 -->
+    <article class='slide slide-list'>
+      <h2>Concatenation in action (results)</h2>
+      <p>Let's re-visit mini-exercise #2 and add a total cost field.</p>
+
+<textarea class='coder-editor coder-editor-full'>
+<script>	
+  var quantity = 0;		
+		
+  function addItem(){	
+    quantity = quantity + 1;			 
+    refreshTotal();
+  }
+  function removeItem(){	
+    quantity = quantity - 1; 
+    refreshTotal();
+  }		
+  function refreshTotal() {					
+    //this will update the HTML textfield
+    document.getElementById('updateQuantity').value = quantity; 
+
+    //EXAMPLE: Use concatenation to add a human readable $ sign to the price
+    var totalCost = quantity * 20; //quantity * fixed price OF $20
+    //var totalCostToShow = 
+
+    //this will update the HTML textfield
+    document.getElementById('updateTotal').value = totalCost;
+  }
+</script>
+<link rel="stylesheet" href="exercises/slides.css" type="text/css" media="screen" />
+<div class="item">
+  <img src="exercises/assets/plush-android.jpg" width="195" height="195" /><br />   
+  <button onclick="addItem();">Add</button>
+  <button onclick="removeItem();">Remove</button><br />
+  Quantity
+  <input type="text" id="updateQuantity" value="0" readonly /><br />
+  Total Cost:
+  <input type="text" id="updateTotal" value="0" readonly />
+</div>
+</textarea>
+    </article>
+
+
+
+
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Conditional Statements</h2>
+      <p>Let's pretend to be your wise but nagging grandmother right now:</p>
+      <ul>
+      <li>I hear it's cold out: bring a sweater!</li>
+      <li>The weather network says it's going to rain: take your umbrella!</li>
+      <li>It's cold and snowing: wearing your warm boots!</li>
+      <li>If (condition) then (perform instruction)</li>
+      </ul>
+      <p>All these things make logical sense to us as grown up humans but computers are a blank slate. The last one is a little closer to the simple instructions that a computer needs.</p>
+      <p>As a programmer, you tell the computer how to behave across certain states or events by using <span class="keyword">CONDITIONALS</span>.</p>
+    </article>
+    
+    
+    <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2><code>If</code> Conditionals</h2>
+        <p>...</p>
+        <table>
+        <tr>
+        	<td width="45%">
+            <p>A basic conditional test looks like this:</p>
+            <p>IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                THEN bring an umbrella</p>
+            </td>
+            <td width="10%"></td>
+          <td width="45%">
+            <p>In JavaScript,<br>
+			it might look like this:</p>
+            <pre class="prettyprint" style="font-size: 24px; border: none;">
+if ( weather == rain ) {
+    bringUmbrella();
+}
+            </pre>
+           
+
+          </td>
+        </tr>
+        </table>
+        <div class="reminders">
+                    <p>The <strong>round</strong> brackets <code>()</code>
+ group together a condition to test.</p>
+			<p>The <strong>curly</strong> braces <code>{}</code>
+ group together a set of statements to execute.<p>
+        </div>
+      </article>
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h3>Important! <br>
+Assignment is not the same as equality</h3>
+<br>
+        <p>Drill this into your head. Tattoo it to your arm! So many errors happen because of this key difference:</p><br>
+        <table width="100%" style="font-size: 26px;">
+        <tr>
+        	<td width="50%" class="centered">
+            <strong>=<br>
+            assignment<br>
+            </strong> <br><br>
+            Store a value to a variable:
+            <br><br>
+            var kitten = "Fluffy";
+            </td>
+            <td width="50%" class="centered">
+            <strong> ==<br>
+            equality<br>
+            </strong> <br><br>
+            Compare a value to another value:
+            <br><br>
+            if ( kitten == cat )
+            </td>
+        </tr>
+        </table>
+      </article>
+      
+    <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Using Several <code>If</code> Conditionals</h2>
+        <p>Sometimes it can be rainy but warm, or rainy and cold. You react to each thing individually.</p>
+        <p>Use several if statements when you're testing mutually <em>inclusive</em> scenarios.</p>
+        <table>
+        <tr>
+        	<td width="50%"><br><br>
+            <p>IF the weather is raining     <br>
+&nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella <br>
+<br>
+IF the temperature is below 10°C     <br>
+&nbsp;&nbsp;&nbsp;&nbsp;THEN wear a sweater</p>
+            </td>
+          <td width="5%"></td>
+          <td width="45%">
+            <p class="sidenote">In JavaScript...</p>
+<pre class="prettyprint" style="font-size: 24px; border: none;">
+if ( weather == rain ) {
+    bringUmbrella();
+}
+
+if ( temperature < 10 ) {
+    wearSweater();
+}
+</pre>
+          </td>
+        </tr>
+        </table>
+</article>
+
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2><code>if/else</code> Conditionals</h2>
+        <p>Sometimes there's a catch-all state that you want to happen if your previous tests don't happen.</p>
+        <table width="100%">
+        <tr>
+       	  <td width="50%"><br><br>
+            <p>IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br><br>
+            OTHERWISE<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;dress normally</p>
+            </td>
+            <td width="5%"></td>
+          <td width="45%">
+            <p class="sidenote">In JavaScript...</p>
+            <pre class="prettyprint"  style="font-size: 24px; border: none;">
+if ( weather == rain ) {
+    bringUmbrella();
+}else{
+    dressNormally();
+}
+            </pre>
+            </td>
+        </tr>
+        </table>
+      </article>
+      
+           <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2><code>if/else if/else</code> Conditionals</h2>
+        <p>It shouldn't snow and rain at the same time so sometimes these conditions are mutually <em>exclusive</em>. </p>
+        <table>
+        <tr>
+        	<td width="45%"><br><br>
+            <p>
+            IF the weather is raining<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN bring an umbrella<br><br>
+            BUT IF the weather is snowing<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;THEN wear warm boots<br><br>
+            OTHERWISE<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;dress normally</p>
+            </td>
+            <td width="5%"></td>
+          <td width="50%">
+            <p class="sidenote">In JavaScript...</p>
+            <pre class="prettyprint" style="font-size: 24px; border: none;">
+if ( weather == rain ) {
+    bringUmbrella();
+}else if ( weather == snow ) {
+    wearWarmBoots();
+}else{
+    dressNormally();
+}
+            </pre>
+          </td>
+        </tr>
+        </table>
+      </article>
+      
+      
+          <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Conditionals used for UI elements</h2>
+        <p>A basic conditional that your browser does internally is to react to mouse clicks on a HTML element. The browser does its own conditional check behind the scenes.</p>
+        <p><img src="assets/thenewdesignguidelines-pull.gif" width="121" height="221" alt="" align="left" style="margin-right: 30px;"/></p>
+        
+        <p><br>
+<code>&lt;button onclick=&quot;animate()&quot;&gt;Pull&lt;/button&gt;</code></p>
+        <p>IF a user has clicked on a button<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;THEN call the animate() function.</p>
+        <br  clear="all" />
+        <table>
+        <tr>
+        	<td></td>
+            <td></td>
+        </tr>
+        </table>
+      </article>
+
+      
+      <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>...And Interactivity</h2>
+        <p>Notice how the brush acts when you speed up / slow down, or get close to other lines. You can even change brushes.</p>
+        <p class="centered"><img src="assets/LLC_sketch.gif" width="506" height="400" alt="Procedural Drawing by Mr. Doob" /></p>
+        <p class="sidenote centered"><a href="http://mrdoob.com/projects/harmony/" target="_blank">http://mrdoob.com/projects/harmony/</a></p>
+      </article>
+
+    
+    
+    <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2>...And Games!</h2>
+        <p>(Notice how the birds fly differently based on how far you pull them back in the slingshot, and in what direction.)</p>
+        <p class="centered"><img src="assets/AngryBirds.png" width="498" height="228" alt="Angry Birds" /></p>
+        <p class="sidenote centered"><a href="http://chrome.angrybirds.com/" target="_blank">http://chrome.angrybirds.com/</a></p>
+      </article>
+      
+      
+      <!-- SLIDE:  -->
+<article class='slide slide-list'>
+        <h2>Conditional Statements Summary</h2>
+        <div><br><br>
+          <table width="100%" style="font-size: 24px;">
+              <tr>
+                <th width="33%" align="left">If Statement </th>
+                <th width="33%" align="left">If...else statement </th>
+                <th width="33%" align="left">If...else if...else statement</th>
+              </tr>
+              <tr>
+              <td colspan="3"><br>
+</td>
+              </tr>
+              <tr>
+                <td>
+<pre class="prettyprint"  style="font-size: 18px; border: none;">
+if (condition) {<br>
+ // do something<br>
+}
+</pre>
+                </td>
+                <td>
+<pre class="prettyprint"  style="font-size: 18px; border: none;">
+if (condition) {<br>
+  // do something<br>
+} else {<br>
+  // otherwise do this<br>
+}
+</pre>
+                </td>
+                <td>
+<pre class="prettyprint" style="font-size: 18px; border: none;">
+if (condition) {<br>
+  // do something<br>
+} else if (condition2) {<br>
+  // do something else<br>
+} else {<br>
+  // otherwise do this<br>
+}
+</pre>
+                </td>
+              </tr>
+          </table>
+        </div>
+        <br>
+        <p>&nbsp;</p>
+      </article>
+    
+    <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Testing Conditions</h2>
+        <p>What does a condition actually look like?</p>
+        <p><code> if ( condition ) { ... } </code></p>
+<textarea class="coder-editor">
+<script>
+// Straight Booleans
+if ( true ) {  
+  document.write( "#1 this works. <br />" );
+} 
+if ( false ) {  
+  document.write( "#2 will not work. <br />" );
+}
+
+// Booleans via variables
+var isSunday = true;
+var isSaturday = false;
+if ( isSunday == true ) {
+  document.write( "#5 Yeah, laundry day! <br />" );
+}
+if ( isSaturday == true ) {
+  document.write( "#6 Nope, you can't go back in time! <br />" );
+}
+
+// Numbers
+if ( 1 &lt; 2 ) {
+  document.write( "#3 workks. <br />" );
+}
+if ( 2 &gt; 1 ) {
+  document.write( "#4 won't work. <br />" );
+}
+
+// Strings
+var emptyString = "";
+var filledString = "Woot! Conditionals!";
+if ( emptyString == "" ) {
+  document.write( "#7 Yep, the string was empty. <br />" );
+}
+if ( filledString == "" ) {
+  document.write( "#8 won't work. <br />" );
+}
+if ( filledString == "Woot! Conditionals!" ) {
+  document.write( "#9 Code strong. <br />" );
+}
+</script>
+</textarea>
+      </article>        
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>
+        Cheat Sheet:  Comparison and Logical Operators
+      </h3>
+		<p class="reminders">
+      Here's a <strong>cheat sheet</strong> of different operators that can be used in conditional statements. </p>
+      <p class="sidenote">Using these two variables, <code>var two = 2</code> and <code>var ten = 10</code>  , the examples below show how the statements would return true using the various operators.
+      </p>
+      <table class="comparison-table" style="float:left; margin-right:20px;">
+        <tr>
+          <th colspan="3" align="left">Comparison operators</th>
+        </tr>
+        <tr>
+          <td width="15%">==</td>
+          <td width="50%">is equal to</td>
+          <td width="35%">ten == two * 5</td>
+        </tr>
+        <tr>
+          <td width="15%">===</td>
+          <td width="50%">
+            is exactly equal to
+            <br />
+            (value and type)
+          </td>
+          <td width="35%">
+            ten === 10
+            <br />
+            ten === "10" (false)
+          </td>
+        </tr>
+        <tr>
+          <td width="15%">!=</td>
+          <td width="50%">is not equal to</td>
+          <td width="35%">ten !== two</td>
+        </tr>
+        <tr>
+          <td width="15%">&gt;</td>
+          <td width="50%">greater than</td>
+          <td width="35%">ten &gt; two</td>
+        </tr>
+        <tr>
+          <td width="15%">&lt;</td>
+          <td width="50%">less than</td>
+          <td width="35%">
+            two
+                &lt; ten
+          </td>
+        </tr>
+        <tr>
+          <td width="15%">&gt;=</td>
+          <td width="50%">greater than or equal to</td>
+          <td width="35%">
+            ten &gt;= two * 5
+            <br />
+            ten &gt;= two * 5 + 1
+          </td>
+        </tr>
+        <tr>
+          <td width="15%">&lt;=</td>
+          <td width="50%">less than for equal to</td>
+          <td width="35%">
+            two
+                        &lt;= ten
+            <br />
+            two
+                        &lt;= 2
+          </td>
+        </tr>
+      </table>
+      <table class="comparison-table" style="float:left;">
+        <tr>
+          <th colspan="3" align="left">Logical operators</th>
+        </tr>
+        <tr>
+          <td width="15%">&amp;&amp;</td>
+          <td width="20%">and</td>
+          <td width="65%">
+            (ten
+            &lt; 11 &amp;&amp; ten &gt; 9)
+          </td>
+        </tr>
+        <tr>
+          <td width="15%">||</td>
+          <td width="20%">or</td>
+          <td width="65%">(ten == 10 || two == 2)</td>
+        </tr>
+        <tr>
+          <td width="15%">!</td>
+          <td width="20%">not</td>
+          <td width="65%">!(ten == two)</td>
+        </tr>
+      </table>
+        <br  clear="all" />
+    </article>
+
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h3>More Conditional  Examples</h3>
+      <p>
+        Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!
+      </p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+var regularPrice = 200;
+var salePrice = 19.99;
+
+if ( salePrice < regularPrice ) {
+  //document.write("#1 You've got to buy that robot! <br />");
+} 
+
+
+if ( salePrice > regularPrice ) {
+  //document.write("#2 Don't buy that robot <br />");
+} else {
+  //document.write("#2 Buy two in different colours! <br />");
+}
+
+if ( salePrice > regularPrice ) {
+  //document.write("#3 Don't buy that robot");
+} else if ( salePrice == regularPrice) {
+  //document.write("#3 Only buy it if you reeeaallly want it! <br />");
+} else {
+  //document.write("# Buy two in different colours! <br />");
+}
+</script>
+      </textarea>
+    </article>
+    
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Variables, Operators, Concatenation and Conditionals</h2>
+      <p>
+Now that we know what <span class="keyword">variables</span>, <span class="keyword">operators</span> and <span class="keyword">conditionals</span> are, let's put them all into action using dynamic content. </p>
+      <textarea class='coder-editor coder-editor-full'>
+<script>
+  prompt("How much is that robot?");
+  //var price = prompt("How much are those shoes?");
+  if ( price <= 100 ) {
+  document.write("$" + price + " isn't bad. Buy them!");
+  } else {
+  document.write("$" + price + "? Good Lawd! That's a lot of money!");
+  }
+</script></textarea>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #3 (10 minutes)</h2>
+      <p>
+        Uh-oh! Someone can attempt to put a negative number of products in their shopping cart! Complete task #1 in the next slide to fix this. For task #2, warn the user that they are attempting to check out with an empty basket. Make a more robust shopping cart so that your customer's order doesn't go sideways.
+      </p>
+      <p>
+        This is based on Exercise #3 so it should look very familiar!
+      </p>
+            <p class="hint">
+        (Hint:  How do you test if a number is greater than, less then, or equal to another number?)
+      </p>
+      </article>
+      
+          <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #3 (10 minutes)</h2>
+      <p class="assignment">TODO: Check within the code for your THREE tasks.</p>
+<textarea class='coder-editor coder-editor-full' data-save='exercise3'>
+<script>
+  var quantity = 0;   
+
+  function addItem(){ 
+    quantity++;
+    refreshTotal();
+  }
+  
+  function removeItem(){
+    /* *** YOUR CODE _BELOW_ HERE **** */
+    /* 1. Use a conditional if/else statement on the "quantity" variable 
+          to avoid having negative products. */
+
+    quantity--; 
+
+    /* *** YOUR CODE ^ABOVE^ HERE **** */
+    refreshTotal();
+  }  
+
+  function checkout() {
+    /* *** YOUR CODE _BELOW_ HERE **** */
+    /* 2. Use a conditional if statement on the "quantity" variable 
+          to determine if the shopping cart is (or is not) empty. */
+
+    // below are some alert messages you can use
+    alert( "Sorry, you don't have anything in your cart!" );
+    alert( "Thank you for your order!" );
+    
+    /* *** YOUR CODE ^ABOVE^ HERE **** */
+  } 
+  
+  function refreshTotal() {         
+    var totalCost = quantity * 20; //quantity * fixed price
+    document.getElementById('updateQuantity').value = quantity; //updates
+    // 3. A nice to have: Put a dollar sign in front of the totalCost
+    document.getElementById('updateTotal').value = (totalCost);
+  }
+</script>
+
+        <div id="exercise2" style="text-align: center;">
+          <img src="exercises/assets/plush-android.jpg" width="195" height="195" />
+          <br />
+          <button onclick="addItem();">Add</button>
+          <button onclick="removeItem();">Remove</button>
+          <br />
+          Quantity
+          <input type="text" id="updateQuantity" value="0" readonly style="text-align:center; width: 20px; border: 1px solid #ccc;"/>
+          <br />
+          <br />
+          Total Cost:
+          <input type="text" id="updateTotal" value="" readonly style="border: 1px solid #ccc;"/>
+          <br />
+          <br />
+          <button onclick="checkout();">Check out now!</button>
+        </div>
+      </textarea>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #4 (5-10 minutes)</h2>
+      <p>
+        Let's revisit the shipping form again -- it's a very simple shipping form, but you don't want someone to be able to submit their order if they haven't filled out their address!
+      </p>
+      <p>
+        You have been supplied with 1 variable (&quot;address&quot;) which will automagically match what is typed into the form field (minus extra whitespace) after you press the &quot;Check out now!&quot; button.
+      </p>
+      <p class="hint">
+        (Hint: If you don't type anything into the address field, you get an &quot;empty string&quot;. How do you test for an empty string?)
+      </p>
+      
+      </article>
+          <article class='slide slide-list'>
+      <h2>Mini-exercise #4 (5-10 minutes)</h2>
+            <p class="assignment">TODO: Check within the code for your ONE task.</p>
+<textarea class='coder-editor coder-editor-full' data-save='exercise4'>
+<script>
+  function validateForm() {
+
+    // automagically get the typed values from the form
+    var address = document.getElementById("address").value;
+
+    /* *** YOUR CODE _BELOW_ HERE **** */
+
+    /* TODO: Use a conditional if/else statement on the "address" variable 
+       to determine if the address field is (or is not) blank, 
+       then show the proper error or confirmation alert message. */
+
+    // below are some alert messages you can use
+    alert( "Sorry there are errors. Form fields cannot be blank!" );
+    alert( "Thank you for your order!" );
+
+    /* *** YOUR CODE ^ABOVE^ HERE **** */
+  }
+</script>
+        Address:
+        <input type="text" id="address" />
+        <br />
+        <br />
+        <button onclick="validateForm()">Check out now!</button>
+      </textarea>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #5 (15-20 minutes)</h2>
+      <p>
+        Now here's a more complex shopping form that you require all fields to be filled in. You have been supplied with 3 additional variables which will automagically update: &quot;name&quot;, &quot;city&quot;, and &quot;postal&quot;.
+      </p>
+      
+      <p class="hint">
+        (Hint for task #3: How do you test for something AND somethingElse OR anotherThing at one time?)
+      </p>
+      <p>
+        Bonus: There's always different ways to get to the same end goal. If you're finished early, try out different ways that you can reduce the number of variables and lines of code.
+      </p>
+      </article>
+      
+     <!-- SLIDE:  -->
+    <article class='slide slide-list'>
+      <h2>Mini-exercise #5 (15-20 minutes)</h2>     
+      <p class="assignment">TODO: Check within the code for your FOUR tasks.</p>
+<textarea class='coder-editor coder-editor-full' data-save='exercise5'>
+<script>
+  function validateForm() {
+
+    // automagically get the typed values from the form
+    var name = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var postal = document.getElementById("postal").value;
+
+    /* *** YOUR CODE _BELOW_ HERE **** */
+
+    /* 1. Declare 4 variables named 
+          "nameIsBlank", "addressIsBlank", "cityIsBlank", and "postalIsBlank" 
+          that will each hold Boolean values. */
+
+
+    /* 2a. Use conditional if/else statements on the variables 
+           "name", "address", "city", and "postal" to determine 
+           if each individual field is not blank.
+
+       2b. Update their respective Boolean variables based on their 
+           individual if/else statements. */
+
+
+    /* 3. In a final conditional, test ALL FOUR fields 
+          and alert the proper message  */
+
+    // below are some alert messages you can use
+    alert( "Sorry there are errors. Form fields cannot be blank!" );
+    alert( "Thank you for your order!" );
+
+    /* *** YOUR CODE ^ABOVE^ HERE **** */
+  }
+</script>
+        Name:
+        <input type="text" id="name" />
+        <br />
+        Address:
+        <input type="text" id="address" />
+        <br />
+        City:
+        <input type="text" id="city" />
+        <br />
+        Postal Code:
+        <input type="text" id="postal" />
+        <br />
+        <br />
+        <button onclick="validateForm()">Check out now!</button>
+      </textarea>
+    </article>
+
+    <!-- SLIDE:  -->
+    <article class='slide slide-subhead'>
+      <h1>Regroup Before Lunch</h1>
+      <p><strong>Learn from our mistakes!</strong></p>
+      <p>Name something that you did while writing code that caused an error. What were you attempting to do and what were your assumptions when doing it? How did you fix it?</p>
+      <p>
+        What are some questions or issues you are having with the material covered so far? Lunch with your mentors and pick their brains. :)
+      </p>
+    </article>
+
+
+    <!-- new slide -->
+    <article class='slide slide-subhead'>
+      <h1>Lunch time!</h1>
+      <p>Come back for 2:00pm</p>
+    </article>
+    
   </div>
   <!-- END div id=presentation -->
-
-  <div class="centered" style="font-size: 12px; padding-top: 10px;">(Use the left and right arrow keys on your keyboard to navigate.)</div>
 
   <script src='src/jquery.min.js'></script>
   <script src="src/modernizr.js"></script>
